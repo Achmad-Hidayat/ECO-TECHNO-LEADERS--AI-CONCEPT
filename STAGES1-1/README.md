@@ -42,7 +42,7 @@ Pendekatan customer-centric di sini adalah memastikan pelanggan merasa didengar 
     Buat file bernama `greenhome.py`. Anda bisa menggunakan perintah berikut di terminal/bash untuk membuat file dan langsung menyalin seluruh kode program ke dalamnya:
 
     ```bash
-    cat << EOF > greenhome.py
+    
     print("Selamat datang di GreenHome Solutions!")
     print("Kami akan membantu Anda menemukan solusi energi ramah lingkungan.")
 
@@ -58,9 +58,9 @@ Pendekatan customer-centric di sini adalah memastikan pelanggan merasa didengar 
     # Memberikan saran
     print("Saran: Gunakan panel surya untuk memenuhi kebutuhan energi Anda dan hemat biaya!")
     print("Terima kasih telah memilih solusi ramah lingkungan bersama GreenHome Solutions!")
-    EOF
+   
     ```
-    Salin dan tempel seluruh blok kode di atas (termasuk `cat << EOF > greenhome.py` dan `EOF` di akhir) ke terminal Anda, lalu tekan Enter.
+    Salin dan tempel seluruh blok kode (di atas sampai di akhir) ke terminal Anda, lalu tekan Enter.
 
 2.  **Jalankan Program:**
     Setelah file `greenhome.py` dibuat dan berisi kode, jalankan dengan perintah:
