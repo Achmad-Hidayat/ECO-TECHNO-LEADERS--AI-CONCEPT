@@ -1,36 +1,86 @@
-### Studi Kasus: Belajar Python untuk Eco-Techno Leader dengan Pendekatan Customer-Centric
+# Studi Kasus: Belajar Python untuk Eco-Techno Leader dengan Pendekatan Customer-Centric
 
-##### Pendahuluan
 Selamat datang di studi kasus sederhana ini! Studi kasus ini dirancang untuk pemula yang ingin mengenal Python tanpa perlu menginstal library tambahan. Kita akan membuat program kecil bertema Eco-Techno Leader yang berfokus pada pendekatan Customer-Centric Approach, yaitu memprioritaskan kebutuhan pelanggan untuk membangun loyalitas. Program ini akan membantu Anda memahami dasar-dasar Python seperti mencetak pesan, menggunakan variabel, melakukan perhitungan sederhana, dan meminta input dari pengguna.
-Tema: Anda adalah seorang Eco-Techno Leader yang sedang merancang solusi energi ramah lingkungan untuk pelanggan, seperti panel surya untuk rumah. Anda ingin memahami kebutuhan pelanggan dan memberikan solusi yang sesuai untuk meningkatkan kepuasan mereka.
----
-Tujuan:
 
-Mengenal perintah dasar Python (print(), variabel, input, dan operasi matematika).
-Membuat program sederhana yang mencerminkan pendekatan customer-centric.
-Menginspirasi pemula untuk berpikir tentang teknologi hijau.
----
-Prasyarat
+**Tema:** Anda adalah seorang Eco-Techno Leader yang sedang merancang solusi energi ramah lingkungan untuk pelanggan, seperti panel surya untuk rumah. Anda ingin memahami kebutuhan pelanggan dan memberikan solusi yang sesuai untuk meningkatkan kepuasan mereka.
 
-Anda hanya perlu menginstal Python (versi 3.x) di komputer Anda. Unduh dari python.org jika belum terinstal.
-Gunakan editor teks sederhana seperti Notepad, atau gunakan Visual Studio Code untuk pengalaman yang lebih baik.
-Tidak perlu menginstal library tambahan seperti pip.
 ---
-Studi Kasus: Kalkulator Kebutuhan Energi Rumah Pelanggan
+
+## Tujuan
+
+* Mengenal perintah dasar Python (`print()`, variabel, `input()`, dan operasi matematika).
+* Membuat program sederhana yang mencerminkan pendekatan customer-centric.
+* Menginspirasi pemula untuk berpikir tentang teknologi hijau.
+
+---
+
+## Prasyarat
+
+* Anda hanya perlu menginstal Python (versi 3.x) di komputer Anda. Unduh dari [python.org](https://www.python.org/downloads/) jika belum terinstal.
+* Gunakan editor teks sederhana seperti Notepad, atau gunakan Visual Studio Code untuk pengalaman yang lebih baik.
+* Tidak perlu menginstal library tambahan seperti `pip`.
+
+---
+
+## Studi Kasus: Kalkulator Kebutuhan Energi Rumah Pelanggan
 
 ### Latar Belakang
-#### Sebagai Eco-Techno Leader, Anda bekerja untuk perusahaan energi ramah lingkungan bernama "GreenHome Solutions". Tugas Anda adalah membantu pelanggan memahami kebutuhan energi mereka untuk menggunakan panel surya. Anda akan membuat program Python sederhana yang:
+Sebagai Eco-Techno Leader, Anda bekerja untuk perusahaan energi ramah lingkungan bernama "GreenHome Solutions". Tugas Anda adalah membantu pelanggan memahami kebutuhan energi mereka untuk menggunakan panel surya. Anda akan membuat program Python sederhana yang:
 
-Menyapa pelanggan dengan ramah.
-Meminta input jumlah perangkat listrik di rumah mereka.
-Menghitung estimasi kebutuhan energi harian berdasarkan input pelanggan.
-Memberikan saran sederhana untuk solusi ramah lingkungan.
----
+* Menyapa pelanggan dengan ramah.
+* Meminta input jumlah perangkat listrik di rumah mereka.
+* Menghitung estimasi kebutuhan energi harian berdasarkan input pelanggan.
+* Memberikan saran sederhana untuk solusi ramah lingkungan.
+
 Pendekatan customer-centric di sini adalah memastikan pelanggan merasa didengar dengan meminta input mereka dan memberikan solusi yang relevan berdasarkan kebutuhan mereka.
----
-### Langkah 1: Menyapa Pelanggan
-#### Mari buat program yang menyapa pelanggan dengan pesan ramah. Simpan kode berikut dalam file bernama greenhome.py:
 
+---
+
+## Cara Menjalankan
+
+1.  **Buat File Python:**
+    Buat file bernama `greenhome.py`. Anda bisa menggunakan perintah berikut di terminal/bash untuk membuat file dan langsung menyalin seluruh kode program ke dalamnya:
+
+    ```bash
+    cat << EOF > greenhome.py
+    print("Selamat datang di GreenHome Solutions!")
+    print("Kami akan membantu Anda menemukan solusi energi ramah lingkungan.")
+
+    # Meminta input dari pelanggan
+    jumlah_perangkat = int(input("Masukkan jumlah perangkat listrik di rumah Anda: "))
+    print("Jumlah perangkat listrik Anda:", jumlah_perangkat)
+
+    # Menghitung kebutuhan energi
+    energi_per_perangkat = 0.5  # kWh per hari
+    total_energi = jumlah_perangkat * energi_per_perangkat
+    print("Kebutuhan energi harian Anda:", total_energi, "kWh")
+
+    # Memberikan saran
+    print("Saran: Gunakan panel surya untuk memenuhi kebutuhan energi Anda dan hemat biaya!")
+    print("Terima kasih telah memilih solusi ramah lingkungan bersama GreenHome Solutions!")
+    EOF
+    ```
+    Salin dan tempel seluruh blok kode di atas (termasuk `cat << EOF > greenhome.py` dan `EOF` di akhir) ke terminal Anda, lalu tekan Enter.
+
+2.  **Jalankan Program:**
+    Setelah file `greenhome.py` dibuat dan berisi kode, jalankan dengan perintah:
+
+    ```bash
+    python greenhome.py
+    ```
+    Atau jika Anda menggunakan Python 3 secara spesifik:
+    ```bash
+    python3 greenhome.py
+    ```
+
+---
+
+## Langkah-langkah Pembuatan Program (Detail)
+
+### Langkah 1: Menyapa Pelanggan
+
+Kode awal untuk menyapa pelanggan:
+```python
 print("Selamat datang di GreenHome Solutions!")
 print("Kami akan membantu Anda menemukan solusi energi ramah lingkungan.")
 
