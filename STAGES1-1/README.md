@@ -1,3 +1,5 @@
+![ROADMAP](https://github.com/arry-hutomo/ETL--AICONCEPT/blob/main/STAGES1-1/ROADMAP.png)
+
 # Studi Kasus: Belajar Python untuk Eco-Techno Leader dengan Pendekatan Customer-Centric
 
 Selamat datang di studi kasus sederhana ini! Studi kasus ini dirancang untuk pemula yang ingin mengenal Python tanpa perlu menginstal library tambahan. Kita akan membuat program kecil bertema Eco-Techno Leader yang berfokus pada pendekatan Customer-Centric Approach, yaitu memprioritaskan kebutuhan pelanggan untuk membangun loyalitas. Program ini akan membantu Anda memahami dasar-dasar Python seperti mencetak pesan, menggunakan variabel, melakukan perhitungan sederhana, dan meminta input dari pengguna.
