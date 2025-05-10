@@ -1,4 +1,4 @@
-[VIBECODING](https://github.com/arry-hutomo/ETL--AICONCEPT/blob/main/STAGES%201-2/vibe%20coding%20with%20python.png)
+![VIBECODING](https://github.com/arry-hutomo/ETL--AICONCEPT/blob/main/STAGES%201-2/vibe%20coding%20with%20python.png)
 ---
 ### AI Vibe Forge: Craft Personal Apps, Hyper Fast!
 ---
