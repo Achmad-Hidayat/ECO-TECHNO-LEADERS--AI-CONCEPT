@@ -2,7 +2,9 @@
 
 ## "Master the Roots Before You Vibe: Code Tradisional Dulu, Baru Gas!" 🌟
 
-![VIBECODING](https://github.com/arry-hutomo/ETL--AICONCEPT/blob/main/STAGES%201-2/vibe%20coding%20with%20python.png)
+![HELLOPYTHON](https://github.com/arry-hutomo/ECO-TECHNO-LEADERS--AI-CONCEPT/blob/main/STAGES%201-2/hello%20PYTHON.png)
+
+
 
 
 Assalamu’alaikum, para eco techno leader yang saya cintai! Vibe coding itu *cool* banget, guys, tapi jangan cuma *nge-vibe* doang, yak! 😎 Pahamin juga esensi dari *structural query* di chapter 1-20 Python basic ini. It’s like *“A journey of a thousand miles begins with a single step”*—step awal kalian kuasain *basic syntax*, *loops*, sampe *functions*, itu *fundamentally epic*! 💻✨ Bukan cuma bikin kode *run*, tapi ngerti *why it works*. Bayangin, kayak *bouwen een sterk huis* (bikin rumah kokoh) di Belanda, fondasinya harus *solid* biar ga *ambruk*. 🏡💪
@@ -18,6 +20,8 @@ Jadi, *let’s level up* bareng! 🚀 Gak ada yang salah sama *vibe coding*, tap
 
 
 # ✨🇮🇩 AI Vibe Forge: Craft Personal Apps, Hyper Fast! 🇮🇩✨
+
+![VIBECODING](https://github.com/arry-hutomo/ETL--AICONCEPT/blob/main/STAGES%201-2/vibe%20coding%20with%20python.png)
 
 🎉 **Selamat Datang di Dunia Vibe Coding!** 🎉
 
