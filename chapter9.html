@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9: Fungsi, Bikin Kode Lebih Rapi! 🛠️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 9: Fungsi, Bikin Kode Lebih Rapi! 🛠️</h2>
+    <div class="quote">
+        "Fungsi itu kayak alat ajaib, bikin kode kita rapi dan gampang dipake ulang! 🛠️✨" <br>
+        Doa: "Ya Tuhan, bantu kami membuat kode yang rapi dan efisien biar bantu dunia. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar tentang fungsi di Python, biar kode kita lebih rapi dan bisa dipake ulang. Kita pake variabel (Chapter 2), operasi (Chapter 3), input (Chapter 4), pengkondisian (Chapter 5), perulangan (Chapter 6), list (Chapter 7), dictionary (Chapter 8), dan <span class="code-term">print</span> (Chapter 1). Yuk, kita bikin fungsi bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: Fungsi buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Fungsi Sederhana Tanpa Parameter (Super Gampang)</h4>
+    <pre>def tanam_pohon():
+    print("Arry Hutomo tanam pohon!")
+
+tanam_pohon()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon!" karena kita panggil fungsi <span class="code-term">tanam_pohon()</span> yang cuma nampilin pesan pake <span class="code-term">print()</span>. Fungsi ini ga butuh parameter, jadi langsung jalan pas dipanggil.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini sederhana buat kenalin fungsi pake <span class="code-term">def</span>. Aku pilih nama fungsi <span class="code-term">tanam_pohon</span> biar jelas, dan isi fungsi cuma <span class="code-term">print()</span> biar simpel. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku panggil fungsi pake <span class="code-term">tanam_pohon()</span> biar kamu paham cara manggil fungsi. Struktur ini bikin kamu paham cara bikin fungsi sederhana, dan gampang diinget karena mirip kayak bikin tombol ajaib! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Fungsi dengan Parameter (Gampang)</h4>
+    <pre>def tanam_pohon(jenis):
+    print(f"Arry Hutomo tanam pohon {jenis}!")
+
+tanam_pohon("Mangrove")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon Mangrove!" karena kita panggil fungsi <span class="code-term">tanam_pohon()</span> dengan parameter "Mangrove". Fungsi nerima parameter <span class="code-term">jenis</span>, trus nampilin pesan pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara bikin fungsi dengan parameter. Aku pilih parameter <span class="code-term">jenis</span> biar fungsi fleksibel, dan panggil fungsi dengan "Mangrove" biar realistis. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">f-string</span> biar pesan dinamis. Struktur ini bikin kamu paham cara bikin fungsi yang bisa nerima input, dan gampang diinget karena mirip kayak nyanyi lagu dengan judul yang beda! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Fungsi dengan Return (Gampang)</h4>
+    <pre>def hitung_pohon(jumlah):
+    return jumlah + 5
+
+hasil = hitung_pohon(10)
+print(f"Arry Hutomo tanam {hasil} pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 15 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 15 pohon!" karena kita panggil fungsi <span class="code-term">hitung_pohon(10)</span>, yang nambah 5 ke parameter <span class="code-term">jumlah</span> (10 + 5 = 15), trus nilai ini dikembaliin pake <span class="code-term">return</span>. Hasil disimpen di variabel <span class="code-term">hasil</span>, trus ditampilin pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara bikin fungsi dengan <span class="code-term">return</span>. Aku pilih fungsi <span class="code-term">hitung_pohon</span> dengan parameter <span class="code-term">jumlah</span>, dan nambah 5 biar simpel. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku simpen hasil di variabel biar kamu paham cara pake nilai yang dikembaliin. Struktur ini bikin kamu paham cara bikin fungsi yang ngasih output, dan gampang diinget karena mirip kayak bikin kalkulator! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Fungsi dengan Parameter dan Return (Masih Gampang)</h4>
+    <pre>def hitung_sampah(berat):
+    return berat * 2
+
+hasil = hitung_sampah(5.5)
+print(f"Arry Hutomo daur ulang {hasil} kg sampah!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 11.0 kg sampah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 11.0 kg sampah!" karena kita panggil fungsi <span class="code-term">hitung_sampah(5.5)</span>, yang kalikan parameter <span class="code-term">berat</span> dengan 2 (5.5 * 2 = 11.0), trus nilai ini dikembaliin pake <span class="code-term">return</span>. Hasil disimpen di variabel <span class="code-term">hasil</span>, trus ditampilin.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin fungsi dengan parameter dan <span class="code-term">return</span>. Aku pilih fungsi <span class="code-term">hitung_sampah</span> dengan parameter <span class="code-term">berat</span>, dan kalikan 2 biar realistis. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini sederhana biar kamu paham cara bikin fungsi yang ngasih output berdasarkan parameter, dan gampang diinget karena mirip kayak bikin kalkulator sederhana! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>5. Fungsi dengan Input (Mulai Agak Menantang)</h4>
+    <pre>def tanam_pohon(jenis):
+    print(f"Arry Hutomo tanam pohon {jenis}!")
+
+pohon = input("Masukkan jenis pohon: ")
+tanam_pohon(pohon)</pre>
+    <p><strong>Output (misalnya user masukkan "Mangrove"):</strong></p>
+    <pre>Masukkan jenis pohon: Mangrove
+Arry Hutomo tanam pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jenis pohon: ", user masukin "Mangrove", trus kita panggil fungsi <span class="code-term">tanam_pohon()</span> dengan input user. Fungsi nampilin pesan pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> dari Chapter 4 sama fungsi, biar kamu paham cara bikin fungsi interaktif. Aku pilih fungsi <span class="code-term">tanam_pohon</span> dengan parameter <span class="code-term">jenis</span>, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku panggil fungsi dengan input user biar fleksibel. Struktur ini bikin kamu paham cara bikin fungsi yang interaktif, dan gampang diinget karena mirip kayak ngasih perintah ke robot! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. Fungsi dengan For Loop (Agak Menantang)</h4>
+    <pre>def tanam_pohon(jumlah):
+    for i in range(jumlah):
+        print("Arry Hutomo tanam pohon!")
+
+tanam_pohon(3)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!
+Arry Hutomo tanam pohon!
+Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak "Arry Hutomo tanam pohon!" tiga kali karena kita panggil fungsi <span class="code-term">tanam_pohon(3)</span>. Fungsi pake <span class="code-term">for</span> loop dengan <span class="code-term">range(3)</span>, jadi ulang 3 kali.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi sama <span class="code-term">for</span> loop dari Chapter 6, biar kamu paham cara bikin fungsi yang ngulang. Aku pilih fungsi <span class="code-term">tanam_pohon</span> dengan parameter <span class="code-term">jumlah</span>, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">range(jumlah)</span> biar loop dinamis. Struktur ini bikin kamu paham cara bikin fungsi yang ngulang, dan gampang diinget karena mirip kayak nyanyi lagu berkali-kali! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Fungsi dengan While Loop (Agak Menantang)</h4>
+    <pre>def daur_ulang_sampah(berat):
+    i = 0
+    while i < berat:
+        print("Arry Hutomo daur ulang 1 kg!")
+        i = i + 1
+
+daur_ulang_sampah(3)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 1 kg!
+Arry Hutomo daur ulang 1 kg!
+Arry Hutomo daur ulang 1 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak "Arry Hutomo daur ulang 1 kg!" tiga kali karena kita panggil fungsi <span class="code-term">daur_ulang_sampah(3)</span>. Fungsi pake <span class="code-term">while</span> loop, ulang selama <span class="code-term">i < berat</span> (3), jadi 3 kali.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi sama <span class="code-term">while</span> loop dari Chapter 6, biar kamu paham cara bikin fungsi yang ngulang berdasarkan kondisi. Aku pilih fungsi <span class="code-term">daur_ulang_sampah</span> dengan parameter <span class="code-term">berat</span>, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">while</span> loop biar realistis kayak ngolah sampah per kg. Struktur ini bikin kamu paham cara bikin fungsi yang ngulang, dan gampang diinget karena mirip kayak ngitung sisa sampah! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>8. Fungsi dengan If-Else (Menantang)</h4>
+    <pre>def cek_pohon(jumlah):
+    if jumlah > 7:
+        print(f"Arry Hutomo tanam {jumlah} pohon, banyak!")
+    else:
+        print(f"Arry Hutomo tanam {jumlah} pohon, tambah lagi!")
+
+cek_pohon(10)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon, banyak!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 10 pohon, banyak!" karena kita panggil fungsi <span class="code-term">cek_pohon(10)</span>. Fungsi cek <span class="code-term">jumlah > 7</span>: karena 10 > 7 (True), masuk ke blok <span class="code-term">if</span> dan cetak "banyak".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi sama <span class="code-term">if-else</span> dari Chapter 5, biar kamu paham cara bikin keputusan dalam fungsi. Aku pilih fungsi <span class="code-term">cek_pohon</span> dengan parameter <span class="code-term">jumlah</span>, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">jumlah > 7</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin fungsi dengan keputusan, dan gampang diinget karena mirip kayak nyanyi lagu dengan nada yang beda! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. Fungsi dengan Input dan For Loop (Menantang)</h4>
+    <pre>def tanam_banyak(jumlah):
+    for i in range(jumlah):
+        print(f"Arry Hutomo tanam pohon ke-{i+1}!")
+
+jumlah = int(input("Masukkan jumlah pohon: "))
+tanam_banyak(jumlah)</pre>
+    <p><strong>Output (misalnya user masukkan 3):</strong></p>
+    <pre>Masukkan jumlah pohon: 3
+Arry Hutomo tanam pohon ke-1!
+Arry Hutomo tanam pohon ke-2!
+Arry Hutomo tanam pohon ke-3!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon: ", user masukin 3, trus kita panggil fungsi <span class="code-term">tanam_banyak(3)</span>. Fungsi pake <span class="code-term">for</span> loop, ulang 3 kali, dan cetak pesan tiap iterasi.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">for</span> loop, dan fungsi, biar kamu paham cara bikin fungsi interaktif yang ngulang. Aku pilih fungsi <span class="code-term">tanam_banyak</span> dengan parameter <span class="code-term">jumlah</span>, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan loop biar fungsi dinamis. Struktur ini bikin kamu paham cara bikin fungsi interaktif yang ngulang, dan gampang diinget karena mirip kayak nyanyi lagu sesuai jumlah! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. Fungsi dengan List dan Return (Menantang)</h4>
+    <pre>def hitung_total_pohon(pohon_list):
+    total = 0
+    for jumlah in pohon_list:
+        total = total + jumlah
+    return total
+
+pohon_list = [10, 5, 8]
+hasil = hitung_total_pohon(pohon_list)
+print(f"Arry Hutomo tanam {hasil} pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 23 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 23 pohon!" karena kita panggil fungsi <span class="code-term">hitung_total_pohon()</span> dengan list [10, 5, 8]. Fungsi jumlahkan semua elemen: 0 + 10 = 10, 10 + 5 = 15, 15 + 8 = 23, trus kembalikan total pake <span class="code-term">return</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi sama list dari Chapter 7, biar kamu paham cara bikin fungsi yang ngolah list. Aku pilih fungsi <span class="code-term">hitung_total_pohon</span> dengan parameter <span class="code-term">pohon_list</span>, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">for</span> loop buat njumlahin elemen list. Struktur ini bikin kamu paham cara bikin fungsi yang ngolah list, dan gampang diinget karena mirip kayak njumlahin daftar belanja! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>11. Fungsi dengan Dictionary dan Return (Agak Sulit)</h4>
+    <pre>def hitung_total_sampah(berat_dict):
+    total = 0
+    for berat in berat_dict.values():
+        total = total + berat
+    return total
+
+berat_dict = {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}
+hasil = hitung_total_sampah(berat_dict)
+print(f"Arry Hutomo daur ulang {hasil} kg!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 11.0 kg!" karena kita panggil fungsi <span class="code-term">hitung_total_sampah()</span> dengan dictionary {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}. Fungsi jumlahkan semua nilai: 0 + 5.5 = 5.5, 5.5 + 3.0 = 8.5, 8.5 + 2.5 = 11.0, trus kembalikan total.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi sama dictionary dari Chapter 8, biar kamu paham cara bikin fungsi yang ngolah dictionary. Aku pilih fungsi <span class="code-term">hitung_total_sampah</span> dengan parameter <span class="code-term">berat_dict</span>, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">values()</span> dan <span class="code-term">for</span> loop buat njumlahin nilai. Struktur ini bikin kamu paham cara bikin fungsi yang ngolah dictionary, dan gampang diinget karena mirip kayak njumlahin catatan! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>12. Fungsi dengan If-Else dan List (Sulit)</h4>
+    <pre>def cek_pohon_list(pohon_list):
+    for jumlah in pohon_list:
+        if jumlah > 7:
+            print(f"Arry Hutomo tanam {jumlah} pohon, banyak!")
+        else:
+            print(f"Arry Hutomo tanam {jumlah} pohon, tambah lagi!")
+
+pohon_list = [10, 5, 8]
+cek_pohon_list(pohon_list)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon, banyak!
+Arry Hutomo tanam 5 pohon, tambah lagi!
+Arry Hutomo tanam 8 pohon, banyak!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam 10 pohon, banyak!", "Arry Hutomo tanam 5 pohon, tambah lagi!", dan "Arry Hutomo tanam 8 pohon, banyak!" karena kita panggil fungsi <span class="code-term">cek_pohon_list()</span> dengan list [10, 5, 8]. Fungsi iterasi list, cek tiap elemen: kalo > 7, cetak "banyak"; kalo ga, cetak "tambah lagi".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi, list, <span class="code-term">for</span> loop, dan <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan dalam fungsi yang ngolah list. Aku pilih fungsi <span class="code-term">cek_pohon_list</span> dengan parameter <span class="code-term">pohon_list</span>, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">jumlah > 7</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin fungsi dengan keputusan, dan gampang diinget karena mirip kayak ngecek daftar! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. Fungsi dengan Dictionary, While Loop, dan Return (Sulit)</h4>
+    <pre>def hitung_sampah_dict(berat_dict):
+    keys = list(berat_dict.keys())
+    i = 0
+    total = 0
+    while i < len(keys):
+        total = total + berat_dict[keys[i]]
+        i = i + 1
+    return total
+
+berat_dict = {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}
+hasil = hitung_sampah_dict(berat_dict)
+print(f"Arry Hutomo daur ulang {hasil} kg!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 11.0 kg!" karena kita panggil fungsi <span class="code-term">hitung_sampah_dict()</span> dengan dictionary {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}. Fungsi pake <span class="code-term">while</span> loop buat iterasi kunci, jumlahkan nilai: 0 + 5.5 = 5.5, 5.5 + 3.0 = 8.5, 8.5 + 2.5 = 11.0, trus kembalikan total.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi, dictionary, <span class="code-term">while</span> loop, dan <span class="code-term">return</span>, biar kamu paham cara bikin fungsi yang ngolah dictionary pake indeks. Aku pilih fungsi <span class="code-term">hitung_sampah_dict</span> dengan parameter <span class="code-term">berat_dict</span>, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">keys()</span> dan <span class="code-term">while</span> loop buat iterasi. Struktur ini bikin kamu paham cara bikin fungsi yang ngolah dictionary, dan gampang diinget karena mirip kayak njumlahin catatan! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>14. Fungsi dengan Input, If-Else, dan Chapter 1 (Lebih Sulit)</h4>
+    <pre>def cek_donasi(jumlah):
+    if jumlah > 150000:
+        print(f"Arry Hutomo donasi Rp {jumlah}!\nBanyak ", "buat komunitas!", sep="=>", end="")
+        print("yuk!")
+    else:
+        print(f"Arry Hutomo donasi Rp {jumlah}!\nTambah ", "buat komunitas!", sep="=>", end="")
+        print("yuk!")
+
+donasi = int(input("Masukkan jumlah donasi (Rp): "))
+cek_donasi(donasi)</pre>
+    <p><strong>Output (misalnya user masukkan 200000):</strong></p>
+    <pre>Masukkan jumlah donasi (Rp): 200000
+Arry Hutomo donasi Rp 200000!
+Banyak =>buat komunitas!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah donasi (Rp): ", user masukin 200000, trus kita panggil fungsi <span class="code-term">cek_donasi(200000)</span>. Fungsi cek <span class="code-term">jumlah > 150000</span>: karena 200000 > 150000 (True), masuk ke blok <span class="code-term">if</span>. Pake <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span> buat format rapi.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, fungsi, <span class="code-term">if-else</span>, dan <span class="code-term">\n</span>, <span class="code-term">sep</span>, <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin fungsi interaktif dengan keputusan dan format kece. Aku pilih fungsi <span class="code-term">cek_donasi</span> dengan parameter <span class="code-term">jumlah</span>, dan tema donasi karena Arry Hutomo peduli sosial, sesuai isu sosial. Aku pake <span class="code-term">jumlah > 150000</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin fungsi interaktif, dan gampang diinget karena mirip kayak ngecek donasi! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre>def hitung_dan_cek_sampah(berat_dict):
+    total = 0
+    i = 0
+    keys = list(berat_dict.keys())
+    while i < len(keys):
+        jenis = keys[i]
+        total = total + berat_dict[jenis]
+        if total > 10:
+            print(f"Arry Hutomo daur ulang {total} kg!\nCukup ", f"{jenis} banyak!", sep="=>", end="")
+            print("yuk!")
+        else:
+            print(f"Arry Hutomo daur ulang {total} kg!\nTambah ", f"{jenis} kurang!", sep="=>", end="")
+            print("yuk!")
+        i = i + 1
+    return total
+
+berat_dict = {}
+for i in range(3):
+    jenis = input(f"Masukkan jenis sampah ke-{i+1}: ")
+    berat = float(input(f"Masukkan berat {jenis} (kg): "))
+    berat_dict[jenis] = berat
+hasil = hitung_dan_cek_sampah(berat_dict)
+print(f"Total akhir: {hasil} kg!")</pre>
+    <p><strong>Output (misalnya user masukkan "Plastik", 5.5, "Kertas", 3.0, "Organik", 2.5):</strong></p>
+    <pre>Masukkan jenis sampah ke-1: Plastik
+Masukkan berat Plastik (kg): 5.5
+Masukkan jenis sampah ke-2: Kertas
+Masukkan berat Kertas (kg): 3.0
+Masukkan jenis sampah ke-3: Organik
+Masukkan berat Organik (kg): 2.5
+Arry Hutomo daur ulang 5.5 kg!
+Tambah =>Plastik kurang!yuk!
+Arry Hutomo daur ulang 8.5 kg!
+Tambah =>Kertas kurang!yuk!
+Arry Hutomo daur ulang 11.0 kg!
+Cukup =>Organik banyak!yuk!
+Total akhir: 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin "Plastik", 5.5, "Kertas", 3.0, "Organik", 2.5. Dictionary <span class="code-term">berat_dict</span> diisi, trus kita panggil fungsi <span class="code-term">hitung_dan_cek_sampah()</span>. Fungsi jumlahkan nilai: 0 + 5.5 = 5.5, 5.5 + 3.0 = 8.5, 8.5 + 2.5 = 11.0, tiap iterasi cek <span class="code-term">total > 10</span>, dan cetak pesan dengan format <span class="code-term">sep</span> dan <span class="code-term">end</span>. Terakhir, tampilin total akhir.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, <span class="code-term">while</span> loop, dictionary, operasi <span class="code-term">+</span>, <span class="code-term">if-else</span>, <span class="code-term">return</span>, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span>, biar kamu paham cara bikin fungsi kompleks yang interaktif. Aku pilih fungsi <span class="code-term">hitung_dan_cek_sampah</span> dengan parameter <span class="code-term">berat_dict</span>, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin fungsi canggih, dan gampang diinget karena mirip kayak bikin laporan daur ulang! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Pastiin kasih <span class="code-term">return</span> kalo fungsi butuh ngasih output, biar hasilnya bisa dipake di luar fungsi. ✅</li>
+        <li><strong>Don't:</strong> Jangan lupa panggil fungsi dengan tanda kurung <span class="code-term>()</span>, misalnya <span class="code-term">fungsi()</span>, kalo ga fungsi ga bakal jalan. ❌</li>
+        <li><strong>Do:</strong> Kasih nama fungsi yang jelas dan deskriptif, kayak <span class="code-term">hitung_total_pohon</span>, biar gampang dipahami. 🌟</li>
+        <li><strong>Don't:</strong> Jangan bikin fungsi tanpa parameter kalo seharusnya butuh input, nanti fungsi ga fleksibel. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap fungsi yang kamu buat adalah langkah menuju kode yang lebih rapi! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

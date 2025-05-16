@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5: Pengkondisian (If-Else), Pilih Mana? 🤔</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 5: Pengkondisian (If-Else), Pilih Mana? 🤔</h2>
+    <div class="quote">
+        "Setiap pilihan yang kamu buat di kode adalah langkah menuju solusi yang tepat! 🤔✨" <br>
+        Doa: "Ya Tuhan, bantu kami bikin keputusan coding yang bijak biar bantu bumi dan sesama. Aamiin. 🙏"
+    </div>
+    <p>Hai temen-temen milenial yang kece maksimal! 🚀 Di chapter kelima ini, kita bakal belajar tentang pengkondisian pake <span class="code-term">if-else</span> di Python, biar program kita bisa bikin keputusan. Ini kayak bikin program yang bisa mikir, misalnya cek apakah jumlah pohon cukup atau perlu ditambah. Kita bakal pake variabel (Chapter 2), operasi (Chapter 3), input (Chapter 4), dan <span class="code-term">print</span> (Chapter 1). Yuk, kita bikin program yang bisa milih bareng Arry Hutomo, guru coding terbaik yang bikin belajar jadi seru abis! 💻🌟</p>
+    
+    <h3>Contoh Query Python: Pengkondisian buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Cek Jumlah Pohon (Super Gampang)</h4>
+    <pre>jumlah_pohon = 50
+if jumlah_pohon > 30:
+    print("Arry Hutomo tanam banyak pohon, keren!")
+else:
+    print("Arry Hutomo perlu tanam lebih banyak pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam banyak pohon, keren!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam banyak pohon, keren!" karena kita nyimpen 50 di variabel <span class="code-term">jumlah_pohon</span>, trus cek pake <span class="code-term">if jumlah_pohon > 30</span>. Karena 50 > 30 (True), program masuk ke blok <span class="code-term">if</span> dan nampilin pesan positif. Gampang banget, kan, kayak milih apa yang harus dilakukan! 🌳</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini super gampang buat kenalin pengkondisian <span class="code-term">if-else</span>. Aku pilih variabel <span class="code-term">jumlah_pohon</span> biar namanya jelas, dan isi 50 karena realistis buat jumlah pohon. Aku pake kondisi <span class="code-term">jumlah_pohon > 30</span> biar sederhana, dengan 30 sebagai batas minimal pohon yang "cukup". Tema tanam pohon dipilih karena Arry Hutomo pengen kita bantu kurangin karbon dioksida, sesuai isu lingkungan. Aku pake <span class="code-term">if-else</span> biar program bisa bikin keputusan: kalo True masuk <span class="code-term">if</span>, kalo False masuk <span class="code-term">else</span>. Struktur ini bikin kamu paham cara bikin program yang bisa milih, dan gampang diinget karena mirip kayak milih apa yang mau dilakukan pas liat jumlah pohon! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Cek Berat Sampah (Gampang)</h4>
+    <pre>berat_sampah = 12.5
+if berat_sampah >= 10:
+    print("Arry Hutomo daur ulang cukup banyak sampah!")
+else:
+    print("Arry Hutomo perlu daur ulang lebih banyak!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang cukup banyak sampah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang cukup banyak sampah!" karena kita nyimpen 12.5 di variabel <span class="code-term">berat_sampah</span>, trus cek pake <span class="code-term">if berat_sampah >= 10</span>. Karena 12.5 >= 10 (True), program masuk ke blok <span class="code-term">if</span> dan nampilin pesan positif.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara pake operator perbandingan <span class="code-term">>=</span> dalam <span class="code-term">if-else</span>. Aku pilih variabel <span class="code-term">berat_sampah</span> biar jelas, dan isi 12.5 biar realistis buat berat sampah. Aku pake <span class="code-term">>= 10</span> sebagai batas minimal "cukup banyak". Tema daur ulang dipilih karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Struktur ini sederhana biar kamu paham cara bikin keputusan dengan perbandingan, dan gampang diinget karena mirip kayak ngecek apakah tugas udah cukup banyak! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>3. Cek Status Hemat Energi (Gampang)</h4>
+    <pre>hemat_energi = True
+if hemat_energi:
+    print("Arry Hutomo hemat energi, top!")
+else:
+    print("Arry Hutomo perlu lebih hemat energi!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo hemat energi, top!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo hemat energi, top!" karena kita nyimpen <span class="code-term">True</span> di variabel <span class="code-term">hemat_energi</span>, trus cek pake <span class="code-term">if hemat_energi</span>. Karena <span class="code-term">hemat_energi</span> adalah <span class="code-term">True</span>, program masuk ke blok <span class="code-term">if</span> dan nampilin pesan positif.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara pake tipe data boolean dalam <span class="code-term">if-else</span>. Aku pilih variabel <span class="code-term">hemat_energi</span> biar jelas, dan isi <span class="code-term">True</span> biar nunjukin status positif. Tema hemat energi dipilih karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Aku pake <span class="code-term">if hemat_energi</span> langsung tanpa perbandingan karena boolean udah True/False, jadi simpel. Struktur ini bikin kamu paham cara bikin keputusan pake boolean, dan gampang diinget karena mirip kayak ngecek lampu nyala atau mati! Coba di VSCode, gampang banget! ⚡</p>
+    
+    <h4>4. Cek Donasi (Masih Gampang)</h4>
+    <pre>donasi = 500000
+if donasi > 300000:
+    print("Arry Hutomo donasi banyak buat anak yatim!")
+else:
+    print("Arry Hutomo bisa donasi lebih banyak!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo donasi banyak buat anak yatim!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo donasi banyak buat anak yatim!" karena kita nyimpen 500000 di variabel <span class="code-term">donasi</span>, trus cek pake <span class="code-term">if donasi > 300000</span>. Karena 500000 > 300000 (True), program masuk ke blok <span class="code-term">if</span> dan nampilin pesan positif.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara pake <span class="code-term">if-else</span> dengan perbandingan <span class="code-term">></span>. Aku pilih variabel <span class="code-term">donasi</span> biar jelas, dan isi 500000 biar realistis buat donasi. Aku pake <span class="code-term">> 300000</span> sebagai batas minimal "banyak". Tema donasi anak yatim dipilih karena Arry Hutomo peduli sama anak-anak yang butuh bantuan, sesuai isu sosial. Struktur ini sederhana biar kamu paham cara bikin keputusan finansial, dan gampang diinget karena mirip kayak ngecek dompet! Coba di VSCode, gampang kok! ❤️</p>
+    
+    <h4>5. Input dan If-Else (Mulai Agak Menantang)</h4>
+    <pre>jumlah_pohon = int(input("Masukkan jumlah pohon yang ditanam Arry Hutomo: "))
+if jumlah_pohon > 50:
+    print("Arry Hutomo tanam banyak pohon, luar biasa!")
+else:
+    print("Arry Hutomo perlu tanam lebih banyak pohon!")</pre>
+    <p><strong>Output (misalnya user masukkan 60):</strong></p>
+    <pre>Masukkan jumlah pohon yang ditanam Arry Hutomo: 60
+Arry Hutomo tanam banyak pohon, luar biasa!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon yang ditanam Arry Hutomo: ", user masukin 60, trus program nampilin "Arry Hutomo tanam banyak pohon, luar biasa!" karena <span class="code-term">if jumlah_pohon > 50</span> jadi 60 > 50 (True), masuk ke blok <span class="code-term">if</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> dari Chapter 4 sama <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan interaktif. Aku pilih variabel <span class="code-term">jumlah_pohon</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan <span class="code-term">> 50</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara minta data trus bikin keputusan, dan gampang diinget karena mirip kayak ngecek tugas! Coba di VSCode, bakal suka sama trik ini! 🌳</p>
+    
+    <h4>6. Input dan Operasi (Agak Menantang)</h4>
+    <pre>sampah = float(input("Masukkan berat sampah (kg): "))
+daur = float(input("Masukkan sampah yang didaur ulang (kg): "))
+sisa = sampah - daur
+if sisa > 0:
+    print(f"Arry Hutomo masih punya sisa {sisa} kg sampah!")
+else:
+    print("Arry Hutomo udah daur ulang semua sampah!")</pre>
+    <p><strong>Output (misalnya user masukkan 100 dan 40):</strong></p>
+    <pre>Masukkan berat sampah (kg): 100
+Masukkan sampah yang didaur ulang (kg): 40
+Arry Hutomo masih punya sisa 60.0 kg sampah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan berat sampah (kg): ", user masukin 100, trus "Masukkan sampah yang didaur ulang (kg): ", user masukin 40. Program hitung 100 - 40 = 60.0, disimpen di <span class="code-term">sisa</span>. Karena <span class="code-term">sisa > 0</span> (60.0 > 0, True), masuk ke blok <span class="code-term">if</span> dan nampilin pesan sisa.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama operasi <span class="code-term">-</span> dari Chapter 3 dan <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan berdasarkan perhitungan interaktif. Aku pilih variabel <span class="code-term">sampah</span> dan <span class="code-term">daur</span> biar jelas, dan tema daur ulang karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">float()</span> biar bisa desimal, dan <span class="code-term">sisa > 0</span> buat cek apakah masih ada sisa. Struktur ini bikin kamu paham cara bikin keputusan dengan data interaktif, dan gampang diinget karena mirip kayak ngecek sisa tugas! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>7. If-Else dengan Operasi (Agak Menantang)</h4>
+    <pre>lampu = 5
+rumah = 3
+total = lampu * rumah
+if total > 10:
+    print(f"Arry Hutomo hemat {total} lampu, keren!")
+else:
+    print("Arry Hutomo perlu hemat lebih banyak lampu!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo hemat 15 lampu, keren!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo hemat 15 lampu, keren!" karena kita nyimpen 5 di variabel <span class="code-term">lampu</span> dan 3 di variabel <span class="code-term">rumah</span>, trus kalikan jadi 5 * 3 = 15, disimpen di <span class="code-term">total</span>. Karena <span class="code-term">total > 10</span> (15 > 10, True), masuk ke blok <span class="code-term">if</span> dan nampilin pesan positif.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi kali <span class="code-term">*</span> dari Chapter 3 sama <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan berdasarkan perhitungan. Aku pilih variabel <span class="code-term">lampu</span> dan <span class="code-term">rumah</span> biar jelas, dan tema hemat lampu karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Aku pake <span class="code-term">total > 10</span> sebagai batas "cukup banyak". Struktur ini bikin kamu paham cara bikin keputusan dengan hasil perhitungan, dan gampang diinget karena mirip kayak ngecek apakah kerjaan udah cukup! Coba di VSCode, gampang kok! ⚡</p>
+    
+    <h4>8. If-Else dengan Input (Menantang)</h4>
+    <pre>donasi = int(input("Masukkan jumlah donasi (Rp): "))
+if donasi >= 1000000:
+    print("Arry Hutomo donasi besar buat UMKM!")
+else:
+    print("Arry Hutomo bisa donasi lebih banyak!")</pre>
+    <p><strong>Output (misalnya user masukkan 1500000):</strong></p>
+    <pre>Masukkan jumlah donasi (Rp): 1500000
+Arry Hutomo donasi besar buat UMKM!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah donasi (Rp): ", user masukin 1500000, trus program nampilin "Arry Hutomo donasi besar buat UMKM!" karena <span class="code-term">donasi >= 1000000</span> (1500000 >= 1000000, True), masuk ke blok <span class="code-term">if</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama <span class="code-term">if-else</span> dengan perbandingan <span class="code-term">>=</span>, biar kamu paham cara bikin keputusan interaktif finansial. Aku pilih variabel <span class="code-term">donasi</span> biar jelas, dan tema donasi UMKM karena Arry Hutomo pengen kita bantu ekonomi lokal, sesuai isu ketahanan ekonomi. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan <span class="code-term">>= 1000000</span> sebagai batas "besar". Struktur ini bikin kamu paham cara bikin keputusan interaktif, dan gampang diinget karena mirip kayak ngecek dompet! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>9. If-Else dengan Chapter 1 (Menantang)</h4>
+    <pre>pohon = 60
+if pohon > 50:
+    print(f"Arry Hutomo tanam {pohon} pohon!\nKeren banget!")
+else:
+    print(f"Arry Hutomo tanam {pohon} pohon!\nAyo tambah lagi!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 60 pohon!
+Keren banget!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya ada dua baris: "Arry Hutomo tanam 60 pohon!" di baris pertama, dan "Keren banget!" di baris kedua. Kita nyimpen 60 di variabel <span class="code-term">pohon</span>, trus cek <span class="code-term">pohon > 50</span> (60 > 50, True), masuk ke blok <span class="code-term">if</span>. Kita pake <span class="code-term">\n</span> dari Chapter 1 buat pindah baris.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">if-else</span> sama <span class="code-term">\n</span> dari Chapter 1, biar kamu paham cara bikin keputusan dengan format rapi. Aku pilih variabel <span class="code-term">pohon</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Aku pake <span class="code-term">pohon > 50</span> sebagai batas, dan <span class="code-term">\n</span> bikin pesan terstruktur. Struktur ini bikin kamu paham cara bikin keputusan dengan output rapi, dan gampang diinget karena mirip kayak bikin pesan motivasi! Coba di VSCode, bakal suka sama hasilnya! 🌳</p>
+    
+    <h4>10. If-Else dengan Separator (Menantang)</h4>
+    <pre>sampah = 15.5
+if sampah > 10:
+    print("Arry Hutomo daur ulang", sampah, "kg", "keren!", sep=" - ")
+else:
+    print("Arry Hutomo daur ulang", sampah, "kg", "tambah lagi!", sep=" - ")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang - 15.5 - kg - keren!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang - 15.5 - kg - keren!" karena kita nyimpen 15.5 di variabel <span class="code-term">sampah</span>, trus cek <span class="code-term">sampah > 10</span> (15.5 > 10, True), masuk ke blok <span class="code-term">if</span>. Kita pake <span class="code-term">sep=" - "</span> dari Chapter 1 buat pisahin item dalam <span class="code-term">print()</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">if-else</span> sama <span class="code-term">sep</span> dari Chapter 1, biar kamu paham cara bikin keputusan dengan pemisah custom. Aku pilih variabel <span class="code-term">sampah</span> biar jelas, dan tema daur ulang karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">sampah > 10</span> sebagai batas, dan <span class="code-term">sep=" - "</span> bikin output rapi. Struktur ini bikin kamu paham cara bikin keputusan dengan format kece, dan gampang diinget karena mirip kayak bikin kalimat sambung! Coba di VSCode, bakal rapi banget! ♻️</p>
+    
+    <h4>11. If-Else dengan End (Agak Sulit)</h4>
+    <pre>lampu = 12
+if lampu > 10:
+    print(f"Arry Hutomo hemat {lampu} lampu ", end="")
+    print("di rumah!")
+else:
+    print(f"Arry Hutomo hemat {lampu} lampu ", end="")
+    print("tambah lagi!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo hemat 12 lampu di rumah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo hemat 12 lampu di rumah!" dalam satu baris karena kita nyimpen 12 di variabel <span class="code-term">lampu</span>, trus cek <span class="code-term">lampu > 10</span> (12 > 10, True), masuk ke blok <span class="code-term">if</span>. Kita pake <span class="code-term">end=""</span> dari Chapter 1 biar <span class="code-term">print()</span> kedua nyambung di baris yang sama.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">if-else</span> sama <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin keputusan dengan output dalam satu baris. Aku pilih variabel <span class="code-term">lampu</span> biar jelas, dan tema hemat lampu karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Aku pake <span class="code-term">lampu > 10</span> sebagai batas, dan <span class="code-term">end=""</span> bikin output nyambung. Struktur ini bikin kamu paham cara bikin keputusan dengan format rapi, dan gampang diinget karena mirip kayak nyatuin dua kalimat! Coba di VSCode, bakal suka sama trik ini! ⚡</p>
+    
+    <h4>12. If-Else dengan Operasi Kompleks (Sulit)</h4>
+    <pre>pohon = 100
+tambah = 50
+mati = 20
+total = pohon + tambah - mati
+if total > 100:
+    print(f"Arry Hutomo punya {total} pohon, banyak banget!")
+else:
+    print(f"Arry Hutomo punya {total} pohon, tambah lagi!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo punya 130 pohon, banyak banget!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo punya 130 pohon, banyak banget!" karena kita nyimpen 100 di variabel <span class="code-term">pohon</span>, 50 di <span class="code-term">tambah</span>, dan 20 di <span class="code-term">mati</span>. Program hitung 100 + 50 - 20 = 130, disimpen di <span class="code-term">total</span>. Karena <span class="code-term">total > 100</span> (130 > 100, True), masuk ke blok <span class="code-term">if</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi <span class="code-term">+</span> dan <span class="code-term">-</span> dari Chapter 3 sama <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan berdasarkan perhitungan kompleks. Aku pilih variabel <span class="code-term">pohon</span>, <span class="code-term">tambah</span>, dan <span class="code-term">mati</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Aku pake <span class="code-term">total > 100</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin keputusan dengan perhitungan berlapis, dan gampang diinget karena mirip kayak ngecek stok! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. If-Else dengan Input dan Modulus (Sulit)</h4>
+    <pre>donasi = int(input("Masukkan total donasi (Rp): "))
+penerima = int(input("Masukkan jumlah penerima: "))
+sisa = donasi % penerima
+if sisa == 0:
+    print("Arry Hutomo bagi donasi merata!")
+else:
+    print(f"Arry Hutomo punya sisa Rp {sisa}!")</pre>
+    <p><strong>Output (misalnya user masukkan 1000000 dan 3):</strong></p>
+    <pre>Masukkan total donasi (Rp): 1000000
+Masukkan jumlah penerima: 3
+Arry Hutomo punya sisa Rp 1!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan total donasi (Rp): ", user masukin 1000000, trus "Masukkan jumlah penerima: ", user masukin 3. Program hitung sisa 1000000 % 3 = 1, disimpen di <span class="code-term">sisa</span>. Karena <span class="code-term">sisa == 0</span> (1 == 0, False), masuk ke blok <span class="code-term">else</span> dan nampilin sisa.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, operasi modulus <span class="code-term">%</span> dari Chapter 3, dan <span class="code-term">if-else</span>, biar kamu paham cara cek sisa bagi secara interaktif. Aku pilih variabel <span class="code-term">donasi</span> dan <span class="code-term">penerima</span> biar jelas, dan tema donasi karena Arry Hutomo peduli sama orang yang membutuhkan, sesuai isu sosial. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan <span class="code-term">sisa == 0</span> buat cek apakah pembagian merata. Struktur ini bikin kamu paham cara minta data trus cek sisa, dan gampang diinget karena mirip kayak ngitung sisa kue! Coba di VSCode, gampang kok! ❤️</p>
+    
+    <h4>14. If-Else dengan Floor Division dan Chapter 1 (Lebih Sulit)</h4>
+    <pre>lampu = int(input("Masukkan jumlah lampu: "))
+rumah = int(input("Masukkan jumlah rumah: "))
+bagi = lampu // rumah
+if bagi > 5:
+    print(f"Arry Hutomo bagi {bagi} lampu per rumah!\nLuar biasa!")
+else:
+    print(f"Arry Hutomo bagi {bagi} lampu per rumah!\nTambah lagi!")</pre>
+    <p><strong>Output (misalnya user masukkan 25 dan 4):</strong></p>
+    <pre>Masukkan jumlah lampu: 25
+Masukkan jumlah rumah: 4
+Arry Hutomo bagi 6 lampu per rumah!
+Luar biasa!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah lampu: ", user masukin 25, trus "Masukkan jumlah rumah: ", user masukin 4. Program bagi pake <span class="code-term">//</span> jadi 25 // 4 = 6, disimpen di <span class="code-term">bagi</span>. Karena <span class="code-term">bagi > 5</span> (6 > 5, True), masuk ke blok <span class="code-term">if</span> dan nampilin pesan positif dengan <span class="code-term">\n</span> buat pindah baris.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, operasi floor division <span class="code-term">//</span> dari Chapter 3, <span class="code-term">if-else</span>, dan <span class="code-term">\n</span> dari Chapter 1, biar kamu paham cara bikin keputusan interaktif dengan format rapi. Aku pilih variabel <span class="code-term">lampu</span> dan <span class="code-term">rumah</span> biar jelas, dan tema hemat lampu karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Aku pake <span class="code-term">int()</span>, <span class="code-term">//</span> biar hasil bulat, dan <span class="code-term">bagi > 5</span> sebagai batas "luar biasa". Struktur ini bikin kamu paham cara bikin keputusan interaktif dengan perhitungan, dan gampang diinget karena mirip kayak bagi-bagi permen! Coba di VSCode, bakal suka sama trik ini! ⚡</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre>sampah = float(input("Masukkan berat sampah awal (kg): "))
+daur = float(input("Masukkan sampah yang didaur ulang (kg): "))
+tambah = float(input("Masukkan sampah tambahan (kg): "))
+total = (sampah - daur + tambah) * 2 / 3
+if total > 50:
+    print(f"Arry Hutomo hitung sampah {total} kg!\nLuar biasa ", "bareng ECC Team!", sep="=>", end="")
+    print("yuk!")
+else:
+    print(f"Arry Hutomo hitung sampah {total} kg!\nTambah lagi ", "bareng ECC Team!", sep="=>", end="")
+    print("yuk!")</pre>
+    <p><strong>Output (misalnya user masukkan 100, 40, dan 20):</strong></p>
+    <pre>Masukkan berat sampah awal (kg): 100
+Masukkan sampah yang didaur ulang (kg): 40
+Masukkan sampah tambahan (kg): 20
+Arry Hutomo hitung sampah 53.333333333333336 kg!
+Luar biasa =>bareng ECC Team!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin 100, 40, dan 20. Program hitung (100 - 40 + 20) * 2 / 3 = (80) * 2 / 3 = 160 / 3 = 53.333333333333336, disimpen di <span class="code-term">total</span>. Karena <span class="code-term">total > 50</span> (53.333... > 50, True), masuk ke blok <span class="code-term">if</span>. Outputnya jadi dua baris: "Arry Hutomo hitung sampah 53.333333333333336 kg!" di baris pertama, dan "Luar biasa =>bareng ECC Team!yuk!" di baris kedua, pake <span class="code-term">\n</span>, <span class="code-term">sep="=>"</span>, dan <span class="code-term">end=""</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, operasi <span class="code-term">-</span>, <span class="code-term">+</span>, <span class="code-term">*</span>, <span class="code-term">/</span> dari Chapter 3, <span class="code-term">if-else</span>, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin keputusan interaktif yang canggih. Aku pilih variabel <span class="code-term">sampah</span>, <span class="code-term">daur</span>, dan <span class="code-term">tambah</span> biar jelas, dan tema hitung sampah karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">float()</span> biar bisa desimal, dan <span class="code-term">total > 50</span> sebagai batas "luar biasa". Struktur ini bikin kamu paham cara bikin keputusan kompleks dengan format kece, dan gampang diinget karena mirip kayak bikin laporan! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Pastiin indentasi di dalam <span class="code-term">if</span> dan <span class="code-term">else</span> bener, biar Python tahu mana blok yang harus dijalanin. ✅</li>
+        <li><strong>Don't:</strong> Jangan salah indentasi, misalnya ga kasih spasi di dalam blok <span class="code-term">if</span>, nanti error. ❌</li>
+        <li><strong>Do:</strong> Pake operator perbandingan yang tepat, kayak <span class="code-term">></span>, <span class="code-term">>=</span>, atau <span class="code-term">==</span>, biar keputusan sesuai. 🌟</li>
+        <li><strong>Don't:</strong> Jangan lupa tanda <span class="code-term">:</span> setelah <span class="code-term">if</span> atau <span class="code-term">else</span>, nanti error. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap keputusan yang kamu buat di kode membawa kita lebih dekat ke solusi besar! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami bikin keputusan coding yang tepat biar dunia lebih baik. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12: File Handling, Baca dan Tulis Data! 📂</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 12: File Handling, Baca dan Tulis Data! 📂</h2>
+    <div class="quote">
+        "File handling itu kayak buku harian, simpan dan baca data kapan aja! 📂✨" <br>
+        Doa: "Ya Tuhan, bantu kami menyimpan data dengan rapi biar program kami berguna. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar tentang file handling di Python, biar kita bisa baca dan tulis data ke file. Namun, karena kita ada di lingkungan Pyodide yang ga support I/O file lokal, kita akan simulasi file handling dengan string output. Dalam praktik asli, kamu bisa coba kode ini di VSCode dengan file sungguhan. Kita pake variabel (Chapter 2), operasi (Chapter 3), input (Chapter 4), pengkondisian (Chapter 5), perulangan (Chapter 6), list (Chapter 7), dictionary (Chapter 8), fungsi (Chapter 9), modul (Chapter 10), error handling (Chapter 11), dan <span class="code-term">print</span> (Chapter 1). Yuk, kita simulasi file handling bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: File Handling buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Tulis ke File (Super Gampang)</h4>
+    <pre># Simulasi menulis ke file pohon.txt
+# with open("pohon.txt", "w") as file:
+#     file.write("Arry Hutomo tanam 10 pohon Mangrove!\n")
+print("Simulasi isi file pohon.txt:")
+print("Arry Hutomo tanam 10 pohon Mangrove!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi isi file pohon.txt:
+Arry Hutomo tanam 10 pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan isi file <span class="code-term">pohon.txt</span> dengan teks "Arry Hutomo tanam 10 pohon Mangrove!". Dalam praktik, kode ini bakal bikin file <span class="code-term">pohon.txt</span> dan tulis teks ke dalamnya.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini sederhana buat kenalin cara tulis ke file pake <span class="code-term">open()</span> dengan mode <span class="code-term">"w"</span> (write). Aku simulasi karena ga bisa I/O file di sini, tapi dalam praktik, file bakal dibuat. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara dasar tulis file, dan gampang diinget karena mirip kayak nulis di buku harian! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Baca dari File (Gampang)</h4>
+    <pre># Simulasi file pohon.txt berisi:
+# Arry Hutomo tanam 10 pohon Mangrove!
+# with open("pohon.txt", "r") as file:
+#     isi = file.read()
+# print(isi)
+print("Simulasi baca file pohon.txt:")
+print("Arry Hutomo tanam 10 pohon Mangrove!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi baca file pohon.txt:
+Arry Hutomo tanam 10 pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan baca file <span class="code-term">pohon.txt</span> dan nampilin "Arry Hutomo tanam 10 pohon Mangrove!". Dalam praktik, kode ini bakal baca isi file sungguhan.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara baca file pake <span class="code-term">open()</span> dengan mode <span class="code-term">"r"</span> (read). Aku simulasi karena ga bisa I/O file di sini, tapi dalam praktik, kode ini bakal baca file. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara dasar baca file, dan gampang diinget karena mirip kayak baca buku harian! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Tulis Multiple Baris ke File (Gampang)</h4>
+    <pre># Simulasi menulis ke file pohon.txt
+# with open("pohon.txt", "w") as file:
+#     file.write("Arry Hutomo tanam 10 pohon Mangrove!\n")
+#     file.write("Arry Hutomo tanam 5 pohon Kelapa!\n")
+print("Simulasi isi file pohon.txt:")
+print("Arry Hutomo tanam 10 pohon Mangrove!")
+print("Arry Hutomo tanam 5 pohon Kelapa!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi isi file pohon.txt:
+Arry Hutomo tanam 10 pohon Mangrove!
+Arry Hutomo tanam 5 pohon Kelapa!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan isi file <span class="code-term">pohon.txt</span> dengan dua baris teks. Dalam praktik, kode ini bakal tulis dua baris ke file.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara tulis multiple baris ke file pake <span class="code-term">write()</span>. Aku pake <span class="code-term">\n</span> biar tiap pesan di baris baru. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara tulis banyak baris, dan gampang diinget karena mirip kayak nulis daftar di buku harian! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Baca File Baris demi Baris (Masih Gampang)</h4>
+    <pre># Simulasi file pohon.txt berisi:
+# Arry Hutomo tanam 10 pohon Mangrove!
+# Arry Hutomo tanam 5 pohon Kelapa!
+# with open("pohon.txt", "r") as file:
+#     for line in file:
+#         print(line.strip())
+print("Simulasi baca file pohon.txt baris demi baris:")
+print("Arry Hutomo tanam 10 pohon Mangrove!")
+print("Arry Hutomo tanam 5 pohon Kelapa!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi baca file pohon.txt baris demi baris:
+Arry Hutomo tanam 10 pohon Mangrove!
+Arry Hutomo tanam 5 pohon Kelapa!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan baca file <span class="code-term">pohon.txt</span> baris demi baris dan nampilin dua baris teks. Dalam praktik, kode ini bakal baca file baris demi baris.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara baca file baris demi baris pake loop <span class="code-term">for</span>. Aku pake <span class="code-term">strip()</span> biar hapus newline di akhir baris. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara baca file per baris, dan gampang diinget karena mirip kayak baca buku harian baris demi baris! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. Tulis ke File dengan Input (Mulai Agak Menantang)</h4>
+    <pre>pohon = input("Masukkan jenis pohon: ")
+jumlah = input("Masukkan jumlah pohon: ")
+# Simulasi menulis ke file pohon.txt
+# with open("pohon.txt", "w") as file:
+#     file.write(f"Arry Hutomo tanam {jumlah} pohon {pohon}!\n")
+print("Simulasi isi file pohon.txt:")
+print(f"Arry Hutomo tanam {jumlah} pohon {pohon}!")</pre>
+    <p><strong>Output (misalnya user masukkan "Mangrove", 10):</strong></p>
+    <pre>Masukkan jenis pohon: Mangrove
+Masukkan jumlah pohon: 10
+Simulasi isi file pohon.txt:
+Arry Hutomo tanam 10 pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan isi file <span class="code-term">pohon.txt</span> dengan teks berdasarkan input user. Dalam praktik, kode ini bakal tulis input user ke file.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama file handling, biar kamu paham cara tulis data dari user ke file. Aku simulasi karena ga bisa I/O file di sini. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin file interaktif, dan gampang diinget karena mirip kayak nulis pesan user di buku harian! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. Baca File dengan For Loop (Agak Menantang)</h4>
+    <pre># Simulasi file pohon.txt berisi:
+# Arry Hutomo tanam 10 pohon Mangrove!
+# Arry Hutomo tanam 5 pohon Kelapa!
+# Arry Hutomo tanam 8 pohon Mahoni!
+# with open("pohon.txt", "r") as file:
+#     for line in file:
+#         print(f"Data: {line.strip()}")
+print("Simulasi baca file pohon.txt dengan for loop:")
+print("Data: Arry Hutomo tanam 10 pohon Mangrove!")
+print("Data: Arry Hutomo tanam 5 pohon Kelapa!")
+print("Data: Arry Hutomo tanam 8 pohon Mahoni!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi baca file pohon.txt dengan for loop:
+Data: Arry Hutomo tanam 10 pohon Mangrove!
+Data: Arry Hutomo tanam 5 pohon Kelapa!
+Data: Arry Hutomo tanam 8 pohon Mahoni!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan baca file <span class="code-term">pohon.txt</span> baris demi baris dengan tambahan "Data: " di depan tiap baris.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin file handling sama <span class="code-term">for</span> loop, biar kamu paham cara baca file dan olah tiap baris. Aku pake <span class="code-term">strip()</span> biar hapus newline. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara olah file per baris, dan gampang diinget karena mirip kayak baca daftar di buku harian! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Tulis List ke File (Agak Menantang)</h4>
+    <pre>pohon_list = ["Mangrove: 10", "Kelapa: 5", "Mahoni: 8"]
+# Simulasi menulis ke file pohon.txt
+# with open("pohon.txt", "w") as file:
+#     for pohon in pohon_list:
+#         file.write(f"Arry Hutomo tanam {pohon} pohon!\n")
+print("Simulasi isi file pohon.txt:")
+for pohon in pohon_list:
+    print(f"Arry Hutomo tanam {pohon} pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi isi file pohon.txt:
+Arry Hutomo tanam Mangrove: 10 pohon!
+Arry Hutomo tanam Kelapa: 5 pohon!
+Arry Hutomo tanam Mahoni: 8 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan isi file <span class="code-term">pohon.txt</span> dengan tiga baris teks dari list.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin file handling sama list dan <span class="code-term">for</span> loop, biar kamu paham cara tulis list ke file. Aku simulasi karena ga bisa I/O file di sini. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara tulis data dari list, dan gampang diinget karena mirip kayak nulis daftar belanja ke buku harian! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>8. Baca File dan Tampilkan dengan If-Else (Menantang)</h4>
+    <pre># Simulasi file pohon.txt berisi:
+# Arry Hutomo tanam 10 pohon Mangrove!
+# Arry Hutomo tanam 5 pohon Kelapa!
+# Arry Hutomo tanam 8 pohon Mahoni!
+# with open("pohon.txt", "r") as file:
+#     for line in file:
+#         jumlah = int(line.split()[3])
+#         if jumlah > 7:
+#             print(f"Banyak: {line.strip()}")
+#         else:
+#             print(f"Tambah: {line.strip()}")
+print("Simulasi baca file pohon.txt dengan if-else:")
+print("Banyak: Arry Hutomo tanam 10 pohon Mangrove!")
+print("Tambah: Arry Hutomo tanam 5 pohon Kelapa!")
+print("Banyak: Arry Hutomo tanam 8 pohon Mahoni!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi baca file pohon.txt dengan if-else:
+Banyak: Arry Hutomo tanam 10 pohon Mangrove!
+Tambah: Arry Hutomo tanam 5 pohon Kelapa!
+Banyak: Arry Hutomo tanam 8 pohon Mahoni!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan baca file dan cek jumlah pohon: kalo > 7, tambah "Banyak"; kalo ga, tambah "Tambah".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin file handling, <span class="code-term">for</span> loop, dan <span class="code-term">if-else</span>, biar kamu paham cara baca file dan olah data dengan kondisi. Aku simulasi ekstraksi jumlah pake <span class="code-term">split()</span>. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara olah file dengan logika, dan gampang diinget karena mirip kayak baca buku harian dan ngecek jumlah! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. Tulis Dictionary ke File (Menantang)</h4>
+    <pre>berat_dict = {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}
+# Simulasi menulis ke file sampah.txt
+# with open("sampah.txt", "w") as file:
+#     for jenis, berat in berat_dict.items():
+#         file.write(f"Arry Hutomo daur ulang {berat} kg {jenis}!\n")
+print("Simulasi isi file sampah.txt:")
+for jenis, berat in berat_dict.items():
+    print(f"Arry Hutomo daur ulang {berat} kg {jenis}!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi isi file sampah.txt:
+Arry Hutomo daur ulang 5.5 kg Plastik!
+Arry Hutomo daur ulang 3.0 kg Kertas!
+Arry Hutomo daur ulang 2.5 kg Organik!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan isi file <span class="code-term">sampah.txt</span> dengan tiga baris teks dari dictionary.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin file handling sama dictionary dan <span class="code-term">for</span> loop, biar kamu paham cara tulis dictionary ke file. Aku pake <span class="code-term">items()</span> buat iterasi kunci dan nilai. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara tulis dictionary, dan gampang diinget karena mirip kayak nulis catatan ke buku harian! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>10. Baca File dan Gunakan While Loop (Menantang)</h4>
+    <pre># Simulasi file pohon.txt berisi:
+# Arry Hutomo tanam 10 pohon Mangrove!
+# Arry Hutomo tanam 5 pohon Kelapa!
+# Arry Hutomo tanam 8 pohon Mahoni!
+# with open("pohon.txt", "r") as file:
+#     lines = file.readlines()
+#     i = 0
+#     while i < len(lines):
+#         print(f"Baris {i+1}: {lines[i].strip()}")
+#         i = i + 1
+print("Simulasi baca file pohon.txt dengan while loop:")
+print("Baris 1: Arry Hutomo tanam 10 pohon Mangrove!")
+print("Baris 2: Arry Hutomo tanam 5 pohon Kelapa!")
+print("Baris 3: Arry Hutomo tanam 8 pohon Mahoni!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi baca file pohon.txt dengan while loop:
+Baris 1: Arry Hutomo tanam 10 pohon Mangrove!
+Baris 2: Arry Hutomo tanam 5 pohon Kelapa!
+Baris 3: Arry Hutomo tanam 8 pohon Mahoni!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan baca file pake <span class="code-term">readlines()</span> dan <span class="code-term">while</span> loop, nampilin tiap baris dengan nomor.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin file handling sama <span class="code-term">while</span> loop, biar kamu paham cara baca file pake pendekatan lain. Aku pake <span class="code-term">readlines()</span> buat baca semua baris jadi list. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara baca file pake <span class="code-term">while</span>, dan gampang diinget karena mirip kayak baca buku harian sambil nomorin baris! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>11. Tulis ke File dengan Try-Except (Agak Sulit)</h4>
+    <pre>try:
+    pohon = input("Masukkan jenis pohon: ")
+    jumlah = int(input("Masukkan jumlah pohon: "))
+    # Simulasi menulis ke file pohon.txt
+    # with open("pohon.txt", "w") as file:
+    #     file.write(f"Arry Hutomo tanam {jumlah} pohon {pohon}!\n")
+    print("Simulasi isi file pohon.txt:")
+    print(f"Arry Hutomo tanam {jumlah} pohon {pohon}!")
+except ValueError:
+    print("Jumlah pohon harus angka!")</pre>
+    <p><strong>Output (misalnya user masukkan "Mangrove", "abc"):</strong></p>
+    <pre>Masukkan jenis pohon: Mangrove
+Masukkan jumlah pohon: abc
+Jumlah pohon harus angka!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Jumlah pohon harus angka!" karena user masukin "abc" untuk jumlah, yang menyebabkan <span class="code-term">ValueError</span>. Program masuk ke blok <span class="code-term">except</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin file handling sama <span class="code-term">try-except</span> dari Chapter 11, biar kamu paham cara nangani error saat tulis file. Aku simulasi penulisan file dan tangkap <span class="code-term">ValueError</span> kalo input jumlah salah. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error saat tulis file, dan gampang diinget karena mirip kayak nulis di buku harian tapi siap kalo salah! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>12. Baca File dengan Try-Except (Sulit)</h4>
+    <pre>try:
+    # Simulasi file pohon.txt berisi:
+    # Arry Hutomo tanam 10 pohon Mangrove!
+    # with open("pohon.txt", "r") as file:
+    #     isi = file.read()
+    # print(isi)
+    print("Simulasi baca file pohon.txt:")
+    print("Arry Hutomo tanam 10 pohon Mangrove!")
+except FileNotFoundError:
+    print("File pohon.txt tidak ditemukan!")</pre>
+    <p><strong>Output (misalnya file ada):</strong></p>
+    <pre>Simulasi baca file pohon.txt:
+Arry Hutomo tanam 10 pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan baca file <span class="code-term">pohon.txt</span>. Dalam praktik, kalo file ga ada, bakal masuk ke blok <span class="code-term">except</span> dan nampilin pesan error.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin file handling sama <span class="code-term">try-except</span>, biar kamu paham cara nangani error saat baca file. Aku tangkap <span class="code-term">FileNotFoundError</span> biar program ga crash kalo file ga ada. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error saat baca file, dan gampang diinget karena mirip kayak baca buku harian tapi siap kalo bukunya hilang! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. Tulis dan Baca File dengan Fungsi (Sulit)</h4>
+    <pre>def tulis_dan_baca_sampah(jenis, berat):
+    # Simulasi menulis ke file sampah.txt
+    # with open("sampah.txt", "w") as file:
+    #     file.write(f"Arry Hutomo daur ulang {berat} kg {jenis}!\n")
+    print("Simulasi isi file sampah.txt:")
+    print(f"Arry Hutomo daur ulang {berat} kg {jenis}!")
+    # Simulasi baca file sampah.txt
+    # with open("sampah.txt", "r") as file:
+    #     isi = file.read()
+    # print("Simulasi baca file:")
+    # print(isi)
+    print("Simulasi baca file:")
+    print(f"Arry Hutomo daur ulang {berat} kg {jenis}!")
+
+tulis_dan_baca_sampah("Plastik", 5.5)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Simulasi isi file sampah.txt:
+Arry Hutomo daur ulang 5.5 kg Plastik!
+Simulasi baca file:
+Arry Hutomo daur ulang 5.5 kg Plastik!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan tulis dan baca file <span class="code-term">sampah.txt</span> dengan teks yang sama.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin file handling sama fungsi, biar kamu paham cara tulis dan baca file dalam satu fungsi. Aku simulasi kedua operasi ini. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara gabungin file handling dengan fungsi, dan gampang diinget karena mirip kayak nulis dan baca buku harian dalam satu langkah! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>14. Tulis dan Baca File dengan Try-Except dan Modul (Lebih Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def simpan_dan_baca_sampah(jenis, berat):
+    try:
+        # Simulasi menulis ke file sampah.txt
+        # with open("sampah.txt", "w") as file:
+        #     file.write(f"Arry Hutomo daur ulang {berat} kg {jenis}!\n")
+        print("Simulasi isi file sampah.txt:")
+        print(f"Arry Hutomo daur ulang {berat} kg {jenis}!")
+        # Simulasi baca file sampah.txt
+        # with open("sampah.txt", "r") as file:
+        #     isi = file.read()
+        # print("Simulasi baca file:")
+        # print(isi)
+        print("Simulasi baca file:")
+        print(f"Arry Hutomo daur ulang {berat} kg {jenis}!")
+    except IOError:
+        print("Terjadi error saat menulis atau membaca file!")
+
+# File utama
+# from lingkungan import simpan_dan_baca_sampah
+try:
+    berat = float(input("Masukkan berat sampah (kg): "))
+    simpan_dan_baca_sampah("Plastik", berat)
+except ValueError:
+    print("Berat harus angka!")</pre>
+    <p><strong>Output (misalnya user masukkan 5.5):</strong></p>
+    <pre>Masukkan berat sampah (kg): 5.5
+Simulasi isi file sampah.txt:
+Arry Hutomo daur ulang 5.5 kg Plastik!
+Simulasi baca file:
+Arry Hutomo daur ulang 5.5 kg Plastik!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mensimulasikan tulis dan baca file dengan input user. Dalam praktik, kalo ada error I/O, bakal masuk ke blok <span class="code-term">except IOError</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin file handling, <span class="code-term">try-except</span>, dan modul, biar kamu paham cara nangani error saat tulis dan baca file dari modul. Aku tangkap <span class="code-term">ValueError</span> di file utama dan <span class="code-term">IOError</span> di fungsi. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error di banyak lapisan, dan gampang diinget karena mirip kayak nulis dan baca buku harian dari kotak alat! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def simpan_dan_proses_sampah(berat_dict):
+    try:
+        # Simulasi menulis ke file sampah.txt
+        # with open("sampah.txt", "w") as file:
+        #     for jenis, berat in berat_dict.items():
+        #         file.write(f"Arry Hutomo daur ulang {berat} kg {jenis}!\n")
+        print("Simulasi isi file sampah.txt:")
+        total = 0
+        i = 0
+        while i < len(berat_dict):
+            jenis = list(berat_dict.keys())[i]
+            berat = berat_dict[jenis]
+            print(f"Arry Hutomo daur ulang {berat} kg {jenis}!")
+            total = total + berat
+            if total > 10:
+                print(f"Total {total} kg!\nCukup ", f"{jenis} banyak!", sep="=>", end="")
+                print("yuk!")
+            else:
+                print(f"Total {total} kg!\nTambah ", f"{jenis} kurang!", sep="=>", end="")
+                print("yuk!")
+            i = i + 1
+        # Simulasi baca file sampah.txt
+        # with open("sampah.txt", "r") as file:
+        #     print("Simulasi baca file:")
+        #     for line in file:
+        #         print(line.strip())
+        print("Simulasi baca file:")
+        for jenis, berat in berat_dict.items():
+            print(f"Arry Hutomo daur ulang {berat} kg {jenis}!")
+        return total
+    except IOError:
+        print("Terjadi error saat menulis atau membaca file!")
+        return 0
+
+# File utama
+# from lingkungan import simpan_dan_proses_sampah
+berat_dict = {}
+for i in range(3):
+    try:
+        jenis = input(f"Masukkan jenis sampah ke-{i+1}: ")
+        berat = float(input(f"Masukkan berat {jenis} (kg): "))
+        berat_dict[jenis] = berat
+    except ValueError:
+        print("Berat harus angka, coba lagi!")
+        i = i - 1
+hasil = simpan_dan_proses_sampah(berat_dict)
+print(f"Total akhir: {hasil} kg!")</pre>
+    <p><strong>Output (misalnya user masukkan "Plastik", 5.5, "Kertas", 3.0, "Organik", 2.5):</strong></p>
+    <pre>Masukkan jenis sampah ke-1: Plastik
+Masukkan berat Plastik (kg): 5.5
+Masukkan jenis sampah ke-2: Kertas
+Masukkan berat Kertas (kg): 3.0
+Masukkan jenis sampah ke-3: Organik
+Masukkan berat Organik (kg): 2.5
+Simulasi isi file sampah.txt:
+Arry Hutomo daur ulang 5.5 kg Plastik!
+Total 5.5 kg!
+Tambah =>Plastik kurang!yuk!
+Arry Hutomo daur ulang 3.0 kg Kertas!
+Total 8.5 kg!
+Tambah =>Kertas kurang!yuk!
+Arry Hutomo daur ulang 2.5 kg Organik!
+Total 11.0 kg!
+Cukup =>Organik banyak!yuk!
+Simulasi baca file:
+Arry Hutomo daur ulang 5.5 kg Plastik!
+Arry Hutomo daur ulang 3.0 kg Kertas!
+Arry Hutomo daur ulang 2.5 kg Organik!
+Total akhir: 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin data, lalu simulasi tulis ke file, hitung total, cek kondisi, dan baca file lagi. Total akhir ditampilin di akhir.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, <span class="code-term">while</span> loop, dictionary, operasi <span class="code-term">+</span>, <span class="code-term">if-else</span>, <span class="code-term">return</span>, <span class="code-term">try-except</span>, modul, file handling, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span>. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara kompleks file handling, dan gampang diinget karena mirip kayak bikin laporan lengkap dari buku harian! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Selalu tutup file pake <span class="code-term">with</span>, biar file otomatis ditutup dan ga error. ✅</li>
+        <li><strong>Don't:</strong> Jangan lupa nangani error pake <span class="code-term">try-except</span>, misalnya <span class="code-term">FileNotFoundError</span>, kalo ga program crash. ❌</li>
+        <li><strong>Do:</strong> Pake mode yang tepat, kayak <span class="code-term">"w"</span> buat tulis, <span class="code-term">"r"</span> buat baca, biar ga salah operasi. 🌟</li>
+        <li><strong>Don't:</strong> Jangan pake <span class="code-term">write()</span> di mode <span class="code-term">"r"</span>, nanti error <span class="code-term">io.UnsupportedOperation</span>. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap data yang kamu simpan adalah langkah menuju program yang lebih berguna! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

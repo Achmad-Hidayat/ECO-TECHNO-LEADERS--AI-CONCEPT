@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 19: JSON Handling, Olah Data Terstruktur dengan Mudah! 🗂️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 19: JSON Handling, Olah Data Terstruktur dengan Mudah! 🗂️</h2>
+    <div class="quote">
+        "JSON itu kayak kotak penyimpanan, bantu kita olah data dengan rapi! 🗂️✨" <br>
+        Doa: "Ya Tuhan, bantu kami mengelola data dengan terstruktur biar program kami efisien. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar cara mengelola data terstruktur pake JSON di Python dengan modul <span class="code-term">json</span>. JSON (JavaScript Object Notation) itu seperti kotak penyimpanan yang rapi untuk data, sering dipake buat simpan dan tukar data. Tema kita akan menggabungkan isu sosial ekonomi (seperti donasi untuk komunitas) dan lingkungan (seperti tanam pohon atau daur ulang). Kita akan pake semua konsep dari Chapter 1-18, termasuk logging dari Chapter 18. Yuk, kita jadi pengelola data bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: JSON Handling buat Isu Sosial Ekonomi dan Lingkungan 🌍💸</h3>
+    
+    <h4>1. Ubah Dictionary ke JSON (Super Gampang)</h4>
+    <pre>import json
+
+data = {"acara": "Tanam Pohon untuk Komunitas", "donasi": 500000}
+json_data = json.dumps(data)
+print(f"Data dalam JSON: {json_data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam JSON: {"acara": "Tanam Pohon untuk Komunitas", "donasi": 500000}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Data dalam JSON: {"acara": "Tanam Pohon untuk Komunitas", "donasi": 500000}" karena metode <span class="code-term">json.dumps()</span> mengubah dictionary Python <span class="code-term">data</span> menjadi string JSON. Formatnya mirip dictionary, tapi ini adalah string yang sesuai standar JSON, dengan tanda kutip ganda untuk string.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya kotak penyimpanan berisi rencana acara sosial lingkungan, yaitu tanam pohon untuk komunitas, lengkap dengan jumlah donasi yang terkumpul, dan kamu mau ubah kotak itu jadi format yang bisa dibaca di mana aja, kayak nyanyi lagu trus simpen nadanya dalam format universal. Di Python, kita bisa pake modul <span class="code-term">json</span> untuk ubah data Python (seperti dictionary) jadi format JSON. Aku mulai dengan impor <span class="code-term">import json</span> biar bisa pake modul ini. Aku bikin dictionary <span class="code-term">data</span> yang nyimpen rencana: kunci "acara" dengan nilai "Tanam Pohon untuk Komunitas" (menggabungkan isu lingkungan dan sosial), dan kunci "donasi" dengan nilai 500000 (isue ekonomi). Aku ubah dictionary ini ke string JSON pake <span class="code-term">json.dumps(data)</span>, yang artinya "dump to string", trus simpen hasilnya di variabel <span class="code-term">json_data</span>. Aku cetak string JSON-nya biar kamu lihat formatnya: dictionary Python berubah jadi string JSON yang valid dengan tanda kutip ganda untuk string. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini sederhana banget, cocok buat pemula, kayak nyimpen rencana acara dalam kotak penyimpanan yang rapi dan universal. Coba di VSCode, pasti langsung bisa! 🌱💸</p>
+    
+    <h4>2. Ubah JSON ke Dictionary (Gampang)</h4>
+    <pre>import json
+
+json_data = '{"acara": "Tanam Pohon untuk Komunitas", "donasi": 500000}'
+data = json.loads(json_data)
+print(f"Data dalam dictionary: {data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam dictionary: {'acara': 'Tanam Pohon untuk Komunitas', 'donasi': 500000}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Data dalam dictionary: {'acara': 'Tanam Pohon untuk Komunitas', 'donasi': 500000}" karena metode <span class="code-term">json.loads()</span> mengubah string JSON <span class="code-term">json_data</span> menjadi dictionary Python. Formatnya sekarang adalah dictionary yang bisa kita olah di Python, dengan kunci "acara" dan "donasi".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya kotak penyimpanan dalam format JSON yang berisi rencana acara tanam pohon untuk komunitas, dan kamu mau buka kotak itu biar bisa diolah lagi, kayak nyanyi lagu dari nada yang disimpen dalam format universal. Di Python, kita bisa pake <span class="code-term">json.loads()</span> untuk ubah string JSON jadi data Python, seperti dictionary, supaya bisa kita olah lebih lanjut. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin string JSON <span class="code-term">json_data</span> yang berisi '{"acara": "Tanam Pohon untuk Komunitas", "donasi": 500000}', ini adalah format JSON yang valid (harus pake tanda kutip ganda untuk string). Aku ubah string ini ke dictionary pake <span class="code-term">json.loads(json_data)</span>, yang artinya "load from string", trus simpen hasilnya di variabel <span class="code-term">data</span>. Aku cetak dictionary-nya biar kamu lihat datanya sekarang jadi dictionary Python yang bisa diolah, misalnya buat ambil nilai donasi atau nama acara. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini gampang dipahami, kayak membuka kotak penyimpanan JSON biar bisa diolah lagi dalam format Python yang lebih fleksibel. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>3. Ubah Dictionary ke JSON dengan Indentasi (Gampang)</h4>
+    <pre>import json
+
+data = {
+    "acara": "Tanam Pohon untuk Komunitas",
+    "donasi": 500000,
+    "lokasi": "Pantai"
+}
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON dengan indentasi:\n{json_data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam JSON dengan indentasi:
+{
+  "acara": "Tanam Pohon untuk Komunitas",
+  "donasi": 500000,
+  "lokasi": "Pantai"
+}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah JSON dengan format yang rapi karena kita tambah parameter <span class="code-term">indent=2</span> di <span class="code-term">json.dumps()</span>. String JSON ditampilkan dengan indentasi dua spasi untuk tiap level, bikin lebih gampang dibaca: tiap kunci-nilai berada di baris sendiri dengan indentasi yang rapi. Kunci "acara", "donasi", dan "lokasi" ditampilkan dengan jelas.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu nyimpen rencana acara tanam pohon untuk komunitas dalam kotak penyimpanan JSON, tapi kamu mau kotaknya ditata rapi biar gampang dibaca orang lain, kayak nyanyi lagu sambil tulis nadanya dengan spasi yang teratur supaya enak diliat. Di Python, kita bisa pake parameter <span class="code-term">indent</span> di <span class="code-term">json.dumps()</span> untuk bikin string JSON lebih rapi dan mudah dibaca. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin dictionary <span class="code-term">data</span> dengan tiga kunci: "acara" (nama acara sosial lingkungan), "donasi" (nilai donasi untuk komunitas), dan "lokasi" (tempat tanam pohon). Aku ubah dictionary ini ke string JSON pake <span class="code-term">json.dumps(data, indent=2)</span>, di mana <span class="code-term">indent=2</span> artinya tiap level JSON akan dikasih indentasi 2 spasi, bikin formatnya rapi: tiap kunci-nilai berada di baris sendiri dengan indentasi yang jelas. Aku cetak string JSON-nya dengan tambahan <span class="code-term">\n</span> biar lebih jelas di output. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini bikin kamu paham cara bikin JSON yang rapi, kayak nyimpen rencana acara dalam kotak penyimpanan dengan tata letak yang teratur dan mudah dibaca. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>4. Ubah JSON dengan Nested Data (Masih Gampang)</h4>
+    <pre>import json
+
+data = {
+    "acara": "Tanam Pohon untuk Komunitas",
+    "detail": {
+        "donasi": 500000,
+        "lokasi": "Pantai",
+        "pohon": 10
+    }
+}
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam JSON:
+{
+  "acara": "Tanam Pohon untuk Komunitas",
+  "detail": {
+    "donasi": 500000,
+    "lokasi": "Pantai",
+    "pohon": 10
+  }
+}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah JSON dengan data bersarang (nested). Dictionary <span class="code-term">data</span> punya kunci "detail" yang berisi dictionary lain dengan kunci "donasi", "lokasi", dan "pohon". Metode <span class="code-term">json.dumps()</span> dengan <span class="code-term">indent=2</span> ngatur formatnya rapi: dictionary dalam dictionary ditampilkan dengan indentasi tambahan, bikin struktur bersarangnya jelas.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya kotak penyimpanan besar untuk rencana acara tanam pohon, dan di dalamnya ada kotak kecil yang nyimpen detail acara, kayak nyanyi lagu sambil simpen nada utama dan sub-nada di folder terpisah biar lebih rapi. Di Python, JSON bisa nyimpen data bersarang, seperti dictionary dalam dictionary, yang berguna untuk struktur data yang kompleks. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin dictionary <span class="code-term">data</span> dengan kunci "acara" dan "detail". Kunci "detail" nyimpen dictionary lain yang punya kunci "donasi" (nilai donasi untuk komunitas), "lokasi" (tempat tanam pohon), dan "pohon" (jumlah pohon yang ditanam). Aku ubah dictionary ini ke string JSON pake <span class="code-term">json.dumps(data, indent=2)</span> biar rapi, trus cetak. Indentasi 2 spasi bikin struktur bersarangnya jelas: dictionary "detail" berada di dalam dictionary utama dengan indentasi tambahan. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini bikin kamu paham cara olah data bersarang di JSON, kayak nyimpen rencana acara dalam kotak besar yang punya kotak kecil di dalamnya untuk detail. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>5. For Loop dengan JSON (Mulai Agak Menantang)</h4>
+    <pre>import json
+
+data = [
+    {"acara": "Tanam Pohon 1", "donasi": 500000, "pohon": 10},
+    {"acara": "Tanam Pohon 2", "donasi": 300000, "pohon": 5},
+    {"acara": "Tanam Pohon 3", "donasi": 800000, "pohon": 8}
+]
+for item in data:
+    item["total"] = item["donasi"] / item["pohon"]
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam JSON:
+[
+  {
+    "acara": "Tanam Pohon 1",
+    "donasi": 500000,
+    "pohon": 10,
+    "total": 50000.0
+  },
+  {
+    "acara": "Tanam Pohon 2",
+    "donasi": 300000,
+    "pohon": 5,
+    "total": 60000.0
+  },
+  {
+    "acara": "Tanam Pohon 3",
+    "donasi": 800000,
+    "pohon": 8,
+    "total": 100000.0
+  }
+]</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah JSON dengan list yang berisi tiga dictionary. List <span class="code-term">data</span> awalnya punya tiga elemen, masing-masing dictionary dengan kunci "acara", "donasi", dan "pohon". Loop <span class="code-term">for</span> nambah kunci "total" ke tiap dictionary, yang dihitung dari donasi dibagi jumlah pohon: 500000/10 = 50000, 300000/5 = 60000, 800000/8 = 100000. Metode <span class="code-term">json.dumps()</span> dengan <span class="code-term">indent=2</span> ngatur formatnya rapi.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya tiga kotak penyimpanan yang masing-masing nyimpen rencana acara tanam pohon, dan kamu mau hitung biaya rata-rata per pohon (donasi dibagi jumlah pohon) untuk tiap acara, trus simpen hasilnya di JSON, kayak nyanyi lagu sambil hitung nada rata-rata tiap bait. Di Python, kita bisa pake list untuk nyimpen banyak dictionary, loop pake <span class="code-term">for</span> untuk olah data, dan ubah ke JSON. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin list <span class="code-term">data</span> yang berisi tiga dictionary, masing-masing nyimpen rencana acara: "Tanam Pohon 1" (500000, 10 pohon), "Tanam Pohon 2" (300000, 5 pohon), "Tanam Pohon 3" (800000, 8 pohon). Aku loop pake <span class="code-term">for item in data</span> untuk akses tiap dictionary, trus tambah kunci "total" dengan nilai donasi dibagi jumlah pohon (<span class="code-term">item["donasi"] / item["pohon"]</span>). Aku ubah list ini ke string JSON pake <span class="code-term">json.dumps(data, indent=2)</span> biar rapi, trus cetak. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi (biaya per pohon) dan lingkungan (tanam pohon). Struktur ini bikin kamu paham cara olah data dalam list dan simpen ke JSON, kayak nyimpen banyak rencana dalam album penyimpanan sambil hitung rata-rata biaya. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>6. While Loop dengan JSON (Agak Menantang)</h4>
+    <pre>import json
+
+data = [
+    {"acara": "Tanam Pohon 1", "donasi": 500000, "pohon": 10},
+    {"acara": "Tanam Pohon 2", "donasi": 300000, "pohon": 5},
+    {"acara": "Tanam Pohon 3", "donasi": 800000, "pohon": 8}
+]
+i = 0
+while i < len(data):
+    data[i]["total"] = data[i]["donasi"] / data[i]["pohon"]
+    i = i + 1
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam JSON:
+[
+  {
+    "acara": "Tanam Pohon 1",
+    "donasi": 500000,
+    "pohon": 10,
+    "total": 50000.0
+  },
+  {
+    "acara": "Tanam Pohon 2",
+    "donasi": 300000,
+    "pohon": 5,
+    "total": 60000.0
+  },
+  {
+    "acara": "Tanam Pohon 3",
+    "donasi": 800000,
+    "pohon": 8,
+    "total": 100000.0
+  }
+]</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya sama seperti sebelumnya: JSON dengan list tiga dictionary. Kali ini, kita pake <span class="code-term">while</span> loop untuk nambah kunci "total" ke tiap dictionary. Loop berjalan selama <span class="code-term">i</span> kurang dari panjang list (3), dan <span class="code-term">i</span> ditambah 1 tiap iterasi: i=0, i=1, i=2. Tiap iterasi, kita hitung biaya rata-rata per pohon dan simpen di kunci "total".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya tiga kotak penyimpanan rencana acara tanam pohon, dan kamu mau hitung biaya rata-rata per pohon satu per satu secara manual, trus simpen hasilnya di JSON, kayak nyanyi lagu sambil hitung nada rata-rata tiap bait dengan tangan biar lebih teliti. Di Python, kita bisa pake <span class="code-term">while</span> loop untuk olah data dalam list, mirip kayak <span class="code-term">for</span> loop tapi lebih manual. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin list <span class="code-term">data</span> dengan tiga dictionary, sama seperti sebelumnya. Aku inisialisasi <span class="code-term">i = 0</span>, trus loop pake <span class="code-term">while i < len(data)</span> biar berhenti setelah tiga elemen. Tiap iterasi, aku akses dictionary ke-<span class="code-term">i</span> pake <span class="code-term">data[i]</span>, hitung biaya rata-rata per pohon (<span class="code-term">data[i]["donasi"] / data[i]["pohon"]</span>), simpen di kunci "total", trus tambah <span class="code-term">i</span>. Aku ubah list ke JSON pake <span class="code-term">json.dumps(data, indent=2)</span> biar rapi, trus cetak. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini bikin kamu paham cara olah data dengan loop manual, kayak nyimpen rencana acara sambil hitung biaya rata-rata secara teliti. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>7. If-Else dengan JSON (Menantang)</h4>
+    <pre>import json
+
+data = [
+    {"acara": "Tanam Pohon 1", "donasi": 500000, "pohon": 10},
+    {"acara": "Tanam Pohon 2", "donasi": 300000, "pohon": 5},
+    {"acara": "Tanam Pohon 3", "donasi": 800000, "pohon": 8}
+]
+for item in data:
+    if item["donasi"] / item["pohon"] > 50000:
+        item["status"] = "Donasi cukup untuk pohon"
+    else:
+        item["status"] = "Donasi kurang untuk pohon"
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam JSON:
+[
+  {
+    "acara": "Tanam Pohon 1",
+    "donasi": 500000,
+    "pohon": 10,
+    "status": "Donasi kurang untuk pohon"
+  },
+  {
+    "acara": "Tanam Pohon 2",
+    "donasi": 300000,
+    "pohon": 5,
+    "status": "Donasi cukup untuk pohon"
+  },
+  {
+    "acara": "Tanam Pohon 3",
+    "donasi": 800000,
+    "pohon": 8,
+    "status": "Donasi cukup untuk pohon"
+  }
+]</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah JSON dengan list tiga dictionary. Loop <span class="code-term">for</span> nambah kunci "status" ke tiap dictionary berdasarkan kondisi: kalo biaya rata-rata per pohon (>50000), statusnya "Donasi cukup untuk pohon"; kalo ga, "Donasi kurang untuk pohon". Tanam Pohon 1 (50000, kurang), Tanam Pohon 2 (60000, cukup), Tanam Pohon 3 (100000, cukup).</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya tiga kotak penyimpanan rencana acara tanam pohon, dan kamu mau cek apakah donasi cukup untuk tiap pohon dengan batas 50000 per pohon, trus simpen statusnya di JSON, kayak nyanyi lagu sambil cek apakah nada tiap bait cukup keras. Di Python, kita bisa pake <span class="code-term">if-else</span> untuk cek kondisi dan tambah data ke dictionary dalam list, trus ubah ke JSON. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin list <span class="code-term">data</span> dengan tiga dictionary. Aku loop pake <span class="code-term">for item in data</span>, hitung biaya rata-rata per pohon (<span class="code-term">item["donasi"] / item["pohon"]</span>), trus cek pake <span class="code-term">if</span>: kalo lebih dari 50000, tambah kunci "status" dengan nilai "Donasi cukup untuk pohon"; kalo ga, "Donasi kurang untuk pohon". Aku ubah list ke JSON pake <span class="code-term">json.dumps(data, indent=2)</span> biar rapi, trus cetak. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi (cek donasi) dan lingkungan (tanam pohon). Struktur ini bikin kamu paham cara olah data dengan logika, kayak nyimpen rencana sambil cek apakah donasi cukup. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>8. Input dengan JSON (Menantang)</h4>
+    <pre>import json
+
+data = []
+for i in range(2):
+    acara = input(f"Masukkan nama acara ke-{i+1}: ")
+    donasi = int(input(f"Masukkan donasi untuk {acara} (Rp): "))
+    pohon = int(input(f"Masukkan jumlah pohon untuk {acara}: "))
+    data.append({"acara": acara, "donasi": donasi, "pohon": pohon})
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")</pre>
+    <p><strong>Output (misalnya user masukkan "Acara 1", 500000, 10, "Acara 2", 300000, 5):</strong></p>
+    <pre>Masukkan nama acara ke-1: Acara 1
+Masukkan donasi untuk Acara 1 (Rp): 500000
+Masukkan jumlah pohon untuk Acara 1: 10
+Masukkan nama acara ke-2: Acara 2
+Masukkan donasi untuk Acara 2 (Rp): 300000
+Masukkan jumlah pohon untuk Acara 2: 5
+Data dalam JSON:
+[
+  {
+    "acara": "Acara 1",
+    "donasi": 500000,
+    "pohon": 10
+  },
+  {
+    "acara": "Acara 2",
+    "donasi": 300000,
+    "pohon": 5
+  }
+]</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin dua acara: "Acara 1" (500000, 10 pohon) dan "Acara 2" (300000, 5 pohon). Loop <span class="code-term">for</span> nyimpen tiap input ke list <span class="code-term">data</span> sebagai dictionary, trus list ini diubah ke JSON dengan <span class="code-term">json.dumps()</span>. JSON-nya ditampilkan dengan indentasi rapi.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu minta orang kasih tau rencana acara tanam pohon, termasuk nama acara, donasi, dan jumlah pohon, trus kamu simpen semua rencana itu dalam kotak JSON, kayak nyanyi lagu dari lirik yang dikasih orang lain biar bisa disimpen rapi. Di Python, kita bisa pake <span class="code-term">input()</span> untuk ambil data dari user, simpen dalam list sebagai dictionary, trus ubah ke JSON. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin list kosong <span class="code-term">data</span> untuk nyimpen rencana. Aku loop dua kali pake <span class="code-term">for i in range(2)</span> untuk minta input: nama acara, donasi (diubah ke integer), dan jumlah pohon (diubah ke integer). Tiap input disimpen sebagai dictionary dalam list pake <span class="code-term">data.append()</span>. Aku ubah list ke JSON pake <span class="code-term">json.dumps(data, indent=2)</span> biar rapi, trus cetak. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi (donasi) dan lingkungan (tanam pohon). Struktur ini bikin kamu paham cara simpen data interaktif ke JSON, kayak nyimpen rencana acara dari input orang dalam kotak penyimpanan. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>9. Try-Except dengan JSON (Agak Sulit)</h4>
+    <pre>import json
+
+json_data = '{"acara": "Tanam Pohon untuk Komunitas", "donasi": 500000, "pohon": 10}'
+try:
+    data = json.loads(json_data)
+    if data["donasi"] < 0:
+        raise ValueError("Donasi tidak boleh negatif!")
+    print(f"Data valid: {data}")
+except ValueError as e:
+    print(f"Error: {e}")
+except json.JSONDecodeError:
+    print("Error: Format JSON salah!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data valid: {'acara': 'Tanam Pohon untuk Komunitas', 'donasi': 500000, 'pohon': 10}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Data valid: {'acara': 'Tanam Pohon untuk Komunitas', 'donasi': 500000, 'pohon': 10}" karena string JSON <span class="code-term">json_data</span> valid dan berhasil diubah ke dictionary pake <span class="code-term">json.loads()</span>. Donasi (500000) ga negatif, jadi ga ada error yang dilempar, dan dictionary dicetak.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya kotak penyimpanan JSON berisi rencana acara tanam pohon, tapi kamu mau pastiin format kotaknya bener dan donasinya ga negatif, kalo salah kamu kasih tau, kayak nyanyi lagu sambil cek apakah nadanya pas atau fals. Di Python, kita bisa pake <span class="code-term">try-except</span> untuk nangani error saat olah JSON. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin string JSON <span class="code-term">json_data</span>. Dalam blok <span class="code-term">try</span>, aku ubah string ke dictionary pake <span class="code-term">json.loads()</span>, trus cek pake <span class="code-term">if data["donasi"] < 0</span>: kalo negatif, aku lempar error pake <span class="code-term">raise ValueError</span>. Kalo ga ada error, aku cetak dictionary. Kalo ada error saat parsing JSON (misalnya format salah), aku tangkap pake <span class="code-term">except json.JSONDecodeError</span>. Kalo ada error donasi negatif, aku tangkap pake <span class="code-term">except ValueError</span>. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini bikin kamu paham cara olah JSON dengan error handling, kayak cek kotak penyimpanan sambil pastiin isinya valid. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>10. File Handling dengan JSON (Simulasi) (Agak Sulit)</h4>
+    <pre>import json
+
+# Simulasi file rencana.json berisi:
+# [{"acara": "Tanam Pohon 1", "donasi": 500000, "pohon": 10}]
+json_data = '[{"acara": "Tanam Pohon 1", "donasi": 500000, "pohon": 10}]'
+data = json.loads(json_data)
+print(f"Data dari file:\n{json.dumps(data, indent=2)}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dari file:
+[
+  {
+    "acara": "Tanam Pohon 1",
+    "donasi": 500000,
+    "pohon": 10
+  }
+]</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah JSON yang rapi karena kita simulasi baca file JSON dengan string <span class="code-term">json_data</span>. String ini diubah ke list dictionary pake <span class="code-term">json.loads()</span>, trus dicetak kembali dalam format JSON pake <span class="code-term">json.dumps()</span> dengan indentasi rapi.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya file berisi rencana acara tanam pohon dalam format JSON, dan kamu mau baca isi file itu trus tampilkan dalam format rapi, kayak nyanyi lagu sambil baca lirik dari buku. Di Python, kita bisa simulasi baca file JSON (karena ga bisa I/O file di sini) dan olah datanya. Aku mulai dengan impor <span class="code-term">import json</span>. Aku simulasi isi file dengan string <span class="code-term">json_data</span> yang berisi list dengan satu dictionary. Aku ubah string ini ke list dictionary pake <span class="code-term">json.loads()</span>, simpen di <span class="code-term">data</span>, trus ubah lagi ke JSON pake <span class="code-term">json.dumps(data, indent=2)</span> biar rapi, dan cetak. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini bikin kamu paham cara olah JSON dari file, kayak membaca rencana acara dari kotak penyimpanan file. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>11. Logging dengan JSON (Agak Sulit)</h4>
+    <pre>import json
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+data = {
+    "acara": "Tanam Pohon untuk Komunitas",
+    "donasi": 500000,
+    "pohon": 10
+}
+logger.info(f"Data rencana: {json.dumps(data, indent=2)}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>INFO:Program Lingkungan:Data rencana: {
+  "acara": "Tanam Pohon untuk Komunitas",
+  "donasi": 500000,
+  "pohon": 10
+}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah log dengan pesan yang berisi data JSON. Logger mencatat pesan level <span class="code-term">INFO</span> yang berisi dictionary <span class="code-term">data</span> dalam format JSON rapi (dengan indentasi 2 spasi). Format log defaultnya adalah [LEVEL]:[NAMA_LOGGER]:[PESAN].</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya buku catatan untuk log aktivitas program, dan kamu mau catat rencana acara tanam pohon dalam format JSON biar rapi, kayak nyanyi lagu sambil catat nada dalam format universal di buku harian. Di Python, kita bisa gabungin logging (Chapter 18) dengan JSON untuk catat data terstruktur. Aku mulai dengan impor <span class="code-term">import json</span> dan <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span>, trus bikin logger bernama "Program Lingkungan". Aku bikin dictionary <span class="code-term">data</span> dengan rencana acara. Aku ubah dictionary ini ke string JSON pake <span class="code-term">json.dumps(data, indent=2)</span> biar rapi, trus catat string JSON-nya pake <span class="code-term">logger.info()</span> sebagai bagian dari pesan log. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini bikin kamu paham cara catat data JSON pake logging, kayak nulis catatan rencana acara dalam format rapi di buku harian. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>12. Waktu dengan JSON (Agak Sulit)</h4>
+    <pre>import json
+from datetime import datetime
+
+data = {
+    "acara": "Tanam Pohon untuk Komunitas",
+    "donasi": 500000,
+    "pohon": 10,
+    "waktu": datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+}
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam JSON:
+{
+  "acara": "Tanam Pohon untuk Komunitas",
+  "donasi": 500000,
+  "pohon": 10,
+  "waktu": "16-05-2025 07:59:00"
+}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah JSON dengan kunci "waktu" yang berisi waktu sekarang (16 Mei 2025, 07:59:00). Waktu diambil pake <span class="code-term">datetime.now()</span>, diformat pake <span class="code-term">strftime()</span>, trus disimpen dalam dictionary <span class="code-term">data</span>. Dictionary ini diubah ke JSON dengan indentasi rapi.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu nyimpen rencana acara tanam pohon dalam kotak JSON, dan kamu mau tambah info waktu kapan rencana itu dibuat, kayak nyanyi lagu sambil catat waktu mulai biar tau kapan nadanya dimainkan. Di Python, kita bisa gabungin datetime (Chapter 17) dengan JSON untuk nyimpen data waktu. Aku mulai dengan impor <span class="code-term">import json</span> dan <span class="code-term">from datetime import datetime</span>. Aku bikin dictionary <span class="code-term">data</span> dengan kunci "acara", "donasi", "pohon", dan "waktu". Kunci "waktu" diisi dengan waktu sekarang pake <span class="code-term">datetime.now().strftime("%d-%m-%Y %H:%M:%S")</span> biar formatnya rapi (tanggal-bulan-tahun jam:menit:detik). Aku ubah dictionary ke JSON pake <span class="code-term">json.dumps(data, indent=2)</span> biar rapi, trus cetak. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini bikin kamu paham cara nyimpen data waktu di JSON, kayak nyimpen rencana acara dalam kotak dengan cap waktu. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>13. OOP dengan JSON (Lebih Sulit)</h4>
+    <pre>import json
+
+class RencanaAcara:
+    def __init__(self, acara, donasi, pohon):
+        self.acara = acara
+        self.donasi = donasi
+        self.pohon = pohon
+    
+    def to_json(self):
+        data = {
+            "acara": self.acara,
+            "donasi": self.donasi,
+            "pohon": self.pohon,
+            "biaya_per_pohon": self.donasi / self.pohon
+        }
+        return json.dumps(data, indent=2)
+
+rencana = RencanaAcara("Tanam Pohon untuk Komunitas", 500000, 10)
+json_data = rencana.to_json()
+print(f"Data dalam JSON:\n{json_data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam JSON:
+{
+  "acara": "Tanam Pohon untuk Komunitas",
+  "donasi": 500000,
+  "pohon": 10,
+  "biaya_per_pohon": 50000.0
+}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah JSON yang berisi data dari objek <span class="code-term">RencanaAcara</span>. Metode <span class="code-term">to_json()</span> bikin dictionary dengan kunci "acara", "donasi", "pohon", dan "biaya_per_pohon" (dihitung dari donasi/pohon), trus ubah ke JSON dengan indentasi rapi.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya robot pengelola acara tanam pohon yang bisa nyimpen datanya dalam kotak JSON, termasuk hitungan biaya per pohon, kayak nyanyi lagu sambil simpen nada dalam format universal dengan info tambahan. Di Python, kita bisa pake OOP (Chapter 13-14) untuk bikin kelas yang mengelola data dan ubah ke JSON. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin kelas <span class="code-term">RencanaAcara</span> dengan atribut <span class="code-term">acara</span>, <span class="code-term">donasi</span>, dan <span class="code-term">pohon</span>. Metode <span class="code-term">to_json</span> bikin dictionary dari atribut objek, tambah kunci "biaya_per_pohon" (donasi/pohon), trus ubah ke JSON pake <span class="code-term">json.dumps()</span>. Aku bikin objek <span class="code-term">rencana</span>, panggil metode <span class="code-term">to_json</span>, trus cetak. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini bikin kamu paham cara olah data pake OOP dan JSON, kayak robot yang nyimpen rencana acara dalam kotak penyimpanan. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>14. Nested List dengan JSON (Lebih Sulit)</h4>
+    <pre>import json
+
+data = {
+    "program": "Bantuan Komunitas",
+    "kegiatan": [
+        {"acara": "Tanam Pohon", "donasi": 500000, "pohon": 10},
+        {"acara": "Daur Ulang", "donasi": 300000, "sampah_kg": 20}
+    ]
+}
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Data dalam JSON:
+{
+  "program": "Bantuan Komunitas",
+  "kegiatan": [
+    {
+      "acara": "Tanam Pohon",
+      "donasi": 500000,
+      "pohon": 10
+    },
+    {
+      "acara": "Daur Ulang",
+      "donasi": 300000,
+      "sampah_kg": 20
+    }
+  ]
+}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah JSON dengan struktur bersarang. Dictionary <span class="code-term">data</span> punya kunci "kegiatan" yang berisi list dengan dua dictionary: satu untuk acara tanam pohon, satu untuk daur ulang. Metode <span class="code-term">json.dumps()</span> ngatur formatnya rapi dengan indentasi.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya kotak penyimpanan besar untuk program bantuan komunitas, dan di dalamnya ada daftar kegiatan yang berisi rencana tanam pohon dan daur ulang, kayak nyanyi lagu sambil simpen nada utama dan sub-nada dalam album terpisah. Di Python, JSON bisa nyimpen list bersarang dalam dictionary. Aku mulai dengan impor <span class="code-term">import json</span>. Aku bikin dictionary <span class="code-term">data</span> dengan kunci "program" dan "kegiatan". Kunci "kegiatan" nyimpen list dengan dua dictionary: satu untuk tanam pohon (dengan donasi dan jumlah pohon), satu untuk daur ulang (dengan donasi dan jumlah sampah). Aku ubah dictionary ini ke JSON pake <span class="code-term">json.dumps(data, indent=2)</span> biar rapi, trus cetak. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi (donasi) dan lingkungan (tanam pohon, daur ulang). Struktur ini bikin kamu paham cara olah data bersarang dengan list di JSON, kayak nyimpen rencana program dalam kotak besar dengan daftar kegiatan. Coba di VSCode, gampang kok! 🌱💸</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre>import json
+import logging
+from datetime import datetime
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+
+class PengelolaAcara:
+    def __init__(self):
+        self.data = []
+        self.logger = logging.getLogger("Program Lingkungan")
+        self.logger.info("Pengelola acara dibuat")
+    
+    def tambah_acara(self, acara, donasi, pohon):
+        try:
+            if donasi < 0 or pohon < 0:
+                raise ValueError("Donasi atau pohon tidak boleh negatif!")
+            rencana = {
+                "acara": acara,
+                "donasi": donasi,
+                "pohon": pohon,
+                "waktu": datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
+                "biaya_per_pohon": donasi / pohon
+            }
+            self.data.append(rencana)
+            self.logger.info(f"Acara {acara} ditambahkan")
+        except Exception as e:
+            self.logger.error(f"Error saat tambah acara: {e}")
+    
+    def to_json(self):
+        return json.dumps(self.data, indent=2)
+
+pengelola = PengelolaAcara()
+i = 0
+while i < 3:
+    try:
+        acara = input(f"Masukkan nama acara ke-{i+1}: ")
+        donasi = int(input(f"Masukkan donasi untuk {acara} (Rp): "))
+        pohon = int(input(f"Masukkan jumlah pohon untuk {acara}: "))
+        pengelola.tambah_acara(acara, donasi, pohon)
+        i = i + 1
+    except:
+        pengelola.logger.error("Error saat input data, coba lagi!")
+        i = i - 1
+json_data = pengelola.to_json()
+print(f"Data dalam JSON:\n{json_data}")</pre>
+    <p><strong>Output (misalnya user masukkan "Acara 1", 500000, 10, "Acara 2", -300000, 5, "Acara 2", 300000, 5, "Acara 3", 800000, 8):</strong></p>
+    <pre>2025-05-16 07:59:00,123 - Program Lingkungan - INFO - Pengelola acara dibuat
+Masukkan nama acara ke-1: Acara 1
+Masukkan donasi untuk Acara 1 (Rp): 500000
+Masukkan jumlah pohon untuk Acara 1: 10
+2025-05-16 07:59:00,124 - Program Lingkungan - INFO - Acara Acara 1 ditambahkan
+Masukkan nama acara ke-2: Acara 2
+Masukkan donasi untuk Acara 2 (Rp): -300000
+Masukkan jumlah pohon untuk Acara 2: 5
+2025-05-16 07:59:00,125 - Program Lingkungan - ERROR - Error saat tambah acara: Donasi atau pohon tidak boleh negatif!
+Masukkan nama acara ke-2: Acara 2
+Masukkan donasi untuk Acara 2 (Rp): 300000
+Masukkan jumlah pohon untuk Acara 2: 5
+2025-05-16 07:59:00,126 - Program Lingkungan - INFO - Acara Acara 2 ditambahkan
+Masukkan nama acara ke-3: Acara 3
+Masukkan donasi untuk Acara 3 (Rp): 800000
+Masukkan jumlah pohon untuk Acara 3: 8
+2025-05-16 07:59:00,127 - Program Lingkungan - INFO - Acara Acara 3 ditambahkan
+Data dalam JSON:
+[
+  {
+    "acara": "Acara 1",
+    "donasi": 500000,
+    "pohon": 10,
+    "waktu": "16-05-2025 07:59:00",
+    "biaya_per_pohon": 50000.0
+  },
+  {
+    "acara": "Acara 2",
+    "donasi": 300000,
+    "pohon": 5,
+    "waktu": "16-05-2025 07:59:00",
+    "biaya_per_pohon": 60000.0
+  },
+  {
+    "acara": "Acara 3",
+    "donasi": 800000,
+    "pohon": 8,
+    "waktu": "16-05-2025 07:59:00",
+    "biaya_per_pohon": 100000.0
+  }
+]</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan log pembuatan objek <span class="code-term">PengelolaAcara</span>. User masukin tiga acara: "Acara 1" (500000, 10 pohon), "Acara 2" (pertama -300000, error, trus 300000, 5 pohon), "Acara 3" (800000, 8 pohon). Logger mencatat setiap langkah: pembuatan objek, penambahan acara, dan error saat donasi negatif. JSON akhir berisi tiga dictionary dengan kunci "waktu" dan "biaya_per_pohon".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya robot pengelola acara super canggih yang minta orang kasih tau rencana acara tanam pohon, catat setiap langkah (termasuk waktu dan error) di buku harian, hitung biaya per pohon, trus simpen semua dalam kotak JSON, kayak nyanyi lagu sambil simpen nada dengan alat super. Di Python, kita gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">while</span> loop, list, dictionary, <span class="code-term">try-except</span>, OOP, datetime, logging, dan JSON. Aku bikin kelas <span class="code-term">PengelolaAcara</span> dengan atribut list <span class="code-term">data</span> dan logger. Metode <span class="code-term">tambah_acara</span> cek input, tambah waktu, hitung biaya per pohon, dan simpen ke list, sambil catat log. Aku minta input tiga acara, olah dengan loop, trus ubah ke JSON. Aku pilih tema ini karena Arry Hutomo peduli lingkungan dan sosial, dan ini sesuai sama isu sosial ekonomi dan lingkungan. Struktur ini bikin kamu paham cara olah data kompleks, kayak robot yang nyimpen rencana acara dalam kotak penyimpanan! Coba di VSCode, bakal bangga sama hasilnya! 🌱💸</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Selalu gunakan <span class="code-term">indent</span> saat buat JSON untuk manusia, biar gampang dibaca. ✅</li>
+        <li><strong>Don't:</strong> Jangan lupa tangani error saat parsing JSON, kalo ga program bisa crash. ❌</li>
+        <li><strong>Do:</strong> Gunakan struktur bersarang untuk data kompleks, tapi jaga supaya ga terlalu dalam. 🌟</li>
+        <li><strong>Don't:</strong> Jangan masukin data sensitif ke JSON tanpa enkripsi, kalo ga bisa jadi celah keamanan. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap data JSON yang kamu olah adalah langkah menuju program yang lebih terstruktur! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

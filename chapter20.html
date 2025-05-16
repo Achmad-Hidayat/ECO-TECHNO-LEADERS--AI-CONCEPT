@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 20: Biodiversity Mangrove Conservation 🌿</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            background-color: #e0f7fa;
+            margin: 40px;
+            color: #004d40;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #00796b;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+        .quote, .prayer {
+            font-style: italic;
+            text-align: center;
+            color: #d81b60;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .dialogue {
+            background-color: #f1f8e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .code, .output {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+        .logic {
+            background-color: #fce4ec;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .do-dont, .motivation {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+        }
+        .clock {
+            text-align: center;
+            font-size: 20px;
+            color: #d81b60;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 16px;
+        }
+        a {
+            color: #d81b60;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p, li {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Chapter 20: Biodiversity Mangrove Conservation 🌴</h1>
+        <p class="quote">"Konservasi mangrove itu kayak ngejaga harta karun alam, bikin bumi tetep hijau dan lestari! 🌴✨"</p>
+        <p class="prayer">Doa: "Ya Tuhan, bantu kami membangun solusi cerdas untuk menjaga mangrove dan mendukung komunitas, biar Indonesia makin hijau. Aamiin. 🙏"</p>
+
+        <div class="clock" id="clock"></div>
+
+        <p><a href="index.html">Kembali ke Daftar Isi 📚</a></p>
+
+        <h2>🎯 Tujuan Pembelajaran</h2>
+        <p>Yo, bro, Chapter 20 ini adalah puncak petualangan coding kita! 🚀 Kita bakal ngegas pol bikin proyek besar bertajuk <strong>Biodiversity Mangrove Conservation</strong> yang nyatuin semua ilmu dari Chapter 10-19: modul, error handling, file handling, OOP, regex, datetime, logging, sampe JSON handling. Proyek ini dirancang untuk bantu komunitas lingkungan kayak BioMac (Biodiversity Mangrove Conservation) ngelola data konservasi mangrove, donasi, dan aktivitas lapangan dengan cara yang efisien, terstruktur, dan super kekinian! 💥 Aplikasi ini bakal bikin tim BioMac bisa kerja lebih cerdas, hemat waktu, dan bikin dampak nyata untuk lingkungan dan sosial. 🌍💚</p>
+        <ul>
+            <li>Ngerti cara nyatuin semua konsep Python dari Chapter 10-19 ke proyek dunia nyata. 🌟</li>
+            <li>Bisa bikin aplikasi yang dukung isu lingkungan dan sosial, khususnya konservasi mangrove. 🌱</li>
+            <li>Jago nge-build proyek besar dengan struktur rapi pake modul, logging, dan JSON. 📊</li>
+            <li>Paham cara ngelola data kompleks pake OOP, regex, datetime, dan error handling. 💻</li>
+            <li>Jadi pro nulis kode bersih, terdokumentasi, dan gampang dibaca buat tim. 😎</li>
+        </ul>
+
+        <h2>🗣️ Cerita Keren: Mas Azmi, Mas Arry, dan ECC Team Ngegas Bareng! 💪</h2>
+        <div class="dialogue">
+            <p><strong>Mas Azmi:</strong> "Mas Arry, mangrove di pantai kami butuh perlindungan serius, bro! 😓 Tim BioMac sering bingung ngatur data tanam pohon, donasi, sama laporan kegiatan. Bisa bantu bikin sistem yang simple tapi powerful? Aku juga mau belajar, biar tim bisa maintain sendiri! 🙌"</p>
+            <p><strong>Mas Arry:</strong> "Chill, Mas Azmi! 😎 Aku sama ECC Team siap ngegas! Kita bakal bikin proyek <strong>Biodiversity Mangrove Conservation</strong> pake Python. Sistemnya rapi, pake modul, logging, JSON, sampe OOP, biar data kamu aman dan gampang diakses. Plus, aku kasih penjelasan detail biar kamu paham setiap langkahnya. Deal? 💪"</p>
+            <p><strong>Mas Azmi:</strong> "Gila, kece banget, Mas! 😍 Tapi aku punya 7 pertanyaan penting yang harus diselesain tim kamu. Ini soal data mangrove, donasi, sama laporan yang bener-bener kami butuhin di lapangan. Bisa? 🧐"</p>
+            <p><strong>Mas Arry:</strong> "Beres, bro! 😎 ECC Team punya tenaga ahli yang siap ngegas. Kita bakal bikin solusi pake materi Chapter 10-19, biar sesuai kebutuhan BioMac. Plus, aku kasih narasi yang bikin kamu ngerti kenapa kodenya begitu. Yuk, kita mulai! 🚴‍♂️"</p>
+        </div>
+
+        <h2>🔍 7 Pertanyaan Penting dari Mas Azmi untuk Tim Mas Arry</h2>
+        <p>Mas Azmi, sebagai leader BioMac, punya 7 kebutuhan spesifik yang harus diselesaikan tim Mas Arry pake Python. Ini bukan cuma soal coding, tapi bikin solusi yang bisa diimplementasi nyata di lapangan, mendukung konservasi mangrove, ngatur donasi, dan bikin laporan yang bermanfaat buat tim BioMac. Berikut daftarnya:</p>
+        <ol>
+            <li><strong>Modul untuk Ngelola Data Tanam Pohon Mangrove 🌱</strong><br>BioMac butuh modul yang ngatur data tanam pohon (jumlah, jenis, lokasi) biar tim lapangan gampang input data.</li>
+            <li><strong>Error Handling untuk Input Donasi 💸</strong><br>Sistem harus bisa nangani input donasi yang salah (misalnya negatif atau bukan angka) tanpa crash, plus kasih pesan jelas.</li>
+            <li><strong>File Handling untuk Simpan Data Kegiatan (Simulasi) 📂</strong><br>BioMac pengen simpen data kegiatan (tanam pohon, daur ulang) ke file JSON, meski pake simulasi karena keterbatasan I/O.</li>
+            <li><strong>OOP untuk Struktur Data Konservasi 🏗️</strong><br>Sistem harus pake kelas-kelas yang terstruktur untuk ngelola data mangrove, donasi, dan laporan kegiatan.</li>
+            <li><strong>Regex untuk Validasi Input Lokasi 🔍</strong><br>BioMac butuh validasi input lokasi tanam pohon pake regex, biar formatnya konsisten (misalnya cuma huruf dan spasi).</li>
+            <li><strong>Datetime untuk Jadwal Kegiatan ⏰</strong><br>Sistem harus bisa nyatet waktu kegiatan dan cek apakah kegiatan udah lewat atau masih akan datang.</li>
+            <li><strong>Logging dan JSON untuk Laporan Kegiatan 📝🗂️</strong><br>BioMac pengen laporan kegiatan yang dicatet pake logging dan disimpen dalam format JSON, biar gampang dianalisis.</li>
+        </ol>
+
+        <h2>🛠️ Tutorial Python: Biodiversity Mangrove Conservation</h2>
+        <p>Berikut tutorial lengkap dengan gaya milenial yang asik, pake bahasa Indonesia, dan dirancang untuk README.md di GitHub/GitPages. Setiap query punya penjelasan detail, narasi output, penjelasan kode, logika query, Do and Don'ts, plus quotes motivasi yang bikin semangat. Yuk, kita bikin proyek ini bareng Mas Azmi, Mas Arry, dan ECC Team! 😎🚀</p>
+
+        <h3>1. Modul untuk Ngelola Data Tanam Pohon Mangrove 🌱</h3>
+        <div class="dialogue">
+            <p><strong>Mas Azmi:</strong> "Mas Arry, tim BioMac sering ribet ngatur data tanam pohon. Bisa bikin modul yang gampang buat input jumlah, jenis, dan lokasi pohon? Aku pengen data ini rapi, kayak playlist Spotify! 🎶😍"</p>
+            <p><strong>Mas Arry:</strong> "Bisa banget, Mas Azmi! 😎 Kita bikin modul <code>mangrove.py</code> pake fungsi-fungsi simpel tapi powerful. Data tanam pohon bakal teratur, kayak kotak penyimpanan aesthetic! 🪴✨"</p>
+        </div>
+        <p><strong>Konsep Modul (Chapter 10):</strong> Modul di Python adalah file .py yang berisi fungsi, kelas, atau variabel yang bisa diimpor ke file lain, bikin kode terorganisir dan reusable. Kita bikin <code>mangrove.py</code> untuk ngelola data pohon, dan <code>main.py</code> untuk pakai modulnya. Ini bikin sistem BioMac lebih rapi, kayak nyusun playlist favorit! 🎧</p>
+        <p><strong>Cara Import Modul di Terminal/VSCode:</strong></p>
+        <ol>
+            <li>Buat file <code>mangrove.py</code> dan <code>main.py</code> di folder yang sama. 📂</li>
+            <li>Buka terminal di VSCode (Ctrl+`). 💻</li>
+            <li>Jalankan <code>main.py</code> dengan perintah: <code>python main.py</code>. 🚀</li>
+            <li>Pastikan Python sudah terinstall (cek dengan <code>python --version</code>). ✅</li>
+        </ol>
+        <p class="code">
+# mangrove.py
+def tambah_pohon(jumlah, jenis, lokasi):
+    return {"jumlah": jumlah, "jenis": jenis, "lokasi": lokasi}
+
+def lihat_data(data_pohon):
+    for i, pohon in enumerate(data_pohon, 1):
+        print(f"Pohon {i}: {pohon['jumlah']} {pohon['jenis']} di {pohon['lokasi']}")
+
+# main.py
+from mangrove import tambah_pohon, lihat_data
+
+data_pohon = []
+data_pohon.append(tambah_pohon(10, "Mangrove", "Pantai"))
+data_pohon.append(tambah_pohon(5, "Bakau", "Muara"))
+lihat_data(data_pohon)
+        </p>
+        <p class="output">
+Pohon 1: 10 Mangrove di Pantai
+Pohon 2: 5 Bakau di Muara
+        </p>
+        <p><strong>Penjelasan Output Detail:</strong> Outputnya nunjukin dua baris data pohon yang disimpen. Baris pertama bilang ada 10 pohon Mangrove ditanam di Pantai, dan baris kedua bilang ada 5 pohon Bakau di Muara. Fungsi <code>lihat_data</code> ngelup list <code>data_pohon</code> pake <code>enumerate</code> biar ada nomor urut (1, 2, dst.), dan nampilin tiap pohon dalam format: jumlah, jenis, lokasi. Data disimpen sebagai dictionary biar fleksibel dan gampang diakses, kayak nyusun playlist dengan judul lagu yang jelas! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Kode ini bikin modul <code>mangrove.py</code> (Chapter 10) dengan dua fungsi: <code>tambah_pohon</code> nge-return dictionary dengan data pohon (jumlah, jenis, lokasi), dan <code>lihat_data</code> nampilin semua data pohon dalam list pake loop. Di <code>main.py</code>, kita impor modul pake <code>from mangrove import</code>, simpen dua data pohon pake <code>tambah_pohon</code>, dan tampilin pake <code>lihat_data</code>. Modul ini bikin kode terpisah dan reusable, cocok buat tim BioMac yang butuh sistem simpel tapi terorganisir di lapangan. Tema mangrove relevan sama konservasi lingkungan, dan struktur ini gampang dimengerti, kayak nyusun playlist favorit yang bisa dipake kapan aja! 🎧😎</p>
+        <p class="logic"><strong>Penjelasan Logic Query:</strong> Logika di sini kayak bikin kotak LEGO yang gampang disusun ulang. Kita pisahin fungsi ke <code>mangrove.py</code> biar kode modular, jadi gampang ditambah atau diubah tanpa bikin pusing. Fungsi <code>tambah_pohon</code> bikin dictionary untuk nyimpen data pohon, soalnya dictionary fleksibel buat nyimpen key-value pair (misalnya "jumlah": 10). Fungsi <code>lihat_data</code> pake <code>enumerate</code> untuk kasih nomor urut otomatis, bikin output rapi kayak daftar lagu. Di <code>main.py</code>, kita simpen data ke list <code>data_pohon</code> soalnya list gampang ditambah elemen baru. Impor modul pake <code>from mangrove import</code> bikin kode utama bersih, fokus ke logika utama: tambah dan tampilin data. Struktur ini bikin sistem BioMac efisien, kayak nyanyi lagu dengan playlist yang udah tertata rapi! 🎵✨</p>
+        <p class="do-dont"><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pisah fungsi ke modul terpisah biar kode rapi dan gampang di-maintain. ✅</li>
+            <li><strong>Don't:</strong> Jangan simpen semua kode di satu file, nanti bikin pusing kalo proyeknya besar. ❌</li>
+            <li><strong>Do:</strong> Kasih nama fungsi yang jelas, kayak <code>tambah_pohon</code>, biar tim gampang ngerti. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa impor modul pake <code>import</code>, kalo ga fungsinya ga jalan. 🚨</li>
+        </ul>
+        <p class="motivation">"Setiap pohon yang kamu tanam adalah langkah kecil buat bikin bumi lebih hijau. Keep it green, bro! 🌿💚"</p>
+
+        <h3>2. Error Handling untuk Input Donasi 💸</h3>
+        <div class="dialogue">
+            <p><strong>Mas Azmi:</strong> "Mas Arry, kadang tim salah input donasi, misalnya masukin huruf atau angka negatif. Bisa bikin sistem yang ga crash tapi kasih warning jelas? 😅🙏"</p>
+            <p><strong>Mas Arry:</strong> "Tenang, Mas Azmi! 😎 Kita pake try-except (Chapter 11) biar sistem tangguh. Kalo input salah, kita kasih pesan yang bikin tim ngerti apa yang harus diperbaiki. 💪✨"</p>
+        </div>
+        <p><strong>Konsep Error Handling (Chapter 11):</strong> Error handling pake <code>try-except</code> nangkep error kayak input bukan angka atau nilai negatif, kasih pesan jelas tanpa crash. Ini bikin sistem BioMac user-friendly, penting buat tim di lapangan yang sering input data cepet-cepet. 🏃‍♂️</p>
+        <p><strong>Cara Import Modul:</strong> Kode ini cuma butuh Python standar, jadi ga perlu instal library tambahan. Jalankan di terminal dengan <code>python nama_file.py</code>. 🚀</p>
+        <p class="code">
+try:
+    donasi = int(input("Masukkan jumlah donasi (Rp): "))
+    if donasi < 0:
+        raise ValueError("Donasi tidak boleh negatif!")
+    print(f"Donasi Rp {donasi} berhasil dicatat! 🎉")
+except ValueError as e:
+    print(f"Error: {e}. Masukkan angka yang valid! 🚨")
+        </p>
+        <p class="output">
+Masukkan jumlah donasi (Rp): -500000
+Error: Donasi tidak boleh negatif!. Masukkan angka yang valid! 🚨
+        </p>
+        <p><strong>Penjelasan Output Detail:</strong> Outputnya nunjukin pesan error: "Error: Donasi tidak boleh negatif!. Masukkan angka yang valid! 🚨" karena user masukin -500000. Kode cek pake <code>if donasi < 0</code> dan lempar <code>ValueError</code> dengan pesan spesifik. Pesan error ditangkap di blok <code>except</code> dan ditampilin bareng instruksi buat masukin angka valid. Kalo user masukin huruf (misalnya "abc"), errornya bakal bilang "Error: invalid literal for int() with base 10: 'abc'. Masukkan angka yang valid! 🚨". Sistem ini bikin program ga crash dan kasih feedback jelas ke tim BioMac, kayak nyanyi lagu dengan nada yang pas meski ada kesalahan! 🎤</p>
+        <p><strong>Penjelasan Query:</strong> Kode ini pake <code>try-except</code> dari Chapter 11 untuk nangani dua jenis error: <code>ValueError</code> kalo input bukan angka (misalnya huruf) dan <code>ValueError</code> kalo donasi negatif (dicek manual pake <code>if</code>). Kita minta input donasi pake <code>input()</code>, ubah ke integer pake <code>int()</code>, dan cek apakah negatif. Kalo semua beres, kita cetak pesan sukses dengan emoji biar semangat! 🎉 Kalo ada error, kita tangkap dan kasih pesan jelas. Struktur ini bikin sistem user-friendly buat tim BioMac yang sering input data di lapangan, dan sesuai kebutuhan Mas Azmi buat sistem yang ga gampang crash. Tema donasi relevan sama isu sosial ekonomi, dan error handling bikin kode robust, kayak nyanyi lagu dengan nada yang selalu pas! 🎶😎</p>
+        <p class="logic"><strong>Penjelasan Logic Query:</strong> Logika di sini kayak bikin jaring pengaman buat tim BioMac. Kita pake <code>try-except</code> untuk nangkep dua kemungkinan error: input bukan angka (misalnya huruf) dan donasi negatif. Pertama, <code>input()</code> minta data dari user, trus <code>int()</code> coba ubah ke integer. Kalo gagal (misalnya user masukin "abc"), <code>ValueError</code> otomatis muncul dan ditangkap oleh <code>except</code>. Kedua, kalo input berhasil jadi angka, kita cek pake <code>if donasi < 0</code>. Kalo negatif, kita lempar <code>ValueError</code> manual dengan pesan spesifik. Pesan error dari kedua kasus ditangkap oleh <code>except ValueError as e</code> dan ditampilkan pake <code>print(f"Error: {e}...")</code> biar user tau apa yang salah dan apa yang harus dilakukan (masukin angka valid). Kalo input beres, kita kasih pesan sukses biar tim semangat. Struktur ini bikin sistem tangguh, kayak nyanyi lagu dengan jaring pengaman biar ga fals! 🎵💪</p>
+        <p class="do-dont"><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Tangkap error spesifik (kaya <code>ValueError</code>) biar tau apa yang salah. ✅</li>
+            <li><strong>Don't:</strong> Jangan pake <code>except</code> kosong tanpa spesifikasi, nanti susah debug. ❌</li>
+            <li><strong>Do:</strong> Kasih pesan error yang jelas, kayak "Masukkan angka yang valid!", biar user paham. 🌟</li>
+            <li><strong>Don't:</strong> Jangan biarin error ga ditangani, misalnya input huruf tanpa <code>try-except</code>, nanti crash. 🚨</li>
+        </ul>
+        <p class="motivation">"Error itu bukan musuh, bro. Tangani dengan cerdas, dan program kamu bakal jadi tank! 💪🔥"</p>
+
+        <h3>3. File Handling untuk Simpan Data Kegiatan (Simulasi) 📂</h3>
+        <div class="dialogue">
+            <p><strong>Mas Azmi:</strong> "Mas Arry, kami butuh nyimpen data kegiatan tanam pohon sama daur ulang ke file JSON biar bisa dianalisis nanti. Tapi kami cuma punya laptop sederhana, bisa simulasi dulu? 🤔😅"</p>
+            <p><strong>Mas Arry:</strong> "No prob, Mas Azmi! 😎 Kita bikin simulasi file handling (Chapter 12) pake JSON (Chapter 19), kayak nyanyi lagu tapi simpen nadanya dalam format digital. Nanti di VSCode kamu bisa beneran nyimpen file! 💾✨"</p>
+        </div>
+        <p><strong>Konsep File Handling dan JSON (Chapter 12, 19):</strong> File handling (Chapter 12) biasanya pake <code>open()</code> untuk baca/tulis file, tapi karena kita di Pyodide (ga support I/O lokal), kita simulasi pake string output. JSON (Chapter 19) bikin data terstruktur dan portabel, cocok buat nyimpen data kegiatan BioMac. Simulasi ini bikin tim bisa lihat format data sebelum implementasi nyata di VSCode. 📊</p>
+        <p><strong>Cara Import Modul:</strong> Kode ini butuh modul <code>json</code> yang sudah ada di Python standar. Jalankan dengan <code>python nama_file.py</code>. 🚀</p>
+        <p class="code">
+import json
+
+# Simulasi file kegiatan.json
+kegiatan = [
+    {"acara": "Tanam Pohon", "pohon": 10, "lokasi": "Pantai"},
+    {"acara": "Daur Ulang", "sampah_kg": 20, "lokasi": "Muara"}
+]
+# Simulasi menulis ke file
+print("Simulasi isi file kegiatan.json:")
+print(json.dumps(kegiatan, indent=2))
+# Simulasi membaca file
+print("\nSimulasi baca file kegiatan.json:")
+data = json.loads(json.dumps(kegiatan))
+for item in data:
+    print(f"Acara: {item['acara']}, Lokasi: {item['lokasi']}")
+        </p>
+        <p class="output">
+Simulasi isi file kegiatan.json:
+[
+  {
+    "acara": "Tanam Pohon",
+    "pohon": 10,
+    "lokasi": "Pantai"
+  },
+  {
+    "acara": "Daur Ulang",
+    "sampah_kg": 20,
+    "lokasi": "Muara"
+  }
+]
+
+Simulasi baca file kegiatan.json:
+Acara: Tanam Pohon, Lokasi: Pantai
+Acara: Daur Ulang, Lokasi: Muara
+        </p>
+        <p><strong>Penjelasan Output Detail:</strong> Outputnya dibagi dua bagian: <br>1. <strong>Simulasi tulis:</strong> Nampilin JSON rapi dengan dua dictionary dalam list, satu buat kegiatan Tanam Pohon (10 pohon di Pantai), satu buat Daur Ulang (20 kg sampah di Muara). Ini simulasi isi file <code>kegiatan.json</code> kalo kita beneran nulis pake <code>json.dump()</code>. <br>2. <strong>Simulasi baca:</strong> Nampilin data yang "dibaca" dari JSON, tapi karena simulasi, kita pake <code>json.loads()</code> dari string JSON. Outputnya dua baris: Tanam Pohon di Pantai dan Daur Ulang di Muara, diambil dari kunci <code>acara</code> dan <code>lokasi</code>. Loop <code>for</code> bikin data gampang dibaca tim BioMac, kayak buka playlist dan lihat judul lagu! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Kode ini simulasi file handling (Chapter 12) pake JSON (Chapter 19). Kita bikin list <code>kegiatan</code> dengan dua dictionary: satu buat tanam pohon, satu buat daur ulang. Simulasi nulis ke file pake <code>json.dumps(kegiatan, indent=2)</code> biar rapi, dan simulasi baca file pake <code>json.loads()</code> untuk ubah JSON jadi data Python. Loop <code>for</code> nampilin data yang relevan (acara dan lokasi) biar gampang dibaca tim BioMac. Struktur ini bikin data kegiatan terstruktur dan portabel, cocok buat kebutuhan Mas Azmi buat nyimpen laporan kegiatan yang bisa dianalisis nanti. Tema kegiatan relevan sama isu lingkungan, dan simulasi ini bikin kode fleksibel buat diimplementasi beneran di VSCode. Gampang diinget, kayak nyanyi lagu dan simpen nadanya di playlist digital! 🎵😎</p>
+        <p class="logic"><strong>Penjelasan Logic Query:</strong> Logika di sini kayak bikin draf digital sebelum nyanyi lagu di panggung. Kita simulasi file handling soalnya Pyodide ga bisa I/O lokal, tapi logikanya sama kayak nyata. Pertama, kita bikin list <code>kegiatan</code> dengan dua dictionary, soalnya list fleksibel buat nyimpen banyak data kegiatan, dan dictionary bikin data terstruktur (key-value pair kayak "pohon": 10). Untuk simulasi nulis, kita pake <code>json.dumps(kegiatan, indent=2)</code> untuk ubah list ke string JSON yang rapi, kayak nulis draf laporan dalam format universal. Untuk simulasi baca, kita pake <code>json.loads(json.dumps(kegiatan))</code> untuk ubah string JSON kembali ke data Python, seolah-olah kita baca dari file. Loop <code>for</code> nampilin kunci <code>acara</code> dan <code>lokasi</code> biar outputnya simpel dan relevan buat tim BioMac. Struktur ini bikin data gampang dianalisis, kayak nyanyi lagu dengan lirik yang udah tersusun rapi di playlist! 🎧💾</p>
+        <p class="do-dont"><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake <code>indent</code> di JSON biar gampang dibaca tim. ✅</li>
+            <li><strong>Don't:</strong> Jangan lupa simulasi file handling kalo ga bisa I/O, biar kode tetep jalan. ❌</li>
+            <li><strong>Do:</strong> Struktur data pake list dan dictionary biar fleksibel di JSON. 🌟</li>
+            <li><strong>Don't:</strong> Jangan masukin data sensitif (kaya nama donatur) ke JSON tanpa enkripsi. 🚨</li>
+        </ul>
+        <p class="motivation">"Data yang rapi itu kayak playlist yang enak didenger. Simpen dengan cerdas, bro! 🎧💚"</p>
+
+        <h3>4. OOP untuk Struktur Data Konservasi 🏗️</h3>
+        <div class="dialogue">
+            <p><strong>Mas Azmi:</strong> "Mas Arry, data konservasi kami banyak banget: pohon, donasi, lokasi. Bisa bikin sistem yang terstruktur biar ga pusing ngatur? 😓🙏"</p>
+            <p><strong>Mas Arry:</strong> "Beres, Mas Azmi! 😎 Kita pake OOP (Chapter 13-14) buat bikin kelas-kelas yang bikin data kamu kayak rak penyimpanan aesthetic. Semua rapi dan gampang diakses! 🪴✨"</p>
+        </div>
+        <p><strong>Konsep OOP (Chapter 13-14):</strong> OOP bikin data terstruktur pake kelas dan objek, kayak bikin blueprint untuk ngelola data kompleks. Kita bikin kelas untuk ngelola data konservasi BioMac, bikin sistem scalable dan gampang dimengerti tim, kayak nyusun rak penyimpanan yang aesthetic! 🏗️</p>
+        <p><strong>Cara Import Modul:</strong> Kode ini cuma butuh Python standar. Jalankan dengan <code>python nama_file.py</code>. 🚀</p>
+        <p class="code">
+class KonservasiMangrove:
+    def __init__(self, acara, donasi, pohon, lokasi):
+        self.acara = acara
+        self.donasi = donasi
+        self.pohon = pohon
+        self.lokasi = lokasi
+    
+    def info(self):
+        return (f"Acara: {self.acara}, Donasi: Rp {self.donasi}, "
+                f"{self.pohon} pohon di {self.lokasi}")
+
+kegiatan = [
+    KonservasiMangrove("Tanam Pohon 1", 500000, 10, "Pantai"),
+    KonservasiMangrove("Tanam Pohon 2", 300000, 5, "Muara")
+]
+for k in kegiatan:
+    print(k.info())
+        </p>
+        <p class="output">
+Acara: Tanam Pohon 1, Donasi: Rp 500000, 10 pohon di Pantai
+Acara: Tanam Pohon 2, Donasi: Rp 300000, 5 pohon di Muara
+        </p>
+        <p><strong>Penjelasan Output Detail:</strong> Outputnya nunjukin dua baris yang ngegambarin dua kegiatan konservasi. Baris pertama bilang ada acara Tanam Pohon 1 dengan donasi Rp 500000, 10 pohon, di Pantai. Baris kedua bilang Tanam Pohon 2 dengan donasi Rp 300000, 5 pohon, di Muara. Metode <code>info</code> dari kelas <code>KonservasiMangrove</code> ngasih string yang ngerangkum semua atribut objek dalam format jelas dan gampang dibaca, kayak buka album dan lihat detail lagu favorit! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Kode ini pake OOP dari Chapter 13 buat bikin kelas <code>KonservasiMangrove</code> yang ngelola data acara konservasi. Kelas ini punya atribut <code>acara</code>, <code>donasi</code>, <code>pohon</code>, dan <code>lokasi</code>, diinisialisasi pake <code>__init__</code>. Metode <code>info</code> nge-return string yang ngerangkum semua data biar gampang ditampilin. Kita bikin list <code>kegiatan</code> yang nyimpen dua objek dari kelas ini, trus loop pake <code>for</code> untuk nampilin info tiap kegiatan. Struktur ini bikin data konservasi terorganisir dan fleksibel, cocok buat kebutuhan Mas Azmi buat ngatur banyak data. Tema konservasi relevan sama isu lingkungan dan sosial ekonomi (donasi), dan OOP bikin kode scalable, kayak nyusun rak penyimpanan yang bisa ditambah kapan aja! 🪴😎</p>
+        <p class="logic"><strong>Penjelasan Logic Query:</strong> Logika di sini kayak bikin blueprint rumah untuk tim BioMac. Kelas <code>KonservasiMangrove</code> kayak cetakan yang nyimpen data acara dalam atribut (<code>acara</code>, <code>donasi</code>, dll.) pake <code>self</code> biar terikat sama objek. Metode <code>__init__</code> inisialisasi atribut saat objek dibuat, kayak ngisi formulir data acara. Metode <code>info</code> bikin string rapi pake f-string, gabungin semua atribut jadi satu pesan yang jelas, kayak bikin ringkasan lagu dalam playlist. Kita simpen objek dalam list <code>kegiatan</code> soalnya list gampang ngatur banyak data, trus loop pake <code>for</code> untuk nampilin info tiap objek. Struktur ini bikin data gampang diakses dan ditambah, kayak nyanyi lagu dengan playlist yang tersusun rapi dan bisa diperluas! 🎵🏗️</p>
+        <p class="do-dont"><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake kelas buat struktur data kompleks biar rapi. ✅</li>
+            <li><strong>Don't:</strong> Jangan bikin atribut tanpa <code>self</code>, nanti ga bisa diakses objek. ❌</li>
+            <li><strong>Do:</strong> Kasih nama kelas yang deskriptif, kayak <code>KonservasiMangrove</code>, biar jelas. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa definisikan metode dengan <code>self</code> sebagai parameter pertama. 🚨</li>
+        </ul>
+        <p class="motivation">"Struktur kode yang rapi itu kayak taman yang terawat. Bikin hidup lebih damai, bro! 🌳💚"</p>
+
+        <h3>5. Regex untuk Validasi Input Lokasi 🔍</h3>
+        <div class="dialogue">
+            <p><strong>Mas Azmi:</strong> "Mas Arry, kadang tim salah masukin lokasi, misalnya pake angka atau simbol. Bisa bikin validasi biar cuma huruf dan spasi? 🧐😅"</p>
+            <p><strong>Mas Arry:</strong> "Gampang, Mas Azmi! 😎 Kita pake regex (Chapter 16) buat bikin lokasi konsisten, kayak detektif yang cuma nerima clue berkualitas! 🕵️‍♂️✨"</p>
+        </div>
+        <p><strong>Konsep Regex (Chapter 16):</strong> Regex bikin kita bisa nyari dan validasi pola teks, kayak detektif teks. Kita pake pola untuk pastiin input lokasi cuma huruf dan spasi, bikin data BioMac bersih dan konsisten, kayak nyanyi lagu dengan lirik yang rapi! 🎶</p>
+        <p><strong>Cara Import Modul:</strong> Kode ini butuh modul <code>re</code> yang sudah ada di Python standar. Jalankan dengan <code>python nama_file.py</code>. 🚀</p>
+        <p class="code">
+import re
+
+lokasi = input("Masukkan lokasi tanam pohon: ")
+pola = r"^[A-Za-z\s]+$"
+if re.match(pola, lokasi):
+    print(f"Lokasi '{lokasi}' valid! ✅")
+else:
+    print("Error: Lokasi hanya boleh huruf dan spasi! 🚨")
+        </p>
+        <p class="output">
+Masukkan lokasi tanam pohon: Pantai123
+Error: Lokasi hanya boleh huruf dan spasi! 🚨
+        </p>
+        <p><strong>Penjelasan Output Detail:</strong> Outputnya bilang "Error: Lokasi hanya boleh huruf dan spasi! 🚨" karena input "Pantai123" ga sesuai pola regex <code>^[A-Za-z\s]+$</code>. Pola ini artinya: <code>^</code> (mulai string), <code>[A-Za-z\s]</code> (huruf A-Z, a-z, atau spasi), <code>+</code> (satu atau lebih karakter), <code>$</code> (akhir string). Karena ada angka "123", <code>re.match()</code> nge-return <code>None</code>, jadi masuk ke blok <code>else</code> dan nampilin pesan error. Kalo inputnya "Pantai", outputnya bakal "Lokasi 'Pantai' valid! ✅". Output ini bikin tim BioMac tau kalo input salah dan apa yang harus diperbaiki, kayak nyanyi lagu dengan lirik yang harus pas! 🎵</p>
+        <p><strong>Penjelasan Query:</strong> Kode ini pake regex dari Chapter 16 untuk validasi input lokasi. Kita impor <code>re</code>, minta input lokasi, dan cek pake <code>re.match(pola, lokasi)</code> dengan pola <code>^[A-Za-z\s]+$</code>. Kalo input sesuai (cuma huruf dan spasi), kita kasih pesan sukses dengan emoji biar semangat! ✅ Kalo ga sesuai, kita kasih pesan error. Struktur ini bikin data lokasi konsisten, penting buat tim BioMac yang butuh data bersih buat laporan. Tema validasi lokasi relevan sama isu lingkungan, dan regex bikin kode efisien dan akurat, kayak detektif yang pilih-pilih clue berkualitas! 🕵️‍♂️😎</p>
+        <p class="logic"><strong>Penjelasan Logic Query:</strong> Logika di sini kayak detektif teks yang cuma nerima data berkualitas. Kita pake <code>re.match()</code> soalnya match cek dari awal string, beda sama <code>re.search()</code> yang nyari di mana aja. Pola <code>^[A-Za-z\s]+$</code> bikin aturan ketat: string harus mulai (<code>^</code>) dan selesai (<code>$</code>) dengan satu atau lebih (<code>+</code>) huruf atau spasi (<code>[A-Za-z\s]</code>). Kalo ada karakter lain (misalnya angka atau simbol), <code>re.match()</code> return <code>None</code>, dan kita masuk ke blok <code>else</code> untuk kasih pesan error. Kalo cocok, kita kasih pesan sukses. Input dari user diambil pake <code>input()</code>, dan hasil validasi ditampilkan pake <code>print()</code> dengan emoji biar user semangat. Struktur ini bikin data lokasi bersih, kayak nyanyi lagu dengan lirik yang selalu pas dan ga ada nada fals! 🎶🔍</p>
+        <p class="do-dont"><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Uji pola regex dengan input sederhana dulu biar yakin bener. ✅</li>
+            <li><strong>Don't:</strong> Jangan bikin pola regex ribet tanpa dokumentasi, nanti bingung sendiri. ❌</li>
+            <li><strong>Do:</strong> Pake <code>re.match()</code> untuk cek seluruh string, biar validasi ketat. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa tangani error input, kalo ga data bisa kacau. 🚨</li>
+        </ul>
+        <p class="motivation">"Data yang bersih itu kayak laut yang jernih. Bikin konservasi mangrove makin kece! 🌊💚"</p>
+
+        <h3>6. Datetime untuk Jadwal Kegiatan ⏰</h3>
+        <div class="dialogue">
+            <p><strong>Mas Azmi:</strong> "Mas Arry, kami butuh sistem yang nyatet waktu kegiatan dan cek apakah udah lewat atau belum. Biar tim ga bingung ngatur jadwal! 😅🙏"</p>
+            <p><strong>Mas Arry:</strong> "Chill, Mas Azmi! 😎 Kita pake datetime (Chapter 17) buat bikin sistem jadwal yang kece, kayak jam tangan digital yang selalu on time! ⌚✨"</p>
+        </div>
+        <p><strong>Konsep Datetime (Chapter 17):</strong> Modul <code>datetime</code> bikin kita bisa ngelola tanggal dan waktu, kayak penutur waktu. Kita pake untuk nyatet jadwal kegiatan BioMac dan cek apakah udah lewat, bikin tim bisa atur waktu dengan cerdas, kayak nyanyi lagu dengan irama yang tepat! 🎶</p>
+        <p><strong>Cara Import Modul:</strong> Kode ini butuh modul <code>datetime</code> yang sudah ada di Python standar. Jalankan dengan <code>python nama_file.py</code>. 🚀</p>
+        <p class="code">
+from datetime import datetime
+
+tanggal = input("Masukkan tanggal acara (dd-mm-yyyy): ")
+try:
+    tanggal_acara = datetime.strptime(tanggal, "%d-%m-%Y")
+    if tanggal_acara < datetime.now():
+        print("Acara sudah lewat! 🕰️")
+    else:
+        selisih = (tanggal_acara - datetime.now()).days
+        print(f"Acara akan berlangsung {selisih} hari lagi! 🎉")
+except ValueError:
+    print("Format tanggal salah! Gunakan dd-mm-yyyy. 🚨")
+        </p>
+        <p class="output">
+Masukkan tanggal acara (dd-mm-yyyy): 01-06-2025
+Acara akan berlangsung 16 hari lagi! 🎉
+        </p>
+        <p><strong>Penjelasan Output Detail:</strong> Outputnya bilang "Acara akan berlangsung 16 hari lagi! 🎉" karena input "01-06-2025" diubah jadi objek <code>datetime</code> (1 Juni 2025). Dibandingin sama waktu sekarang (16 Mei 2025), selisihnya dihitung pake <code>(tanggal_acara - datetime.now()).days</code>, ngasih 16 hari (15 hari dari 16-31 Mei, plus 1 hari ke 1 Juni). Kalo input salah (misalnya "2025-06-01"), outputnya "Format tanggal salah! Gunakan dd-mm-yyyy. 🚨". Sistem ini bikin tim BioMac gampang lacak jadwal, kayak cek playlist kapan lagu diputar! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Kode ini pake <code>datetime</code> dari Chapter 17 untuk ngelola jadwal. Kita minta input tanggal, ubah ke objek <code>datetime</code> pake <code>strptime()</code>, dan cek apakah udah lewat pake <code>if tanggal_acara < datetime.now()</code>. Kalo belum lewat, kita hitung selisih hari pake <code>.days</code>. <code>Try-except</code> nangani error format tanggal, kasih pesan jelas kalo salah. Struktur ini bikin sistem akurat dan user-friendly, cocok buat Mas Azmi yang butuh jadwal kegiatan jelas. Tema jadwal relevan sama isu lingkungan, dan <code>datetime</code> bikin kode tepat waktu, kayak nyanyi lagu dengan jam yang selalu on beat! 🎵😎</p>
+        <p class="logic"><strong>Penjelasan Logic Query:</strong> Logika di sini kayak bikin jam digital untuk BioMac. Kita minta input tanggal pake <code>input()</code>, trus ubah ke objek <code>datetime</code> pake <code>strptime(tanggal, "%d-%m-%Y")</code>, yang artinya string harus sesuai format tanggal-bulan-tahun. Kalo format salah (misalnya "2025-06-01"), <code>ValueError</code> muncul dan ditangkap oleh <code>except</code>, kasih pesan untuk perbaiki format. Kalo format bener, kita bandingin <code>tanggal_acara</code> sama <code>datetime.now()</code> pake <code><</code>. Kalo <code>tanggal_acara</code> lebih kecil, acara udah lewat, jadi kasih pesan. Kalo lebih besar, hitung selisih pake <code>tanggal_acara - datetime.now()</code>, ambil hari pake <code>.days</code>, dan kasih pesan dengan selisih. Struktur ini bikin jadwal akurat, kayak nyanyi lagu dengan irama yang selalu tepat waktu! ⏰🎶</p>
+        <p class="do-dont"><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake format tanggal yang jelas (kaya dd-mm-yyyy) biar ga bingung. ✅</li>
+            <li><strong>Don't:</strong> Jangan lupa <code>try-except</code> buat tangani format tanggal salah. ❌</li>
+            <li><strong>Do:</strong> Hitung selisih pake <code>timedelta</code> biar akurat. 🌟</li>
+            <li><strong>Don't:</strong> Jangan hardcode tanggal tanpa cek, nanti jadwal ga fleksibel. 🚨</li>
+        </ul>
+        <p class="motivation">"Waktu itu emas, bro. Kelola jadwal dengan cerdas, biar konservasi mangrove on track! ⏰💚"</p>
+
+        <h3>7. Logging dan JSON untuk Laporan Kegiatan 📝🗂️</h3>
+        <div class="dialogue">
+            <p><strong>Mas Azmi:</strong> "Mas Arry, kami butuh laporan kegiatan yang rapi, nyatet setiap langkah, dan disimpen dalam JSON. Biar tim bisa analisis dan lapor ke donatur! 📊😍"</p>
+            <p><strong>Mas Arry:</strong> "Beres, Mas Azmi! 😎 Kita gabungin logging (Chapter 18) sama JSON (Chapter 19) buat bikin laporan yang kece, kayak buku harian digital yang bikin donatur kagum! 📖✨"</p>
+        </div>
+        <p><strong>Konsep Logging dan JSON (Chapter 18, 19):</strong> Logging nyatet aktivitas program kayak buku harian, bikin jejak jelas untuk debugging dan laporan. JSON nyimpen data terstruktur, gampang dianalisis. Kita gabungin keduanya untuk bikin laporan kegiatan BioMac yang transparan dan portabel, kayak nyanyi lagu sambil simpen lirik dalam format digital! 🎶</p>
+        <p><strong>Cara Import Modul:</strong> Kode ini butuh modul <code>json</code>, <code>logging</code>, dan <code>datetime</code> yang sudah ada di Python standar. Jalankan dengan <code>python nama_file.py</code>. 🚀</p>
+        <p class="code">
+import json
+import logging
+from datetime import datetime
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("BioMac")
+
+data = []
+for i in range(2):
+    try:
+        acara = input(f"Masukkan nama acara ke-{i+1}: ")
+        donasi = int(input(f"Masukkan donasi (Rp): "))
+        pohon = int(input(f"Masukkan jumlah pohon: "))
+        rencana = {
+            "acara": acara,
+            "donasi": donasi,
+            "pohon": pohon,
+            "waktu": datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+        }
+        data.append(rencana)
+        logger.info(f"Acara {acara} ditambahkan ✅")
+    except ValueError:
+        logger.error("Error: Input donasi/pohon harus angka! 🚨")
+        i = i - 1
+
+logger.info(f"Laporan kegiatan:\n{json.dumps(data, indent=2)}")
+        </p>
+        <p class="output">
+2025-05-16 07:59:00,123 - BioMac - INFO - Acara Acara 1 ditambahkan ✅
+2025-05-16 07:59:00,124 - BioMac - INFO - Acara Acara 2 ditambahkan ✅
+2025-05-16 07:59:00,125 - BioMac - INFO - Laporan kegiatan:
+[
+  {
+    "acara": "Acara 1",
+    "donasi": 500000,
+    "pohon": 10,
+    "waktu": "16-05-2025 07:59:00"
+  },
+  {
+    "acara": "Acara 2",
+    "donasi": 300000,
+    "pohon": 5,
+    "waktu": "16-05-2025 07:59:00"
+  }
+]
+        </p>
+        <p><strong>Penjelasan Output Detail:</strong> Outputnya punya tiga bagian: <br>1. <strong>Log penambahan acara:</strong> Dua baris log INFO nunjukin "Acara Acara 1 ditambahkan ✅" dan "Acara Acara 2 ditambahkan ✅", lengkap dengan timestamp (16 Mei 2025, 07:59:00). Ini dicatet pas tiap acara sukses ditambah ke list <code>data</code>. <br>2. <strong>Log laporan:</strong> Log terakhir nampilin JSON rapi dengan dua dictionary dalam list, nyimpen data acara, donasi, pohon, dan waktu. JSON pake <code>indent=2</code> biar gampang dibaca. <br>3. <strong>Error handling:</strong> Kalo user masukin donasi atau pohon salah (misalnya huruf), log ERROR bilang "Error: Input donasi/pohon harus angka! 🚨" dan minta input ulang. Output ini bikin laporan BioMac transparan, kayak buka playlist dan lihat detail lagu dengan cap waktu! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Kode ini gabungin logging (Chapter 18), JSON (Chapter 19), dan datetime (Chapter 17) buat bikin laporan kegiatan. Kita set logging dengan format kustom biar ada timestamp, nama logger (BioMac), level, dan pesan. Loop <code>for</code> minta input dua acara, simpen data ke list <code>data</code> sebagai dictionary dengan <code>acara</code>, <code>donasi</code>, <code>pohon</code>, dan <code>waktu</code> (pake <code>datetime.now()</code>). <code>Try-except</code> nangani error input, dan logger nyatet setiap langkah: penambahan acara, error, dan laporan akhir dalam JSON. Struktur ini bikin laporan terdokumentasi dan terstruktur, cocok buat Mas Azmi yang butuh laporan buat donatur. Tema laporan relevan sama isu lingkungan dan sosial ekonomi, dan logging bikin kode transparan, kayak nyanyi lagu dan simpen nadanya di buku harian digital! 📖😎</p>
+        <p class="logic"><strong>Penjelasan Logic Query:</strong> Logika di sini kayak bikin buku harian digital untuk BioMac. Kita set logging pake <code>logging.basicConfig</code> dengan format kustom biar setiap catatan punya timestamp, nama logger, level, dan pesan, kayak cap waktu di buku harian. Loop <code>for i in range(2)</code> minta input dua acara, dengan <code>try-except</code> untuk nangani error input (misalnya donasi bukan angka). Tiap input valid disimpen ke list <code>data</code> sebagai dictionary, termasuk waktu dari <code>datetime.now()</code> yang diformat pake <code>strftime()</code>. Logger catat tiap langkah: <code>logger.info</code> saat acara ditambah, <code>logger.error</code> kalo ada error, dan <code>logger.info</code> untuk laporan JSON akhir. JSON dibuat pake <code>json.dumps(data, indent=2)</code> biar rapi dan gampang dianalisis. Struktur ini bikin laporan transparan dan portabel, kayak nyanyi lagu dengan lirik yang tersusun rapi dan dicatat dengan waktu! 📝🎶</p>
+        <p class="do-dont"><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake logging untuk catat setiap langkah biar gampang dilacak. ✅</li>
+            <li><strong>Don't:</strong> Jangan logging data sensitif (kaya nama donatur) tanpa filter. ❌</li>
+            <li><strong>Do:</strong> Simpen laporan dalam JSON biar portabel dan gampang dianalisis. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa <code>try-except</code> buat input user, kalo ga program bisa crash. 🚨</li>
+        </ul>
+        <p class="motivation">"Laporan yang rapi itu kayak cerita sukses konservasi. Catat dengan cinta, bro! 📝💚"</p>
+
+        <h2>🌟 Manfaat Nyata untuk BioMac dan Komunitas</h2>
+        <p>Proyek <strong>Biodiversity Mangrove Conservation</strong> ini bukan cuma kode, tapi solusi nyata buat tim BioMac:</p>
+        <ul>
+            <li><strong>Efisiensi:</strong> Sistem bantu tim ngatur data tanam pohon, donasi, dan laporan tanpa ribet, hemat waktu di lapangan. ⏳💨</li>
+            <li><strong>Transparansi:</strong> Logging dan JSON bikin laporan kegiatan jelas, bikin donatur percaya dan tim gampang analisis. 📊👍</li>
+            <li><strong>Skalabilitas:</strong> Struktur modul dan OOP bikin sistem gampang dikembangin, misalnya nambah fitur daur ulang atau monitoring mangrove. 📈🚀</li>
+            <li><strong>Edukasi:</strong> Mas Azmi dan tim belajar Python dari penjelasan detail, bikin BioMac mandiri ngelola sistem ini. 🧠🎓</li>
+            <li><strong>Dampak Lingkungan dan Sosial:</strong> Konservasi mangrove ngejaga ekosistem pantai, plus donasi dukung komunitas lokal, bikin dampak ganda! 🌴💸</li>
+        </ul>
+        <p>Dengan proyek ini, BioMac bisa fokus ke aksi nyata di lapangan, sementara data dan laporan diurus sistem yang kece. Indonesia bakal makin hijau, dan komunitas lokal makin sejahtera! 💚🌍</p>
+
+        <h2>🙌 Penutup</h2>
+        <p>Yo, bro, proyek ini adalah bukti bahwa teknologi bisa bikin dunia lebih baik! 🌍 Bersama Mas Azmi, Mas Arry Hutomo, dan ECC Team, kita udah bikin sistem yang nggak cuma bantu konservasi mangrove, tapi juga ngajarin kita buat kreatif, terstruktur, dan peduli sama lingkungan. Terus semangat belajar Python, dan bikin solusi yang bikin bumi tersenyum! 😊🚀</p>
+        <p class="footer">Naskah ini dibuat dari Arry Hutomo dan ECC Team untuk Bangsaku yang Kucintai, Indonesia tercinta. 🇮🇩💖</p>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const options = { timeZone: 'Asia/Jakarta', hour12: false };
+            const time = now.toLocaleTimeString('id-ID', options);
+            const date = now.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            document.getElementById('clock').textContent = `${time} WIB - Jakarta | ${date}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

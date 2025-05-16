@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional 01: Cara Import Modul dalam Python - Eco Techno Leaders 🌟</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2e7d32; /* Hijau lingkungan */
+        }
+        h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.2em;
+        }
+        p {
+            font-size: 1em;
+            color: #424242;
+        }
+        code {
+            background-color: #e0e0e0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        a {
+            color: #0288d1; /* Biru cerah */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .quote {
+            font-style: italic;
+            color: #6a1b9a; /* Ungu inspiratif */
+            margin: 20px 0;
+            text-align: center;
+        }
+        .doa {
+            font-style: italic;
+            color: #d81b60; /* Merah muda lembut */
+            margin: 20px 0;
+            text-align: center;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">Kembali ke Daftar Isi 📚</a>
+
+    <h1>Additional 01: Cara Import Modul dalam Python, Gampang Banget! 🛠️</h1>
+
+    <div class="section">
+        <p class="quote">"Import modul itu kayak ngundang temen spesialis ke proyek kita, bikin coding lebih gampang! 🛠️✨"</p>
+        <p class="doa">Doa: "Ya Tuhan, bantu kami memahami cara import modul dengan mudah biar program kami lebih keren. Aamiin. 🙏"</p>
+
+        <p>Hai temen-temen milenial yang kece abis! 🚀 Di tutorial tambahan ini, kita bakal belajar cara <strong>import modul</strong> yang dipake di Chapter 13-19 dari Tutorial Python ala Arry Hutomo. Bayangin modul itu kayak kotak alat super canggih: kalo kita butuh alat khusus, tinggal panggil, ga perlu bikin dari nol! Kita akan jelasin <em>step-by-step</em> dengan bahasa yang super gampang, mulai dari konsep, logika, kenapa harus gitu, sampe cara import lewat terminal di VS Code, plus ekstensi yang dibutuhin. Yuk, kita jadi pengelola alat coding bareng Arry Hutomo! 🌟</p>
+    </div>
+
+    <div class="section">
+        <h2>Apa Sih Import Modul Itu? 🧐</h2>
+        <p>Bayangin kamu lagi bikin proyek lingkungan, misalnya ngatur jadwal tanam pohon. Tapi, kamu butuh alat buat hitung waktu, olah teks, atau nyimpen data rapi. Nah, Python punya <strong>modul</strong>, yaitu file atau pustaka kode yang udah disiapin orang-orang pinter, kayak kotak alat siap pake! Contohnya:</p>
+        <ul>
+            <li><code>re</code>: Buat nyari pola teks, kayak detektif di Chapter 16. 🔍</li>
+            <li><code>datetime</code>: Buat ngatur waktu, kayak di Chapter 17. ⏰</li>
+            <li><code>logging</code>: Buat nyatet aktivitas, kayak di Chapter 18. 📝</li>
+            <li><code>json</code>: Buat nyimpen data rapi, kayak di Chapter 19. 🗂️</li>
+        </ul>
+        <p>Import modul artinya kita <em>ngundang</em> alat-alat ini ke program kita. Logikanya: daripada bikin alat sendiri (susah dan lama), kita pake yang udah ada, tinggal panggil pake kata <code>import</code>. Ini bikin hidup kita lebih gampang, kayak ngundang temen spesialis ke proyek lingkungan! 🌱</p>
+    </div>
+
+    <div class="section">
+        <h2>Modul yang Dipake di Chapter 13-19 📋</h2>
+        <p>Di Chapter 13-19, kita pake beberapa modul keren. Yuk, kita lihat apa aja dan kenapa kita butuh mereka:</p>
+        <h3>1. Chapter 13: OOP Dasar 🏗️</h3>
+        <p><strong>Modul:</strong> Tidak ada modul eksternal, cuma pake fitur Python bawaan.</p>
+        <p><strong>Kenapa?</strong> Chapter ini fokus ke dasar OOP, kayak bikin kelas <code>Pohon</code> atau <code>Sampah</code>. Kita ga butuh alat tambahan karena Python udah punya semua yang dibutuhin buat bikin blueprint. Logikanya: ini kayak bikin rumah pake bata standar, ga perlu alat canggih dulu.</p>
+
+        <h3>2. Chapter 14: OOP Lanjutan 🏰</h3>
+        <p><strong>Modul:</strong> Masih pake fitur bawaan Python.</p>
+        <p><strong>Kenapa?</strong> Di sini kita mainin pewarisan dan polimorfisme, kayak bikin kelas <code>Pohon</code> yang warisin <code>Lingkungan</code>. Semua alatnya udah ada di Python, jadi ga perlu import apa-apa. Logikanya: kita cuma tambah dekorasi ke rumah yang udah dibikin di Chapter 13.</p>
+
+        <h3>3. Chapter 15: Manipulasi String ✍️</h3>
+        <p><strong>Modul:</strong> Masih pake fitur bawaan Python.</p>
+        <p><strong>Kenapa?</strong> Kita olah teks pake metode kayak <code>upper()</code>, <code>lower()</code>, atau <code>split()</code>, yang udah built-in di Python. Ga perlu modul tambahan karena Python udah kasih semua alat buat mainin string. Logikanya: ini kayak nyanyi lagu pake suara sendiri, ga perlu mic eksternal.</p>
+
+        <h3>4. Chapter 16: Regular Expression 🔍</h3>
+        <p><strong>Modul:</strong> <code>re</code></p>
+        <p><strong>Kenapa?</strong> Kita butuh <code>re</code> untuk nyari pola teks, kayak nyari angka (<code>\d+</code>) atau kata di pesan lingkungan. Modul <code>re</code> punya fungsi canggih kayak <code>re.search()</code> atau <code>re.findall()</code>, yang ga bisa kita bikin sendiri dengan gampang. Logikanya: ini kayak ngundang detektif spesialis untuk nyari petunjuk di buku harian.</p>
+        <p><strong>Contoh Import:</strong></p>
+        <pre><code>import re</code></pre>
+
+        <h3>5. Chapter 17: Date dan Time ⏰</h3>
+        <p><strong>Modul:</strong> <code>datetime</code></p>
+        <p><strong>Kenapa?</strong> Kita butuh <code>datetime</code> untuk ngatur waktu, misalnya cek waktu sekarang (<code>datetime.now()</code>) atau hitung selisih hari. Python ga punya alat bawaan untuk olah waktu secanggih ini, jadi kita panggil <code>datetime</code>. Logikanya: ini kayak pake jam dinding digital untuk ngatur jadwal tanam pohon.</p>
+        <p><strong>Contoh Import:</strong></p>
+        <pre><code>from datetime import datetime, timedelta</code></pre>
+        <p><em>Catatan:</em> Kita import <code>datetime</code> dan <code>timedelta</code> dari modul <code>datetime</code> karena kita butuh dua alat ini: <code>datetime</code> untuk waktu, <code>timedelta</code> untuk hitung selisih.</p>
+
+        <h3>6. Chapter 18: Logging 📝</h3>
+        <p><strong>Modul:</strong> <code>logging</code>, <code>datetime</code></p>
+        <p><strong>Kenapa?</strong> Kita pake <code>logging</code> untuk nyatet aktivitas, kayak nyatet kapan tanam pohon dimulai. Modul <code>logging</code> kasih alat kayak <code>logger.info()</code> untuk catat pesan rapi. Kita juga pake <code>datetime</code> lagi untuk nambah waktu di log. Logikanya: ini kayak nyatet di buku harian pake pena canggih yang otomatis kasih cap waktu.</p>
+        <p><strong>Contoh Import:</strong></p>
+        <pre><code>import logging
+from datetime import datetime</code></pre>
+
+        <h3>7. Chapter 19: JSON Handling 🗂️</h3>
+        <p><strong>Modul:</strong> <code>json</code>, <code>logging</code>, <code>datetime</code></p>
+        <p><strong>Kenapa?</strong> Kita butuh <code>json</code> untuk nyimpen data rapi, kayak rencana acara tanam pohon dalam format JSON. Modul <code>json</code> punya fungsi kayak <code>json.dumps()</code> dan <code>json.loads()</code>. Kita juga pake <code>logging</code> untuk nyatet proses dan <code>datetime</code> untuk nambah waktu. Logikanya: ini kayak nyimpen rencana di kotak penyimpanan canggih sambil nyatet kapan kita simpen.</p>
+        <p><strong>Contoh Import:</strong></p>
+        <pre><code>import json
+import logging
+from datetime import datetime</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>Kenapa Harus Import Modul? 🤔</h2>
+        <p>Bayangin kamu lagi bikin proyek besar, misalnya ngatur acara tanam pohon di seluruh kota. Kalo semua alat harus kamu bikin sendiri, capek banget, kan? Makanya, Python kasih modul-modul ini supaya:</p>
+        <ul>
+            <li><strong>Hemat Waktu:</strong> Ga perlu bikin fungsi untuk olah waktu atau teks dari nol. 🌟</li>
+            <li><strong>Lebih Rapi:</strong> Modul udah dirancang pinter, jadi kode kita lebih terstruktur. 📚</li>
+            <li><strong>Bebas Error:</strong> Modul ini udah dites ribuan orang, jadi kecil kemungkinan error. ✅</li>
+        </ul>
+        <p>Logikanya: import modul itu kayak ngundang ahli ke tim kita. Mereka bawa alat canggih, kita tinggal pake dengan bener. Kalo ga import, kita kayak nyanyi lagu tanpa alat musik—bisa sih, tapi ga maksimal! 🎶</p>
+    </div>
+
+    <div class="section">
+        <h2>Cara Import Modul di Kode Python 🖥️</h2>
+        <p>Import modul di Python gampang banget, kayak manggil temen pake telepon! 📞 Ada beberapa cara, yuk kita lihat:</p>
+        <h3>1. Import Langsung</h3>
+        <p>Pake kata <code>import</code> di awal kode untuk panggil modul:</p>
+        <pre><code>import re
+pesan = "Arry Hutomo tanam 10 pohon!"
+hasil = re.findall(r"\d+", pesan)
+print(hasil)  # Output: ['10']
+</code></pre>
+        <p><strong>Kenapa?</strong> Ini cara paling sederhana, cocok kalo kita butuh semua alat di modul itu.</p>
+
+        <h3>2. Import Spesifik</h3>
+        <p>Kalo cuma butuh alat tertentu dari modul, pake <code>from ... import ...</code>:</p>
+        <pre><code>from datetime import datetime
+sekarang = datetime.now()
+print(sekarang)
+</code></pre>
+        <p><strong>Kenapa?</strong> Ini hemat memori karena cuma ambil yang kita butuh, kayak ngundang cuma satu spesialis.</p>
+
+        <h3>3. Import dengan Alias</h3>
+        <p>Kalo nama modul panjang atau ribet, kasih nama pendek pake <code>as</code>:</p>
+        <pre><code>import re as regex
+pesan = "Arry Hutomo tanam 10 pohon!"
+hasil = regex.findall(r"\d+", pesan)
+print(hasil)  # Output: ['10']
+</code></pre>
+        <p><strong>Kenapa?</strong> Ini bikin kode lebih pendek dan gampang diketik, kayak kasih nama panggilan ke temen.</p>
+    </div>
+
+    <div class="section">
+        <h2>Cara Import Modul Lewat Terminal di VS Code ⚙️</h2>
+        <p>Semua modul yang kita pake di Chapter 13-19 (<code>re</code>, <code>datetime</code>, <code>logging</code>, <code>json</code>) udah ada di Python standar, jadi ga perlu install apa-apa. Tapi, kalo kita butuh modul tambahan (misalnya <code>numpy</code> atau <code>pandas</code> di masa depan), kita bisa install lewat terminal di VS Code. Yuk, kita lihat langkah-langkahnya!</p>
+
+        <h3>1. Buka Terminal di VS Code</h3>
+        <p>Di VS Code, klik menu <strong>Terminal</strong> di atas, trus pilih <strong>New Terminal</strong>. Atau, pake shortcut <code>Ctrl + `</code> (tanda backtick). Terminal bakal muncul di bawah layar. Ini kayak walkie-talkie buat ngobrol sama komputer! 📡</p>
+
+        <h3>2. Cek Versi Python</h3>
+        <p>Pastikan Python udah terinstall. Ketik di terminal:</p>
+        <pre><code>python --version</code></pre>
+        <p>atau</p>
+        <pre><code>python3 --version</code></pre>
+        <p>Kalo muncul versi (misalnya <code>Python 3.9.2</code>), berarti Python udah siap. Kalo ga, install Python dari <a href="https://www.python.org/downloads/">python.org</a>.</p>
+
+        <h3>3. Install Modul (Kalo Perlu)</h3>
+        <p>Karena modul <code>re</code>, <code>datetime</code>, <code>logging</code>, dan <code>json</code> udah ada, kita ga perlu install. Tapi, kalo mau coba modul lain, misalnya <code>requests</code>, ketik di terminal:</p>
+        <pre><code>pip install requests</code></pre>
+        <p>atau</p>
+        <pre><code>pip3 install requests</code></pre>
+        <p><code>pip</code> adalah alat buat download modul. Ini kayak pergi ke toko alat dan ambil yang kita butuh. 🛒</p>
+
+        <h3>4. Tulis Kode dan Import</h3>
+        <p>Bikin file baru di VS Code, misalnya <code>lingkungan.py</code>. Tulis kode kayak gini:</p>
+        <pre><code>import re
+import json
+from datetime import datetime
+import logging
+
+# Contoh kode sederhana
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+pesan = "Arry Hutomo tanam 10 pohon pada 16-05-2025!"
+angka = re.findall(r"\d+", pesan)
+waktu = datetime.now().strftime("%d-%m-%Y")
+data = {"acara": "Tanam Pohon", "angka": angka}
+logger.info(f"Waktu: {waktu}, Data: {json.dumps(data)}")
+</code></pre>
+        <p>Simpan file (<code>Ctrl + S</code>), trus jalankan di terminal pake:</p>
+        <pre><code>python lingkungan.py</code></pre>
+        <p>atau</p>
+        <pre><code>python3 lingkungan.py</code></pre>
+        <p>Kalo ga ada error, artinya import sukses! 🎉</p>
+    </div>
+
+    <div class="section">
+        <h2>Ekstensi VS Code yang Dibutuhin 📦</h2>
+        <p>Supaya coding di VS Code lebih asik, kita butuh beberapa ekstensi. Ini kayak nambah fitur ke walkie-talkie supaya lebih canggih! 📡</p>
+        <h3>1. Python (by Microsoft)</h3>
+        <p><strong>Apa itu?</strong> Ekstensi resmi untuk coding Python. Kasih fitur kayak auto-complete, debugging, dan cek error.</p>
+        <p><strong>Cara Install:</strong> Buka tab Extensions (<code>Ctrl + Shift + X</code>), cari "Python", pilih yang dari Microsoft, klik <strong>Install</strong>.</p>
+        <p><strong>Kenapa?</strong> Ini bikin VS Code ngerti Python, kayak kasih otak cerdas ke editor kita. 🧠</p>
+
+        <h3>2. Code Runner</h3>
+        <p><strong>Apa itu?</strong> Ekstensi untuk jalanin kode langsung dari editor pake tombol play.</p>
+        <p><strong>Cara Install:</strong> Cari "Code Runner" di Extensions, klik <strong>Install</strong>.</p>
+        <p><strong>Kenapa?</strong> Bikin kita bisa jalanin kode cepet tanpa ketik di terminal, kayak pencet tombol start di mesin. 🚀</p>
+
+        <h3>3. Pylance</h3>
+        <p><strong>Apa itu?</strong> Ekstensi tambahan untuk Python yang kasih analisis kode lebih cerdas.</p>
+        <p><strong>Cara Install:</strong> Cari "Pylance" di Extensions, klik <strong>Install</strong>.</p>
+        <p><strong>Kenapa?</strong> Ini bantu kasih saran kode dan deteksi error lebih cepet, kayak detektif yang bantu kita coding. 🔍</p>
+    </div>
+
+    <div class="section">
+        <h2>Do and Don'ts ✅❌</h2>
+        <ul>
+            <li><strong>Do:</strong> Selalu import modul di awal file biar kode rapi dan gampang dibaca. ✅</li>
+            <li><strong>Don't:</strong> Jangan import modul yang ga kepake, nanti kode jadi berat. ❌</li>
+            <li><strong>Do:</strong> Pake <code>from ... import ...</code> kalo cuma butuh alat spesifik, biar hemat memori. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa cek versi Python dan pip di terminal, kalo ga modul bisa ga jalan. 🚨</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <p class="quote">"Setiap modul yang kamu import adalah langkah menuju program yang lebih canggih! 🚀✨"</p>
+        <p class="doa">Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat dan gampang ngerti. Aamiin. 🙏"</p>
+        <p><strong>✨ Sharing oleh Arry Hutomo dan ECC Team ✨</strong></p>
+    </div>
+
+</body>
+</html>

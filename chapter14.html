@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 14: OOP Lanjutan, Pewarisan dan Polimorfisme! 🏰</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 14: OOP Lanjutan, Pewarisan dan Polimorfisme! 🏰</h2>
+    <div class="quote">
+        "Pewarisan dan polimorfisme itu kayak membangun kerajaan, bikin kode kita lebih fleksibel! 🏰✨" <br>
+        Doa: "Ya Tuhan, bantu kami membangun kode yang fleksibel dan efisien. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar konsep lanjutan OOP: pewarisan (inheritance) dan polimorfisme (polymorphism), biar kode kita lebih fleksibel dan efisien. Kita pake semua konsep dari Chapter 1-13, termasuk kelas dasar dari Chapter 13. Yuk, kita eksplorasi bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: OOP Lanjutan buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Pewarisan Sederhana (Super Gampang)</h4>
+    <pre>class Lingkungan:
+    def aksi(self):
+        print("Arry Hutomo peduli lingkungan!")
+
+class Pohon(Lingkungan):
+    pass
+
+pohon = Pohon()
+pohon.aksi()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo peduli lingkungan!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo peduli lingkungan!" karena kelas <span class="code-term">Pohon</span> mewarisi metode <span class="code-term">aksi()</span> dari kelas <span class="code-term">Lingkungan</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini sederhana buat kenalin pewarisan. Kelas <span class="code-term">Pohon</span> mewarisi <span class="code-term">Lingkungan</span> pake tanda kurung. Aku pake <span class="code-term">pass</span> biar kelas anak minimalis. Tema lingkungan dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham dasar pewarisan, dan gampang diinget karena mirip kayak anak mewarisi sifat orang tua! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Pewarisan dengan Atribut (Gampang)</h4>
+    <pre>class Lingkungan:
+    def __init__(self, lokasi):
+        self.lokasi = lokasi
+    
+    def aksi(self):
+        print(f"Arry Hutomo peduli lingkungan di {self.lokasi}!")
+
+class Pohon(Lingkungan):
+    pass
+
+pohon = Pohon("Pantai")
+pohon.aksi()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo peduli lingkungan di Pantai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo peduli lingkungan di Pantai!" karena kelas <span class="code-term">Pohon</span> mewarisi atribut <span class="code-term">lokasi</span> dan metode <span class="code-term">aksi()</span> dari <span class="code-term">Lingkungan</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin pewarisan dengan atribut. Kelas <span class="code-term">Pohon</span> mewarisi <span class="code-term">__init__</span> dari <span class="code-term">Lingkungan</span>, jadi bisa pake atribut <span class="code-term">lokasi</span>. Tema lingkungan dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara waris atribut, dan gampang diinget karena mirip kayak anak mewarisi harta orang tua! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Pewarisan dengan Atribut Tambahan (Gampang)</h4>
+    <pre>class Lingkungan:
+    def __init__(self, lokasi):
+        self.lokasi = lokasi
+    
+    def aksi(self):
+        print(f"Arry Hutomo peduli lingkungan di {self.lokasi}!")
+
+class Pohon(Lingkungan):
+    def __init__(self, lokasi, jenis):
+        super().__init__(lokasi)
+        self.jenis = jenis
+    
+    def tanam(self):
+        print(f"Arry Hutomo tanam pohon {self.jenis} di {self.lokasi}!")
+
+pohon = Pohon("Pantai", "Mangrove")
+pohon.aksi()
+pohon.tanam()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo peduli lingkungan di Pantai!
+Arry Hutomo tanam pohon Mangrove di Pantai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya punya dua baris: satu dari metode warisan <span class="code-term">aksi()</span>, satu dari metode baru <span class="code-term">tanam()</span> yang pake atribut tambahan <span class="code-term">jenis</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin pewarisan dengan atribut tambahan. Aku pake <span class="code-term">super().__init__</span> buat panggil konstruktor induk, lalu tambah atribut <span class="code-term">jenis</span>. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara tambah atribut di kelas anak, dan gampang diinget karena mirip kayak anak punya barang sendiri selain warisan! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Pewarisan dengan Override Metode (Masih Gampang)</h4>
+    <pre>class Lingkungan:
+    def __init__(self, lokasi):
+        self.lokasi = lokasi
+    
+    def aksi(self):
+        print(f"Arry Hutomo peduli lingkungan di {self.lokasi}!")
+
+class Pohon(Lingkungan):
+    def aksi(self):
+        print(f"Arry Hutomo tanam pohon di {self.lokasi}!")
+
+pohon = Pohon("Pantai")
+pohon.aksi()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon di Pantai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon di Pantai!" karena kelas <span class="code-term">Pohon</span> override metode <span class="code-term">aksi()</span> dari <span class="code-term">Lingkungan</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin konsep override metode. Kelas <span class="code-term">Pohon</span> punya metode <span class="code-term">aksi()</span> sendiri, jadi ganti perilaku metode induk. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara override metode, dan gampang diinget karena mirip kayak anak punya cara sendiri meski mirip orang tua! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. Polimorfisme Sederhana (Mulai Agak Menantang)</h4>
+    <pre>class Lingkungan:
+    def aksi(self):
+        print("Arry Hutomo peduli lingkungan!")
+
+class Pohon(Lingkungan):
+    def aksi(self):
+        print("Arry Hutomo tanam pohon!")
+
+class Sampah(Lingkungan):
+    def aksi(self):
+        print("Arry Hutomo daur ulang sampah!")
+
+def lakukan_aksi(obj):
+    obj.aksi()
+
+pohon = Pohon()
+sampah = Sampah()
+lakukan_aksi(pohon)
+lakukan_aksi(sampah)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!
+Arry Hutomo daur ulang sampah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya punya dua baris karena fungsi <span class="code-term">lakukan_aksi()</span> memanggil metode <span class="code-term">aksi()</span> dari objek yang berbeda, menunjukkan polimorfisme.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin polimorfisme. Kelas <span class="code-term">Pohon</span> dan <span class="code-term">Sampah</span> override metode <span class="code-term">aksi()</span>, dan fungsi <span class="code-term">lakukan_aksi()</span> bisa panggil metode yang sesuai berdasarkan objek. Tema lingkungan dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham polimorfisme dasar, dan gampang diinget karena mirip kayak orang tua kasih perintah, tapi anak jalani dengan cara sendiri! Coba di VSCode, gampang kok! 🌳♻️</p>
+    
+    <h4>6. Pewarisan dengan For Loop (Agak Menantang)</h4>
+    <pre>class Lingkungan:
+    def __init__(self, lokasi):
+        self.lokasi = lokasi
+    
+    def aksi(self):
+        print(f"Arry Hutomo peduli lingkungan di {self.lokasi}!")
+
+class Pohon(Lingkungan):
+    def __init__(self, lokasi, jumlah):
+        super().__init__(lokasi)
+        self.jumlah = jumlah
+    
+    def tanam(self):
+        for i in range(self.jumlah):
+            print(f"Arry Hutomo tanam pohon di {self.lokasi} ke-{i+1}!")
+
+pohon = Pohon("Pantai", 3)
+pohon.tanam()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon di Pantai ke-1!
+Arry Hutomo tanam pohon di Pantai ke-2!
+Arry Hutomo tanam pohon di Pantai ke-3!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris karena metode <span class="code-term">tanam()</span> pake <span class="code-term">for</span> loop untuk ulang sebanyak <span class="code-term">jumlah</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin pewarisan sama <span class="code-term">for</span> loop. Kelas <span class="code-term">Pohon</span> mewarisi <span class="code-term">lokasi</span> dan punya metode <span class="code-term">tanam()</span> yang ngulang. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara gabungin pewarisan dan loop, dan gampang diinget karena mirip kayak nyanyi lagu di lokasi tertentu! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Pewarisan dengan While Loop (Agak Menantang)</h4>
+    <pre>class Lingkungan:
+    def __init__(self, lokasi):
+        self.lokasi = lokasi
+    
+    def aksi(self):
+        print(f"Arry Hutomo peduli lingkungan di {self.lokasi}!")
+
+class Sampah(Lingkungan):
+    def __init__(self, lokasi, berat):
+        super().__init__(lokasi)
+        self.berat = berat
+    
+    def daur_ulang(self):
+        i = 0
+        while i < self.berat:
+            print(f"Arry Hutomo daur ulang 1 kg di {self.lokasi}!")
+            i = i + 1
+
+sampah = Sampah("Kota", 3)
+sampah.daur_ulang()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 1 kg di Kota!
+Arry Hutomo daur ulang 1 kg di Kota!
+Arry Hutomo daur ulang 1 kg di Kota!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris karena metode <span class="code-term">daur_ulang()</span> pake <span class="code-term">while</span> loop untuk ulang sebanyak <span class="code-term">berat</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin pewarisan sama <span class="code-term">while</span> loop. Kelas <span class="code-term">Sampah</span> mewarisi <span class="code-term">lokasi</span> dan punya metode <span class="code-term">daur_ulang()</span> yang ngulang. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara gabungin pewarisan dan loop, dan gampang diinget karena mirip kayak ngitung sisa sampah di lokasi! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>8. Polimorfisme dengan If-Else (Menantang)</h4>
+    <pre>class Lingkungan:
+    def aksi(self):
+        print("Arry Hutomo peduli lingkungan!")
+
+class Pohon(Lingkungan):
+    def __init__(self, jumlah):
+        self.jumlah = jumlah
+    
+    def aksi(self):
+        if self.jumlah > 7:
+            print(f"Arry Hutomo tanam {self.jumlah} pohon, banyak!")
+        else:
+            print(f"Arry Hutomo tanam {self.jumlah} pohon, tambah lagi!")
+
+class Sampah(Lingkungan):
+    def __init__(self, berat):
+        self.berat = berat
+    
+    def aksi(self):
+        if self.berat > 5:
+            print(f"Arry Hutomo daur ulang {self.berat} kg, banyak!")
+        else:
+            print(f"Arry Hutomo daur ulang {self.berat} kg, tambah lagi!")
+
+def lakukan_aksi(obj):
+    obj.aksi()
+
+pohon = Pohon(10)
+sampah = Sampah(3)
+lakukan_aksi(pohon)
+lakukan_aksi(sampah)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon, banyak!
+Arry Hutomo daur ulang 3 kg, tambah lagi!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya punya dua baris: <span class="code-term">Pohon</span> masuk ke blok <span class="code-term">if</span> (10 > 7), <span class="code-term">Sampah</span> masuk ke blok <span class="code-term">else</span> (3 < 5).</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin polimorfisme sama <span class="code-term">if-else</span>. Kelas <span class="code-term">Pohon</span> dan <span class="code-term">Sampah</span> override <span class="code-term">aksi()</span> dengan logika masing-masing. Tema lingkungan dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham polimorfisme dengan logika, dan gampang diinget karena mirip kayak anak punya cara sendiri sesuai kondisi! Coba di VSCode, gampang kok! 🌳♻️</p>
+    
+    <h4>9. Pewarisan dengan Input (Menantang)</h4>
+    <pre>class Lingkungan:
+    def __init__(self, lokasi):
+        self.lokasi = lokasi
+    
+    def aksi(self):
+        print(f"Arry Hutomo peduli lingkungan di {self.lokasi}!")
+
+class Pohon(Lingkungan):
+    def __init__(self, lokasi, jenis):
+        super().__init__(lokasi)
+        self.jenis = jenis
+    
+    def tanam(self):
+        print(f"Arry Hutomo tanam pohon {self.jenis} di {self.lokasi}!")
+
+lokasi = input("Masukkan lokasi: ")
+jenis = input("Masukkan jenis pohon: ")
+pohon = Pohon(lokasi, jenis)
+pohon.aksi()
+pohon.tanam()</pre>
+    <p><strong>Output (misalnya user masukkan "Pantai", "Mangrove"):</strong></p>
+    <pre>Masukkan lokasi: Pantai
+Masukkan jenis pohon: Mangrove
+Arry Hutomo peduli lingkungan di Pantai!
+Arry Hutomo tanam pohon Mangrove di Pantai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin data, lalu metode warisan dan metode baru dipanggil.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin pewarisan sama <span class="code-term">input()</span>. Kelas <span class="code-term">Pohon</span> mewarisi <span class="code-term">lokasi</span> dan punya atribut tambahan <span class="code-term">jenis</span>. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin kelas interaktif dengan pewarisan, dan gampang diinget karena mirip kayak bikin blueprint dari input! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. Polimorfisme dengan List (Menantang)</h4>
+    <pre>class Lingkungan:
+    def aksi(self):
+        print("Arry Hutomo peduli lingkungan!")
+
+class Pohon(Lingkungan):
+    def __init__(self, jumlah):
+        self.jumlah = jumlah
+    
+    def aksi(self):
+        print(f"Arry Hutomo tanam {self.jumlah} pohon!")
+
+class Sampah(Lingkungan):
+    def __init__(self, berat):
+        self.berat = berat
+    
+    def aksi(self):
+        print(f"Arry Hutomo daur ulang {self.berat} kg!")
+
+objek = [Pohon(10), Sampah(5.5)]
+for obj in objek:
+    obj.aksi()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon!
+Arry Hutomo daur ulang 5.5 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak dua baris karena loop memanggil metode <span class="code-term">aksi()</span> dari masing-masing objek, menunjukkan polimorfisme.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin polimorfisme sama list dan <span class="code-term">for</span> loop. List <span class="code-term">objek</span> berisi objek dari kelas berbeda, tapi bisa panggil metode yang sama. Tema lingkungan dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake polimorfisme dengan list, dan gampang diinget karena mirip kayak ngatur banyak anak dengan tugas yang sama! Coba di VSCode, gampang kok! 🌳♻️</p>
+    
+    <h4>11. Pewarisan dengan Dictionary (Agak Sulit)</h4>
+    <pre>class Lingkungan:
+    def __init__(self, lokasi):
+        self.lokasi = lokasi
+    
+    def aksi(self):
+        print(f"Arry Hutomo peduli lingkungan di {self.lokasi}!")
+
+class Sampah(Lingkungan):
+    def __init__(self, lokasi, berat_dict):
+        super().__init__(lokasi)
+        self.berat_dict = berat_dict
+    
+    def hitung_total(self):
+        total = 0
+        for berat in self.berat_dict.values():
+            total = total + berat
+        return total
+
+sampah = Sampah("Kota", {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5})
+hasil = sampah.hitung_total()
+print(f"Arry Hutomo daur ulang {hasil} kg di {sampah.lokasi}!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 11.0 kg di Kota!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 11.0 kg di Kota!" karena metode <span class="code-term">hitung_total()</span> jumlahkan nilai dictionary, dan <span class="code-term">lokasi</span> diwarisi.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin pewarisan sama dictionary. Kelas <span class="code-term">Sampah</span> mewarisi <span class="code-term">lokasi</span> dan punya atribut <span class="code-term">berat_dict</span> untuk diolah. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara gabungin pewarisan dan dictionary, dan gampang diinget karena mirip kayak njumlahin catatan di lokasi! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>12. Polimorfisme dengan Try-Except (Sulit)</h4>
+    <pre>class Lingkungan:
+    def aksi(self):
+        print("Arry Hutomo peduli lingkungan!")
+
+class Pohon(Lingkungan):
+    def __init__(self, jumlah):
+        self.jumlah = jumlah
+    
+    def aksi(self):
+        try:
+            if self.jumlah < 0:
+                raise ValueError("Jumlah pohon tidak boleh negatif!")
+            print(f"Arry Hutomo tanam {self.jumlah} pohon!")
+        except ValueError as e:
+            print(e)
+
+class Sampah(Lingkungan):
+    def __init__(self, berat):
+        self.berat = berat
+    
+    def aksi(self):
+        try:
+            if self.berat < 0:
+                raise ValueError("Berat sampah tidak boleh negatif!")
+            print(f"Arry Hutomo daur ulang {self.berat} kg!")
+        except ValueError as e:
+            print(e)
+
+def lakukan_aksi(obj):
+    obj.aksi()
+
+pohon = Pohon(-5)
+sampah = Sampah(5.5)
+lakukan_aksi(pohon)
+lakukan_aksi(sampah)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Jumlah pohon tidak boleh negatif!
+Arry Hutomo daur ulang 5.5 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak pesan error untuk <span class="code-term">Pohon</span> karena jumlah negatif, lalu berhasil untuk <span class="code-term">Sampah</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin polimorfisme sama <span class="code-term">try-except</span>. Kelas <span class="code-term">Pohon</span> dan <span class="code-term">Sampah</span> override <span class="code-term">aksi()</span> dengan penanganan error. Tema lingkungan dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham polimorfisme dengan error handling, dan gampang diinget karena mirip kayak anak punya cara sendiri tapi siap kalo salah! Coba di VSCode, gampang kok! 🌳♻️</p>
+    
+    <h4>13. Pewarisan dengan File Handling (Simulasi) (Sulit)</h4>
+    <pre>class Lingkungan:
+    def __init__(self, lokasi):
+        self.lokasi = lokasi
+    
+    def aksi(self):
+        print(f"Arry Hutomo peduli lingkungan di {self.lokasi}!")
+
+class Pohon(Lingkungan):
+    def __init__(self, lokasi, jenis, jumlah):
+        super().__init__(lokasi)
+        self.jenis = jenis
+        self.jumlah = jumlah
+    
+    def simpan(self):
+        # Simulasi menulis ke file pohon.txt
+        # with open("pohon.txt", "w") as file:
+        #     file.write(f"Arry Hutomo tanam {self.jumlah} pohon {self.jenis} di {self.lokasi}!\n")
+        print("Simulasi isi file pohon.txt:")
+        print(f"Arry Hutomo tanam {self.jumlah} pohon {self.jenis} di {self.lokasi}!")
+
+pohon = Pohon("Pantai", "Mangrove", 10)
+pohon.aksi()
+pohon.simpan()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo peduli lingkungan di Pantai!
+Simulasi isi file pohon.txt:
+Arry Hutomo tanam 10 pohon Mangrove di Pantai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya punya dua baris: satu dari metode warisan, satu dari simulasi file handling.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin pewarisan sama file handling (disimulasikan). Kelas <span class="code-term">Pohon</span> mewarisi <span class="code-term">lokasi</span> dan punya metode <span class="code-term">simpan()</span> untuk simulasi tulis file. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara gabungin pewarisan dan file handling, dan gampang diinget karena mirip kayak nulis catatan di lokasi! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>14. Polimorfisme dengan Modul (Lebih Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+class Lingkungan:
+    def aksi(self):
+        print("Arry Hutomo peduli lingkungan!")
+
+class Pohon(Lingkungan):
+    def __init__(self, jumlah):
+        self.jumlah = jumlah
+    
+    def aksi(self):
+        print(f"Arry Hutomo tanam {self.jumlah} pohon!")
+
+class Sampah(Lingkungan):
+    def __init__(self, berat):
+        self.berat = berat
+    
+    def aksi(self):
+        print(f"Arry Hutomo daur ulang {self.berat} kg!")
+
+# File utama
+# from lingkungan import Pohon, Sampah
+def lakukan_aksi(obj):
+    obj.aksi()
+
+pohon = Pohon(10)
+sampah = Sampah(5.5)
+lakukan_aksi(pohon)
+lakukan_aksi(sampah)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon!
+Arry Hutomo daur ulang 5.5 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak dua baris karena fungsi <span class="code-term">lakukan_aksi()</span> memanggil metode <span class="code-term">aksi()</span> dari kelas yang diimpor dari modul.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin polimorfisme sama modul. Kelas <span class="code-term">Pohon</span> dan <span class="code-term">Sampah</span> diimpor dari modul simulasi dan digunakan secara polimorfik. Tema lingkungan dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham polimorfisme dengan modul, dan gampang diinget karena mirip kayak ngatur banyak anak dari kotak alat! Coba di VSCode, gampang kok! 🌳♻️</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+class Lingkungan:
+    def __init__(self, lokasi):
+        self.lokasi = lokasi
+    
+    def aksi(self):
+        print(f"Arry Hutomo peduli lingkungan di {self.lokasi}!")
+
+class Pohon(Lingkungan):
+    def __init__(self, lokasi, daftar_pohon):
+        super().__init__(lokasi)
+        self.daftar_pohon = daftar_pohon
+    
+    def aksi(self):
+        try:
+            total = 0
+            for pohon in self.daftar_pohon:
+                if pohon < 0:
+                    raise ValueError("Jumlah pohon tidak boleh negatif!")
+                total = total + pohon
+                print(f"Arry Hutomo tanam {pohon} pohon di {self.lokasi}!")
+            return total
+        except ValueError as e:
+            print(e)
+            return 0
+
+class Sampah(Lingkungan):
+    def __init__(self, lokasi, berat_dict):
+        super().__init__(lokasi)
+        self.berat_dict = berat_dict
+    
+    def aksi(self):
+        try:
+            total = 0
+            i = 0
+            keys = list(self.berat_dict.keys())
+            while i < len(keys):
+                jenis = keys[i]
+                berat = self.berat_dict[jenis]
+                if berat < 0:
+                    raise ValueError("Berat sampah tidak boleh negatif!")
+                total = total + berat
+                if total > 10:
+                    print(f"Arry Hutomo daur ulang {total} kg di {self.lokasi}!\nCukup ", f"{jenis} banyak!", sep="=>", end="")
+                    print("yuk!")
+                else:
+                    print(f"Arry Hutomo daur ulang {total} kg di {self.lokasi}!\nTambah ", f"{jenis} kurang!", sep="=>", end="")
+                    print("yuk!")
+                i = i + 1
+            return total
+        except ValueError as e:
+            print(e)
+            return 0
+
+# File utama
+# from lingkungan import Pohon, Sampah
+def lakukan_aksi(obj):
+    hasil = obj.aksi()
+    print(f"Hasil di {obj.lokasi}: {hasil}")
+
+lokasi = input("Masukkan lokasi: ")
+daftar_pohon = []
+for i in range(3):
+    try:
+        jumlah = int(input(f"Masukkan jumlah pohon ke-{i+1}: "))
+        daftar_pohon.append(jumlah)
+    except ValueError:
+        print("Jumlah harus angka, coba lagi!")
+        i = i - 1
+
+berat_dict = {}
+for i in range(3):
+    try:
+        jenis = input(f"Masukkan jenis sampah ke-{i+1}: ")
+        berat = float(input(f"Masukkan berat {jenis} (kg): "))
+        berat_dict[jenis] = berat
+    except ValueError:
+        print("Berat harus angka, coba lagi!")
+        i = i - 1
+
+pohon = Pohon(lokasi, daftar_pohon)
+sampah = Sampah(lokasi, berat_dict)
+lakukan_aksi(pohon)
+lakukan_aksi(sampah)</pre>
+    <p><strong>Output (misalnya user masukkan "Pantai", 10, 5, 8, "Plastik", 5.5, "Kertas", 3.0, "Organik", 2.5):</strong></p>
+    <pre>Masukkan lokasi: Pantai
+Masukkan jumlah pohon ke-1: 10
+Masukkan jumlah pohon ke-2: 5
+Masukkan jumlah pohon ke-3: 8
+Masukkan jenis sampah ke-1: Plastik
+Masukkan berat Plastik (kg): 5.5
+Masukkan jenis sampah ke-2: Kertas
+Masukkan berat Kertas (kg): 3.0
+Masukkan jenis sampah ke-3: Organik
+Masukkan berat Organik (kg): 2.5
+Arry Hutomo tanam 10 pohon di Pantai!
+Arry Hutomo tanam 5 pohon di Pantai!
+Arry Hutomo tanam 8 pohon di Pantai!
+Hasil di Pantai: 23
+Arry Hutomo daur ulang 5.5 kg di Pantai!
+Tambah =>Plastik kurang!yuk!
+Arry Hutomo daur ulang 8.5 kg di Pantai!
+Tambah =>Kertas kurang!yuk!
+Arry Hutomo daur ulang 11.0 kg di Pantai!
+Cukup =>Organik banyak!yuk!
+Hasil di Pantai: 11.0</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin data, lalu metode <span class="code-term">aksi()</span> dari <span class="code-term">Pohon</span> dan <span class="code-term">Sampah</span> dijalankan secara polimorfik, dengan error handling, loop, dan logika.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, <span class="code-term">while</span> loop, list, dictionary, operasi <span class="code-term">+</span>, <span class="code-term">if-else</span>, <span class="code-term">return</span>, <span class="code-term">try-except</span>, modul, pewarisan, polimorfisme, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span>. Tema lingkungan dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin program kompleks dengan OOP, dan gampang diinget karena mirip kayak bikin kerajaan lingkungan! Coba di VSCode, bakal bangga sama hasilnya! 🌳♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Gunakan <span class="code-term">super()</span> untuk memanggil metode induk, biar ga kehilangan fungsionalitas warisan. ✅</li>
+        <li><strong>Don't:</strong> Jangan override metode tanpa alasan jelas, kalo ga perlu, biarin metode induk jalan. ❌</li>
+        <li><strong>Do:</strong> Pastikan polimorfisme digunakan dengan metode yang sama di semua kelas turunan, biar fleksibel. 🌟</li>
+        <li><strong>Don't:</strong> Jangan lupa nangani error saat override metode, kalo ga program bisa crash. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap warisan dan polimorfisme yang kamu buat adalah langkah menuju kode yang lebih fleksibel! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

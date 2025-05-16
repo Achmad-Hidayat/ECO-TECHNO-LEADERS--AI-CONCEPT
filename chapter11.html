@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 11: Error Handling, Tangani Kesalahan dengan Elegan! 🚨</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 11: Error Handling, Tangani Kesalahan dengan Elegan! 🚨</h2>
+    <div class="quote">
+        "Error handling itu kayak jaring pengaman, bikin program kita tetap jalan meski ada masalah! 🚨✨" <br>
+        Doa: "Ya Tuhan, bantu kami menangani error dengan bijak biar program kami lancar. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar tentang error handling di Python pake <span class="code-term">try-except</span>, biar program kita ga crash kalo ada masalah. Kita pake variabel (Chapter 2), operasi (Chapter 3), input (Chapter 4), pengkondisian (Chapter 5), perulangan (Chapter 6), list (Chapter 7), dictionary (Chapter 8), fungsi (Chapter 9), modul (Chapter 10), dan <span class="code-term">print</span> (Chapter 1). Yuk, kita tangani error bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: Error Handling buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Try-Except Sederhana (Super Gampang)</h4>
+    <pre>try:
+    jumlah = int(input("Masukkan jumlah pohon: "))
+    print(f"Arry Hutomo tanam {jumlah} pohon!")
+except ValueError:
+    print("Masukkan angka yang valid!")</pre>
+    <p><strong>Output (misalnya user masukkan "abc"):</strong></p>
+    <pre>Masukkan jumlah pohon: abc
+Masukkan angka yang valid!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Masukkan angka yang valid!" karena user masukin "abc", yang ga bisa diubah ke integer pake <span class="code-term">int()</span>. Ini menyebabkan <span class="code-term">ValueError</span>, jadi program masuk ke blok <span class="code-term">except</span> dan nampilin pesan error.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini sederhana buat kenalin <span class="code-term">try-except</span>. Aku pake <span class="code-term">int(input())</span> yang bisa gagal kalo input bukan angka, jadi aku tangkap <span class="code-term">ValueError</span> di blok <span class="code-term">except</span>. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error dasar, dan gampang diinget karena mirip kayak nyanyi lagu tapi siap kalo nada fals! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Try-Except dengan Input Valid (Gampang)</h4>
+    <pre>try:
+    jumlah = int(input("Masukkan jumlah pohon: "))
+    print(f"Arry Hutomo tanam {jumlah} pohon!")
+except ValueError:
+    print("Masukkan angka yang valid!")</pre>
+    <p><strong>Output (misalnya user masukkan 10):</strong></p>
+    <pre>Masukkan jumlah pohon: 10
+Arry Hutomo tanam 10 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 10 pohon!" karena user masukin 10, yang bisa diubah ke integer pake <span class="code-term">int()</span>. Ga ada error, jadi program jalan di blok <span class="code-term">try</span> dan nampilin pesan sukses.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin kasus sukses dalam <span class="code-term">try-except</span>. Aku pake <span class="code-term">int(input())</span> lagi, tapi kali ini inputnya valid, jadi ga masuk ke <span class="code-term">except</span>. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara <span class="code-term">try-except</span> jalan kalo ga ada error, dan gampang diinget karena mirip kayak nyanyi lagu dengan nada yang pas! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Try-Except untuk Pembagian (Gampang)</h4>
+    <pre>try:
+    total = 100
+    penerima = int(input("Masukkan jumlah penerima: "))
+    per_orang = total / penerima
+    print(f"Arry Hutomo bagi Rp {per_orang} per orang!")
+except ZeroDivisionError:
+    print("Jumlah penerima tidak boleh 0!")</pre>
+    <p><strong>Output (misalnya user masukkan 0):</strong></p>
+    <pre>Masukkan jumlah penerima: 0
+Jumlah penerima tidak boleh 0!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Jumlah penerima tidak boleh 0!" karena user masukin 0, yang menyebabkan <span class="code-term">ZeroDivisionError</span> saat pembagian <span class="code-term">total / penerima</span>. Program masuk ke blok <span class="code-term">except</span> dan nampilin pesan error.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara tangani <span class="code-term">ZeroDivisionError</span> pake <span class="code-term">try-except</span>. Aku pake pembagian karena ini sering bikin error kalo pembaginya 0. Tema bagi donasi dipilih karena Arry Hutomo peduli sosial, sesuai isu sosial. Struktur ini bikin kamu paham cara nangani error pembagian, dan gampang diinget karena mirip kayak bagi kue tapi ga boleh 0 orang! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>4. Try-Except untuk Pembagian Valid (Masih Gampang)</h4>
+    <pre>try:
+    total = 100
+    penerima = int(input("Masukkan jumlah penerima: "))
+    per_orang = total / penerima
+    print(f"Arry Hutomo bagi Rp {per_orang} per orang!")
+except ZeroDivisionError:
+    print("Jumlah penerima tidak boleh 0!")</pre>
+    <p><strong>Output (misalnya user masukkan 5):</strong></p>
+    <pre>Masukkan jumlah penerima: 5
+Arry Hutomo bagi Rp 20.0 per orang!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo bagi Rp 20.0 per orang!" karena user masukin 5, jadi pembagian <span class="code-term">100 / 5 = 20.0</span> berhasil. Ga ada error, jadi program jalan di blok <span class="code-term">try</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin kasus sukses dalam <span class="code-term">try-except</span> untuk pembagian. Inputnya valid, jadi ga masuk ke <span class="code-term">except</span>. Tema bagi donasi dipilih karena Arry Hutomo peduli sosial, sesuai isu sosial. Struktur ini bikin kamu paham cara <span class="code-term">try-except</span> jalan kalo ga ada error, dan gampang diinget karena mirip kayak bagi kue dengan jumlah orang yang pas! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>5. Try-Except dengan Multiple Exception (Mulai Agak Menantang)</h4>
+    <pre>try:
+    total = 100
+    penerima = int(input("Masukkan jumlah penerima: "))
+    per_orang = total / penerima
+    print(f"Arry Hutomo bagi Rp {per_orang} per orang!")
+except ValueError:
+    print("Masukkan angka yang valid!")
+except ZeroDivisionError:
+    print("Jumlah penerima tidak boleh 0!")</pre>
+    <p><strong>Output (misalnya user masukkan "abc"):</strong></p>
+    <pre>Masukkan jumlah penerima: abc
+Masukkan angka yang valid!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Masukkan angka yang valid!" karena user masukin "abc", yang menyebabkan <span class="code-term">ValueError</span> saat <span class="code-term">int()</span>. Program masuk ke blok <span class="code-term">except ValueError</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara nangani lebih dari satu jenis error pake <span class="code-term">try-except</span>. Aku tangkap <span class="code-term">ValueError</span> dan <span class="code-term">ZeroDivisionError</span> biar program siap nangani dua kemungkinan error. Tema bagi donasi dipilih karena Arry Hutomo peduli sosial, sesuai isu sosial. Struktur ini bikin kamu paham cara nangani multiple exception, dan gampang diinget karena mirip kayak nyanyi lagu tapi siap kalo nada fals atau ga ada penyanyi! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>6. Try-Except dengan For Loop (Agak Menantang)</h4>
+    <pre>pohon_list = [10, "abc", 5]
+for jumlah in pohon_list:
+    try:
+        print(f"Arry Hutomo tanam {jumlah} pohon!")
+    except TypeError:
+        print("Data pohon tidak valid!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon!
+Data pohon tidak valid!
+Arry Hutomo tanam 5 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam 10 pohon!" (berhasil), "Data pohon tidak valid!" (karena "abc" menyebabkan <span class="code-term">TypeError</span> saat digunakan di <span class="code-term">f-string</span>), dan "Arry Hutomo tanam 5 pohon!" (berhasil).</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">try-except</span> sama <span class="code-term">for</span> loop, biar kamu paham cara nangani error dalam loop. Aku pake list dengan data campuran (integer dan string) biar ada error <span class="code-term">TypeError</span> saat string dipake di <span class="code-term">f-string</span>. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error dalam loop, dan gampang diinget karena mirip kayak nyanyi lagu tapi skip kalo nada fals! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Try-Except dengan While Loop (Agak Menantang)</h4>
+    <pre>berat = 3
+i = 0
+while i < berat:
+    try:
+        penerima = int(input(f"Masukkan penerima ke-{i+1}: "))
+        per_orang = 100 / penerima
+        print(f"Arry Hutomo bagi Rp {per_orang} per orang!")
+        i = i + 1
+    except (ValueError, ZeroDivisionError):
+        print("Input tidak valid atau penerima tidak boleh 0!")</pre>
+    <p><strong>Output (misalnya user masukkan 0, lalu 5):</strong></p>
+    <pre>Masukkan penerima ke-1: 0
+Input tidak valid atau penerima tidak boleh 0!
+Masukkan penerima ke-1: 5
+Arry Hutomo bagi Rp 20.0 per orang!
+Masukkan penerima ke-2: 5
+Arry Hutomo bagi Rp 20.0 per orang!
+Masukkan penerima ke-3: 5
+Arry Hutomo bagi Rp 20.0 per orang!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin 0 (menyebabkan <span class="code-term">ZeroDivisionError</span>, masuk ke <span class="code-term">except</span>), lalu masukin 5 (berhasil, ulang sampai selesai 3 kali).</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">try-except</span> sama <span class="code-term">while</span> loop, biar kamu paham cara nangani error dalam loop. Aku pake <span class="code-term">while</span> loop biar user bisa coba lagi kalo salah input. Tema bagi donasi dipilih karena Arry Hutomo peduli sosial, sesuai isu sosial. Struktur ini bikin kamu paham cara nangani error dalam loop, dan gampang diinget karena mirip kayak bagi kue tapi ulang kalo salah! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>8. Try-Except dengan Fungsi (Menantang)</h4>
+    <pre>def bagi_donasi(total, penerima):
+    try:
+        per_orang = total / penerima
+        print(f"Arry Hutomo bagi Rp {per_orang} per orang!")
+    except ZeroDivisionError:
+        print("Jumlah penerima tidak boleh 0!")
+
+bagi_donasi(100, 0)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Jumlah penerima tidak boleh 0!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Jumlah penerima tidak boleh 0!" karena kita panggil fungsi <span class="code-term">bagi_donasi(100, 0)</span>, yang menyebabkan <span class="code-term">ZeroDivisionError</span>. Fungsi tangkap error dan masuk ke blok <span class="code-term">except</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">try-except</span> sama fungsi dari Chapter 9, biar kamu paham cara nangani error dalam fungsi. Aku pilih fungsi <span class="code-term">bagi_donasi</span> dengan parameter <span class="code-term">total</span> dan <span class="code-term">penerima</span>, dan tema bagi donasi karena Arry Hutomo peduli sosial, sesuai isu sosial. Struktur ini bikin kamu paham cara nangani error dalam fungsi, dan gampang diinget karena mirip kayak pake kalkulator tapi siap kalo salah! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>9. Try-Except dengan List (Menantang)</h4>
+    <pre>pohon_list = [10, 5, 8]
+try:
+    indeks = int(input("Masukkan indeks pohon (0-2): "))
+    print(f"Arry Hutomo tanam {pohon_list[indeks]} pohon!")
+except IndexError:
+    print("Indeks di luar jangkauan!")
+except ValueError:
+    print("Masukkan angka yang valid!")</pre>
+    <p><strong>Output (misalnya user masukkan 3):</strong></p>
+    <pre>Masukkan indeks pohon (0-2): 3
+Indeks di luar jangkauan!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Indeks di luar jangkauan!" karena user masukin 3, yang di luar jangkauan list <span class="code-term">pohon_list</span> (indeks 0-2). Ini menyebabkan <span class="code-term">IndexError</span>, jadi program masuk ke blok <span class="code-term">except IndexError</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">try-except</span> sama list, biar kamu paham cara nangani error saat akses list. Aku tangkap <span class="code-term">IndexError</span> dan <span class="code-term">ValueError</span> biar program siap nangani dua jenis error. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error saat akses list, dan gampang diinget karena mirip kayak nyari barang di daftar tapi salah nomor! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. Try-Except dengan Dictionary (Menantang)</h4>
+    <pre>berat_dict = {"Plastik": 5.5, "Kertas": 3.0}
+try:
+    jenis = input("Masukkan jenis sampah: ")
+    print(f"Arry Hutomo daur ulang {berat_dict[jenis]} kg!")
+except KeyError:
+    print("Jenis sampah tidak ditemukan!")</pre>
+    <p><strong>Output (misalnya user masukkan "Organik"):</strong></p>
+    <pre>Masukkan jenis sampah: Organik
+Jenis sampah tidak ditemukan!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Jenis sampah tidak ditemukan!" karena user masukin "Organik", yang ga ada di dictionary <span class="code-term">berat_dict</span>. Ini menyebabkan <span class="code-term">KeyError</span>, jadi program masuk ke blok <span class="code-term">except KeyError</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">try-except</span> sama dictionary, biar kamu paham cara nangani error saat akses dictionary. Aku tangkap <span class="code-term">KeyError</span> biar program ga crash kalo kunci ga ada. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error saat akses dictionary, dan gampang diinget karena mirip kayak nyari nomor telepon tapi salah nama! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>11. Try-Except dengan Modul (Agak Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def bagi_donasi(total, penerima):
+    try:
+        per_orang = total / penerima
+        print(f"Arry Hutomo bagi Rp {per_orang} per orang!")
+    except ZeroDivisionError:
+        print("Jumlah penerima tidak boleh 0!")
+
+# File utama
+# from lingkungan import bagi_donasi
+try:
+    bagi_donasi(100, 0)
+except:
+    print("Terjadi error saat memanggil fungsi!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Jumlah penerima tidak boleh 0!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Jumlah penerima tidak boleh 0!" karena kita panggil fungsi <span class="code-term">bagi_donasi(100, 0)</span> dari modul, yang tangani <span class="code-term">ZeroDivisionError</span> di dalam fungsi. Blok <span class="code-term">except</span> di file utama ga kepake karena error udah ditangani di modul.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">try-except</span> sama modul, biar kamu paham cara nangani error saat pake fungsi dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema bagi donasi karena Arry Hutomo peduli sosial, sesuai isu sosial. Struktur ini bikin kamu paham cara nangani error dari modul, dan gampang diinget karena mirip kayak pake alat dari kotak tapi siap kalo error! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>12. Try-Except dengan For Loop dan List (Sulit)</h4>
+    <pre>pohon_list = [10, 5, 8]
+for i in range(4):
+    try:
+        print(f"Arry Hutomo tanam {pohon_list[i]} pohon!")
+    except IndexError:
+        print(f"Indeks {i} di luar jangkauan!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon!
+Arry Hutomo tanam 5 pohon!
+Arry Hutomo tanam 8 pohon!
+Indeks 3 di luar jangkauan!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak empat baris: tiga baris pertama berhasil (indeks 0-2), tapi indeks 3 menyebabkan <span class="code-term">IndexError</span> karena list cuma punya 3 elemen, jadi masuk ke <span class="code-term">except</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">try-except</span>, <span class="code-term">for</span> loop, dan list, biar kamu paham cara nangani error saat iterasi list dengan indeks. Aku sengaja pake <span class="code-term">range(4)</span> biar ada error. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error dalam loop, dan gampang diinget karena mirip kayak nyari barang di daftar tapi nomornya kelewat! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. Try-Except dengan While Loop dan Dictionary (Sulit)</h4>
+    <pre>berat_dict = {"Plastik": 5.5, "Kertas": 3.0}
+i = 0
+while i < 3:
+    try:
+        jenis = input(f"Masukkan jenis sampah ke-{i+1}: ")
+        print(f"Arry Hutomo daur ulang {berat_dict[jenis]} kg!")
+        i = i + 1
+    except KeyError:
+        print("Jenis sampah tidak ditemukan, coba lagi!")</pre>
+    <p><strong>Output (misalnya user masukkan "Organik", lalu "Plastik", lalu "Kertas"):</strong></p>
+    <pre>Masukkan jenis sampah ke-1: Organik
+Jenis sampah tidak ditemukan, coba lagi!
+Masukkan jenis sampah ke-1: Plastik
+Arry Hutomo daur ulang 5.5 kg!
+Masukkan jenis sampah ke-2: Kertas
+Arry Hutomo daur ulang 3.0 kg!
+Masukkan jenis sampah ke-3: Organik
+Jenis sampah tidak ditemukan, coba lagi!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin "Organik" (ga ada di dictionary, masuk <span class="code-term">except</span>), lalu "Plastik" dan "Kertas" (berhasil), lalu "Organik" lagi (gagal lagi).</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">try-except</span>, <span class="code-term">while</span> loop, dan dictionary, biar kamu paham cara nangani error saat akses dictionary dalam loop. Aku pake <span class="code-term">while</span> loop biar user bisa coba lagi kalo salah. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error dalam loop, dan gampang diinget karena mirip kayak nyari nomor telepon tapi ulang kalo salah! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>14. Try-Except dengan Fungsi dan Modul (Lebih Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def bagi_donasi(total, penerima):
+    try:
+        per_orang = total / penerima
+        print(f"Arry Hutomo bagi Rp {per_orang} per orang!")
+    except ZeroDivisionError:
+        print("Jumlah penerima tidak boleh 0!")
+
+# File utama
+# from lingkungan import bagi_donasi
+try:
+    penerima = int(input("Masukkan jumlah penerima: "))
+    bagi_donasi(100, penerima)
+except ValueError:
+    print("Masukkan angka yang valid!")</pre>
+    <p><strong>Output (misalnya user masukkan "abc"):</strong></p>
+    <pre>Masukkan jumlah penerima: abc
+Masukkan angka yang valid!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Masukkan angka yang valid!" karena user masukin "abc", yang menyebabkan <span class="code-term">ValueError</span> saat <span class="code-term">int()</span>. Program masuk ke blok <span class="code-term">except ValueError</span> di file utama.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">try-except</span>, fungsi, dan modul, biar kamu paham cara nangani error di dua level: dalam fungsi (di modul) dan di file utama. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema bagi donasi karena Arry Hutomo peduli sosial, sesuai isu sosial. Struktur ini bikin kamu paham cara nangani error di banyak lapisan, dan gampang diinget karena mirip kayak pake alat dari kotak tapi siap kalo salah! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def hitung_dan_cek_sampah(berat_dict):
+    try:
+        total = 0
+        i = 0
+        keys = list(berat_dict.keys())
+        while i < len(keys):
+            jenis = keys[i]
+            total = total + berat_dict[jenis]
+            if total > 10:
+                print(f"Arry Hutomo daur ulang {total} kg!\nCukup ", f"{jenis} banyak!", sep="=>", end="")
+                print("yuk!")
+            else:
+                print(f"Arry Hutomo daur ulang {total} kg!\nTambah ", f"{jenis} kurang!", sep="=>", end="")
+                print("yuk!")
+            i = i + 1
+        return total
+    except KeyError:
+        print("Ada jenis sampah yang tidak ditemukan!")
+        return 0
+
+# File utama
+# from lingkungan import hitung_dan_cek_sampah
+berat_dict = {}
+for i in range(3):
+    try:
+        jenis = input(f"Masukkan jenis sampah ke-{i+1}: ")
+        berat = float(input(f"Masukkan berat {jenis} (kg): "))
+        berat_dict[jenis] = berat
+    except ValueError:
+        print("Berat harus angka, coba lagi!")
+        i = i - 1  # Ulangi iterasi
+hasil = hitung_dan_cek_sampah(berat_dict)
+print(f"Total akhir: {hasil} kg!")</pre>
+    <p><strong>Output (misalnya user masukkan "Plastik", 5.5, "Kertas", "abc", "Kertas", 3.0, "Organik", 2.5):</strong></p>
+    <pre>Masukkan jenis sampah ke-1: Plastik
+Masukkan berat Plastik (kg): 5.5
+Masukkan jenis sampah ke-2: Kertas
+Masukkan berat Kertas (kg): abc
+Berat harus angka, coba lagi!
+Masukkan jenis sampah ke-2: Kertas
+Masukkan berat Kertas (kg): 3.0
+Masukkan jenis sampah ke-3: Organik
+Masukkan berat Organik (kg): 2.5
+Arry Hutomo daur ulang 5.5 kg!
+Tambah =>Plastik kurang!yuk!
+Arry Hutomo daur ulang 8.5 kg!
+Tambah =>Kertas kurang!yuk!
+Arry Hutomo daur ulang 11.0 kg!
+Cukup =>Organik banyak!yuk!
+Total akhir: 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin "Plastik", 5.5 (berhasil), lalu "Kertas", "abc" (gagal, masuk <span class="code-term">except ValueError</span>, ulang), lalu "Kertas", 3.0, dan "Organik", 2.5 (berhasil). Fungsi <span class="code-term">hitung_dan_cek_sampah()</span> dari modul jumlahkan nilai, cek <span class="code-term">total > 10</span>, dan cetak pesan dengan format.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, <span class="code-term">while</span> loop, dictionary, operasi <span class="code-term">+</span>, <span class="code-term">if-else</span>, <span class="code-term">return</span>, <span class="code-term">try-except</span>, modul, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span>, biar kamu paham cara nangani error di banyak lapisan. Dalam praktik, fungsi ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara nangani error kompleks, dan gampang diinget karena mirip kayak bikin laporan tapi siap kalo salah! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Selalu tangkap error spesifik, seperti <span class="code-term">ValueError</span> atau <span class="code-term">KeyError</span>, biar tau persis apa yang salah. ✅</li>
+        <li><strong>Don't:</strong> Jangan pake <span class="code-term">except</span> tanpa spesifikasi error (misalnya <span class="code-term">except:</span>), nanti sulit debug. ❌</li>
+        <li><strong>Do:</strong> Kasih pesan error yang jelas, kayak "Masukkan angka yang valid!", biar user tau apa yang salah. 🌟</li>
+        <li><strong>Don't:</strong> Jangan biarin error ga ditangani, misalnya ga pake <span class="code-term">try-except</span> saat akses list, nanti program crash. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap error yang kamu tangani adalah langkah menuju program yang lebih tangguh! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

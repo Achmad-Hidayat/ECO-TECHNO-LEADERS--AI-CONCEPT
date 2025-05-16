@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 16: Regular Expression, Cari Pola Teks dengan Cerdas! 🔍</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 16: Regular Expression, Cari Pola Teks dengan Cerdas! 🔍</h2>
+    <div class="quote">
+        "Regular expression itu kayak detektif teks, bantu kita cari pola dengan cerdas! 🔍✨" <br>
+        Doa: "Ya Tuhan, bantu kami mencari pola teks dengan tepat biar program kami bermanfaat. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar tentang regular expression (regex) di Python, biar kita bisa mencari dan mengolah pola teks dengan lebih cerdas. Regex itu seperti detektif yang bisa nyari pola tertentu dalam teks, misalnya cari semua angka, kata tertentu, atau format khusus. Bayangin kamu punya buku harian penuh cerita, dan kamu mau nyari informasi tertentu, seperti semua angka atau kata-kata yang cocok dengan pola. Nah, regex bakal jadi alat bantu kita! Kita akan pake semua konsep dari Chapter 1-15, termasuk manipulasi string dari Chapter 15. Yuk, kita jadi detektif teks bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: Regular Expression buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Cari Kata Sederhana (Super Gampang)</h4>
+    <pre>import re
+
+pesan = "Arry Hutomo tanam pohon di Pantai!"
+pola = r"pohon"
+hasil = re.search(pola, pesan)
+if hasil:
+    print(f"Kata '{pola}' ditemukan pada posisi {hasil.start()} sampai {hasil.end()}!")
+else:
+    print(f"Kata '{pola}' tidak ditemukan.")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Kata 'pohon' ditemukan pada posisi 12 sampai 17!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Kata 'pohon' ditemukan pada posisi 12 sampai 17!" karena metode <span class="code-term">re.search()</span> menemukan kata "pohon" dalam string <span class="code-term">pesan</span>. Posisi 12 adalah indeks awal "pohon" (setelah "Arry Hutomo tanam "), dan 17 adalah indeks akhir (karena "pohon" panjangnya 5 huruf, jadi 12 + 5 = 17).</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang lagi nyari kata "pohon" di buku harian, dan kamu mau tau di halaman berapa kata itu mulai sama selesai. Di Python, kita bisa pake modul <span class="code-term">re</span> untuk nyari pola teks pake regular expression. Aku mulai dengan impor <span class="code-term">import re</span> biar bisa pake fungsi regex. Aku bikin string <span class="code-term">pesan</span> sebagai buku harian, trus aku definisikan <span class="code-term">pola</span> sebagai "pohon", yang artinya kita nyari kata itu persis. Aku pake <span class="code-term">re.search(pola, pesan)</span> untuk cari kemunculan pertama "pohon", dan simpen hasilnya di variabel <span class="code-term">hasil</span>. Kalo ketemu, aku cetak posisi awal pake <span class="code-term">hasil.start()</span> dan posisi akhir pake <span class="code-term">hasil.end()</span>; kalo ga ketemu, aku kasih tau bahwa kata ga ada. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini sederhana, cocok buat pemula, kayak detektif yang nyari kata di buku harian. Coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Cari Angka (Gampang)</h4>
+    <pre>import re
+
+pesan = "Arry Hutomo tanam 10 pohon di Pantai!"
+pola = r"\d+"
+hasil = re.search(pola, pesan)
+if hasil:
+    print(f"Angka ditemukan: {hasil.group()}")
+else:
+    print("Angka tidak ditemukan.")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Angka ditemukan: 10</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Angka ditemukan: 10" karena pola <span class="code-term">\d+</span> mencari satu atau lebih digit dalam string <span class="code-term">pesan</span>. Angka "10" ditemukan, dan metode <span class="code-term">hasil.group()</span> mengembalikan angka yang cocok dengan pola, yaitu "10".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang lagi nyari angka di buku harian, misalnya jumlah pohon yang ditanam. Di Python, kita bisa pake regex untuk nyari angka pake pola <span class="code-term">\d+</span>. Aku mulai dengan impor <span class="code-term">import re</span> biar bisa pake fungsi regex. Aku bikin string <span class="code-term">pesan</span>, trus aku definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span>, yang artinya cari satu atau lebih digit (0-9). Aku pake <span class="code-term">re.search(pola, pesan)</span> untuk cari angka pertama, dan simpen hasilnya di variabel <span class="code-term">hasil</span>. Kalo ketemu, aku cetak angka itu pake <span class="code-term">hasil.group()</span>; kalo ga ketemu, aku kasih tau bahwa angka ga ada. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini gampang dipahami, kayak detektif yang nyari nomor halaman di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Cari Semua Angka (Gampang)</h4>
+    <pre>import re
+
+pesan = "Arry Hutomo tanam 10 pohon dan 5 pohon lagi!"
+pola = r"\d+"
+hasil = re.findall(pola, pesan)
+print(f"Semua angka yang ditemukan: {hasil}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Semua angka yang ditemukan: ['10', '5']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Semua angka yang ditemukan: ['10', '5']" karena metode <span class="code-term">re.findall()</span> mencari semua kemunculan pola <span class="code-term">\d+</span> (satu atau lebih digit) dalam string <span class="code-term">pesan</span>. Ada dua angka: "10" dan "5", jadi hasilnya adalah list berisi kedua angka itu.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang ga cuma nyari satu angka, tapi semua angka di buku harian, misalnya jumlah pohon yang ditanam di beberapa kesempatan. Di Python, kita bisa pake <span class="code-term">re.findall()</span> untuk nyari semua kemunculan pola. Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin string <span class="code-term">pesan</span> dengan dua angka, trus aku definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span> untuk cari digit. Aku pake <span class="code-term">re.findall(pola, pesan)</span> untuk cari semua angka, dan simpen hasilnya di variabel <span class="code-term">hasil</span> sebagai list. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari banyak pola sekaligus, kayak detektif yang nyari semua nomor halaman di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Cari Kata dengan Pola Huruf (Masih Gampang)</h4>
+    <pre>import re
+
+pesan = "Arry Hutomo tanam pohon di Pantai!"
+pola = r"[A-Za-z]+"
+hasil = re.findall(pola, pesan)
+print(f"Semua kata yang ditemukan: {hasil}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Semua kata yang ditemukan: ['Arry', 'Hutomo', 'tanam', 'pohon', 'di', 'Pantai']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Semua kata yang ditemukan: ['Arry', 'Hutomo', 'tanam', 'pohon', 'di', 'Pantai']" karena pola <span class="code-term">[A-Za-z]+</span> mencari satu atau lebih huruf (baik besar maupun kecil) dalam string <span class="code-term">pesan</span>. Tanda seru ("!") dan spasi diabaikan karena bukan huruf.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang mau nyari semua kata yang cuma terdiri dari huruf di buku harian, tanpa spasi atau tanda baca. Di Python, kita bisa pake pola <span class="code-term">[A-Za-z]+</span> untuk nyari kata-kata yang terdiri dari huruf. Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin string <span class="code-term">pesan</span>, trus aku definisikan <span class="code-term">pola</span> sebagai <span class="code-term">[A-Za-z]+</span>, yang artinya cari satu atau lebih huruf (A-Z atau a-z). Aku pake <span class="code-term">re.findall(pola, pesan)</span> untuk cari semua kata, dan simpen hasilnya di variabel <span class="code-term">hasil</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari kata dengan pola, kayak detektif yang nyari semua kata penting di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. Ganti Pola dengan Replace (Mulai Agak Menantang)</h4>
+    <pre>import re
+
+pesan = "Arry Hutomo tanam 10 pohon di Pantai!"
+pola = r"\d+"
+pesan_baru = re.sub(pola, "100", pesan)
+print(f"Pesan baru: {pesan_baru}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Pesan baru: Arry Hutomo tanam 100 pohon di Pantai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Pesan baru: Arry Hutomo tanam 100 pohon di Pantai!" karena metode <span class="code-term">re.sub()</span> mengganti semua kemunculan pola <span class="code-term">\d+</span> (angka) dengan string "100". Jadi, "10" diganti jadi "100".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang mau ganti semua angka di buku harian dengan angka lain, misalnya ganti jumlah pohon jadi 100 biar lebih dramatis. Di Python, kita bisa pake <span class="code-term">re.sub()</span> untuk ganti pola teks dengan teks lain. Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin string <span class="code-term">pesan</span>, trus aku definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span> untuk cari angka. Aku pake <span class="code-term">re.sub(pola, "100", pesan)</span> untuk ganti semua angka dengan "100", dan simpen hasilnya di variabel <span class="code-term">pesan_baru</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara ganti pola teks, kayak detektif yang ganti nomor halaman di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. Cari Pola dengan For Loop (Agak Menantang)</h4>
+    <pre>import re
+
+pesan = "Arry Hutomo tanam 10 pohon dan 5 pohon lagi!"
+pola = r"\d+"
+hasil = re.finditer(pola, pesan)
+for match in hasil:
+    print(f"Angka {match.group()} ditemukan pada posisi {match.start()} sampai {match.end()}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Angka 10 ditemukan pada posisi 12 sampai 14
+Angka 5 ditemukan pada posisi 23 sampai 24</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak dua baris: "Angka 10 ditemukan pada posisi 12 sampai 14" dan "Angka 5 ditemukan pada posisi 23 sampai 24". Metode <span class="code-term">re.finditer()</span> menemukan semua kemunculan pola <span class="code-term">\d+</span>, yaitu "10" (posisi 12-14) dan "5" (posisi 23-24). Aku hitung indeksnya: "Arry Hutomo tanam " (0-12), "10" (12-14), dan seterusnya.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang mau nyari semua angka di buku harian, dan untuk tiap angka, kamu mau tau posisinya, kayak nyanyi lagu sambil catat nada di posisi berapa. Di Python, kita bisa pake <span class="code-term">re.finditer()</span> untuk nyari semua kemunculan pola dan loop pake <span class="code-term">for</span> untuk cetak detailnya. Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin string <span class="code-term">pesan</span> dengan dua angka, trus aku definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span>. Aku pake <span class="code-term">re.finditer(pola, pesan)</span> untuk cari semua angka, dan loop pake <span class="code-term">for match in hasil</span> untuk cetak angka (<span class="code-term">match.group()</span>) dan posisinya (<span class="code-term">match.start()</span> dan <span class="code-term">match.end()</span>). Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari pola dengan loop, kayak detektif yang catat semua nomor halaman di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Cari Pola dengan While Loop (Agak Menantang)</h4>
+    <pre>import re
+
+pesan = "Arry Hutomo tanam 10 pohon dan 5 pohon lagi!"
+pola = r"\d+"
+hasil = re.finditer(pola, pesan)
+iterator = iter(hasil)
+while True:
+    try:
+        match = next(iterator)
+        print(f"Angka {match.group()} ditemukan pada posisi {match.start()} sampai {match.end()}")
+    except StopIteration:
+        break</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Angka 10 ditemukan pada posisi 12 sampai 14
+Angka 5 ditemukan pada posisi 23 sampai 24</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya sama seperti sebelumnya: "Angka 10 ditemukan pada posisi 12 sampai 14" dan "Angka 5 ditemukan pada posisi 23 sampai 24". Kali ini, kita pake <span class="code-term">while</span> loop untuk iterasi hasil <span class="code-term">re.finditer()</span>. Loop berhenti saat ga ada lagi angka yang ditemukan, ditangani oleh <span class="code-term">except StopIteration</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang nyari semua angka di buku harian, tapi kali ini kamu pake cara manual dengan ngitung satu per satu pake tangan, kayak nyanyi lagu sambil catat nada satu per satu. Di Python, kita bisa pake <span class="code-term">while</span> loop untuk iterasi hasil <span class="code-term">re.finditer()</span>. Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin string <span class="code-term">pesan</span>, trus definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span>. Aku pake <span class="code-term">re.finditer(pola, pesan)</span> untuk cari semua angka, trus aku ubah jadi iterator pake <span class="code-term">iter(hasil)</span>. Aku pake <span class="code-term">while True</span> untuk loop terus, dan <span class="code-term">next(iterator)</span> untuk ambil hasil satu per satu, sampai ga ada lagi (ditangani oleh <span class="code-term">except StopIteration</span>). Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari pola dengan loop manual, kayak detektif yang catat nomor halaman satu per satu. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>8. Cari Pola dengan If-Else (Menantang)</h4>
+    <pre>import re
+
+pesan = "Arry Hutomo tanam 10 pohon di Pantai!"
+pola = r"\d+"
+hasil = re.search(pola, pesan)
+if hasil:
+    angka = int(hasil.group())
+    if angka > 5:
+        print(f"Angka {angka} lebih dari 5!")
+    else:
+        print(f"Angka {angka} kurang dari atau sama dengan 5.")
+else:
+    print("Angka tidak ditemukan.")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Angka 10 lebih dari 5!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Angka 10 lebih dari 5!" karena metode <span class="code-term">re.search()</span> menemukan angka "10", yang kemudian diubah jadi integer pake <span class="code-term">int(hasil.group())</span>. Karena 10 > 5, program masuk ke blok <span class="code-term">if</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang nyari angka di buku harian, dan kalo ketemu, kamu mau cek apakah angka itu lebih dari 5, kayak nyanyi lagu sambil cek apakah nadanya tinggi. Di Python, kita bisa pake regex untuk nyari angka, trus cek kondisi pake <span class="code-term">if-else</span>. Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin string <span class="code-term">pesan</span>, trus definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span>. Aku pake <span class="code-term">re.search(pola, pesan)</span> untuk cari angka pertama, trus ubah jadi integer pake <span class="code-term">int(hasil.group())</span>. Aku cek kalo angka > 5, masuk ke blok <span class="code-term">if</span>; kalo ga, masuk ke blok <span class="code-term">else</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari pola dan cek kondisi, kayak detektif yang cek nomor halaman di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. Cari Pola dengan Input (Menantang)</h4>
+    <pre>import re
+
+pesan = input("Masukkan pesan lingkungan: ")
+pola = r"pohon"
+hasil = re.search(pola, pesan)
+if hasil:
+    print(f"Kata 'pohon' ditemukan pada posisi {hasil.start()} sampai {hasil.end()}!")
+else:
+    print("Kata 'pohon' tidak ditemukan.")</pre>
+    <p><strong>Output (misalnya user masukkan "Arry Hutomo tanam pohon di Pantai!"):</strong></p>
+    <pre>Masukkan pesan lingkungan: Arry Hutomo tanam pohon di Pantai!
+Kata 'pohon' ditemukan pada posisi 12 sampai 17!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Kata 'pohon' ditemukan pada posisi 12 sampai 17!" karena user masukin "Arry Hutomo tanam pohon di Pantai!", dan metode <span class="code-term">re.search()</span> menemukan "pohon" di posisi 12-17, sama seperti contoh pertama.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang minta orang kasih tau cerita, trus kamu cari kata "pohon" di cerita itu, kayak nyanyi lagu dari lirik yang dikasih orang lain. Di Python, kita bisa pake <span class="code-term">input()</span> untuk ambil cerita dari user, trus cari pola pake regex. Aku mulai dengan impor <span class="code-term">import re</span>. Aku minta user masukin pesan pake <span class="code-term">input()</span>, trus definisikan <span class="code-term">pola</span> sebagai "pohon". Aku pake <span class="code-term">re.search(pola, pesan)</span> untuk cari kata "pohon", dan cek kalo ketemu, cetak posisinya; kalo ga ketemu, kasih tau bahwa kata ga ada. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari pola interaktif, kayak detektif yang cari kata di cerita orang. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. Cari Pola dengan List (Menantang)</h4>
+    <pre>import re
+
+daftar_pesan = [
+    "Arry Hutomo tanam 10 pohon di Pantai!",
+    "Arry Hutomo daur ulang 5 kg sampah!",
+    "Arry Hutomo tanam 15 pohon lagi!"
+]
+pola = r"\d+"
+for pesan in daftar_pesan:
+    hasil = re.findall(pola, pesan)
+    print(f"Pesan: {pesan}")
+    print(f"Angka yang ditemukan: {hasil}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Pesan: Arry Hutomo tanam 10 pohon di Pantai!
+Angka yang ditemukan: ['10']
+Pesan: Arry Hutomo daur ulang 5 kg sampah!
+Angka yang ditemukan: ['5']
+Pesan: Arry Hutomo tanam 15 pohon lagi!
+Angka yang ditemukan: ['15']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga pesan beserta angka yang ditemukan: "10", "5", dan "15". Untuk tiap pesan dalam list <span class="code-term">daftar_pesan</span>, metode <span class="code-term">re.findall()</span> mencari semua angka pake pola <span class="code-term">\d+</span>, dan hasilnya ditampilkan.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang punya tiga buku harian, dan kamu mau nyari semua angka di tiap buku, kayak nyanyi lagu dari tiga lirik berbeda. Di Python, kita bisa pake list untuk simpen banyak pesan, trus loop pake <span class="code-term">for</span> untuk cek tiap pesan pake regex. Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin list <span class="code-term">daftar_pesan</span> dengan tiga string, trus definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span>. Aku loop pake <span class="code-term">for pesan in daftar_pesan</span>, trus pake <span class="code-term">re.findall(pola, pesan)</span> untuk cari semua angka di tiap pesan, dan cetak hasilnya. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari pola di banyak teks, kayak detektif yang cek banyak buku harian. Coba di VSCode, gampang kok! 🌳♻️</p>
+    
+    <h4>11. Cari Pola dengan Dictionary (Agak Sulit)</h4>
+    <pre>import re
+
+data = {
+    "pesan1": "Arry Hutomo tanam 10 pohon di Pantai!",
+    "pesan2": "Arry Hutomo daur ulang 5 kg sampah!",
+    "pesan3": "Arry Hutomo tanam 15 pohon lagi!"
+}
+pola = r"\d+"
+for kunci, pesan in data.items():
+    hasil = re.findall(pola, pesan)
+    print(f"{kunci}: {hasil}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>pesan1: ['10']
+pesan2: ['5']
+pesan3: ['15']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "pesan1: ['10']", "pesan2: ['5']", dan "pesan3: ['15']". Untuk tiap pesan dalam dictionary <span class="code-term">data</span>, metode <span class="code-term">re.findall()</span> mencari semua angka pake pola <span class="code-term">\d+</span>, dan hasilnya ditampilkan beserta kunci dictionary.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang punya catatan di tiga folder berbeda, dan kamu mau nyari angka di tiap folder, kayak nyanyi lagu dari tiga album berbeda. Di Python, kita bisa pake dictionary untuk simpen pesan dengan label, trus loop pake <span class="code-term">for</span> untuk cek tiap pesan pake regex. Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin dictionary <span class="code-term">data</span> dengan tiga pasang kunci-nilai, trus definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span>. Aku loop pake <span class="code-term">for kunci, pesan in data.items()</span> untuk akses tiap pesan, trus pake <span class="code-term">re.findall(pola, pesan)</span> untuk cari semua angka, dan cetak hasilnya beserta kunci folder. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari pola di data terstruktur, kayak detektif yang cek banyak folder. Coba di VSCode, gampang kok! 🌳♻️</p>
+    
+    <h4>12. Cari Pola dengan Try-Except (Sulit)</h4>
+    <pre>import re
+
+pesan = "Arry Hutomo tanam 10 pohon di Pantai!"
+pola = r"\d+"
+try:
+    hasil = re.search(pola, pesan)
+    if hasil:
+        angka = int(hasil.group())
+        print(f"Angka ditemukan: {angka}")
+    else:
+        raise ValueError("Angka tidak ditemukan!")
+except ValueError as e:
+    print(f"Error: {e}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Angka ditemukan: 10</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Angka ditemukan: 10" karena metode <span class="code-term">re.search()</span> menemukan angka "10", yang kemudian diubah jadi integer pake <span class="code-term">int(hasil.group())</span>. Karena angka ditemukan, ga ada error yang dilempar, dan program cetak angka yang ditemukan.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang nyari angka di buku harian, tapi kamu mau pastiin kalo ga ketemu angka, kamu kasih tau ada error, kayak nyanyi lagu sambil siap kalo nadanya fals. Di Python, kita bisa pake <span class="code-term">try-except</span> untuk nangani error saat cari pola. Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin string <span class="code-term">pesan</span>, trus definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span>. Aku pake <span class="code-term">re.search(pola, pesan)</span> dalam blok <span class="code-term">try</span> untuk cari angka, trus cek kalo ketemu, ubah ke integer dan cetak; kalo ga ketemu, aku lempar error pake <span class="code-term">raise ValueError</span>. Error itu ditangkap oleh <span class="code-term">except ValueError</span> dan dicetak. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari pola dengan error handling, kayak detektif yang siap kalo ga nemu petunjuk. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. Cari Pola dengan File Handling (Simulasi) (Sulit)</h4>
+    <pre>import re
+
+# Simulasi file lingkungan.txt berisi:
+# Arry Hutomo tanam 10 pohon di Pantai!
+# Arry Hutomo daur ulang 5 kg sampah!
+pesan = """Arry Hutomo tanam 10 pohon di Pantai!
+Arry Hutomo daur ulang 5 kg sampah!"""
+pola = r"\d+"
+hasil = re.findall(pola, pesan)
+print(f"Semua angka yang ditemukan: {hasil}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Semua angka yang ditemukan: ['10', '5']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Semua angka yang ditemukan: ['10', '5']" karena metode <span class="code-term">re.findall()</span> menemukan semua angka dalam string <span class="code-term">pesan</span>, yang disimulasikan sebagai isi file. Angka "10" ada di baris pertama, dan "5" ada di baris kedua.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif yang baca file berisi catatan lingkungan, dan kamu mau nyari semua angka di file itu, kayak nyanyi lagu dari lirik yang ada di buku. Di Python, kita bisa pake regex untuk nyari pola di teks dari file (disimulasikan karena kita ga bisa I/O file di sini). Aku mulai dengan impor <span class="code-term">import re</span>. Aku bikin string <span class="code-term">pesan</span> yang disimulasikan sebagai isi file dengan dua baris, trus definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span>. Aku pake <span class="code-term">re.findall(pola, pesan)</span> untuk cari semua angka, dan simpen hasilnya di variabel <span class="code-term">hasil</span>. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari pola di teks file, kayak detektif yang cek buku catatan. Coba di VSCode, gampang kok! 🌳♻️</p>
+    
+    <h4>14. Cari Pola dengan OOP (Lebih Sulit)</h4>
+    <pre>import re
+
+class DetektifLingkungan:
+    def __init__(self, pesan):
+        self.pesan = pesan
+    
+    def cari_angka(self):
+        pola = r"\d+"
+        hasil = re.findall(pola, self.pesan)
+        return hasil
+
+pesan = "Arry Hutomo tanam 10 pohon dan 5 pohon lagi!"
+detektif = DetektifLingkungan(pesan)
+angka = detektif.cari_angka()
+print(f"Angka yang ditemukan: {angka}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Angka yang ditemukan: ['10', '5']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Angka yang ditemukan: ['10', '5']" karena metode <span class="code-term">cari_angka()</span> dalam kelas <span class="code-term">DetektifLingkungan</span> menggunakan <span class="code-term">re.findall()</span> untuk menemukan semua angka dalam string <span class="code-term">pesan</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya robot detektif khusus lingkungan yang bisa nyari angka di catatan, kayak nyanyi lagu sambil pakai alat canggih. Di Python, kita bisa pake OOP (Chapter 13-14) untuk bikin kelas yang nyari pola pake regex. Aku bikin kelas <span class="code-term">DetektifLingkungan</span> dengan atribut <span class="code-term">pesan</span> untuk simpen teks. Metode <span class="code-term">cari_angka()</span> definisikan <span class="code-term">pola</span> sebagai <span class="code-term">\d+</span>, trus pake <span class="code-term">re.findall()</span> untuk cari semua angka, dan return hasilnya. Aku bikin objek <span class="code-term">detektif</span> dari kelas ini, trus panggil metode <span class="code-term">cari_angka()</span>. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara gabungin regex dengan OOP, kayak detektif robot yang cari nomor halaman. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+import re
+
+class DetektifLingkungan:
+    def __init__(self, data):
+        self.data = data
+    
+    def cari_dan_olah(self):
+        try:
+            pola = r"\d+"
+            hasil_dict = {}
+            total = 0
+            i = 0
+            while i < len(self.data):
+                kunci, pesan = list(self.data.items())[i]
+                hasil = re.finditer(pola, pesan)
+                angka_list = []
+                for match in hasil:
+                    angka = int(match.group())
+                    if angka > 10:
+                        print(f"Di {kunci}, angka {angka} lebih dari 10!")
+                    else:
+                        print(f"Di {kunci}, angka {angka} kurang dari atau sama dengan 10.")
+                    angka_list.append(angka)
+                    total = total + angka
+                hasil_dict[kunci] = angka_list
+                i = i + 1
+            return hasil_dict, total
+        except:
+            print("Terjadi error saat mengolah data!")
+            return {}, 0
+
+# File utama
+# from lingkungan import DetektifLingkungan
+data = {}
+for i in range(3):
+    try:
+        pesan = input(f"Masukkan pesan lingkungan ke-{i+1}: ")
+        data[f"pesan{i+1}"] = pesan
+    except:
+        print("Error saat input data, coba lagi!")
+        i = i - 1
+
+detektif = DetektifLingkungan(data)
+hasil_dict, total = detektif.cari_dan_olah()
+print(f"Hasil per pesan: {hasil_dict}")
+print(f"Total angka: {total}")</pre>
+    <p><strong>Output (misalnya user masukkan "Arry Hutomo tanam 10 pohon!", "Arry Hutomo daur ulang 5 kg!", "Arry Hutomo tanam 15 pohon!"):</strong></p>
+    <pre>Masukkan pesan lingkungan ke-1: Arry Hutomo tanam 10 pohon!
+Masukkan pesan lingkungan ke-2: Arry Hutomo daur ulang 5 kg!
+Masukkan pesan lingkungan ke-3: Arry Hutomo tanam 15 pohon!
+Di pesan1, angka 10 kurang dari atau sama dengan 10.
+Di pesan2, angka 5 kurang dari atau sama dengan 10.
+Di pesan3, angka 15 lebih dari 10!
+Hasil per pesan: {'pesan1': [10], 'pesan2': [5], 'pesan3': [15]}
+Total angka: 30</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin tiga pesan. Metode <span class="code-term">cari_dan_olah()</span> cari angka di tiap pesan: "10", "5", dan "15". Tiap angka dicek: 10 dan 5 ≤ 10 (cetak pesan "kurang dari atau sama dengan 10"), 15 > 10 (cetak pesan "lebih dari 10"). Angka-angka disimpan dalam dictionary <span class="code-term">hasil_dict</span>, dan totalnya (10 + 5 + 15 = 30) ditampilkan.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi detektif super canggih yang minta tiga cerita dari orang, trus nyari semua angka di cerita itu, cek apakah angkanya lebih dari 10, simpen angka-angka dalam folder berlabel, dan jumlahkan semua angka, kayak nyanyi lagu sambil pakai robot detektif. Di Python, kita gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, <span class="code-term">while</span> loop, dictionary, <span class="code-term">if-else</span>, <span class="code-term">try-except</span>, OOP, dan regex. Aku bikin kelas <span class="code-term">DetektifLingkungan</span> dengan atribut <span class="code-term">data</span> (dictionary). Metode <span class="code-term">cari_dan_olah()</span> loop pake <span class="code-term">while</span> untuk akses tiap pesan, pake <span class="code-term">re.finditer()</span> untuk cari angka, loop <span class="code-term">for</span> untuk cek tiap angka, simpen hasil dalam dictionary, dan jumlahkan total. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari pola kompleks, kayak detektif super yang olah banyak cerita! Coba di VSCode, bakal bangga sama hasilnya! 🌳♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Selalu uji pola regex dengan teks sederhana dulu, biar yakin pola bekerja sesuai harapan. ✅</li>
+        <li><strong>Don't:</strong> Jangan bikin pola regex yang terlalu rumit tanpa dokumentasi, nanti susah dimengerti. ❌</li>
+        <li><strong>Do:</strong> Gunakan <span class="code-term">re.finditer()</span> kalo kamu butuh detail posisi dan loop, biar lebih fleksibel. 🌟</li>
+        <li><strong>Don't:</strong> Jangan lupa nangani error, misalnya pake <span class="code-term">try-except</span>, kalo ga program bisa crash. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap pola yang kamu temukan adalah langkah menuju teks yang lebih terstruktur! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

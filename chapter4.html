@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: Input dan Output, Ngobrol sama Program! 💬</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 4: Input dan Output, Ngobrol sama Program! 💬</h2>
+    <div class="quote">
+        "Ngobrol sama program itu seru, kayak punya temen yang bantu kita bikin solusi kece! 💬✨" <br>
+        Doa: "Ya Tuhan, bantu kami bikin program yang interaktif biar bisa bantu bumi dan sesama. Aamiin. 🙏"
+    </div>
+    <p>Hai temen-temen milenial yang super kece! 🚀 Di chapter keempat ini, kita bakal belajar cara minta input dari user dan nampilin output pake Python. Ini kayak ngobrol sama program, jadi kita bisa bikin program yang interaktif dan bantu Arry Hutomo ngatasi isu lingkungan, energi, sosial, dan ketahanan. Kita bakal pake variabel (Chapter 2), operasi (Chapter 3), dan konsep <span class="code-term">print</span> (Chapter 1). Yuk, kita ngobrol sama program bareng Arry Hutomo, guru coding terbaik yang bikin belajar jadi seru abis! 💻🌟</p>
+    
+    <h3>Contoh Query Python: Input dan Output buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Minta Jumlah Pohon (Super Gampang)</h4>
+    <pre>jumlah_pohon = int(input("Masukkan jumlah pohon yang ditanam Arry Hutomo: "))
+print(f"Arry Hutomo tanam {jumlah_pohon} pohon!")</pre>
+    <p><strong>Output (misalnya user masukkan 50):</strong></p>
+    <pre>Masukkan jumlah pohon yang ditanam Arry Hutomo: 50
+Arry Hutomo tanam 50 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon yang ditanam Arry Hutomo: ", user masukin 50, trus program nampilin "Arry Hutomo tanam 50 pohon!" karena kita nyimpen input user di variabel <span class="code-term">jumlah_pohon</span> pake <span class="code-term">int()</span> (ngubah string jadi integer), dan nampilin pake <span class="code-term">f-string</span>. Gampang banget, kan, kayak ngobrol sama temen! 🌳</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini super gampang buat kenalin fungsi <span class="code-term">input()</span>, yang bikin program bisa minta data dari user. Aku pilih variabel <span class="code-term">jumlah_pohon</span> biar namanya jelas, dan pake <span class="code-term">int()</span> karena input user selalu string, jadi kita ubah ke integer biar bisa dipake buat perhitungan nanti. Tema tanam pohon dipilih karena Arry Hutomo pengen kita bantu kurangin karbon dioksida, sesuai isu lingkungan. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa nampilin variabel. Struktur ini bikin kamu paham cara bikin program interaktif, dan gampang diinget karena mirip kayak tanya jawab sama temen! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Minta Berat Sampah (Gampang)</h4>
+    <pre>berat_sampah = float(input("Masukkan berat sampah yang didaur ulang Arry Hutomo (kg): "))
+print(f"Arry Hutomo daur ulang {berat_sampah} kg sampah!")</pre>
+    <p><strong>Output (misalnya user masukkan 12.5):</strong></p>
+    <pre>Masukkan berat sampah yang didaur ulang Arry Hutomo (kg): 12.5
+Arry Hutomo daur ulang 12.5 kg sampah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan berat sampah yang didaur ulang Arry Hutomo (kg): ", user masukin 12.5, trus program nampilin "Arry Hutomo daur ulang 12.5 kg sampah!" karena kita nyimpen input user di variabel <span class="code-term">berat_sampah</span> pake <span class="code-term">float()</span> (ngubah string jadi float), dan nampilin pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara minta input yang bukan cuma integer, tapi juga float, pake <span class="code-term">float()</span>. Aku pilih variabel <span class="code-term">berat_sampah</span> biar jelas, dan pake <span class="code-term">float()</span> karena berat sampah sering desimal kayak 12.5 kg. Tema daur ulang dipilih karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa, dan struktur ini sederhana biar kamu paham bedanya <span class="code-term">int()</span> sama <span class="code-term">float()</span>. Ini bikin kamu paham cara minta data desimal dari user, dan gampang diinget karena mirip kayak tanya berat barang! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>3. Minta Nama Komunitas (Gampang)</h4>
+    <pre>komunitas = input("Masukkan nama komunitas Arry Hutomo: ")
+print(f"Arry Hutomo bareng {komunitas} bantu anak putus sekolah!")</pre>
+    <p><strong>Output (misalnya user masukkan "ECC Team"):</strong></p>
+    <pre>Masukkan nama komunitas Arry Hutomo: ECC Team
+Arry Hutomo bareng ECC Team bantu anak putus sekolah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan nama komunitas Arry Hutomo: ", user masukin "ECC Team", trus program nampilin "Arry Hutomo bareng ECC Team bantu anak putus sekolah!" karena kita nyimpen input user di variabel <span class="code-term">komunitas</span> (yang otomatis string), dan nampilin pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara minta input teks (string) tanpa perlu diubah tipe datanya, karena <span class="code-term">input()</span> selalu ngasih string. Aku pilih variabel <span class="code-term">komunitas</span> biar jelas, dan tema bantu anak putus sekolah karena Arry Hutomo peduli sama pendidikan, sesuai isu sosial. Aku ga pake <span class="code-term">int()</span> atau <span class="code-term">float()</span> karena inputnya teks, dan pake <span class="code-term">f-string</span> biar kamu terbiasa. Struktur ini sederhana biar kamu paham cara minta data teks, dan gampang diinget karena mirip kayak tanya nama temen! Coba di VSCode, gampang banget! 📚</p>
+    
+    <h4>4. Minta Jumlah Donasi (Masih Gampang)</h4>
+    <pre>donasi = int(input("Masukkan jumlah donasi Arry Hutomo (Rp): "))
+print(f"Arry Hutomo donasi Rp {donasi} buat UMKM!")</pre>
+    <p><strong>Output (misalnya user masukkan 500000):</strong></p>
+    <pre>Masukkan jumlah donasi Arry Hutomo (Rp): 500000
+Arry Hutomo donasi Rp 500000 buat UMKM!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah donasi Arry Hutomo (Rp): ", user masukin 500000, trus program nampilin "Arry Hutomo donasi Rp 500000 buat UMKM!" karena kita nyimpen input user di variabel <span class="code-term">donasi</span> pake <span class="code-term">int()</span>, dan nampilin pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara minta input integer lagi, tapi dengan konteks yang beda. Aku pilih variabel <span class="code-term">donasi</span> biar jelas, dan pake <span class="code-term">int()</span> karena donasi biasanya angka bulat. Tema donasi UMKM dipilih karena Arry Hutomo pengen kita bantu ekonomi lokal, sesuai isu ketahanan ekonomi. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa. Struktur ini sederhana biar kamu paham cara minta data angka, dan gampang diinget karena mirip kayak tanya jumlah uang! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>5. Input dan Operasi Tambah (Mulai Agak Menantang)</h4>
+    <pre>pohon_tanam = int(input("Masukkan jumlah pohon yang ditanam Arry Hutomo: "))
+pohon_tambah = int(input("Masukkan jumlah pohon tambahan: "))
+total = pohon_tanam + pohon_tambah
+print(f"Arry Hutomo tanam {total} pohon!")</pre>
+    <p><strong>Output (misalnya user masukkan 50 dan 30):</strong></p>
+    <pre>Masukkan jumlah pohon yang ditanam Arry Hutomo: 50
+Masukkan jumlah pohon tambahan: 30
+Arry Hutomo tanam 80 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon yang ditanam Arry Hutomo: ", user masukin 50, trus prompt "Masukkan jumlah pohon tambahan: ", user masukin 30. Program jumlahkan 50 + 30 = 80, disimpen di variabel <span class="code-term">total</span>, dan nampilin "Arry Hutomo tanam 80 pohon!" pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama operasi tambah <span class="code-term">+</span> dari Chapter 3, biar kamu paham cara bikin perhitungan interaktif. Aku pilih variabel <span class="code-term">pohon_tanam</span> dan <span class="code-term">pohon_tambah</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Aku pake <span class="code-term">int()</span> biar input user jadi integer, dan pake <span class="code-term">f-string</span> buat nampilin hasil. Struktur ini bikin kamu paham cara minta data dari user trus hitung, dan gampang diinget karena mirip kayak tanya jumlah trus jumlahin! Coba di VSCode, bakal suka sama trik ini! 🌳</p>
+    
+    <h4>6. Input dan Operasi Kurang (Agak Menantang)</h4>
+    <pre>sampah_awal = float(input("Masukkan berat sampah awal (kg): "))
+sampah_daur = float(input("Masukkan berat sampah yang didaur ulang: "))
+sisa = sampah_awal - sampah_daur
+print(f"Arry Hutomo kurangi sampah jadi {sisa} kg!")</pre>
+    <p><strong>Output (misalnya user masukkan 100 dan 40):</strong></p>
+    <pre>Masukkan berat sampah awal (kg): 100
+Masukkan berat sampah yang didaur ulang: 40
+Arry Hutomo kurangi sampah jadi 60.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan berat sampah awal (kg): ", user masukin 100, trus prompt "Masukkan berat sampah yang didaur ulang: ", user masukin 40. Program kurangin 100 - 40 = 60.0, disimpen di variabel <span class="code-term">sisa</span>, dan nampilin "Arry Hutomo kurangi sampah jadi 60.0 kg!" pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama operasi kurang <span class="code-term">-</span> dari Chapter 3, biar kamu paham cara bikin perhitungan interaktif dengan data desimal. Aku pilih variabel <span class="code-term">sampah_awal</span> dan <span class="code-term">sampah_daur</span> biar jelas, dan tema kurangi sampah karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">float()</span> biar input bisa desimal, dan pake <span class="code-term">f-string</span> buat nampilin hasil. Struktur ini bikin kamu paham cara minta data desimal trus hitung, dan gampang diinget karena mirip kayak ngitung sisa stok! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>7. Input dan Operasi Kali (Agak Menantang)</h4>
+    <pre>lampu = int(input("Masukkan jumlah lampu per rumah: "))
+rumah = int(input("Masukkan jumlah rumah: "))
+total_lampu = lampu * rumah
+print(f"Arry Hutomo hemat {total_lampu} lampu!")</pre>
+    <p><strong>Output (misalnya user masukkan 5 dan 10):</strong></p>
+    <pre>Masukkan jumlah lampu per rumah: 5
+Masukkan jumlah rumah: 10
+Arry Hutomo hemat 50 lampu!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah lampu per rumah: ", user masukin 5, trus prompt "Masukkan jumlah rumah: ", user masukin 10. Program kalikan 5 * 10 = 50, disimpen di variabel <span class="code-term">total_lampu</span>, dan nampilin "Arry Hutomo hemat 50 lampu!" pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama operasi kali <span class="code-term">*</span> dari Chapter 3, biar kamu paham cara bikin perhitungan interaktif untuk total data. Aku pilih variabel <span class="code-term">lampu</span> dan <span class="code-term">rumah</span> biar jelas, dan tema hemat lampu karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan pake <span class="code-term">f-string</span> buat nampilin hasil. Struktur ini bikin kamu paham cara minta data trus kalikan, dan gampang diinget karena mirip kayak ngitung total barang! Coba di VSCode, bakal suka sama trik ini! ⚡</p>
+    
+    <h4>8. Input dan Operasi Bagi (Menantang)</h4>
+    <pre>donasi = int(input("Masukkan total donasi Arry Hutomo (Rp): "))
+penerima = int(input("Masukkan jumlah penerima: "))
+per_orang = donasi / penerima
+print(f"Arry Hutomo bagi Rp {per_orang} per orang!")</pre>
+    <p><strong>Output (misalnya user masukkan 1000000 dan 5):</strong></p>
+    <pre>Masukkan total donasi Arry Hutomo (Rp): 1000000
+Masukkan jumlah penerima: 5
+Arry Hutomo bagi Rp 200000.0 per orang!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan total donasi Arry Hutomo (Rp): ", user masukin 1000000, trus prompt "Masukkan jumlah penerima: ", user masukin 5. Program bagi 1000000 / 5 = 200000.0, disimpen di variabel <span class="code-term">per_orang</span>, dan nampilin "Arry Hutomo bagi Rp 200000.0 per orang!" pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama operasi bagi <span class="code-term">/</span> dari Chapter 3, biar kamu paham cara bikin perhitungan interaktif untuk bagi rata. Aku pilih variabel <span class="code-term">donasi</span> dan <span class="code-term">penerima</span> biar jelas, dan tema bagi donasi karena Arry Hutomo pengen kita bantu orang yang membutuhkan, sesuai isu sosial. Aku pake <span class="code-term">int()</span> biar input jadi integer, tapi hasilnya float karena <span class="code-term">/</span> selalu ngasih float. Struktur ini bikin kamu paham cara minta data trus bagi rata, dan gampang diinget karena mirip kayak bagi-bagi uang! Coba di VSCode, gampang kok! ❤️</p>
+    
+    <h4>9. Input dengan Chapter 1 (Menantang)</h4>
+    <pre>pohon = int(input("Masukkan jumlah pohon yang ditanam: "))
+print(f"Arry Hutomo tanam {pohon} pohon!\nAyo ikut!")</pre>
+    <p><strong>Output (misalnya user masukkan 60):</strong></p>
+    <pre>Masukkan jumlah pohon yang ditanam: 60
+Arry Hutomo tanam 60 pohon!
+Ayo ikut!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon yang ditanam: ", user masukin 60, trus program nampilin dua baris: "Arry Hutomo tanam 60 pohon!" di baris pertama, dan "Ayo ikut!" di baris kedua. Ini karena kita pake <span class="code-term">\n</span> dari Chapter 1 buat pindah baris, dan <span class="code-term">f-string</span> buat nampilin input user.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama konsep <span class="code-term">\n</span> dari Chapter 1, biar kamu paham cara bikin pesan interaktif yang rapi. Aku pilih variabel <span class="code-term">pohon</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan <span class="code-term">\n</span> biar pesan lebih terstruktur. Struktur ini bikin kamu paham cara minta data trus bikin pesan rapi, dan gampang diinget karena mirip kayak bikin pesan motivasi! Coba di VSCode, bakal suka sama hasilnya! 🌳</p>
+    
+    <h4>10. Input dengan Separator (Menantang)</h4>
+    <pre>sampah = float(input("Masukkan berat sampah (kg): "))
+nama = input("Masukkan nama: ")
+print("Arry Hutomo daur ulang", sampah, "kg bareng", nama, sep=" - ")</pre>
+    <p><strong>Output (misalnya user masukkan 15.5 dan "ECC Team"):</strong></p>
+    <pre>Masukkan berat sampah (kg): 15.5
+Masukkan nama: ECC Team
+Arry Hutomo daur ulang - 15.5 - kg bareng - ECC Team</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan berat sampah (kg): ", user masukin 15.5, trus prompt "Masukkan nama: ", user masukin "ECC Team". Program nampilin "Arry Hutomo daur ulang - 15.5 - kg bareng - ECC Team" karena kita pake <span class="code-term">sep=" - "</span> dari Chapter 1 buat pisahin item dalam <span class="code-term">print()</span>, jadi pemisah default (spasi) diganti sama " - ".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama <span class="code-term">sep</span> dari Chapter 1, biar kamu paham cara bikin pesan interaktif dengan pemisah custom. Aku pilih variabel <span class="code-term">sampah</span> dan <span class="code-term">nama</span> biar jelas, dan tema daur ulang karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">float()</span> buat <span class="code-term">sampah</span> biar bisa desimal, dan ga ubah <span class="code-term">nama</span> karena string. Aku pake <span class="code-term">sep=" - "</span> biar output rapi dengan pemisah unik. Struktur ini bikin kamu paham cara bikin pesan interaktif dengan format kece, dan gampang diinget karena mirip kayak bikin kalimat sambung! Coba di VSCode, bakal rapi banget! ♻️</p>
+    
+    <h4>11. Input dengan End (Agak Sulit)</h4>
+    <pre>lampu = int(input("Masukkan jumlah lampu: "))
+print(f"Arry Hutomo hemat {lampu} lampu ", end="")
+print("di rumah!")</pre>
+    <p><strong>Output (misalnya user masukkan 12):</strong></p>
+    <pre>Masukkan jumlah lampu: 12
+Arry Hutomo hemat 12 lampu di rumah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah lampu: ", user masukin 12, trus program nampilin "Arry Hutomo hemat 12 lampu di rumah!" dalam satu baris karena kita pake <span class="code-term">end=""</span> dari Chapter 1 biar <span class="code-term">print()</span> kedua nyambung di baris yang sama. Spasi di akhir teks pertama bikin hasilnya rapi!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin pesan interaktif dalam satu baris. Aku pilih variabel <span class="code-term">lampu</span> biar jelas, dan tema hemat lampu karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan <span class="code-term">end=""</span> biar output nyambung. Struktur ini bikin kamu paham cara bikin pesan interaktif yang rapi, dan gampang diinget karena mirip kayak nyatuin dua kalimat! Coba di VSCode, bakal suka sama trik ini! ⚡</p>
+    
+    <h4>12. Input dan Operasi Kompleks (Sulit)</h4>
+    <pre>pohon = int(input("Masukkan jumlah pohon awal: "))
+tambah = int(input("Masukkan pohon tambahan: "))
+mati = int(input("Masukkan pohon yang mati: "))
+total = (pohon + tambah - mati) / 2 Ascending
+print(f"Arry Hutomo hitung rata-rata {total} pohon!")</pre>
+    <p><strong>Output (misalnya user masukkan 100, 50, dan 20):</strong></p>
+    <pre>Masukkan jumlah pohon awal: 100
+Masukkan pohon tambahan: 50
+Masukkan pohon yang mati: 20
+Arry Hutomo hitung rata-rata 65.0 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon awal: ", user masukin 100, trus "Masukkan pohon tambahan: ", user masukin 50, dan "Masukkan pohon yang mati: ", user masukin 20. Program hitung (100 + 50 - 20) / 2 = 130 / 2 = 65.0, disimpen di <span class="code-term">total</span>, dan nampilin "Arry Hutomo hitung rata-rata 65.0 pohon!" pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama operasi kompleks <span class="code-term">+</span>, <span class="code-term">-</span>, dan <span class="code-term">/</span> dari Chapter 3, biar kamu paham cara bikin perhitungan interaktif berlapis. Aku pilih variabel <span class="code-term">pohon</span>, <span class="code-term">tambah</span>, dan <span class="code-term">mati</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Aku pake tanda kurung biar urutan operasi jelas, dan bagi 2 buat cari rata-rata. Struktur ini bikin kamu paham cara minta data trus hitung berlapis, dan gampang diinget karena mirip kayak ngitung rata-rata nilai! Coba di VSCode, bakal suka sama trik ini! 🌳</p>
+    
+    <h4>13. Input dengan Modulus (Sulit)</h4>
+    <pre>donasi = int(input("Masukkan total donasi (Rp): "))
+penerima = int(input("Masukkan jumlah penerima: "))
+sisa = donasi % penerima
+print(f"Arry Hutomo punya sisa Rp {sisa}!")</pre>
+    <p><strong>Output (misalnya user masukkan 1000000 dan 3):</strong></p>
+    <pre>Masukkan total donasi (Rp): 1000000
+Masukkan jumlah penerima: 3
+Arry Hutomo punya sisa Rp 1!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan total donasi (Rp): ", user masukin 1000000, trus "Masukkan jumlah penerima: ", user masukin 3. Program hitung sisa bagi 1000000 % 3 = 1, disimpen di <span class="code-term">sisa</span>, dan nampilin "Arry Hutomo punya sisa Rp 1!" pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama operasi modulus <span class="code-term">%</span> dari Chapter 3, biar kamu paham cara cek sisa bagi secara interaktif. Aku pilih variabel <span class="code-term">donasi</span> dan <span class="code-term">penerima</span> biar jelas, dan tema donasi karena Arry Hutomo peduli sama orang yang membutuhkan, sesuai isu sosial. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan <span class="code-term">%</span> buat cari sisa. Struktur ini bikin kamu paham cara minta data trus cek sisa, dan gampang diinget karena mirip kayak ngitung sisa kue! Coba di VSCode, gampang kok! ❤️</p>
+    
+    <h4>14. Input dengan Floor Division dan Chapter 1 (Lebih Sulit)</h4>
+    <pre>lampu = int(input("Masukkan jumlah lampu: "))
+rumah = int(input("Masukkan jumlah rumah: "))
+bagi = lampu // rumah
+print(f"Arry Hutomo bagi {bagi} lampu per rumah!\nAyo hemat!")</pre>
+    <p><strong>Output (misalnya user masukkan 25 dan 4):</strong></p>
+    <pre>Masukkan jumlah lampu: 25
+Masukkan jumlah rumah: 4
+Arry Hutomo bagi 6 lampu per rumah!
+Ayo hemat!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah lampu: ", user masukin 25, trus "Masukkan jumlah rumah: ", user masukin 4. Program bagi pake <span class="code-term">//</span> jadi 25 // 4 = 6, disimpen di <span class="code-term">bagi</span>, dan nampilin "Arry Hutomo bagi 6 lampu per rumah!\nAyo hemat!" dengan <span class="code-term">\n</span> buat pindah baris.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama operasi floor division <span class="code-term">//</span> dari Chapter 3 dan <span class="code-term">\n</span> dari Chapter 1, biar kamu paham cara bikin perhitungan interaktif dengan format rapi. Aku pilih variabel <span class="code-term">lampu</span> dan <span class="code-term">rumah</span> biar jelas, dan tema hemat lampu karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Aku pake <span class="code-term">int()</span> dan <span class="code-term">//</span> biar hasilnya bulat, dan <span class="code-term">\n</span> bikin pesan terstruktur. Struktur ini bikin kamu paham cara minta data trus bagi bulat, dan gampang diinget karena mirip kayak bagi-bagi permen! Coba di VSCode, bakal suka sama trik ini! ⚡</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre>sampah = float(input("Masukkan berat sampah awal (kg): "))
+daur = float(input("Masukkan sampah yang didaur ulang (kg): "))
+tambah = float(input("Masukkan sampah tambahan (kg): "))
+hasil = (sampah - daur + tambah) * 2 / 3
+print(f"Arry Hutomo hitung sampah {hasil} kg!\nLakukan ", f"lagi bareng ECC Team!", sep="=>", end="")
+print("yuk!")</pre>
+    <p><strong>Output (misalnya user masukkan 100, 40, dan 20):</strong></p>
+    <pre>Masukkan berat sampah awal (kg): 100
+Masukkan sampah yang didaur ulang (kg): 40
+Masukkan sampah tambahan (kg): 20
+Arry Hutomo hitung sampah 53.333333333333336 kg!
+Lakukan =>lagi bareng ECC Team!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin 100, 40, dan 20. Program hitung (100 - 40 + 20) * 2 / 3 = (80) * 2 / 3 = 160 / 3 = 53.333333333333336, disimpen di <span class="code-term">hasil</span>. Outputnya jadi dua baris: "Arry Hutomo hitung sampah 53.333333333333336 kg!" di baris pertama, dan "Lakukan =>lagi bareng ECC Team!yuk!" di baris kedua, pake <span class="code-term">\n</span>, <span class="code-term">sep="=>"</span>, dan <span class="code-term">end=""</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, operasi <span class="code-term">-</span>, <span class="code-term">+</span>, <span class="code-term">*</span>, <span class="code-term">/</span> dari Chapter 3, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin perhitungan interaktif yang canggih. Aku pilih variabel <span class="code-term">sampah</span>, <span class="code-term">daur</span>, dan <span class="code-term">tambah</span> biar jelas, dan tema hitung sampah karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">float()</span> biar bisa desimal, dan gabungin semua konsep biar output rapi. Struktur ini bikin kamu paham cara bikin program interaktif kompleks, dan gampang diinget karena mirip kayak bikin laporan! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Pastiin ubah input ke tipe data yang sesuai, kayak <span class="code-term">int()</span> atau <span class="code-term">float()</span>, biar ga error pas hitung. ✅</li>
+        <li><strong>Don't:</strong> Jangan lupa ubah tipe data, misalnya input angka tapi ga pake <span class="code-term">int()</span>, nanti error pas operasi. ❌</li>
+        <li><strong>Do:</strong> Kasih pesan input yang jelas, biar user tahu apa yang harus dimasukin, kayak "Masukkan jumlah pohon: ". 🌟</li>
+        <li><strong>Don't:</strong> Jangan bagi dengan 0 dari input, misalnya user masukin 0 buat pembagi, nanti error. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap input yang kamu minta dari user adalah langkah menuju solusi yang lebih personal! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami bikin program yang bantu ngobrol sama dunia biar lebih baik. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

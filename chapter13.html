@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 13: OOP Dasar, Bikin Program Berbasis Objek! 🏗️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 13: OOP Dasar, Bikin Program Berbasis Objek! 🏗️</h2>
+    <div class="quote">
+        "OOP itu kayak bikin blueprint, bikin program kita lebih terstruktur! 🏗️✨" <br>
+        Doa: "Ya Tuhan, bantu kami membuat program yang terstruktur biar bantu dunia. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar dasar-dasar Object-Oriented Programming (OOP) di Python, biar program kita lebih terstruktur. Kita pake variabel (Chapter 2), operasi (Chapter 3), input (Chapter 4), pengkondisian (Chapter 5), perulangan (Chapter 6), list (Chapter 7), dictionary (Chapter 8), fungsi (Chapter 9), modul (Chapter 10), error handling (Chapter 11), file handling (Chapter 12), dan <span class="code-term">print</span> (Chapter 1). Yuk, kita bikin kelas bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: OOP buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Kelas Sederhana Tanpa Atribut (Super Gampang)</h4>
+    <pre>class Pohon:
+    def tanam(self):
+        print("Arry Hutomo tanam pohon!")
+
+pohon = Pohon()
+pohon.tanam()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon!" karena kita bikin objek <span class="code-term">pohon</span> dari kelas <span class="code-term">Pohon</span> dan panggil metode <span class="code-term">tanam()</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini sederhana buat kenalin konsep kelas pake <span class="code-term">class</span>. Kelas <span class="code-term">Pohon</span> punya metode <span class="code-term">tanam()</span> tanpa atribut. Aku bikin objek dan panggil metode biar kamu paham dasar OOP. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin kelas sederhana, dan gampang diinget karena mirip kayak bikin blueprint pohon! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Kelas dengan Atribut (Gampang)</h4>
+    <pre>class Pohon:
+    def __init__(self, jenis):
+        self.jenis = jenis
+    
+    def tanam(self):
+        print(f"Arry Hutomo tanam pohon {self.jenis}!")
+
+pohon = Pohon("Mangrove")
+pohon.tanam()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon Mangrove!" karena kita bikin objek <span class="code-term">pohon</span> dengan atribut <span class="code-term">jenis</span> "Mangrove", lalu metode <span class="code-term">tanam()</span> pake atribut itu.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara bikin kelas dengan atribut pake <span class="code-term">__init__</span>. Aku kasih atribut <span class="code-term">jenis</span> biar kelas fleksibel. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin kelas dengan atribut, dan gampang diinget karena mirip kayak bikin blueprint pohon dengan nama! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Kelas dengan Multiple Atribut (Gampang)</h4>
+    <pre>class Pohon:
+    def __init__(self, jenis, jumlah):
+        self.jenis = jenis
+        self.jumlah = jumlah
+    
+    def tanam(self):
+        print(f"Arry Hutomo tanam {self.jumlah} pohon {self.jenis}!")
+
+pohon = Pohon("Mangrove", 10)
+pohon.tanam()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 10 pohon Mangrove!" karena kita bikin objek dengan atribut <span class="code-term">jenis</span> dan <span class="code-term">jumlah</span>, lalu metode <span class="code-term">tanam()</span> pake keduanya.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara bikin kelas dengan lebih dari satu atribut. Aku tambah <span class="code-term">jumlah</span> biar lebih realistis. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin kelas dengan banyak atribut, dan gampang diinget karena mirip kayak bikin blueprint pohon dengan detail! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Kelas dengan Metode Tambahan (Masih Gampang)</h4>
+    <pre>class Pohon:
+    def __init__(self, jenis, jumlah):
+        self.jenis = jenis
+        self.jumlah = jumlah
+    
+    def tanam(self):
+        print(f"Arry Hutomo tanam {self.jumlah} pohon {self.jenis}!")
+    
+    def info(self):
+        print(f"Pohon {self.jenis} berjumlah {self.jumlah}.")
+
+pohon = Pohon("Mangrove", 10)
+pohon.tanam()
+pohon.info()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon Mangrove!
+Pohon Mangrove berjumlah 10.</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya punya dua baris: satu dari metode <span class="code-term">tanam()</span>, satu dari metode <span class="code-term">info()</span>, yang nampilin detail pohon.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara bikin kelas dengan lebih dari satu metode. Aku tambah metode <span class="code-term">info()</span> biar kelas lebih fungsional. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin kelas dengan banyak metode, dan gampang diinget karena mirip kayak bikin blueprint pohon dengan banyak fungsi! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. Kelas dengan Input (Mulai Agak Menantang)</h4>
+    <pre>class Pohon:
+    def __init__(self, jenis, jumlah):
+        self.jenis = jenis
+        self.jumlah = jumlah
+    
+    def tanam(self):
+        print(f"Arry Hutomo tanam {self.jumlah} pohon {self.jenis}!")
+
+jenis = input("Masukkan jenis pohon: ")
+jumlah = int(input("Masukkan jumlah pohon: "))
+pohon = Pohon(jenis, jumlah)
+pohon.tanam()</pre>
+    <p><strong>Output (misalnya user masukkan "Mangrove", 10):</strong></p>
+    <pre>Masukkan jenis pohon: Mangrove
+Masukkan jumlah pohon: 10
+Arry Hutomo tanam 10 pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin "Mangrove" dan 10, lalu objek dibuat dan metode <span class="code-term">tanam()</span> dipanggil.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama kelas, biar kamu paham cara bikin objek interaktif. Aku pake <span class="code-term">int()</span> buat jumlah biar jadi integer. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin kelas interaktif, dan gampang diinget karena mirip kayak bikin blueprint pohon dari input! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. Kelas dengan For Loop (Agak Menantang)</h4>
+    <pre>class Pohon:
+    def __init__(self, jenis, jumlah):
+        self.jenis = jenis
+        self.jumlah = jumlah
+    
+    def tanam(self):
+        for i in range(self.jumlah):
+            print(f"Arry Hutomo tanam pohon {self.jenis} ke-{i+1}!")
+
+pohon = Pohon("Mangrove", 3)
+pohon.tanam()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon Mangrove ke-1!
+Arry Hutomo tanam pohon Mangrove ke-2!
+Arry Hutomo tanam pohon Mangrove ke-3!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris karena metode <span class="code-term">tanam()</span> pake <span class="code-term">for</span> loop untuk ulang sebanyak <span class="code-term">jumlah</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin kelas sama <span class="code-term">for</span> loop, biar kamu paham cara bikin metode yang ngulang berdasarkan atribut. Aku pake <span class="code-term">range(self.jumlah)</span> biar dinamis. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin metode yang ngulang, dan gampang diinget karena mirip kayak nyanyi lagu berkali-kali! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Kelas dengan While Loop (Agak Menantang)</h4>
+    <pre>class Sampah:
+    def __init__(self, berat):
+        self.berat = berat
+    
+    def daur_ulang(self):
+        i = 0
+        while i < self.berat:
+            print("Arry Hutomo daur ulang 1 kg!")
+            i = i + 1
+
+sampah = Sampah(3)
+sampah.daur_ulang()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 1 kg!
+Arry Hutomo daur ulang 1 kg!
+Arry Hutomo daur ulang 1 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris karena metode <span class="code-term">daur_ulang()</span> pake <span class="code-term">while</span> loop untuk ulang sebanyak <span class="code-term">berat</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin kelas sama <span class="code-term">while</span> loop, biar kamu paham cara bikin metode yang ngulang berdasarkan kondisi. Aku pake <span class="code-term">while</span> biar realistis kayak daur ulang per kg. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin metode yang ngulang, dan gampang diinget karena mirip kayak ngitung sisa sampah! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>8. Kelas dengan If-Else (Menantang)</h4>
+    <pre>class Pohon:
+    def __init__(self, jenis, jumlah):
+        self.jenis = jenis
+        self.jumlah = jumlah
+    
+    def cek(self):
+        if self.jumlah > 7:
+            print(f"Arry Hutomo tanam {self.jumlah} pohon {self.jenis}, banyak!")
+        else:
+            print(f"Arry Hutomo tanam {self.jumlah} pohon {self.jenis}, tambah lagi!")
+
+pohon = Pohon("Mangrove", 10)
+pohon.cek()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon Mangrove, banyak!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 10 pohon Mangrove, banyak!" karena <span class="code-term">jumlah</span> 10 > 7, jadi masuk ke blok <span class="code-term">if</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin kelas sama <span class="code-term">if-else</span>, biar kamu paham cara bikin metode dengan keputusan. Aku pake <span class="code-term">jumlah > 7</span> sebagai batas "banyak". Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin metode dengan logika, dan gampang diinget karena mirip kayak nyanyi lagu dengan nada yang beda! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. Kelas dengan Input dan For Loop (Menantang)</h4>
+    <pre>class Pohon:
+    def __init__(self, jenis, jumlah):
+        self.jenis = jenis
+        self.jumlah = jumlah
+    
+    def tanam(self):
+        for i in range(self.jumlah):
+            print(f"Arry Hutomo tanam pohon {self.jenis} ke-{i+1}!")
+
+jenis = input("Masukkan jenis pohon: ")
+jumlah = int(input("Masukkan jumlah pohon: "))
+pohon = Pohon(jenis, jumlah)
+pohon.tanam()</pre>
+    <p><strong>Output (misalnya user masukkan "Mangrove", 3):</strong></p>
+    <pre>Masukkan jenis pohon: Mangrove
+Masukkan jumlah pohon: 3
+Arry Hutomo tanam pohon Mangrove ke-1!
+Arry Hutomo tanam pohon Mangrove ke-2!
+Arry Hutomo tanam pohon Mangrove ke-3!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin data, lalu metode <span class="code-term">tanam()</span> ulang tiga kali berdasarkan input.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, kelas, dan <span class="code-term">for</span> loop, biar kamu paham cara bikin metode interaktif yang ngulang. Aku pake <span class="code-term">int()</span> buat jumlah. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin kelas interaktif yang ngulang, dan gampang diinget karena mirip kayak nyanyi lagu sesuai jumlah! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. Kelas dengan List dan Metode (Menantang)</h4>
+    <pre>class Pohon:
+    def __init__(self, daftar_pohon):
+        self.daftar_pohon = daftar_pohon
+    
+    def tanam_semua(self):
+        total = 0
+        for pohon in self.daftar_pohon:
+            total = total + pohon
+            print(f"Arry Hutomo tanam {pohon} pohon!")
+        return total
+
+pohon = Pohon([10, 5, 8])
+hasil = pohon.tanam_semua()
+print(f"Total pohon: {hasil}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon!
+Arry Hutomo tanam 5 pohon!
+Arry Hutomo tanam 8 pohon!
+Total pohon: 23</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris dari loop, lalu total 23 dari penjumlahan list.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin kelas sama list dan <span class="code-term">for</span> loop, biar kamu paham cara bikin metode yang ngolah list. Aku pake list sebagai atribut biar fleksibel. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara ngolah list dalam kelas, dan gampang diinget karena mirip kayak njumlahin daftar belanja! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>11. Kelas dengan Dictionary dan Metode (Agak Sulit)</h4>
+    <pre>class Sampah:
+    def __init__(self, berat_dict):
+        self.berat_dict = berat_dict
+    
+    def hitung_total(self):
+        total = 0
+        for berat in self.berat_dict.values():
+            total = total + berat
+        return total
+
+sampah = Sampah({"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5})
+hasil = sampah.hitung_total()
+print(f"Arry Hutomo daur ulang {hasil} kg!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 11.0 kg!" karena metode <span class="code-term">hitung_total()</span> jumlahkan semua nilai dalam dictionary: 5.5 + 3.0 + 2.5 = 11.0.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin kelas sama dictionary, biar kamu paham cara bikin metode yang ngolah dictionary. Aku pake <span class="code-term">values()</span> buat ambil nilai dan jumlahkan. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara ngolah dictionary dalam kelas, dan gampang diinget karena mirip kayak njumlahin catatan! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>12. Kelas dengan If-Else dan List (Sulit)</h4>
+    <pre>class Pohon:
+    def __init__(self, daftar_pohon):
+        self.daftar_pohon = daftar_pohon
+    
+    def cek_pohon(self):
+        for jumlah in self.daftar_pohon:
+            if jumlah > 7:
+                print(f"Arry Hutomo tanam {jumlah} pohon, banyak!")
+            else:
+                print(f"Arry Hutomo tanam {jumlah} pohon, tambah lagi!")
+
+pohon = Pohon([10, 5, 8])
+pohon.cek_pohon()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon, banyak!
+Arry Hutomo tanam 5 pohon, tambah lagi!
+Arry Hutomo tanam 8 pohon, banyak!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris berdasarkan kondisi: 10 dan 8 > 7 (banyak), 5 < 7 (tambah lagi).</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin kelas, list, <span class="code-term">for</span> loop, dan <span class="code-term">if-else</span>, biar kamu paham cara bikin metode dengan keputusan yang ngolah list. Aku pake <span class="code-term">jumlah > 7</span> sebagai batas. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin metode dengan logika, dan gampang diinget karena mirip kayak ngecek daftar! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. Kelas dengan Dictionary, While Loop, dan Return (Sulit)</h4>
+    <pre>class Sampah:
+    def __init__(self, berat_dict):
+        self.berat_dict = berat_dict
+    
+    def hitung_sampah(self):
+        keys = list(self.berat_dict.keys())
+        i = 0
+        total = 0
+        while i < len(keys):
+            total = total + self.berat_dict[keys[i]]
+            i = i + 1
+        return total
+
+sampah = Sampah({"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5})
+hasil = sampah.hitung_sampah()
+print(f"Arry Hutomo daur ulang {hasil} kg!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 11.0 kg!" karena metode <span class="code-term">hitung_sampah()</span> jumlahkan nilai pake <span class="code-term">while</span> loop: 5.5 + 3.0 + 2.5 = 11.0.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin kelas, dictionary, <span class="code-term">while</span> loop, dan <span class="code-term">return</span>, biar kamu paham cara ngolah dictionary pake indeks dalam kelas. Aku pake <span class="code-term">keys()</span> dan <span class="code-term">while</span> loop buat iterasi. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara ngolah dictionary, dan gampang diinget karena mirip kayak njumlahin catatan! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>14. Kelas dengan Input, If-Else, dan Chapter 1 (Lebih Sulit)</h4>
+    <pre>class Donasi:
+    def __init__(self, jumlah):
+        self.jumlah = jumlah
+    
+    def cek_donasi(self):
+        if self.jumlah > 150000:
+            print(f"Arry Hutomo donasi Rp {self.jumlah}!\nBanyak ", "buat komunitas!", sep="=>", end="")
+            print("yuk!")
+        else:
+            print(f"Arry Hutomo donasi Rp {self.jumlah}!\nTambah ", "buat komunitas!", sep="=>", end="")
+            print("yuk!")
+
+jumlah = int(input("Masukkan jumlah donasi (Rp): "))
+donasi = Donasi(jumlah)
+donasi.cek_donasi()</pre>
+    <p><strong>Output (misalnya user masukkan 200000):</strong></p>
+    <pre>Masukkan jumlah donasi (Rp): 200000
+Arry Hutomo donasi Rp 200000!
+Banyak =>buat komunitas!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin 200000, lalu metode <span class="code-term">cek_donasi()</span> cek <span class="code-term">jumlah > 150000</span>, masuk ke blok <span class="code-term">if</span>, dan cetak pesan dengan format <span class="code-term">sep</span> dan <span class="code-term">end</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, kelas, <span class="code-term">if-else</span>, dan <span class="code-term">\n</span>, <span class="code-term">sep</span>, <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin metode interaktif dengan keputusan dan format kece. Tema donasi dipilih karena Arry Hutomo peduli sosial, sesuai isu sosial. Struktur ini bikin kamu paham cara bikin kelas interaktif, dan gampang diinget karena mirip kayak ngecek donasi! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+class Sampah:
+    def __init__(self, berat_dict):
+        self.berat_dict = berat_dict
+    
+    def proses_sampah(self):
+        try:
+            total = 0
+            i = 0
+            keys = list(self.berat_dict.keys())
+            while i < len(keys):
+                jenis = keys[i]
+                total = total + self.berat_dict[jenis]
+                if total > 10:
+                    print(f"Arry Hutomo daur ulang {total} kg!\nCukup ", f"{jenis} banyak!", sep="=>", end="")
+                    print("yuk!")
+                else:
+                    print(f"Arry Hutomo daur ulang {total} kg!\nTambah ", f"{jenis} kurang!", sep="=>", end="")
+                    print("yuk!")
+                i = i + 1
+            return total
+        except KeyError:
+            print("Ada jenis sampah yang tidak ditemukan!")
+            return 0
+
+# File utama
+# from lingkungan import Sampah
+berat_dict = {}
+for i in range(3):
+    try:
+        jenis = input(f"Masukkan jenis sampah ke-{i+1}: ")
+        berat = float(input(f"Masukkan berat {jenis} (kg): "))
+        berat_dict[jenis] = berat
+    except ValueError:
+        print("Berat harus angka, coba lagi!")
+        i = i - 1
+sampah = Sampah(berat_dict)
+hasil = sampah.proses_sampah()
+print(f"Total akhir: {hasil} kg!")</pre>
+    <p><strong>Output (misalnya user masukkan "Plastik", 5.5, "Kertas", 3.0, "Organik", 2.5):</strong></p>
+    <pre>Masukkan jenis sampah ke-1: Plastik
+Masukkan berat Plastik (kg): 5.5
+Masukkan jenis sampah ke-2: Kertas
+Masukkan berat Kertas (kg): 3.0
+Masukkan jenis sampah ke-3: Organik
+Masukkan berat Organik (kg): 2.5
+Arry Hutomo daur ulang 5.5 kg!
+Tambah =>Plastik kurang!yuk!
+Arry Hutomo daur ulang 8.5 kg!
+Tambah =>Kertas kurang!yuk!
+Arry Hutomo daur ulang 11.0 kg!
+Cukup =>Organik banyak!yuk!
+Total akhir: 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin data, lalu metode <span class="code-term">proses_sampah()</span> hitung total, cek kondisi, dan cetak pesan dengan format. Total akhir ditampilin.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, <span class="code-term">while</span> loop, dictionary, operasi <span class="code-term">+</span>, <span class="code-term">if-else</span>, <span class="code-term">return</span>, <span class="code-term">try-except</span>, dan modul. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara bikin kelas kompleks, dan gampang diinget karena mirip kayak bikin laporan daur ulang! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Kasih nama kelas yang jelas, kayak <span class="code-term">Pohon</span>, biar gampang dipahami. ✅</li>
+        <li><strong>Don't:</strong> Jangan lupa pake <span class="code-term">self</span> saat akses atribut atau metode dalam kelas, kalo ga bakal error. ❌</li>
+        <li><strong>Do:</strong> Gunakan <span class="code-term">__init__</span> buat inisialisasi atribut, biar objek punya data awal. 🌟</li>
+        <li><strong>Don't:</strong> Jangan bikin metode tanpa <span class="code-term">self</span> sebagai parameter pertama, nanti ga bisa dipake sama objek. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap kelas yang kamu buat adalah langkah menuju program yang lebih terstruktur! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

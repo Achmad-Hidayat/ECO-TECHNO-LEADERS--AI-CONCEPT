@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10: Modul, Bikin Proyek Lebih Teratur! 📦</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 10: Modul, Bikin Proyek Lebih Teratur! 📦</h2>
+    <div class="quote">
+        "Modul itu kayak kotak penyimpanan, bikin proyek kita teratur dan gampang dikelola! 📦✨" <br>
+        Doa: "Ya Tuhan, bantu kami mengatur proyek coding dengan rapi biar lebih efisien. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar tentang modul di Python, biar proyek kita lebih teratur dan gampang dikelola. Kita pake variabel (Chapter 2), operasi (Chapter 3), input (Chapter 4), pengkondisian (Chapter 5), perulangan (Chapter 6), list (Chapter 7), dictionary (Chapter 8), fungsi (Chapter 9), dan <span class="code-term">print</span> (Chapter 1). Yuk, kita bikin modul bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Catatan:</h3>
+    <p>Untuk chapter ini, kita akan simulasi modul sebagai kode dalam satu file HTML, tapi dalam praktik aslinya, kamu harus pisah kode ke file Python terpisah (misalnya <span class="code-term">lingkungan.py</span>) dan impor ke file utama. Karena kita di lingkungan ini, aku bakal tulis semua kode dalam satu tempat, tapi aku jelasin cara impornya.</p>
+    
+    <h3>Contoh Query Python: Modul buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Modul Sederhana dengan Fungsi (Super Gampang)</h4>
+    <pre># Simulasi file lingkungan.py
+def tanam_pohon():
+    print("Arry Hutomo tanam pohon!")
+
+# File utama
+# import lingkungan  # Dalam praktik, ini impor modul
+tanam_pohon()  # Memanggil fungsi dari modul</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon!" karena kita panggil fungsi <span class="code-term">tanam_pohon()</span> yang seharusnya ada di modul <span class="code-term">lingkungan</span>. Fungsi ini cuma nampilin pesan pake <span class="code-term">print()</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini sederhana buat kenalin konsep modul. Dalam praktik, kamu harus buat file terpisah bernama <span class="code-term">lingkungan.py</span>, isi dengan fungsi <span class="code-term">tanam_pohon</span>, trus impor pake <span class="code-term">import lingkungan</span> di file utama. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul, dan gampang diinget karena mirip kayak nyimpan alat di kotak! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Modul dengan Fungsi dan Parameter (Gampang)</h4>
+    <pre># Simulasi file lingkungan.py
+def tanam_pohon(jenis):
+    print(f"Arry Hutomo tanam pohon {jenis}!")
+
+# File utama
+# import lingkungan
+tanam_pohon("Mangrove")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon Mangrove!" karena kita panggil fungsi <span class="code-term">tanam_pohon("Mangrove")</span> yang seharusnya ada di modul <span class="code-term">lingkungan</span>. Fungsi nerima parameter <span class="code-term">jenis</span> dan nampilin pesan.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara pake fungsi dengan parameter dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>, dan kita impor modulnya. Aku pilih parameter "Mangrove" biar realistis. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake fungsi dari modul, dan gampang diinget karena mirip kayak nyanyi lagu dari playlist! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Modul dengan Fungsi dan Return (Gampang)</h4>
+    <pre># Simulasi file lingkungan.py
+def hitung_pohon(jumlah):
+    return jumlah + 5
+
+# File utama
+# import lingkungan
+hasil = hitung_pohon(10)
+print(f"Arry Hutomo tanam {hasil} pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 15 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 15 pohon!" karena kita panggil fungsi <span class="code-term">hitung_pohon(10)</span> dari modul, yang nambah 5 ke parameter (10 + 5 = 15), trus simpen hasilnya dan tampilin.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara pake fungsi dengan <span class="code-term">return</span> dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih fungsi <span class="code-term">hitung_pohon</span> dengan parameter <span class="code-term">jumlah</span>, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake fungsi yang ngasih output dari modul, dan gampang diinget karena mirip kayak pake kalkulator dari kotak alat! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Modul dengan Impor Spesifik (Masih Gampang)</h4>
+    <pre># Simulasi file lingkungan.py
+def tanam_pohon():
+    print("Arry Hutomo tanam pohon!")
+
+# File utama
+# from lingkungan import tanam_pohon  # Impor spesifik
+tanam_pohon()</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon!" karena kita panggil fungsi <span class="code-term">tanam_pohon()</span> yang diimpor spesifik dari modul <span class="code-term">lingkungan</span> pake <span class="code-term">from ... import</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara impor spesifik pake <span class="code-term">from ... import</span>. Dalam praktik, kita cuma impor fungsi <span class="code-term">tanam_pohon</span> dari file <span class="code-term">lingkungan.py</span>, jadi ga perlu tulis nama modul pas manggil. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara impor spesifik, dan gampang diinget karena mirip kayak ambil alat spesifik dari kotak! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. Modul dengan Input (Mulai Agak Menantang)</h4>
+    <pre># Simulasi file lingkungan.py
+def tanam_pohon(jenis):
+    print(f"Arry Hutomo tanam pohon {jenis}!")
+
+# File utama
+# from lingkungan import tanam_pohon
+pohon = input("Masukkan jenis pohon: ")
+tanam_pohon(pohon)</pre>
+    <p><strong>Output (misalnya user masukkan "Mangrove"):</strong></p>
+    <pre>Masukkan jenis pohon: Mangrove
+Arry Hutomo tanam pohon Mangrove!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jenis pohon: ", user masukin "Mangrove", trus kita panggil fungsi <span class="code-term">tanam_pohon()</span> dari modul dengan input user.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama fungsi dari modul, biar kamu paham cara bikin fungsi interaktif yang diimpor. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul interaktif, dan gampang diinget karena mirip kayak ngasih perintah ke robot dari kotak alat! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. Modul dengan For Loop (Agak Menantang)</h4>
+    <pre># Simulasi file lingkungan.py
+def tanam_banyak(jumlah):
+    for i in range(jumlah):
+        print("Arry Hutomo tanam pohon!")
+
+# File utama
+# from lingkungan import tanam_banyak
+tanam_banyak(3)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!
+Arry Hutomo tanam pohon!
+Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak "Arry Hutomo tanam pohon!" tiga kali karena kita panggil fungsi <span class="code-term">tanam_banyak(3)</span> dari modul, yang pake <span class="code-term">for</span> loop untuk ulang 3 kali.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi dari modul sama <span class="code-term">for</span> loop, biar kamu paham cara pake fungsi yang ngulang dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul yang ngulang, dan gampang diinget karena mirip kayak nyanyi lagu dari playlist! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Modul dengan While Loop (Agak Menantang)</h4>
+    <pre># Simulasi file lingkungan.py
+def daur_ulang_sampah(berat):
+    i = 0
+    while i < berat:
+        print("Arry Hutomo daur ulang 1 kg!")
+        i = i + 1
+
+# File utama
+# from lingkungan import daur_ulang_sampah
+daur_ulang_sampah(3)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 1 kg!
+Arry Hutomo daur ulang 1 kg!
+Arry Hutomo daur ulang 1 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak "Arry Hutomo daur ulang 1 kg!" tiga kali karena kita panggil fungsi <span class="code-term">daur_ulang_sampah(3)</span> dari modul, yang pake <span class="code-term">while</span> loop untuk ulang 3 kali.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi dari modul sama <span class="code-term">while</span> loop, biar kamu paham cara pake fungsi yang ngulang berdasarkan kondisi dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul yang ngulang, dan gampang diinget karena mirip kayak ngitung sisa sampah dari kotak alat! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>8. Modul dengan If-Else (Menantang)</h4>
+    <pre># Simulasi file lingkungan.py
+def cek_pohon(jumlah):
+    if jumlah > 7:
+        print(f"Arry Hutomo tanam {jumlah} pohon, banyak!")
+    else:
+        print(f"Arry Hutomo tanam {jumlah} pohon, tambah lagi!")
+
+# File utama
+# from lingkungan import cek_pohon
+cek_pohon(10)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon, banyak!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 10 pohon, banyak!" karena kita panggil fungsi <span class="code-term">cek_pohon(10)</span> dari modul, yang cek <span class="code-term">jumlah > 7</span> dan masuk ke blok <span class="code-term">if</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi dari modul sama <span class="code-term">if-else</span>, biar kamu paham cara pake fungsi dengan keputusan dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul dengan keputusan, dan gampang diinget karena mirip kayak pake alat cerdas dari kotak! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. Modul dengan Input dan For Loop (Menantang)</h4>
+    <pre># Simulasi file lingkungan.py
+def tanam_banyak(jumlah):
+    for i in range(jumlah):
+        print(f"Arry Hutomo tanam pohon ke-{i+1}!")
+
+# File utama
+# from lingkungan import tanam_banyak
+jumlah = int(input("Masukkan jumlah pohon: "))
+tanam_banyak(jumlah)</pre>
+    <p><strong>Output (misalnya user masukkan 3):</strong></p>
+    <pre>Masukkan jumlah pohon: 3
+Arry Hutomo tanam pohon ke-1!
+Arry Hutomo tanam pohon ke-2!
+Arry Hutomo tanam pohon ke-3!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon: ", user masukin 3, trus kita panggil fungsi <span class="code-term">tanam_banyak()</span> dari modul, yang ulang 3 kali pake <span class="code-term">for</span> loop.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">for</span> loop, dan fungsi dari modul, biar kamu paham cara bikin fungsi interaktif yang ngulang dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul interaktif yang ngulang, dan gampang diinget karena mirip kayak nyanyi lagu sesuai jumlah dari playlist! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. Modul dengan List dan Return (Agak Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def hitung_total_pohon(pohon_list):
+    total = 0
+    for jumlah in pohon_list:
+        total = total + jumlah
+    return total
+
+# File utama
+# from lingkungan import hitung_total_pohon
+pohon_list = [10, 5, 8]
+hasil = hitung_total_pohon(pohon_list)
+print(f"Arry Hutomo tanam {hasil} pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 23 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 23 pohon!" karena kita panggil fungsi <span class="code-term">hitung_total_pohon()</span> dari modul dengan list [10, 5, 8]. Fungsi jumlahkan elemen dan kembalikan total 23.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi dari modul sama list dan <span class="code-term">return</span>, biar kamu paham cara pake fungsi yang ngolah list dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul yang ngolah list, dan gampang diinget karena mirip kayak njumlahin daftar belanja dari kotak alat! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>11. Modul dengan Dictionary dan Return (Agak Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def hitung_total_sampah(berat_dict):
+    total = 0
+    for berat in berat_dict.values():
+        total = total + berat
+    return total
+
+# File utama
+# from lingkungan import hitung_total_sampah
+berat_dict = {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}
+hasil = hitung_total_sampah(berat_dict)
+print(f"Arry Hutomo daur ulang {hasil} kg!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 11.0 kg!" karena kita panggil fungsi <span class="code-term">hitung_total_sampah()</span> dari modul dengan dictionary {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}. Fungsi jumlahkan nilai dan kembalikan total 11.0.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi dari modul sama dictionary dan <span class="code-term">return</span>, biar kamu paham cara pake fungsi yang ngolah dictionary dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul yang ngolah dictionary, dan gampang diinget karena mirip kayak njumlahin catatan dari kotak alat! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>12. Modul dengan If-Else dan List (Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def cek_pohon_list(pohon_list):
+    for jumlah in pohon_list:
+        if jumlah > 7:
+            print(f"Arry Hutomo tanam {jumlah} pohon, banyak!")
+        else:
+            print(f"Arry Hutomo tanam {jumlah} pohon, tambah lagi!")
+
+# File utama
+# from lingkungan import cek_pohon_list
+pohon_list = [10, 5, 8]
+cek_pohon_list(pohon_list)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 10 pohon, banyak!
+Arry Hutomo tanam 5 pohon, tambah lagi!
+Arry Hutomo tanam 8 pohon, banyak!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris karena kita panggil fungsi <span class="code-term">cek_pohon_list()</span> dari modul dengan list [10, 5, 8]. Fungsi iterasi list, cek tiap elemen: kalo > 7, cetak "banyak"; kalo ga, cetak "tambah lagi".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi dari modul, list, <span class="code-term">for</span> loop, dan <span class="code-term">if-else</span>, biar kamu paham cara pake fungsi dengan keputusan yang ngolah list dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul dengan keputusan, dan gampang diinget karena mirip kayak ngecek daftar dari kotak alat! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. Modul dengan Dictionary, While Loop, dan Return (Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def hitung_sampah_dict(berat_dict):
+    keys = list(berat_dict.keys())
+    i = 0
+    total = 0
+    while i < len(keys):
+        total = total + berat_dict[keys[i]]
+        i = i + 1
+    return total
+
+# File utama
+# from lingkungan import hitung_sampah_dict
+berat_dict = {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}
+hasil = hitung_sampah_dict(berat_dict)
+print(f"Arry Hutomo daur ulang {hasil} kg!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 11.0 kg!" karena kita panggil fungsi <span class="code-term">hitung_sampah_dict()</span> dari modul dengan dictionary {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}. Fungsi jumlahkan nilai pake <span class="code-term">while</span> loop dan kembalikan total 11.0.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin fungsi dari modul, dictionary, <span class="code-term">while</span> loop, dan <span class="code-term">return</span>, biar kamu paham cara pake fungsi yang ngolah dictionary pake indeks dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul yang ngolah dictionary, dan gampang diinget karena mirip kayak njumlahin catatan dari kotak alat! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>14. Modul dengan Input, If-Else, dan Chapter 1 (Lebih Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def cek_donasi(jumlah):
+    if jumlah > 150000:
+        print(f"Arry Hutomo donasi Rp {jumlah}!\nBanyak ", "buat komunitas!", sep="=>", end="")
+        print("yuk!")
+    else:
+        print(f"Arry Hutomo donasi Rp {jumlah}!\nTambah ", "buat komunitas!", sep="=>", end="")
+        print("yuk!")
+
+# File utama
+# from lingkungan import cek_donasi
+donasi = int(input("Masukkan jumlah donasi (Rp): "))
+cek_donasi(donasi)</pre>
+    <p><strong>Output (misalnya user masukkan 200000):</strong></p>
+    <pre>Masukkan jumlah donasi (Rp): 200000
+Arry Hutomo donasi Rp 200000!
+Banyak =>buat komunitas!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah donasi (Rp): ", user masukin 200000, trus kita panggil fungsi <span class="code-term">cek_donasi()</span> dari modul. Fungsi cek <span class="code-term">jumlah > 150000</span>, masuk ke blok <span class="code-term">if</span>, dan cetak pesan dengan format <span class="code-term">sep</span> dan <span class="code-term">end</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, fungsi dari modul, <span class="code-term">if-else</span>, dan <span class="code-term">\n</span>, <span class="code-term">sep</span>, <span class="code-term">end</span>, biar kamu paham cara pake fungsi interaktif dengan keputusan dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema donasi karena Arry Hutomo peduli sosial, sesuai isu sosial. Struktur ini bikin kamu paham cara pake modul interaktif, dan gampang diinget karena mirip kayak ngecek donasi dari kotak alat! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+def hitung_dan_cek_sampah(berat_dict):
+    total = 0
+    i = 0
+    keys = list(berat_dict.keys())
+    while i < len(keys):
+        jenis = keys[i]
+        total = total + berat_dict[jenis]
+        if total > 10:
+            print(f"Arry Hutomo daur ulang {total} kg!\nCukup ", f"{jenis} banyak!", sep="=>", end="")
+            print("yuk!")
+        else:
+            print(f"Arry Hutomo daur ulang {total} kg!\nTambah ", f"{jenis} kurang!", sep="=>", end="")
+            print("yuk!")
+        i = i + 1
+    return total
+
+# File utama
+# from lingkungan import hitung_dan_cek_sampah
+berat_dict = {}
+for i in range(3):
+    jenis = input(f"Masukkan jenis sampah ke-{i+1}: ")
+    berat = float(input(f"Masukkan berat {jenis} (kg): "))
+    berat_dict[jenis] = berat
+hasil = hitung_dan_cek_sampah(berat_dict)
+print(f"Total akhir: {hasil} kg!")</pre>
+    <p><strong>Output (misalnya user masukkan "Plastik", 5.5, "Kertas", 3.0, "Organik", 2.5):</strong></p>
+    <pre>Masukkan jenis sampah ke-1: Plastik
+Masukkan berat Plastik (kg): 5.5
+Masukkan jenis sampah ke-2: Kertas
+Masukkan berat Kertas (kg): 3.0
+Masukkan jenis sampah ke-3: Organik
+Masukkan berat Organik (kg): 2.5
+Arry Hutomo daur ulang 5.5 kg!
+Tambah =>Plastik kurang!yuk!
+Arry Hutomo daur ulang 8.5 kg!
+Tambah =>Kertas kurang!yuk!
+Arry Hutomo daur ulang 11.0 kg!
+Cukup =>Organik banyak!yuk!
+Total akhir: 11.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin "Plastik", 5.5, "Kertas", 3.0, "Organik", 2.5. Dictionary <span class="code-term">berat_dict</span> diisi, trus kita panggil fungsi <span class="code-term">hitung_dan_cek_sampah()</span> dari modul. Fungsi jumlahkan nilai, cek <span class="code-term">total > 10</span>, dan cetak pesan dengan format. Terakhir, tampilin total akhir.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, <span class="code-term">while</span> loop, dictionary, operasi <span class="code-term">+</span>, <span class="code-term">if-else</span>, <span class="code-term">return</span>, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span>, biar kamu paham cara pake fungsi kompleks dari modul. Dalam praktik, fungsi ini ada di file <span class="code-term">lingkungan.py</span>. Aku pilih tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini bikin kamu paham cara pake modul canggih, dan gampang diinget karena mirip kayak bikin laporan dari kotak alat! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Pisah kode ke modul terpisah biar proyek lebih rapi, misalnya simpen fungsi di <span class="code-term">lingkungan.py</span> dan impor di file utama. ✅</li>
+        <li><strong>Don't:</strong> Jangan lupa impor modul pake <span class="code-term">import</span> atau <span class="code-term">from ... import</span>, kalo ga fungsi ga bisa dipake. ❌</li>
+        <li><strong>Do:</strong> Kasih nama modul yang jelas, kayak <span class="code-term">lingkungan.py</span>, biar gampang dipahami. 🌟</li>
+        <li><strong>Don't:</strong> Jangan pake nama modul yang sama dengan nama file utama, nanti Python bingung dan error. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap modul yang kamu buat adalah langkah menuju proyek yang lebih teratur! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 15: Manipulasi String, Olah Teks dengan Cerdas! ✍️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 15: Manipulasi String, Olah Teks dengan Cerdas! ✍️</h2>
+    <div class="quote">
+        "Manipulasi string itu kayak menyusun kata, bikin pesan kita lebih jelas! ✍️✨" <br>
+        Doa: "Ya Tuhan, bantu kami mengolah teks dengan cerdas biar pesan kami tersampaikan. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar cara manipulasi string di Python, biar kita bisa mengolah teks dengan cerdas. Bayangin string itu kayak sekumpulan kata dalam buku harian, dan kita mau ubah-ubah kata itu supaya lebih rapi, lebih jelas, atau lebih sesuai dengan kebutuhan. Kita akan pake semua konsep dari Chapter 1-14, termasuk OOP dari Chapter 13-14, biar makin seru! Yuk, kita olah teks bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: Manipulasi String buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Concatenation Sederhana (Super Gampang)</h4>
+    <pre>nama = "Arry Hutomo"
+aksi = "tanam pohon"
+pesan = nama + " " + aksi + "!"
+print(pesan)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Arry Hutomo tanam pohon!" karena kita menggabungkan tiga string: <span class="code-term">nama</span> ("Arry Hutomo"), spasi (" "), dan <span class="code-term">aksi</span> ("tanam pohon"), lalu ditambah tanda seru ("!") di akhir. Proses ini dilakukan dengan operator <span class="code-term">+</span>, yang berfungsi untuk menyambungkan string.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi nyanyi lagu, dan kamu mau gabungin beberapa lirik supaya jadi satu kalimat yang utuh. Nah, di sini kita punya dua "lirik": <span class="code-term">nama</span> dan <span class="code-term">aksi</span>. Kita gabungkan pake operator <span class="code-term">+</span>, tapi kita tambahin spasi (" ") di tengah biar kalimatnya enak dibaca, kayak nyanyi lagu yang pas nadanya. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan yang kita angkat. Struktur ini sederhana banget, cocok buat pemula, dan bikin kamu paham cara dasar nyambungin string. Coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Upper Case (Gampang)</h4>
+    <pre>pesan = "arry hutomo tanam pohon"
+pesan_besar = pesan.upper()
+print(pesan_besar)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>ARRY HUTOMO TANAM POHON</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya jadi "ARRY HUTOMO TANAM POHON" karena metode <span class="code-term">upper()</span> mengubah semua huruf dalam string <span class="code-term">pesan</span> jadi huruf kapital. Jadi, yang awalnya huruf kecil seperti "arry" berubah jadi "ARRY", dan seterusnya untuk semua kata.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi buat spanduk untuk acara tanam pohon, dan kamu mau semua tulisannya gede biar orang dari jauh bisa baca. Nah, di Python, kita bisa pake metode <span class="code-term">upper()</span> untuk ubah semua huruf jadi kapital, kayak teriak biar semua orang denger. Aku mulai dengan string <span class="code-term">pesan</span> yang hurufnya kecil semua, trus aku ubah pake <span class="code-term">upper()</span> dan simpen hasilnya di variabel <span class="code-term">pesan_besar</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini gampang dipahami, kayak ngubah tulisan biasa jadi tulisan gede di spanduk. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Lower Case (Gampang)</h4>
+    <pre>pesan = "ARRY HUTOMO TANAM POHON"
+pesan_kecil = pesan.lower()
+print(pesan_kecil)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>arry hutomo tanam pohon</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya jadi "arry hutomo tanam pohon" karena metode <span class="code-term">lower()</span> mengubah semua huruf dalam string <span class="code-term">pesan</span> jadi huruf kecil. Jadi, yang awalnya huruf besar seperti "ARRY" berubah jadi "arry", dan seterusnya untuk semua kata.</p>
+    <p><strong>Penjelasan Query:</strong> Sekarang bayangin kamu lagi nulis catatan kecil di buku harian, dan kamu mau semua tulisannya huruf kecil biar terlihat santai. Di Python, kita bisa pake metode <span class="code-term">lower()</span> untuk ubah semua huruf jadi kecil, kayak bisik biar suasananya tenang. Aku mulai dengan string <span class="code-term">pesan</span> yang hurufnya gede semua, trus aku ubah pake <span class="code-term">lower()</span> dan simpen hasilnya di variabel <span class="code-term">pesan_kecil</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini gampang dipahami, kayak ngubah tulisan spanduk jadi catatan santai di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Replace String (Masih Gampang)</h4>
+    <pre>pesan = "Arry Hutomo tanam pohon di Pantai!"
+pesan_baru = pesan.replace("Pantai", "Hutan")
+print(pesan_baru)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon di Hutan!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya jadi "Arry Hutomo tanam pohon di Hutan!" karena metode <span class="code-term">replace()</span> mengganti kata "Pantai" dengan "Hutan". Selain kata itu, string lainnya tetap sama.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi nyanyi lagu, tapi ada satu kata di lirik yang salah, misalnya tempatnya "Pantai" padahal seharusnya "Hutan". Di Python, kita bisa pake metode <span class="code-term">replace()</span> untuk ganti kata yang salah dengan yang bener. Aku mulai dengan string <span class="code-term">pesan</span>, trus aku pake <span class="code-term">replace("Pantai", "Hutan")</span> untuk ganti lokasi tanam pohon, dan simpen hasilnya di variabel <span class="code-term">pesan_baru</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini gampang dipahami, kayak ganti kata di lirik lagu biar sesuai sama ceritanya. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. Split String (Mulai Agak Menantang)</h4>
+    <pre>pesan = "Arry Hutomo tanam 10 pohon Mangrove"
+kata = pesan.split()
+print(kata)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>['Arry', 'Hutomo', 'tanam', '10', 'pohon', 'Mangrove']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah list yang berisi kata-kata: ['Arry', 'Hutomo', 'tanam', '10', 'pohon', 'Mangrove']. Metode <span class="code-term">split()</span> memisahkan string <span class="code-term">pesan</span> berdasarkan spasi, jadi setiap kata yang dipisah spasi jadi elemen dalam list.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya kalimat panjang di buku harian, dan kamu mau pisah-pisah kalimat itu jadi kata-kata biar bisa diolah satu per satu, misalnya buat dihitung atau dianalisis. Di Python, kita bisa pake metode <span class="code-term">split()</span> untuk motong string jadi list, kayak motong-motong kertas jadi potongan kecil. Aku mulai dengan string <span class="code-term">pesan</span>, trus aku pake <span class="code-term">split()</span> tanpa parameter, yang artinya dia akan pisah berdasarkan spasi (default). Hasilnya disimpan di variabel <span class="code-term">kata</span> sebagai list. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara pisah teks, kayak motong lirik lagu jadi bagian-bagian kecil. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. Join String (Agak Menantang)</h4>
+    <pre>kata = ['Arry', 'Hutomo', 'tanam', 'pohon']
+pesan = " ".join(kata)
+print(pesan)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Arry Hutomo tanam pohon" karena metode <span class="code-term">join()</span> menggabungkan semua elemen dalam list <span class="code-term">kata</span> jadi satu string, dengan spasi (" ") sebagai pemisah antar elemen.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya beberapa potongan kertas yang masing-masing ada satu kata, dan kamu mau satuin potongan itu jadi kalimat yang utuh. Di Python, kita bisa pake metode <span class="code-term">join()</span> untuk nyatuin list kata-kata jadi string, kayak nyanyi lagu dengan lirik yang disambung. Aku mulai dengan list <span class="code-term">kata</span> yang berisi potongan kata, trus aku pake <span class="code-term">" ".join(kata)</span> untuk satuin semua kata dengan spasi sebagai perekatnya, dan simpen hasilnya di variabel <span class="code-term">pesan</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara gabung teks, kayak nyanyi lagu dengan lirik yang disatukan. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Strip String (Agak Menantang)</h4>
+    <pre>pesan = "   Arry Hutomo tanam pohon!   "
+pesan_bersih = pesan.strip()
+print(pesan_bersih)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Arry Hutomo tanam pohon!" karena metode <span class="code-term">strip()</span> menghapus spasi kosong di awal dan akhir string <span class="code-term">pesan</span>. Jadi, spasi yang tadinya ada di depan "Arry" dan setelah tanda seru ("!") hilang.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya kertas yang pinggirnya penuh coretan spasi kosong, dan kamu mau bersihin biar rapi. Di Python, kita bisa pake metode <span class="code-term">strip()</span> untuk hapus spasi kosong di awal dan akhir string, kayak bersihin tepi kertas biar rapi. Aku mulai dengan string <span class="code-term">pesan</span> yang punya spasi berlebih, trus aku pake <span class="code-term">strip()</span> untuk bersihin, dan simpen hasilnya di variabel <span class="code-term">pesan_bersih</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara bersihin teks, kayak nyanyi lagu tanpa nada sumbang di awal atau akhir. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>8. Find Substring (Menantang)</h4>
+    <pre>pesan = "Arry Hutomo tanam pohon di Pantai!"
+posisi = pesan.find("pohon")
+print(f"Kata 'pohon' ada di posisi: {posisi}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Kata 'pohon' ada di posisi: 12</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Kata 'pohon' ada di posisi: 12" karena metode <span class="code-term">find()</span> mencari kata "pohon" dalam string <span class="code-term">pesan</span> dan mengembalikan indeks posisi awal kata itu, yaitu 12. Indeks dihitung mulai dari 0, jadi "pohon" dimulai dari karakter ke-12 (setelah "Arry Hutomo tanam ").</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi baca buku, dan kamu mau cari di mana kata "pohon" pertama kali muncul, kayak nyari nomor halaman. Di Python, kita bisa pake metode <span class="code-term">find()</span> untuk cari posisi awal substring dalam string, mirip nyari kata di buku. Aku mulai dengan string <span class="code-term">pesan</span>, trus aku pake <span class="code-term">find("pohon")</span> untuk cari posisi kata "pohon", dan simpen hasilnya di variabel <span class="code-term">posisi</span>. Indeks dimulai dari 0, jadi aku hitung manual: "Arry" (0-3), spasi (4), "Hutomo" (5-10), spasi (11), "tanam" (12-16), dan "pohon" mulai dari indeks 12. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cari posisi teks, kayak nyari kata di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. Count Substring (Menantang)</h4>
+    <pre>pesan = "Arry Hutomo tanam pohon di pohon Pantai!"
+jumlah = pesan.count("pohon")
+print(f"Kata 'pohon' muncul sebanyak: {jumlah} kali")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Kata 'pohon' muncul sebanyak: 2 kali</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Kata 'pohon' muncul sebanyak: 2 kali" karena metode <span class="code-term">count()</span> menghitung berapa kali kata "pohon" muncul dalam string <span class="code-term">pesan</span>. Kata "pohon" ada dua kali: satu setelah "tanam" dan satu sebelum "Pantai".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi nyanyi lagu, dan kamu mau hitung berapa kali kata "pohon" muncul di lirik, kayak ngitung chorus berulang. Di Python, kita bisa pake metode <span class="code-term">count()</span> untuk hitung kemunculan substring dalam string, mirip ngitung kata di lirik lagu. Aku mulai dengan string <span class="code-term">pesan</span>, trus aku pake <span class="code-term">count("pohon")</span> untuk hitung berapa kali "pohon" muncul, dan simpen hasilnya di variabel <span class="code-term">jumlah</span>. Aku sengaja bikin string dengan dua "pohon" biar kamu lihat cara kerjanya. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara hitung teks, kayak ngitung kata di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. String Slicing (Agak Sulit)</h4>
+    <pre>pesan = "Arry Hutomo tanam pohon di Pantai!"
+potongan = pesan[12:17]
+print(f"Potongan teks: {potongan}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Potongan teks: tanam</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Potongan teks: tanam" karena kita mengambil potongan string dari indeks 12 sampai 16 (17 tidak termasuk). Aku hitung indeksnya: "Arry" (0-3), spasi (4), "Hutomo" (5-10), spasi (11), "tanam" (12-16). Jadi, potongan dari indeks 12 sampai 16 adalah "tanam".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya selembar kertas panjang bertulisan kalimat, dan kamu mau potong bagian tertentu aja, misalnya cuma kata "tanam". Di Python, kita bisa pake slicing dengan format <span class="code-term">[awal:akhir]</span> untuk ambil potongan string, kayak motong kertas pake gunting. Aku mulai dengan string <span class="code-term">pesan</span>, trus aku pake <span class="code-term">[12:17]</span> untuk ambil kata "tanam", dan simpen hasilnya di variabel <span class="code-term">potongan</span>. Aku hitung indeks manual supaya jelas: "Arry" (0-3), spasi (4), "Hutomo" (5-10), spasi (11), "tanam" (12-16). Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara potong teks, kayak motong lirik lagu cuma ambil bagian tertentu. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>11. String dengan If-Else (Agak Sulit)</h4>
+    <pre>pesan = "Arry Hutomo tanam pohon di Pantai!"
+if "pohon" in pesan:
+    print("Kata 'pohon' ada dalam pesan!")
+else:
+    print("Kata 'pohon' tidak ada dalam pesan.")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Kata 'pohon' ada dalam pesan!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Kata 'pohon' ada dalam pesan!" karena kondisi <span class="code-term">"pohon" in pesan</span> bernilai True. Kata "pohon" memang ada dalam string <span class="code-term">pesan</span>, jadi program masuk ke blok <span class="code-term">if</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi nyari kata tertentu di buku harian, misalnya "pohon", dan kamu mau kasih tau kalo kata itu ada atau nggak. Di Python, kita bisa pake operator <span class="code-term">in</span> untuk cek apakah substring ada dalam string, kayak nyari kata di buku. Aku mulai dengan string <span class="code-term">pesan</span>, trus aku cek pake <span class="code-term">"pohon" in pesan</span>. Kalo True, masuk ke blok <span class="code-term">if</span> dan cetak pesan bahwa kata ada; kalo False, masuk ke blok <span class="code-term">else</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara cek teks dengan logika, kayak nyanyi lagu sambil cek apakah liriknya ada kata tertentu. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>12. String dengan For Loop (Sulit)</h4>
+    <pre>pesan = "Arry Hutomo tanam pohon di Pantai!"
+vokal = 0
+for huruf in pesan:
+    if huruf.lower() in "aeiou":
+        vokal = vokal + 1
+print(f"Jumlah huruf vokal: {vokal}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Jumlah huruf vokal: 10</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Jumlah huruf vokal: 10" karena kita menghitung huruf vokal (a, e, i, o, u) dalam string <span class="code-term">pesan</span>. Aku hitung manual: "A" (1), "u" (2), "o" (3), "o" (4), "a" (5), "a" (6), "o" (7), "i" (8), "a" (9), "a" (10). Jadi, total ada 10 huruf vokal.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi baca kalimat di buku harian, dan kamu mau hitung berapa huruf vokal (a, e, i, o, u) yang ada di kalimat itu, kayak nyanyi lagu sambil ngitung nada yang pas. Di Python, kita bisa pake <span class="code-term">for</span> loop untuk cek tiap huruf dalam string. Aku mulai dengan string <span class="code-term">pesan</span>, trus aku loop tiap huruf pake <span class="code-term">for huruf in pesan</span>. Aku ubah huruf ke huruf kecil pake <span class="code-term">huruf.lower()</span> biar pengecekan konsisten, trus cek apakah huruf itu ada di "aeiou". Kalo iya, aku tambah variabel <span class="code-term">vokal</span> pake <span class="code-term">vokal = vokal + 1</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara olah teks dengan loop, kayak ngitung nada di lirik lagu. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. String dengan While Loop (Sulit)</h4>
+    <pre>pesan = "Arry Hutomo tanam pohon di Pantai!"
+i = 0
+while i < len(pesan):
+    print(f"Karakter ke-{i+1}: {pesan[i]}")
+    i = i + 1</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Karakter ke-1: A
+Karakter ke-2: r
+Karakter ke-3: r
+Karakter ke-4: y
+Karakter ke-5:  
+Karakter ke-6: H
+Karakter ke-7: u
+Karakter ke-8: t
+Karakter ke-9: o
+Karakter ke-10: m
+Karakter ke-11: o
+Karakter ke-12:  
+Karakter ke-13: t
+Karakter ke-14: a
+Karakter ke-15: n
+Karakter ke-16: a
+Karakter ke-17: m
+Karakter ke-18:  
+Karakter ke-19: p
+Karakter ke-20: o
+Karakter ke-21: h
+Karakter ke-22: o
+Karakter ke-23: n
+Karakter ke-24:  
+Karakter ke-25: d
+Karakter ke-26: i
+Karakter ke-27:  
+Karakter ke-28: P
+Karakter ke-29: a
+Karakter ke-30: n
+Karakter ke-31: t
+Karakter ke-32: a
+Karakter ke-33: i
+Karakter ke-34: !</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak setiap karakter dalam string <span class="code-term">pesan</span> beserta posisinya. Kita pake <span class="code-term">while</span> loop untuk mengakses karakter satu per satu dari indeks 0 sampai panjang string (34 karakter), dan cetak masing-masing karakter beserta nomor posisinya.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi baca buku harian, dan kamu mau tulis ulang setiap huruf satu per satu sambil kasih nomor urut, kayak nyanyi lagu sambil ngitung tiap nada. Di Python, kita bisa pake <span class="code-term">while</span> loop untuk akses tiap karakter dalam string berdasarkan indeks. Aku mulai dengan string <span class="code-term">pesan</span>, trus aku inisialisasi <span class="code-term">i = 0</span> sebagai indeks awal. Aku loop pake <span class="code-term">while i < len(pesan)</span> untuk pastiin loop berjalan sampai akhir string, trus cetak tiap karakter pake <span class="code-term">pesan[i]</span> dan tambah <span class="code-term">i</span> pake <span class="code-term">i = i + 1</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara olah teks dengan loop, kayak nyanyi lagu sambil ngitung nada satu per satu. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>14. String dengan OOP (Lebih Sulit)</h4>
+    <pre>class PesanLingkungan:
+    def __init__(self, teks):
+        self.teks = teks
+    
+    def format_pesan(self):
+        teks_besar = self.teks.upper()
+        teks_ganti = teks_besar.replace("PANTAI", "HUTAN")
+        return teks_ganti
+
+pesan = PesanLingkungan("Arry Hutomo tanam pohon di Pantai!")
+hasil = pesan.format_pesan()
+print(hasil)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>ARRY HUTOMO TANAM POHON DI HUTAN!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "ARRY HUTOMO TANAM POHON DI HUTAN!" karena metode <span class="code-term">format_pesan()</span> pertama ubah string jadi huruf besar pake <span class="code-term">upper()</span>, lalu ganti "PANTAI" jadi "HUTAN" pake <span class="code-term">replace()</span>. Karena <span class="code-term">upper()</span> udah jalan duluan, "Pantai" jadi "PANTAI", makanya kita ganti "PANTAI" di langkah kedua.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya mesin cetak spanduk untuk acara lingkungan, dan mesin itu bisa ubah teks jadi huruf gede sekaligus ganti lokasi acara sesuai kebutuhan. Di Python, kita bisa bikin kelas pake OOP (Chapter 13-14) untuk olah string kayak mesin itu. Aku bikin kelas <span class="code-term">PesanLingkungan</span> dengan atribut <span class="code-term">teks</span> untuk simpen string. Metode <span class="code-term">format_pesan()</span> punya dua langkah: pertama, ubah teks jadi huruf besar pake <span class="code-term">upper()</span>, kayak nyiapin spanduk biar tulisannya gede; kedua, ganti "PANTAI" jadi "HUTAN" pake <span class="code-term">replace()</span>, kayak ganti lokasi acara. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara gabungin manipulasi string dengan OOP, kayak nyanyi lagu sambil pakai mesin canggih. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+class PesanLingkungan:
+    def __init__(self, teks):
+        self.teks = teks
+    
+    def olah_pesan(self):
+        try:
+            # Ubah ke huruf besar
+            teks = self.teks.upper()
+            # Split jadi list kata
+            kata = teks.split()
+            # Hitung vokal
+            vokal = 0
+            i = 0
+            while i < len(teks):
+                if teks[i].lower() in "aeiou":
+                    vokal = vokal + 1
+                i = i + 1
+            # Ganti kata
+            teks_ganti = teks.replace("PANTAI", "HUTAN")
+            # Gabung kembali
+            pesan_akhir = " ".join(teks_ganti.split())
+            # Cek substring
+            if "POHON" in pesan_akhir:
+                print("Kata 'POHON' ada dalam pesan!")
+            return pesan_akhir, vokal
+        except:
+            print("Terjadi error saat mengolah pesan!")
+            return "", 0
+
+# File utama
+# from lingkungan import PesanLingkungan
+teks = input("Masukkan pesan lingkungan: ")
+pesan = PesanLingkungan(teks)
+hasil, jumlah_vokal = pesan.olah_pesan()
+print(f"Pesan akhir: {hasil}")
+print(f"Jumlah huruf vokal: {jumlah_vokal}")</pre>
+    <p><strong>Output (misalnya user masukkan "Arry Hutomo tanam pohon di Pantai!"):</strong></p>
+    <pre>Masukkan pesan lingkungan: Arry Hutomo tanam pohon di Pantai!
+Kata 'POHON' ada dalam pesan!
+Pesan akhir: ARRY HUTOMO TANAM POHON DI HUTAN!
+Jumlah huruf vokal: 10</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin "Arry Hutomo tanam pohon di Pantai!". Metode <span class="code-term">olah_pesan()</span> lakukan beberapa langkah: ubah teks jadi huruf besar ("ARRY HUTOMO TANAM POHON DI PANTAI!"), split jadi list untuk olah (meski kita gabung lagi nanti), hitung vokal (10: A, u, o, o, a, a, o, i, a, i), ganti "PANTAI" jadi "HUTAN", gabung lagi dengan <span class="code-term">join()</span>, dan cek apakah "POHON" ada (ada, jadi cetak pesan). Hasil akhir dan jumlah vokal ditampilkan.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya mesin super canggih untuk bikin spanduk acara lingkungan, dan mesin ini bisa ubah teks jadi huruf gede, ganti lokasi, hitung vokal, cek kata, dan satuin lagi jadi kalimat rapi—all in one! Di Python, kita bisa bikin kelas pake OOP untuk olah string dengan banyak langkah. Aku bikin kelas <span class="code-term">PesanLingkungan</span> dengan atribut <span class="code-term">teks</span>. Metode <span class="code-term">olah_pesan()</span> punya langkah-langkah: pertama, ubah teks jadi huruf besar pake <span class="code-term">upper()</span>, kayak nyiapin spanduk; kedua, split teks jadi list kata pake <span class="code-term">split()</span>, meski kita satuin lagi nanti; ketiga, hitung vokal pake <span class="code-term">while</span> loop, kayak nyanyi lagu sambil ngitung nada vokal; keempat, ganti "PANTAI" jadi "HUTAN" pake <span class="code-term">replace()</span>, kayak ganti lokasi acara; kelima, satuin lagi pake <span class="code-term">join()</span> biar rapi; terakhir, cek apakah "POHON" ada pake <span class="code-term">if</span>. Semua langkah dibungkus dalam <span class="code-term">try-except</span> biar aman dari error. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara olah teks kompleks, kayak nyanyi lagu sambil pakai mesin canggih! Coba di VSCode, bakal bangga sama hasilnya! 🌳</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Gunakan metode seperti <span class="code-term">upper()</span> atau <span class="code-term">lower()</span> untuk konsistensi format teks, biar rapi dan mudah dibaca. ✅</li>
+        <li><strong>Don't:</strong> Jangan lupa cek apakah substring ada sebelum olah lebih lanjut, kalo ga bisa error, misalnya saat <span class="code-term">replace()</span>. ❌</li>
+        <li><strong>Do:</strong> Gunakan <span class="code-term">strip()</span> untuk bersihin spasi kosong, biar teks ga berantakan. 🌟</li>
+        <li><strong>Don't:</strong> Jangan lupa nangani error saat olah string, misalnya pake <span class="code-term">try-except</span>, kalo ga program bisa crash. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap string yang kamu olah adalah langkah menuju pesan yang lebih jelas! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>
