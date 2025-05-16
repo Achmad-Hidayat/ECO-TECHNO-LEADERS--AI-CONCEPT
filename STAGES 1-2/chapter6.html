@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6: Perulangan (For dan While), Ulangi Terus! 🔄</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 6: Perulangan (For dan While), Ulangi Terus! 🔄</h2>
+    <div class="quote">
+        "Setiap langkah yang diulang membawa kita lebih dekat ke tujuan! 🌟" <br>
+        Doa: "Ya Tuhan, bantu kami mengulang langkah dengan penuh semangat untuk kebaikan. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar perulangan pake <span class="code-term">for</span> dan <span class="code-term">while</span> di Python, biar program kita bisa ngulang langkah-langkah. Kita pake variabel (Chapter 2), operasi (Chapter 3), input (Chapter 4), pengkondisian (Chapter 5), dan <span class="code-term">print</span> (Chapter 1). Yuk, kita ulang-ulang bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: Perulangan buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. For Loop Sederhana (Super Gampang)</h4>
+    <pre>for i in range(3):
+    print("Arry Hutomo tanam pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon!
+Arry Hutomo tanam pohon!
+Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak "Arry Hutomo tanam pohon!" tiga kali karena kita pake <span class="code-term">for</span> loop dengan <span class="code-term">range(3)</span>, yang berarti ulang dari 0 sampai 2 (total 3 kali). Setiap iterasi, program nampilin pesan yang sama pake <span class="code-term">print()</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini sederhana buat kenalin <span class="code-term">for</span> loop pake <span class="code-term">range()</span>. Aku pilih <span class="code-term">range(3)</span> biar loop jalan 3 kali, cukup buat nunjukin konsep tanpa terlalu panjang. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">for</span> loop karena ini cara paling gampang buat ngulang sesuatu yang udah pasti jumlahnya. Struktur ini bikin kamu paham cara ngulang pesan, dan gampang diinget karena mirip kayak nyanyi lagu dengan bait yang sama! Coba di VSCode, gampang banget! 🌳</p>
+    
+    <h4>2. While Loop Sederhana (Gampang)</h4>
+    <pre>count = 0
+while count < 3:
+    print("Arry Hutomo daur ulang sampah!")
+    count = count + 1</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang sampah!
+Arry Hutomo daur ulang sampah!
+Arry Hutomo daur ulang sampah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak "Arry Hutomo daur ulang sampah!" tiga kali karena kita pake <span class="code-term">while</span> loop. Awalnya <span class="code-term">count</span> 0, trus selama <span class="code-term">count < 3</span> (True), program cetak pesan dan tambah <span class="code-term">count</span> jadi 1, 2, 3. Pas <span class="code-term">count</span> jadi 3, kondisi jadi False, loop berhenti.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin <span class="code-term">while</span> loop, yang ngulang selama kondisi True. Aku pilih variabel <span class="code-term">count</span> biar jelas, dan pake <span class="code-term">count < 3</span> biar loop jalan 3 kali. Tema daur ulang dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">while</span> biar kamu paham cara ngulang yang lebih fleksibel dibandingkan <span class="code-term">for</span>. Aku tambah <span class="code-term">count</span> setiap iterasi biar loop ga endless. Struktur ini bikin kamu paham cara bikin loop sederhana, dan gampang diinget karena mirip kayak nyanyi sambil ngitung! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>3. For Loop dengan Angka (Gampang)</h4>
+    <pre>for i in range(1, 4):
+    print(f"Arry Hutomo hemat {i} lampu!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo hemat 1 lampu!
+Arry Hutomo hemat 2 lampu!
+Arry Hutomo hemat 3 lampu!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo hemat 1 lampu!", "Arry Hutomo hemat 2 lampu!", dan "Arry Hutomo hemat 3 lampu!" karena kita pake <span class="code-term">range(1, 4)</span>, yang berarti ulang dari 1 sampai 3 (3 kali). Setiap iterasi, <span class="code-term">i</span> bertambah, dan kita pake <span class="code-term">f-string</span> buat nyisipkan <span class="code-term">i</span> ke pesan.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara pake <span class="code-term">range()</span> dengan batas awal dan akhir. Aku pilih <span class="code-term">range(1, 4)</span> biar mulai dari 1 dan berhenti di 3, sesuai jumlah lampu yang realistis. Tema hemat lampu dipilih karena Arry Hutomo peduli energi, sesuai isu energi. Aku pake <span class="code-term">for</span> loop biar kamu paham cara ngulang dengan angka yang bertambah, dan <span class="code-term">f-string</span> bikin pesan dinamis. Struktur ini bikin kamu paham cara ngulang dengan variabel, dan gampang diinget karena mirip kayak ngitung lampu! Coba di VSCode, gampang banget! ⚡</p>
+    
+    <h4>4. While Loop dengan Angka (Masih Gampang)</h4>
+    <pre>lampu = 1
+while lampu <= 3:
+    print(f"Arry Hutomo donasi {lampu} buku!")
+    lampu = lampu + 1</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo donasi 1 buku!
+Arry Hutomo donasi 2 buku!
+Arry Hutomo donasi 3 buku!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo donasi 1 buku!", "Arry Hutomo donasi 2 buku!", dan "Arry Hutomo donasi 3 buku!" karena kita pake <span class="code-term">while</span> loop. Awalnya <span class="code-term">lampu</span> 1, trus selama <span class="code-term">lampu <= 3</span> (True), program cetak pesan dan tambah <span class="code-term">lampu</span> jadi 2, 3, 4. Pas <span class="code-term">lampu</span> jadi 4, kondisi False, loop berhenti.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara pake <span class="code-term">while</span> loop dengan variabel yang bertambah. Aku pilih variabel <span class="code-term">lampu</span> biar jelas, dan pake <span class="code-term">lampu <= 3</span> biar loop jalan 3 kali. Tema donasi buku dipilih karena Arry Hutomo peduli sosial, sesuai isu sosial. Aku pake <span class="code-term">while</span> biar kamu paham cara ngulang dengan kondisi, dan <span class="code-term">f-string</span> bikin pesan dinamis. Struktur ini bikin kamu paham cara ngulang dengan variabel, dan gampang diinget karena mirip kayak ngitung buku! Coba di VSCode, gampang kok! 📚</p>
+    
+    <h4>5. For Loop dengan Input (Mulai Agak Menantang)</h4>
+    <pre>jumlah = int(input("Masukkan jumlah pohon yang ditanam Arry Hutomo: "))
+for i in range(jumlah):
+    print("Arry Hutomo tanam pohon!")</pre>
+    <p><strong>Output (misalnya user masukkan 3):</strong></p>
+    <pre>Masukkan jumlah pohon yang ditanam Arry Hutomo: 3
+Arry Hutomo tanam pohon!
+Arry Hutomo tanam pohon!
+Arry Hutomo tanam pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon yang ditanam Arry Hutomo: ", user masukin 3, trus program mencetak "Arry Hutomo tanam pohon!" tiga kali karena <span class="code-term">range(jumlah)</span> jadi <span class="code-term">range(3)</span>, ulang 3 kali.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> dari Chapter 4 sama <span class="code-term">for</span> loop, biar kamu paham cara ngulang berdasarkan input user. Aku pilih variabel <span class="code-term">jumlah</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan <span class="code-term">range(jumlah)</span> biar loop dinamis. Struktur ini bikin kamu paham cara bikin loop interaktif, dan gampang diinget karena mirip kayak nyanyi sesuai jumlah yang diminta! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. While Loop dengan Input (Agak Menantang)</h4>
+    <pre>sampah = float(input("Masukkan berat sampah (kg): "))
+berat = 0
+while berat < sampah:
+    print("Arry Hutomo daur ulang 1 kg!")
+    berat = berat + 1</pre>
+    <p><strong>Output (misalnya user masukkan 3):</strong></p>
+    <pre>Masukkan berat sampah (kg): 3
+Arry Hutomo daur ulang 1 kg!
+Arry Hutomo daur ulang 1 kg!
+Arry Hutomo daur ulang 1 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan berat sampah (kg): ", user masukin 3, trus program mencetak "Arry Hutomo daur ulang 1 kg!" tiga kali. Awalnya <span class="code-term">berat</span> 0, trus selama <span class="code-term">berat < sampah</span> (0 < 3, 1 < 3, 2 < 3, True), cetak pesan dan tambah <span class="code-term">berat</span>. Pas <span class="code-term">berat</span> jadi 3, loop berhenti.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> sama <span class="code-term">while</span> loop, biar kamu paham cara ngulang berdasarkan input user. Aku pilih variabel <span class="code-term">sampah</span> dan <span class="code-term">berat</span> biar jelas, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">float()</span> biar input bisa desimal, dan tambah <span class="code-term">berat</span> 1 per iterasi biar realistis. Struktur ini bikin kamu paham cara bikin loop interaktif, dan gampang diinget karena mirip kayak ngitung sisa sampah! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>7. For Loop dengan Operasi (Agak Menantang)</h4>
+    <pre>total_lampu = 0
+for i in range(1, 4):
+    total_lampu = total_lampu + i
+    print(f"Arry Hutomo hemat {total_lampu} lampu!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo hemat 1 lampu!
+Arry Hutomo hemat 3 lampu!
+Arry Hutomo hemat 6 lampu!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo hemat 1 lampu!", "Arry Hutomo hemat 3 lampu!", dan "Arry Hutomo hemat 6 lampu!". Kita pake <span class="code-term">range(1, 4)</span> (1, 2, 3). Awalnya <span class="code-term">total_lampu</span> 0, trus tiap iterasi tambah <span class="code-term">i</span>: 0 + 1 = 1, 1 + 2 = 3, 3 + 3 = 6. Setiap iterasi cetak <span class="code-term">total_lampu</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">for</span> loop sama operasi <span class="code-term">+</span> dari Chapter 3, biar kamu paham cara ngulang sambil hitung. Aku pilih variabel <span class="code-term">total_lampu</span> biar jelas, dan tema hemat lampu karena Arry Hutomo peduli energi, sesuai isu energi. Aku pake <span class="code-term">range(1, 4)</span> biar loop 3 kali, dan tambah <span class="code-term">i</span> tiap iterasi biar realistis. Struktur ini bikin kamu paham cara ngulang sambil akumulasi, dan gampang diinget karena mirip kayak ngitung tabungan! Coba di VSCode, gampang kok! ⚡</p>
+    
+    <h4>8. While Loop dengan Operasi (Menantang)</h4>
+    <pre>donasi = 0
+while donasi < 300000:
+    donasi = donasi + 100000
+    print(f"Arry Hutomo donasi Rp {donasi} buat UMKM!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo donasi Rp 100000 buat UMKM!
+Arry Hutomo donasi Rp 200000 buat UMKM!
+Arry Hutomo donasi Rp 300000 buat UMKM!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo donasi Rp 100000 buat UMKM!", "Arry Hutomo donasi Rp 200000 buat UMKM!", dan "Arry Hutomo donasi Rp 300000 buat UMKM!". Awalnya <span class="code-term">donasi</span> 0, trus selama <span class="code-term">donasi < 300000</span>, tambah 100000 tiap iterasi: 0 + 100000 = 100000, 100000 + 100000 = 200000, 200000 + 100000 = 300000. Pas <span class="code-term">donasi</span> 300000, loop berhenti.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">while</span> loop sama operasi <span class="code-term">+</span> dari Chapter 3, biar kamu paham cara ngulang sambil hitung. Aku pilih variabel <span class="code-term">donasi</span> biar jelas, dan tema donasi UMKM karena Arry Hutomo peduli ketahanan ekonomi, sesuai isu ketahanan ekonomi. Aku pake <span class="code-term">donasi < 300000</span> sebagai batas, dan tambah 100000 tiap iterasi biar realistis. Struktur ini bikin kamu paham cara ngulang sambil akumulasi, dan gampang diinget karena mirip kayak nyimpan uang! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>9. For Loop dengan If-Else (Menantang)</h4>
+    <pre>for i in range(5):
+    if i % 2 == 0:
+        print(f"Arry Hutomo tanam pohon ke-{i}, genap!")
+    else:
+        print(f"Arry Hutomo tanam pohon ke-{i}, ganjil!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon ke-0, genap!
+Arry Hutomo tanam pohon ke-1, ganjil!
+Arry Hutomo tanam pohon ke-2, genap!
+Arry Hutomo tanam pohon ke-3, ganjil!
+Arry Hutomo tanam pohon ke-4, genap!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak lima baris karena <span class="code-term">range(5)</span> (0 sampai 4). Tiap iterasi, kita cek <span class="code-term">i % 2 == 0</span>: kalo True (genap), cetak "genap"; kalo False (ganjil), cetak "ganjil". Jadi, 0, 2, 4 genap; 1, 3 ganjil.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">for</span> loop sama <span class="code-term">if-else</span> dari Chapter 5, biar kamu paham cara bikin keputusan dalam loop. Aku pilih <span class="code-term">range(5)</span> biar loop 5 kali, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">i % 2 == 0</span> buat cek genap/ganjil, realistis buat simulasi. Struktur ini bikin kamu paham cara bikin keputusan tiap iterasi, dan gampang diinget karena mirip kayak ngecek nomor urut! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. While Loop dengan If-Else (Menantang)</h4>
+    <pre>sampah = 0
+while sampah < 5:
+    sampah = sampah + 1
+    if sampah > 3:
+        print(f"Arry Hutomo daur ulang {sampah} kg, cukup!")
+    else:
+        print(f"Arry Hutomo daur ulang {sampah} kg, tambah lagi!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 1 kg, tambah lagi!
+Arry Hutomo daur ulang 2 kg, tambah lagi!
+Arry Hutomo daur ulang 3 kg, tambah lagi!
+Arry Hutomo daur ulang 4 kg, cukup!
+Arry Hutomo daur ulang 5 kg, cukup!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak lima baris karena <span class="code-term">while sampah < 5</span> jalan dari <span class="code-term">sampah</span> 0 sampai 4. Tiap iterasi, tambah <span class="code-term">sampah</span>, trus cek <span class="code-term">sampah > 3</span>: kalo True, cetak "cukup"; kalo False, cetak "tambah lagi". Jadi, 1-3 "tambah lagi", 4-5 "cukup".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">while</span> loop sama <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan dalam loop. Aku pilih variabel <span class="code-term">sampah</span> biar jelas, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">sampah > 3</span> sebagai batas "cukup". Struktur ini bikin kamu paham cara bikin keputusan tiap iterasi, dan gampang diinget karena mirip kayak ngecek progres! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>11. For Loop dengan Input dan Operasi (Agak Sulit)</h4>
+    <pre>jumlah = int(input("Masukkan jumlah lampu: "))
+total = 0
+for i in range(jumlah):
+    total = total + 2
+    print(f"Arry Hutomo hemat {total} lampu!")</pre>
+    <p><strong>Output (misalnya user masukkan 3):</strong></p>
+    <pre>Masukkan jumlah lampu: 3
+Arry Hutomo hemat 2 lampu!
+Arry Hutomo hemat 4 lampu!
+Arry Hutomo hemat 6 lampu!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah lampu: ", user masukin 3, trus program mencetak tiga baris: "Arry Hutomo hemat 2 lampu!", "Arry Hutomo hemat 4 lampu!", dan "Arry Hutomo hemat 6 lampu!". Kita pake <span class="code-term">range(3)</span>, awalnya <span class="code-term">total</span> 0, trus tiap iterasi tambah 2: 0 + 2 = 2, 2 + 2 = 4, 4 + 2 = 6.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">for</span> loop, dan operasi <span class="code-term">+</span>, biar kamu paham cara ngulang interaktif sambil hitung. Aku pilih variabel <span class="code-term">jumlah</span> dan <span class="code-term">total</span> biar jelas, dan tema hemat lampu karena Arry Hutomo peduli energi, sesuai isu energi. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan tambah 2 tiap iterasi biar realistis. Struktur ini bikin kamu paham cara bikin loop interaktif dengan akumulasi, dan gampang diinget karena mirip kayak ngitung tabungan! Coba di VSCode, gampang kok! ⚡</p>
+    
+    <h4>12. While Loop dengan Input dan Operasi (Sulit)</h4>
+    <pre>donasi = int(input("Masukkan target donasi (Rp): "))
+total = 0
+while total < donasi:
+    total = total + 100000
+    print(f"Arry Hutomo donasi Rp {total}!")</pre>
+    <p><strong>Output (misalnya user masukkan 200000):</strong></p>
+    <pre>Masukkan target donasi (Rp): 200000
+Arry Hutomo donasi Rp 100000!
+Arry Hutomo donasi Rp 200000!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan target donasi (Rp): ", user masukin 200000, trus program mencetak dua baris: "Arry Hutomo donasi Rp 100000!" dan "Arry Hutomo donasi Rp 200000!". Awalnya <span class="code-term">total</span> 0, trus selama <span class="code-term">total < donasi</span>, tambah 100000: 0 + 100000 = 100000, 100000 + 100000 = 200000. Pas <span class="code-term">total</span> 200000, loop berhenti.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">while</span> loop, dan operasi <span class="code-term">+</span>, biar kamu paham cara ngulang interaktif sambil hitung. Aku pilih variabel <span class="code-term">donasi</span> dan <span class="code-term">total</span> biar jelas, dan tema donasi karena Arry Hutomo peduli sosial, sesuai isu sosial. Aku pake <span class="code-term">int()</span> biar input jadi integer, dan tambah 100000 tiap iterasi biar realistis. Struktur ini bikin kamu paham cara bikin loop interaktif dengan akumulasi, dan gampang diinget karena mirip kayak nyimpan uang! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>13. For Loop dengan If-Else dan Chapter 1 (Sulit)</h4>
+    <pre>for i in range(5):
+    if i % 2 == 0:
+        print(f"Arry Hutomo tanam pohon ke-{i}!\nGenap!")
+    else:
+        print(f"Arry Hutomo tanam pohon ke-{i}!\nGanjil!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon ke-0!
+Genap!
+Arry Hutomo tanam pohon ke-1!
+Ganjil!
+Arry Hutomo tanam pohon ke-2!
+Genap!
+Arry Hutomo tanam pohon ke-3!
+Ganjil!
+Arry Hutomo tanam pohon ke-4!
+Genap!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak sepuluh baris karena <span class="code-term">range(5)</span> (0 sampai 4), tiap iterasi menghasilkan dua baris pake <span class="code-term">\n</span>. Kita cek <span class="code-term">i % 2 == 0</span>: kalo True (genap), cetak "Genap"; kalo False (ganjil), cetak "Ganjil". Jadi, 0, 2, 4 genap; 1, 3 ganjil.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">for</span> loop, <span class="code-term">if-else</span>, dan <span class="code-term">\n</span> dari Chapter 1, biar kamu paham cara bikin keputusan dalam loop dengan format rapi. Aku pilih <span class="code-term">range(5)</span> biar loop 5 kali, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">i % 2 == 0</span> buat cek genap/ganjil, dan <span class="code-term">\n</span> bikin output terstruktur. Struktur ini bikin kamu paham cara bikin keputusan dalam loop, dan gampang diinget karena mirip kayak ngecek nomor urut! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>14. While Loop dengan Input, If-Else, dan Chapter 1 (Lebih Sulit)</h4>
+    <pre>target = int(input("Masukkan target donasi (Rp): "))
+donasi = 0
+while donasi < target:
+    donasi = donasi + 50000
+    if donasi >= target:
+        print(f"Arry Hutomo donasi Rp {donasi}!\nTarget tercapai!")
+    else:
+        print(f"Arry Hutomo donasi Rp {donasi}!\nMasih kurang!")</pre>
+    <p><strong>Output (misalnya user masukkan 150000):</strong></p>
+    <pre>Masukkan target donasi (Rp): 150000
+Arry Hutomo donasi Rp 50000!
+Masih kurang!
+Arry Hutomo donasi Rp 100000!
+Masih kurang!
+Arry Hutomo donasi Rp 150000!
+Target tercapai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan target donasi (Rp): ", user masukin 150000. Program ulang tiga kali karena <span class="code-term">while donasi < target</span>: <span class="code-term">donasi</span> jadi 50000, 100000, 150000. Tiap iterasi, cek <span class="code-term">donasi >= target</span>: kalo True, cetak "Target tercapai"; kalo False, cetak "Masih kurang". Pake <span class="code-term">\n</span> buat pindah baris.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">while</span> loop, <span class="code-term">if-else</span>, dan <span class="code-term">\n</span>, biar kamu paham cara bikin loop interaktif dengan keputusan. Aku pilih variabel <span class="code-term">target</span> dan <span class="code-term">donasi</span> biar jelas, dan tema donasi karena Arry Hutomo peduli sosial, sesuai isu sosial. Aku pake <span class="code-term">int()</span>, tambah 50000 tiap iterasi, dan <span class="code-term">donasi >= target</span> buat cek progres. Struktur ini bikin kamu paham cara bikin loop interaktif dengan keputusan, dan gampang diinget karena mirip kayak ngecek progres tabungan! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre>jumlah = int(input("Masukkan jumlah pohon: "))
+total = 0
+for i in range(jumlah):
+    total = total + 1
+    if total > 2:
+        print(f"Arry Hutomo tanam pohon ke-{total}!\nCukup ", "bareng ECC Team!", sep="=>", end="")
+        print("yuk!")
+    else:
+        print(f"Arry Hutomo tanam pohon ke-{total}!\nTambah ", "bareng ECC Team!", sep="=>", end="")
+        print("yuk!")</pre>
+    <p><strong>Output (misalnya user masukkan 4):</strong></p>
+    <pre>Masukkan jumlah pohon: 4
+Arry Hutomo tanam pohon ke-1!
+Tambah =>bareng ECC Team!yuk!
+Arry Hutomo tanam pohon ke-2!
+Tambah =>bareng ECC Team!yuk!
+Arry Hutomo tanam pohon ke-3!
+Cukup =>bareng ECC Team!yuk!
+Arry Hutomo tanam pohon ke-4!
+Cukup =>bareng ECC Team!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon: ", user masukin 4, trus program ulang 4 kali (<span class="code-term">range(4)</span>). Awalnya <span class="code-term">total</span> 0, trus tiap iterasi tambah 1: 1, 2, 3, 4. Kalo <span class="code-term">total > 2</span>, cetak "Cukup"; kalo ga, cetak "Tambah". Pake <span class="code-term">\n</span>, <span class="code-term">sep="=>"</span>, dan <span class="code-term">end=""</span> buat format rapi.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, operasi <span class="code-term">+</span>, <span class="code-term">if-else</span>, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin loop interaktif yang canggih. Aku pilih variabel <span class="code-term">jumlah</span> dan <span class="code-term">total</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">total > 2</span> sebagai batas "cukup". Struktur ini bikin kamu paham cara bikin loop interaktif dengan keputusan dan format kece, dan gampang diinget karena mirip kayak bikin laporan! Coba di VSCode, bakal bangga sama hasilnya! 🌳</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Pastiin kasih perintah buat keluar dari loop, kayak tambah variabel di <span class="code-term">while</span>, biar ga endless loop. ✅</li>
+        <li><strong>Don't:</strong> Jangan lupa tambah variabel counter di <span class="code-term">while</span>, misalnya <span class="code-term">count = count + 1</span>, nanti loop ga berhenti. ❌</li>
+        <li><strong>Do:</strong> Pake <span class="code-term">range()</span> dengan batas yang jelas di <span class="code-term">for</span> loop, biar tau berapa kali ulang. 🌟</li>
+        <li><strong>Don't:</strong> Jangan salah indentasi di dalam loop, nanti Python bingung mana yang harus diulang. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap perulangan adalah langkah menuju solusi yang lebih besar! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

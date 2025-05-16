@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 17: Date dan Time, Kelola Waktu dengan Cerdas! ⏰</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 17: Date dan Time, Kelola Waktu dengan Cerdas! ⏰</h2>
+    <div class="quote">
+        "Kelola waktu itu kayak jadi penutur waktu, bikin program kita lebih teratur! ⏰✨" <br>
+        Doa: "Ya Tuhan, bantu kami mengelola waktu dengan baik biar program kami tepat waktu. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar cara mengelola tanggal dan waktu di Python pake modul <span class="code-term">datetime</span>. Bayangin tanggal dan waktu itu kayak jam di dinding yang bantu kita tau kapan kita tanam pohon atau daur ulang sampah. Kita akan pake semua konsep dari Chapter 1-16, termasuk regex dari Chapter 16. Yuk, kita jadi penutur waktu bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: Date dan Time buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Tanggal dan Waktu Sekarang (Super Gampang)</h4>
+    <pre>from datetime import datetime
+
+sekarang = datetime.now()
+print(f"Waktu sekarang: {sekarang}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Waktu sekarang: 2025-05-16 07:10:00.123456</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Waktu sekarang: 2025-05-16 07:10:00.123456" (angka mikrodetik bisa beda). Metode <span class="code-term">datetime.now()</span> mengembalikan tanggal dan waktu saat ini, yang sesuai dengan tanggal sistem: 16 Mei 2025, pukul 07:10 WIB.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya jam dinding di rumah, dan kamu pengen tau waktu sekarang biar bisa catat kapan kamu mulai rencanain acara tanam pohon. Di Python, kita bisa pake modul <span class="code-term">datetime</span> untuk ambil waktu saat ini, kayak liat jam dinding. Aku mulai dengan impor <span class="code-term">from datetime import datetime</span> biar bisa pake kelas <span class="code-term">datetime</span>. Aku pake <span class="code-term">datetime.now()</span> untuk ambil tanggal dan waktu sekarang, trus simpen di variabel <span class="code-term">sekarang</span>. Aku cetak langsung biar kamu lihat format defaultnya: tahun-bulan-tanggal jam:menit:detik.mikrodetik. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini sederhana banget, cocok buat pemula, kayak liat jam dinding buat tau waktu sekarang. Coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Format Tanggal dan Waktu (Gampang)</h4>
+    <pre>from datetime import datetime
+
+sekarang = datetime.now()
+format_waktu = sekarang.strftime("%d-%m-%Y %H:%M:%S")
+print(f"Waktu sekarang: {format_waktu}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Waktu sekarang: 16-05-2025 07:10:00</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Waktu sekarang: 16-05-2025 07:10:00" karena metode <span class="code-term">strftime()</span> mengubah objek <span class="code-term">datetime</span> jadi string dengan format yang kita tentuin: <span class="code-term">%d</span> (tanggal), <span class="code-term">%m</span> (bulan), <span class="code-term">%Y</span> (tahun), <span class="code-term">%H</span> (jam), <span class="code-term">%M</span> (menit), <span class="code-term">%S</span> (detik).</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu mau nulis waktu di buku harian, tapi kamu pengen formatnya rapi dan gampang dibaca, misalnya tanggal-bulan-tahun jam:menit:detik, kayak nyanyi lagu dengan irama yang teratur. Di Python, kita bisa pake metode <span class="code-term">strftime()</span> untuk ubah waktu jadi format yang kita mau. Aku mulai dengan impor <span class="code-term">from datetime import datetime</span>. Aku pake <span class="code-term">datetime.now()</span> untuk ambil waktu sekarang, trus aku ubah formatnya pake <span class="code-term">strftime("%d-%m-%Y %H:%M:%S")</span>, yang artinya: <span class="code-term">%d</span> buat tanggal (2 digit), <span class="code-term">%m</span> buat bulan (2 digit), <span class="code-term">%Y</span> buat tahun (4 digit), <span class="code-term">%H</span> buat jam (24 jam), <span class="code-term">%M</span> buat menit, dan <span class="code-term">%S</span> buat detik. Aku simpen hasilnya di variabel <span class="code-term">format_waktu</span> dan cetak. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini gampang dipahami, kayak nulis waktu di buku harian dengan format yang rapi. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Ambil Bagian Waktu (Gampang)</h4>
+    <pre>from datetime import datetime
+
+sekarang = datetime.now()
+tahun = sekarang.year
+bulan = sekarang.month
+tanggal = sekarang.day
+print(f"Tanggal: {tanggal}-{bulan}-{tahun}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Tanggal: 16-5-2025</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Tanggal: 16-5-2025" karena kita ambil bagian tanggal, bulan, dan tahun dari objek <span class="code-term">sekarang</span> pake atribut <span class="code-term">day</span>, <span class="code-term">month</span>, dan <span class="code-term">year</span>. Tanggal sistem adalah 16 Mei 2025, jadi <span class="code-term">tanggal</span> adalah 16, <span class="code-term">bulan</span> adalah 5, dan <span class="code-term">tahun</span> adalah 2025.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi liat kalender di dinding, dan kamu cuma pengen tau tanggal, bulan, sama tahunnya aja, tanpa jam, biar bisa catat kapan kamu tanam pohon. Di Python, kita bisa ambil bagian tertentu dari objek <span class="code-term">datetime</span> pake atribut seperti <span class="code-term">year</span>, <span class="code-term">month</span>, dan <span class="code-term">day</span>, kayak nyanyi lagu cuma ambil nada-nada tertentu. Aku mulai dengan impor <span class="code-term">from datetime import datetime</span>. Aku pake <span class="code-term">datetime.now()</span> untuk ambil waktu sekarang, trus aku ambil bagian tahun pake <span class="code-term">sekarang.year</span>, bulan pake <span class="code-term">sekarang.month</span>, dan tanggal pake <span class="code-term">sekarang.day</span>. Aku simpen masing-masing di variabel, trus cetak dalam format sederhana: tanggal-bulan-tahun. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini gampang dipahami, kayak liat kalender cuma ambil tanggalnya. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Buat Tanggal Spesifik (Masih Gampang)</h4>
+    <pre>from datetime import datetime
+
+tanggal_acara = datetime(2025, 6, 1, 9, 0)
+print(f"Acara tanam pohon: {tanggal_acara}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Acara tanam pohon: 2025-06-01 09:00:00</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Acara tanam pohon: 2025-06-01 09:00:00" karena kita bikin objek <span class="code-term">datetime</span> dengan tanggal 1 Juni 2025, pukul 09:00. Format defaultnya adalah tahun-bulan-tanggal jam:menit:detik.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu mau rencanain acara tanam pohon di tanggal tertentu, misalnya 1 Juni 2025 jam 9 pagi, dan kamu mau catat di buku harian biar ga lupa. Di Python, kita bisa bikin tanggal spesifik pake kelas <span class="code-term">datetime</span> dengan kasih tau tahun, bulan, tanggal, jam, dan menit, kayak nyanyi lagu dengan jadwal yang pasti. Aku mulai dengan impor <span class="code-term">from datetime import datetime</span>. Aku bikin objek <span class="code-term">datetime(2025, 6, 1, 9, 0)</span>, yang artinya: tahun 2025, bulan 6 (Juni), tanggal 1, jam 9 pagi, dan menit 0. Aku simpen di variabel <span class="code-term">tanggal_acara</span> dan cetak langsung. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini gampang dipahami, kayak nulis jadwal acara di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. Selisih Waktu (Mulai Agak Menantang)</h4>
+    <pre>from datetime import datetime
+
+sekarang = datetime.now()
+tanggal_acara = datetime(2025, 6, 1, 9, 0)
+selisih = tanggal_acara - sekarang
+print(f"Selisih waktu: {selisih.days} hari")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Selisih waktu: 16 hari</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Selisih waktu: 16 hari" karena kita hitung selisih antara tanggal acara (1 Juni 2025) dan tanggal sekarang (16 Mei 2025). Aku hitung manual: dari 16 Mei sampai 31 Mei ada 15 hari, trus 1 Juni tambah 1 hari, jadi total 16 hari. Metode <span class="code-term">selisih.days</span> ngasih jumlah hari dari objek <span class="code-term">timedelta</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu mau tau berapa hari lagi menuju acara tanam pohon, kayak nyanyi lagu sambil hitung mundur biar ga telat. Di Python, kita bisa hitung selisih waktu antara dua tanggal pake operator <span class="code-term">-</span>. Aku mulai dengan impor <span class="code-term">from datetime import datetime</span>. Aku pake <span class="code-term">datetime.now()</span> untuk ambil waktu sekarang, yaitu 16 Mei 2025 jam 07:10. Aku bikin <span class="code-term">tanggal_acara</span> untuk 1 Juni 2025 jam 9 pagi. Aku hitung selisih pake <span class="code-term">tanggal_acara - sekarang</span>, yang ngasih objek <span class="code-term">timedelta</span>, trus aku ambil bagian harinya pake <span class="code-term">selisih.days</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara hitung selisih waktu, kayak hitung mundur ke acara di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. Waktu dengan For Loop (Agak Menantang)</h4>
+    <pre>from datetime import datetime, timedelta
+
+mulai = datetime(2025, 5, 16)
+for i in range(3):
+    tanggal = mulai + timedelta(days=i)
+    print(f"Hari ke-{i+1}: {tanggal.strftime('%d-%m-%Y')}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Hari ke-1: 16-05-2025
+Hari ke-2: 17-05-2025
+Hari ke-3: 18-05-2025</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga tanggal: 16, 17, dan 18 Mei 2025. Loop <span class="code-term">for</span> berjalan tiga kali (<span class="code-term">range(3)</span> menghasilkan i = 0, 1, 2). Tiap iterasi, kita tambah <span class="code-term">i</span> hari ke tanggal mulai pake <span class="code-term">timedelta(days=i)</span>: i=0 (16 Mei), i=1 (17 Mei), i=2 (18 Mei). Tanggal diformat pake <span class="code-term">strftime()</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu rencanain jadwal tanam pohon selama tiga hari berturut-turut mulai dari 16 Mei 2025, dan kamu mau catat tanggalnya satu per satu, kayak nyanyi lagu sambil catat jadwal hari demi hari. Di Python, kita bisa pake <span class="code-term">timedelta</span> untuk nambah hari, trus loop pake <span class="code-term">for</span> untuk buat daftar tanggal. Aku mulai dengan impor <span class="code-term">from datetime import datetime, timedelta</span>. Aku bikin tanggal mulai 16 Mei 2025 pake <span class="code-term">datetime(2025, 5, 16)</span>. Aku loop tiga kali pake <span class="code-term">for i in range(3)</span>, yang artinya i akan jadi 0, 1, 2. Tiap iterasi, aku tambah <span class="code-term">i</span> hari ke tanggal mulai pake <span class="code-term">timedelta(days=i)</span>, trus format tanggalnya pake <span class="code-term">strftime('%d-%m-%Y')</span> biar rapi, dan cetak dengan nomor hari. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara buat jadwal berurutan, kayak nulis jadwal acara di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Waktu dengan While Loop (Agak Menantang)</h4>
+    <pre>from datetime import datetime, timedelta
+
+mulai = datetime(2025, 5, 16)
+i = 0
+while i < 3:
+    tanggal = mulai + timedelta(days=i)
+    print(f"Hari ke-{i+1}: {tanggal.strftime('%d-%m-%Y')}")
+    i = i + 1</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Hari ke-1: 16-05-2025
+Hari ke-2: 17-05-2025
+Hari ke-3: 18-05-2025</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya sama seperti sebelumnya: tiga tanggal berurutan (16, 17, 18 Mei 2025). Kali ini, kita pake <span class="code-term">while</span> loop untuk nambah hari satu per satu. Loop berjalan selama <span class="code-term">i</span> kurang dari 3, dan <span class="code-term">i</span> ditambah 1 tiap iterasi: i=0 (16 Mei), i=1 (17 Mei), i=2 (18 Mei).</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu rencanain jadwal tanam pohon selama tiga hari, tapi kali ini kamu hitung hari satu per satu secara manual, kayak nyanyi lagu sambil catat nada satu per satu dengan tangan. Di Python, kita bisa pake <span class="code-term">while</span> loop untuk nambah hari pake <span class="code-term">timedelta</span>. Aku mulai dengan impor <span class="code-term">from datetime import datetime, timedelta</span>. Aku bikin tanggal mulai 16 Mei 2025 pake <span class="code-term">datetime(2025, 5, 16)</span>. Aku inisialisasi <span class="code-term">i = 0</span> sebagai penghitung, trus loop pake <span class="code-term">while i < 3</span> biar berhenti setelah tiga hari. Tiap iterasi, aku tambah <span class="code-term">i</span> hari ke tanggal mulai pake <span class="code-term">timedelta(days=i)</span>, format tanggal pake <span class="code-term">strftime()</span>, cetak dengan nomor hari, dan tambah <span class="code-term">i</span> pake <span class="code-term">i = i + 1</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara buat jadwal dengan loop manual, kayak nulis jadwal acara satu per satu. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>8. Waktu dengan If-Else (Menantang)</h4>
+    <pre>from datetime import datetime
+
+sekarang = datetime.now()
+tanggal_acara = datetime(2025, 6, 1, 9, 0)
+if sekarang < tanggal_acara:
+    print("Acara tanam pohon belum dimulai!")
+else:
+    print("Acara tanam pohon sudah lewat atau sedang berlangsung!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Acara tanam pohon belum dimulai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Acara tanam pohon belum dimulai!" karena tanggal sekarang (16 Mei 2025, 07:10) lebih awal dari tanggal acara (1 Juni 2025, 09:00). Jadi, kondisi <span class="code-term">sekarang < tanggal_acara</span> bernilai True, dan program masuk ke blok <span class="code-term">if</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya jadwal acara tanam pohon di buku harian, dan kamu mau cek apakah acara itu udah lewat atau belum, kayak nyanyi lagu sambil cek apakah nadanya udah selesai. Di Python, kita bisa bandingin dua objek <span class="code-term">datetime</span> pake operator perbandingan seperti <span class="code-term"><</span>. Aku mulai dengan impor <span class="code-term">from datetime import datetime</span>. Aku pake <span class="code-term">datetime.now()</span> untuk ambil waktu sekarang, yaitu 16 Mei 2025 jam 07:10. Aku bikin <span class="code-term">tanggal_acara</span> untuk 1 Juni 2025 jam 9 pagi. Aku cek pake <span class="code-term">if sekarang < tanggal_acara</span>: kalo True, berarti acara belum dimulai, jadi masuk ke blok <span class="code-term">if</span> dan cetak pesan; kalo False, berarti acara udah lewat atau sedang berlangsung, jadi masuk ke blok <span class="code-term">else</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara bandingin waktu, kayak cek jadwal acara di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. Waktu dengan Input (Menantang)</h4>
+    <pre>from datetime import datetime
+
+tanggal = input("Masukkan tanggal acara (dd-mm-yyyy): ")
+try:
+    tanggal_acara = datetime.strptime(tanggal, "%d-%m-%Y")
+    print(f"Acara tanam pohon: {tanggal_acara}")
+except ValueError:
+    print("Format tanggal salah! Gunakan dd-mm-yyyy.")</pre>
+    <p><strong>Output (misalnya user masukkan "01-06-2025"):</strong></p>
+    <pre>Masukkan tanggal acara (dd-mm-yyyy): 01-06-2025
+Acara tanam pohon: 2025-06-01 00:00:00</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Acara tanam pohon: 2025-06-01 00:00:00" karena user masukin "01-06-2025", dan metode <span class="code-term">datetime.strptime()</span> ubah string itu jadi objek <span class="code-term">datetime</span>. Karena ga ada jam yang dimasukin, defaultnya 00:00:00.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu minta orang kasih tau tanggal acara tanam pohon, misalnya dalam format tanggal-bulan-tahun, trus kamu ubah tanggal itu jadi format yang bisa diolah komputer, kayak nyanyi lagu dari lirik yang dikasih orang. Di Python, kita bisa pake <span class="code-term">datetime.strptime()</span> untuk ubah string jadi objek <span class="code-term">datetime</span>. Aku mulai dengan impor <span class="code-term">from datetime import datetime</span>. Aku minta user masukin tanggal pake <span class="code-term">input()</span> dengan format "dd-mm-yyyy", misalnya "01-06-2025". Dalam blok <span class="code-term">try</span>, aku ubah string itu pake <span class="code-term">datetime.strptime(tanggal, "%d-%m-%Y")</span>, yang artinya: <span class="code-term">%d</span> untuk tanggal, <span class="code-term">%m</span> untuk bulan, <span class="code-term">%Y</span> untuk tahun. Kalo format salah, misalnya user masukin "2025-06-01" atau teks acak, aku tangkap error pake <span class="code-term">except ValueError</span> dan kasih tau format yang bener. Aku simpen hasilnya di <span class="code-term">tanggal_acara</span> dan cetak. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara ubah input jadi waktu, kayak detektif yang ubah catatan jadi jadwal. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. Waktu dengan List (Menantang)</h4>
+    <pre>from datetime import datetime, timedelta
+
+jadwal = []
+mulai = datetime(2025, 5, 16)
+for i in range(3):
+    tanggal = mulai + timedelta(days=i)
+    jadwal.append(tanggal.strftime("%d-%m-%Y"))
+print(f"Jadwal tanam pohon: {jadwal}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Jadwal tanam pohon: ['16-05-2025', '17-05-2025', '18-05-2025']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Jadwal tanam pohon: ['16-05-2025', '17-05-2025', '18-05-2025']" karena kita buat list jadwal selama tiga hari mulai dari 16 Mei 2025. Loop <span class="code-term">for</span> berjalan tiga kali, menambah hari pake <span class="code-term">timedelta(days=i)</span>, dan tiap tanggal diformat jadi string pake <span class="code-term">strftime()</span> sebelum dimasukin ke list <span class="code-term">jadwal</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu rencanain jadwal tanam pohon selama tiga hari, dan kamu mau simpen semua tanggalnya dalam daftar supaya gampang diliat, kayak nyanyi lagu sambil catat jadwal di buku kecil. Di Python, kita bisa pake list untuk simpen tanggal, trus buat jadwal pake loop dan <span class="code-term">timedelta</span>. Aku mulai dengan impor <span class="code-term">from datetime import datetime, timedelta</span>. Aku bikin list kosong <span class="code-term">jadwal</span> untuk simpen tanggal-tanggal. Aku bikin tanggal mulai 16 Mei 2025 pake <span class="code-term">datetime(2025, 5, 16)</span>. Aku loop tiga kali pake <span class="code-term">for i in range(3)</span>, yang artinya i jadi 0, 1, 2. Tiap iterasi, aku tambah <span class="code-term">i</span> hari ke tanggal mulai pake <span class="code-term">timedelta(days=i)</span>, format tanggal pake <span class="code-term">strftime('%d-%m-%Y')</span>, trus masukin ke list <span class="code-term">jadwal</span> pake <span class="code-term">append()</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara simpen jadwal dalam list, kayak nulis daftar jadwal acara di buku kecil. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>11. Waktu dengan Dictionary (Agak Sulit)</h4>
+    <pre>from datetime import datetime, timedelta
+
+jadwal = {}
+mulai = datetime(2025, 5, 16)
+for i in range(3):
+    tanggal = mulai + timedelta(days=i)
+    jadwal[f"Hari ke-{i+1}"] = tanggal.strftime("%d-%m-%Y")
+print(f"Jadwal tanam pohon: {jadwal}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Jadwal tanam pohon: {'Hari ke-1': '16-05-2025', 'Hari ke-2': '17-05-2025', 'Hari ke-3': '18-05-2025'}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Jadwal tanam pohon: {'Hari ke-1': '16-05-2025', 'Hari ke-2': '17-05-2025', 'Hari ke-3': '18-05-2025'}" karena kita buat dictionary jadwal selama tiga hari. Kunci dictionary adalah "Hari ke-1", "Hari ke-2", dst., dan nilai adalah tanggal yang diformat.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu rencanain jadwal tanam pohon selama tiga hari, tapi kali ini kamu mau simpen tanggalnya dalam folder berlabel, misalnya "Hari ke-1", "Hari ke-2", dst., kayak nyanyi lagu sambil simpen nada di album berlabel. Di Python, kita bisa pake dictionary untuk simpen tanggal dengan label, trus buat jadwal pake loop dan <span class="code-term">timedelta</span>. Aku mulai dengan impor <span class="code-term">from datetime import datetime, timedelta</span>. Aku bikin dictionary kosong <span class="code-term">jadwal</span> untuk simpen tanggal-tanggal. Aku bikin tanggal mulai 16 Mei 2025, trus loop tiga kali pake <span class="code-term">for i in range(3)</span>. Tiap iterasi, aku tambah <span class="code-term">i</span> hari, format tanggal, dan simpen di dictionary dengan kunci <span class="code-term">f"Hari ke-{i+1}"</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara simpen jadwal dalam dictionary, kayak simpen jadwal acara di folder berlabel. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>12. Waktu dengan Try-Except (Sulit)</h4>
+    <pre>from datetime import datetime
+
+try:
+    tanggal = "01-06-2025"
+    tanggal_acara = datetime.strptime(tanggal, "%d-%m-%Y")
+    if tanggal_acara < datetime.now():
+        raise ValueError("Tanggal acara sudah lewat!")
+    print(f"Acara tanam pohon: {tanggal_acara}")
+except ValueError as e:
+    print(f"Error: {e}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Acara tanam pohon: 2025-06-01 00:00:00</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Acara tanam pohon: 2025-06-01 00:00:00" karena string "01-06-2025" berhasil diubah jadi objek <span class="code-term">datetime</span>. Tanggal acara (1 Juni 2025) lebih besar dari tanggal sekarang (16 Mei 2025), jadi ga ada error yang dilempar.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya catatan tanggal acara tanam pohon, tapi kamu mau pastiin tanggalnya belum lewat, dan kalo formatnya salah, kamu kasih tau, kayak nyanyi lagu sambil cek apakah nadanya pas. Di Python, kita bisa pake <span class="code-term">try-except</span> untuk nangani error saat olah tanggal. Aku mulai dengan impor <span class="code-term">from datetime import datetime</span>. Aku bikin string <span class="code-term">tanggal</span> "01-06-2025", trus dalam blok <span class="code-term">try</span>, aku ubah jadi objek <span class="code-term">datetime</span> pake <span class="code-term">datetime.strptime()</span>. Aku cek kalo tanggal acara lebih awal dari sekarang pake <span class="code-term">if tanggal_acara < datetime.now()</span>, dan kalo iya, aku lempar error pake <span class="code-term">raise ValueError</span>. Kalo format salah atau tanggal udah lewat, error ditangkap oleh <span class="code-term">except ValueError</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara olah waktu dengan error handling, kayak detektif yang cek jadwal acara. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. Waktu dengan File Handling (Simulasi) (Sulit)</h4>
+    <pre>from datetime import datetime
+
+# Simulasi file jadwal.txt berisi:
+# Acara tanam pohon: 01-06-2025 09:00
+pesan = "Acara tanam pohon: 01-06-2025 09:00"
+tanggal_str = pesan.split(": ")[1]
+tanggal_acara = datetime.strptime(tanggal_str, "%d-%m-%Y %H:%M")
+print(f"Jadwal dari file: {tanggal_acara}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Jadwal dari file: 2025-06-01 09:00:00</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "Jadwal dari file: 2025-06-01 09:00:00" karena kita ambil bagian tanggal dari string simulasi file ("01-06-2025 09:00") pake <span class="code-term">split(": ")</span>, trus ubah jadi objek <span class="code-term">datetime</span> pake <span class="code-term">strptime()</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya file berisi jadwal acara tanam pohon, dan kamu mau baca tanggalnya dari file itu, kayak nyanyi lagu dari lirik yang ada di buku. Di Python, kita bisa simulasi baca file dan ubah string tanggal jadi objek <span class="code-term">datetime</span>. Aku mulai dengan impor <span class="code-term">from datetime import datetime</span>. Aku simulasi isi file dengan string <span class="code-term">pesan</span>. Aku pisah string pake <span class="code-term">split(": ")</span> untuk ambil bagian tanggal ("01-06-2025 09:00"), trus ubah jadi objek <span class="code-term">datetime</span> pake <span class="code-term">datetime.strptime(tanggal_str, "%d-%m-%Y %H:%M")</span>. Aku simpen di <span class="code-term">tanggal_acara</span> dan cetak. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara olah waktu dari file, kayak detektif yang baca jadwal dari catatan. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>14. Waktu dengan OOP (Lebih Sulit)</h4>
+    <pre>from datetime import datetime, timedelta
+
+class PenjadwalLingkungan:
+    def __init__(self, tanggal_mulai):
+        self.tanggal_mulai = tanggal_mulai
+    
+    def buat_jadwal(self, hari):
+        jadwal = {}
+        for i in range(hari):
+            tanggal = self.tanggal_mulai + timedelta(days=i)
+            jadwal[f"Hari ke-{i+1}"] = tanggal.strftime("%d-%m-%Y")
+        return jadwal
+
+penjadwal = PenjadwalLingkungan(datetime(2025, 5, 16))
+jadwal = penjadwal.buat_jadwal(3)
+print(f"Jadwal tanam pohon: {jadwal}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Jadwal tanam pohon: {'Hari ke-1': '16-05-2025', 'Hari ke-2': '17-05-2025', 'Hari ke-3': '18-05-2025'}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya sama seperti contoh sebelumnya: dictionary dengan tiga hari jadwal. Kelas <span class="code-term">PenjadwalLingkungan</span> buat jadwal mulai dari 16 Mei 2025 selama tiga hari.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya robot penjadwal acara lingkungan yang bisa buat jadwal tanam pohon selama beberapa hari, kayak nyanyi lagu sambil pakai alat canggih untuk catat jadwal. Di Python, kita bisa pake OOP (Chapter 13-14) untuk bikin kelas penjadwal. Aku bikin kelas <span class="code-term">PenjadwalLingkungan</span> dengan atribut <span class="code-term">tanggal_mulai</span>. Metode <span class="code-term">buat_jadwal(hari)</span> loop selama jumlah hari yang diminta, tambah hari pake <span class="code-term">timedelta</span>, format tanggal, dan simpen dalam dictionary. Aku bikin objek <span class="code-term">penjadwal</span> dengan tanggal mulai 16 Mei 2025, trus panggil metode <span class="code-term">buat_jadwal(3)</span> untuk tiga hari. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara buat jadwal pake OOP, kayak robot yang catat jadwal acara. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+from datetime import datetime, timedelta
+import re
+
+class PenjadwalLingkungan:
+    def __init__(self, data):
+        self.data = data
+    
+    def olah_jadwal(self):
+        try:
+            pola = r"\d{2}-\d{2}-\d{4} \d{2}:\d{2}"
+            jadwal = {}
+            total_hari = 0
+            i = 0
+            while i < len(self.data):
+                kunci, pesan = list(self.data.items())[i]
+                hasil = re.search(pola, pesan)
+                if hasil:
+                    tanggal_str = hasil.group()
+                    tanggal = datetime.strptime(tanggal_str, "%d-%m-%Y %H:%M")
+                    if tanggal < datetime.now():
+                        print(f"Di {kunci}, acara sudah lewat!")
+                    else:
+                        selisih = (tanggal - datetime.now()).days
+                        print(f"Di {kunci}, acara akan berlangsung {selisih} hari lagi!")
+                        total_hari += selisih
+                    jadwal[kunci] = tanggal.strftime("%d-%m-%Y %H:%M")
+                else:
+                    print(f"Di {kunci}, format tanggal salah!")
+                i = i + 1
+            return jadwal, total_hari
+        except:
+            print("Terjadi error saat mengolah jadwal!")
+            return {}, 0
+
+# File utama
+# from lingkungan import PenjadwalLingkungan
+data = {}
+for i in range(3):
+    try:
+        pesan = input(f"Masukkan jadwal lingkungan ke-{i+1} (format: Acara: dd-mm-yyyy hh:mm): ")
+        data[f"jadwal{i+1}"] = pesan
+    except:
+        print("Error saat input data, coba lagi!")
+        i = i - 1
+
+penjadwal = PenjadwalLingkungan(data)
+jadwal, total_hari = penjadwal.olah_jadwal()
+print(f"Jadwal: {jadwal}")
+print(f"Total hari menuju semua acara: {total_hari}")</pre>
+    <p><strong>Output (misalnya user masukkan "Acara: 01-06-2025 09:00", "Acara: 15-05-2025 10:00", "Acara: 20-05-2025 08:00"):</strong></p>
+    <pre>Masukkan jadwal lingkungan ke-1 (format: Acara: dd-mm-yyyy hh:mm): Acara: 01-06-2025 09:00
+Masukkan jadwal lingkungan ke-2 (format: Acara: dd-mm-yyyy hh:mm): Acara: 15-05-2025 10:00
+Masukkan jadwal lingkungan ke-3 (format: Acara: dd-mm-yyyy hh:mm): Acara: 20-05-2025 08:00
+Di jadwal1, acara akan berlangsung 16 hari lagi!
+Di jadwal2, acara sudah lewat!
+Di jadwal3, acara akan berlangsung 4 hari lagi!
+Jadwal: {'jadwal1': '01-06-2025 09:00', 'jadwal2': '15-05-2025 10:00', 'jadwal3': '20-05-2025 08:00'}
+Total hari menuju semua acara: 20</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin tiga jadwal. Metode <span class="code-term">olah_jadwal()</span> cari tanggal pake regex: jadwal1 (1 Juni 2025, 16 hari lagi), jadwal2 (15 Mei 2025, sudah lewat), jadwal3 (20 Mei 2025, 4 hari lagi). Total hari adalah 16 + 4 = 20 (jadwal2 ga dihitung karena sudah lewat).</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu jadi robot penjadwal super canggih yang minta orang kasih tau jadwal acara lingkungan, trus kamu cek tanggalnya pake regex, bandingin dengan waktu sekarang, hitung selisih hari, simpen dalam folder, dan jumlahkan hari yang belum lewat, kayak nyanyi lagu sambil pakai alat super. Di Python, kita gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, <span class="code-term">while</span> loop, dictionary, <span class="code-term">if-else</span>, <span class="code-term">try-except</span>, OOP, regex, dan datetime. Aku bikin kelas <span class="code-term">PenjadwalLingkungan</span> dengan atribut <span class="code-term">data</span> (dictionary). Metode <span class="code-term">olah_jadwal()</span> loop pake <span class="code-term">while</span>, cari tanggal pake regex, ubah jadi <span class="code-term">datetime</span>, cek apakah udah lewat, hitung selisih, simpen dalam dictionary, dan jumlahkan hari. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara olah waktu kompleks, kayak robot penjadwal! Coba di VSCode, bakal bangga sama hasilnya! 🌳</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Selalu gunakan format yang jelas saat ubah string ke datetime, biar ga bingung. ✅</li>
+        <li><strong>Don't:</strong> Jangan lupa nangani error saat olah tanggal, misalnya pake <span class="code-term">try-except</span>, kalo ga program bisa crash. ❌</li>
+        <li><strong>Do:</strong> Gunakan <span class="code-term">timedelta</span> untuk hitung selisih atau tambah waktu, biar akurat. 🌟</li>
+        <li><strong>Don't:</strong> Jangan hardcode tanggal tanpa cek, pastikan sesuai dengan logika program. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap waktu yang kamu kelola adalah langkah menuju program yang lebih teratur! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

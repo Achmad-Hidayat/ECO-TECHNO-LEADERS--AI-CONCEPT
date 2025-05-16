@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 18: Logging, Catat Aktivitas Program dengan Rapi! 📝</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 18: Logging, Catat Aktivitas Program dengan Rapi! 📝</h2>
+    <div class="quote">
+        "Logging itu kayak buku catatan, bantu kita lacak apa yang terjadi di program! 📝✨" <br>
+        Doa: "Ya Tuhan, bantu kami mencatat aktivitas program dengan rapi biar mudah dilacak. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar cara mencatat aktivitas program di Python pake modul <span class="code-term">logging</span>. Logging itu seperti buku catatan yang nyimpen informasi tentang apa yang terjadi di program, misalnya kapan acara tanam pohon dimulai atau kalo ada error. Kita akan pake semua konsep dari Chapter 1-17, termasuk datetime dari Chapter 17. Yuk, kita jadi pencatat aktivitas bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: Logging buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Logging Dasar (Super Gampang)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+logger.info("Program lingkungan dimulai!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>INFO:Program Lingkungan:Program lingkungan dimulai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "INFO:Program Lingkungan:Program lingkungan dimulai!" karena kita bikin logger dengan level <span class="code-term">INFO</span> dan nama "Program Lingkungan". Pesan "Program lingkungan dimulai!" dicatat dengan level <span class="code-term">INFO</span>, jadi ditampilkan di konsol. Format defaultnya adalah [LEVEL]:[NAMA_LOGGER]:[PESAN].</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya buku catatan, dan kamu mau tulis bahwa program lingkungan dimulai, kayak nyanyi lagu sambil catat kapan lagunya dimulai. Di Python, kita bisa pake modul <span class="code-term">logging</span> untuk catat aktivitas program. Pertama, aku impor <span class="code-term">import logging</span> biar bisa pake modul ini. Aku konfigurasi logging pake <span class="code-term">logging.basicConfig(level=logging.INFO)</span> biar pesan level <span class="code-term">INFO</span> ke atas (seperti <span class="code-term">WARNING</span>, <span class="code-term">ERROR</span>) ditampilkan di konsol. Aku bikin logger bernama "Program Lingkungan" pake <span class="code-term">logging.getLogger("Program Lingkungan")</span>, ini kayak kasih nama buku catatan supaya tau catatan ini buat program apa. Trus, aku catat pesan pake <span class="code-term">logger.info("Program lingkungan dimulai!")</span>, yang artinya aku tulis pesan dengan level kepentingan <span class="code-term">INFO</span>. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini sederhana banget, cocok buat pemula, kayak nulis catatan di buku harian tanpa ribet. Coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Logging dengan Level Berbeda (Gampang)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger("Program Lingkungan")
+logger.debug("Debug: Memulai program...")
+logger.info("Info: Program lingkungan dimulai!")
+logger.warning("Warning: Cek koneksi jaringan.")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>DEBUG:Program Lingkungan:Debug: Memulai program...
+INFO:Program Lingkungan:Info: Program lingkungan dimulai!
+WARNING:Program Lingkungan:Warning: Cek koneksi jaringan.</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris karena kita set level logging ke <span class="code-term">DEBUG</span>, yang artinya semua pesan dari level <span class="code-term">DEBUG</span> ke atas (<span class="code-term">INFO</span>, <span class="code-term">WARNING</span>, <span class="code-term">ERROR</span>, <span class="code-term">CRITICAL</span>) ditampilkan. Baris pertama level <span class="code-term">DEBUG</span> ("Debug: Memulai program..."), baris kedua level <span class="code-term">INFO</span> ("Info: Program lingkungan dimulai!"), dan baris ketiga level <span class="code-term">WARNING</span> ("Warning: Cek koneksi jaringan.").</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya buku catatan, dan kamu mau catat aktivitas program dengan tingkat kepentingan yang berbeda: ada catatan kecil (debug) yang cuma buat developer, info biasa buat tau program jalan, sama peringatan kalo ada yang perlu diperhatikan, kayak nyanyi lagu sambil catat nada rendah, sedang, dan tinggi. Di Python, modul <span class="code-term">logging</span> punya level: <span class="code-term">DEBUG</span> (paling rendah, buat detail teknis), <span class="code-term">INFO</span> (buat info umum), <span class="code-term">WARNING</span> (buat peringatan), <span class="code-term">ERROR</span> (buat error), dan <span class="code-term">CRITICAL</span> (buat error serius). Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level ke <span class="code-term">DEBUG</span> pake <span class="code-term">logging.basicConfig(level=logging.DEBUG)</span> biar semua pesan ditampilkan, dari yang paling detail sampe yang penting. Aku bikin logger bernama "Program Lingkungan", trus catat tiga pesan dengan level berbeda: <span class="code-term">logger.debug()</span> untuk catatan kecil, <span class="code-term">logger.info()</span> untuk info biasa, dan <span class="code-term">logger.warning()</span> untuk peringatan. Karena level diatur ke <span class="code-term">DEBUG</span>, semua pesan muncul. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas dengan tingkat kepentingan berbeda, kayak nulis catatan dengan warna berbeda biar tau mana yang lebih penting. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Logging dengan Format Kustom (Gampang)</h4>
+    <pre>import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("Program Lingkungan")
+logger.info("Program lingkungan dimulai!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>2025-05-16 07:43:00,123 - Program Lingkungan - INFO - Program lingkungan dimulai!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "2025-05-16 07:43:00,123 - Program Lingkungan - INFO - Program lingkungan dimulai!" (mikrodetik bisa beda). Kita set format kustom pake <span class="code-term">format</span> di <span class="code-term">logging.basicConfig</span>: <span class="code-term">%(asctime)s</span> menampilkan waktu pencatatan (2025-05-16 07:43:00,123), <span class="code-term">%(name)s</span> menampilkan nama logger ("Program Lingkungan"), <span class="code-term">%(levelname)s</span> menampilkan level logging ("INFO"), dan <span class="code-term">%(message)s</span> menampilkan pesan ("Program lingkungan dimulai!"). Semua dipisah dengan tanda "-".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu nulis di buku catatan, tapi kamu mau setiap catatan punya format rapi: ada waktu kapan kamu nulis, nama program, tingkat kepentingan, dan pesannya, kayak nyanyi lagu sambil catat waktu dan irama biar lebih teratur. Di Python, kita bisa kustomisasi format logging biar rapi dan informatif. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku konfigurasi logging pake <span class="code-term">logging.basicConfig</span> dengan dua parameter: <span class="code-term">level=logging.INFO</span> biar pesan level <span class="code-term">INFO</span> ke atas muncul, dan <span class="code-term">format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"</span> untuk tentuin format. Format ini artinya: <span class="code-term">%(asctime)s</span> buat waktu pencatatan (otomatis dari sistem), <span class="code-term">%(name)s</span> buat nama logger, <span class="code-term">%(levelname)s</span> buat level logging, dan <span class="code-term">%(message)s</span> buat pesan, semuanya dipisah tanda "-". Aku bikin logger bernama "Program Lingkungan", trus catat pesan pake <span class="code-term">logger.info()</span>. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara format logging, kayak nulis catatan rapi di buku harian dengan waktu dan detail lainnya. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Logging dengan Level Filter (Masih Gampang)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.WARNING)
+logger = logging.getLogger("Program Lingkungan")
+logger.debug("Debug: Memulai program...")
+logger.info("Info: Program lingkungan dimulai!")
+logger.warning("Warning: Cek koneksi jaringan.")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>WARNING:Program Lingkungan:Warning: Cek koneksi jaringan.</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya cuma satu baris: "WARNING:Program Lingkungan:Warning: Cek koneksi jaringan." karena kita set level logging ke <span class="code-term">WARNING</span>. Artinya, cuma pesan dengan level <span class="code-term">WARNING</span> ke atas (<span class="code-term">WARNING</span>, <span class="code-term">ERROR</span>, <span class="code-term">CRITICAL</span>) yang ditampilkan. Pesan level <span class="code-term">DEBUG</span> dan <span class="code-term">INFO</span> diabaikan karena levelnya lebih rendah dari <span class="code-term">WARNING</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu nulis di buku catatan, tapi kamu cuma mau catat hal-hal yang penting, misalnya peringatan aja, kayak nyanyi lagu cuma catat nada yang tinggi biar ga ribet. Di Python, kita bisa filter pesan logging berdasarkan level supaya ga semua pesan dicatat, cuma yang sesuai tingkat kepentingan. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">WARNING</span> pake <span class="code-term">logging.basicConfig(level=logging.WARNING)</span>, yang artinya cuma pesan level <span class="code-term">WARNING</span>, <span class="code-term">ERROR</span>, dan <span class="code-term">CRITICAL</span> yang akan ditampilkan. Aku bikin logger bernama "Program Lingkungan", trus catat tiga pesan dengan level berbeda: <span class="code-term">logger.debug()</span> untuk catatan detail (ga muncul), <span class="code-term">logger.info()</span> untuk info biasa (ga muncul), dan <span class="code-term">logger.warning()</span> untuk peringatan (muncul). Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara filter logging, kayak nulis catatan cuma yang penting supaya buku harian ga penuh. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. Logging dengan For Loop (Mulai Agak Menantang)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+for i in range(3):
+    logger.info(f"Menanam pohon ke-{i+1}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>INFO:Program Lingkungan:Menanam pohon ke-1
+INFO:Program Lingkungan:Menanam pohon ke-2
+INFO:Program Lingkungan:Menanam pohon ke-3</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris karena loop <span class="code-term">for</span> berjalan tiga kali (<span class="code-term">range(3)</span> menghasilkan i = 0, 1, 2). Tiap iterasi, logger catat pesan "Menanam pohon ke-1", "Menanam pohon ke-2", dan "Menanam pohon ke-3" dengan level <span class="code-term">INFO</span>. Karena level logging diatur ke <span class="code-term">INFO</span>, semua pesan ini ditampilkan.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu lagi tanam pohon selama tiga kali, dan tiap kali tanam, kamu catat di buku harian, kayak nyanyi lagu sambil catat nada tiap bait supaya ga lupa berapa pohon yang udah ditanam. Di Python, kita bisa pake loop <span class="code-term">for</span> untuk catat aktivitas berulang pake logging, biar program otomatis mencatat setiap langkah. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span> pake <span class="code-term">logging.basicConfig(level=logging.INFO)</span> biar pesan level <span class="code-term">INFO</span> ke atas ditampilkan. Aku bikin logger bernama "Program Lingkungan", trus aku loop tiga kali pake <span class="code-term">for i in range(3)</span>, yang artinya i akan jadi 0, 1, 2. Tiap iterasi, aku catat pesan pake <span class="code-term">logger.info(f"Menanam pohon ke-{i+1}")</span>, jadi pesan berubah sesuai nomor pohon: ke-1, ke-2, ke-3. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas berulang, kayak nulis catatan tiap langkah tanam pohon di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. Logging dengan While Loop (Agak Menantang)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+i = 0
+while i < 3:
+    logger.info(f"Menanam pohon ke-{i+1}")
+    i = i + 1</pre>
+    <p><strong>Output:</strong></p>
+    <pre>INFO:Program Lingkungan:Menanam pohon ke-1
+INFO:Program Lingkungan:Menanam pohon ke-2
+INFO:Program Lingkungan:Menanam pohon ke-3</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya sama seperti sebelumnya: tiga baris log mencatat "Menanam pohon ke-1" sampai "Menanam pohon ke-3". Kali ini, kita pake <span class="code-term">while</span> loop untuk catat aktivitas tanam pohon tiga kali. Loop berjalan selama <span class="code-term">i</span> kurang dari 3, dan <span class="code-term">i</span> ditambah 1 tiap iterasi: i=0, i=1, i=2.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu tanam pohon tiga kali, tapi kali ini kamu hitung satu per satu secara manual, kayak nyanyi lagu sambil catat nada satu per satu dengan tangan biar lebih teliti. Di Python, kita bisa pake <span class="code-term">while</span> loop untuk catat aktivitas berulang pake logging, mirip kayak loop <span class="code-term">for</span> tapi lebih manual. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span>, trus bikin logger bernama "Program Lingkungan". Aku inisialisasi <span class="code-term">i = 0</span> sebagai penghitung, trus loop pake <span class="code-term">while i < 3</span> biar berhenti setelah tiga pohon. Tiap iterasi, aku catat pesan pake <span class="code-term">logger.info(f"Menanam pohon ke-{i+1}")</span>, trus tambah <span class="code-term">i</span> pake <span class="code-term">i = i + 1</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas dengan loop manual, kayak nulis catatan satu per satu di buku harian dengan teliti. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Logging dengan If-Else (Menantang)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+pohon = 5
+if pohon > 3:
+    logger.info(f"Jumlah pohon ({pohon}) cukup untuk acara!")
+else:
+    logger.warning(f"Jumlah pohon ({pohon}) kurang dari target!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>INFO:Program Lingkungan:Jumlah pohon (5) cukup untuk acara!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "INFO:Program Lingkungan:Jumlah pohon (5) cukup untuk acara!" karena variabel <span class="code-term">pohon</span> bernilai 5, dan kondisi <span class="code-term">pohon > 3</span> bernilai True. Jadi, program masuk ke blok <span class="code-term">if</span> dan logger mencatat pesan dengan level <span class="code-term">INFO</span>. Level logging diatur ke <span class="code-term">INFO</span>, jadi pesan ini ditampilkan.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu cek jumlah pohon untuk acara tanam pohon, dan kamu mau catat di buku harian apakah jumlahnya cukup atau kurang, kayak nyanyi lagu sambil cek apakah nadanya pas atau perlu diperbaiki. Di Python, kita bisa pake <span class="code-term">if-else</span> untuk cek kondisi dan catat hasilnya pake logging, biar kita tau apa yang terjadi berdasarkan logika. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span> pake <span class="code-term">logging.basicConfig(level=logging.INFO)</span> biar pesan level <span class="code-term">INFO</span> ke atas ditampilkan. Aku bikin logger bernama "Program Lingkungan", trus aku bikin variabel <span class="code-term">pohon</span> dengan nilai 5. Aku cek pake <span class="code-term">if pohon > 3</span>: kalo True (jumlah pohon lebih dari 3), aku catat pesan sukses pake <span class="code-term">logger.info()</span> yang bilang jumlah cukup; kalo False, aku catat peringatan pake <span class="code-term">logger.warning()</span> yang bilang jumlah kurang. Karena 5 > 3, pesan <span class="code-term">INFO</span> yang dicatat. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas dengan logika, kayak nulis catatan di buku harian berdasarkan kondisi tertentu, misalnya kalo pohon cukup tulis hijau, kalo kurang tulis merah. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>8. Logging dengan Input (Menantang)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+pohon = int(input("Masukkan jumlah pohon: "))
+logger.info(f"Jumlah pohon yang akan ditanam: {pohon}")</pre>
+    <p><strong>Output (misalnya user masukkan 10):</strong></p>
+    <pre>Masukkan jumlah pohon: 10
+INFO:Program Lingkungan:Jumlah pohon yang akan ditanam: 10</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon:", user masukin 10, trus logger mencatat "INFO:Program Lingkungan:Jumlah pohon yang akan ditanam: 10". Logger mencatat pesan dengan level <span class="code-term">INFO</span> yang berisi jumlah pohon yang dimasukin user, dan karena level logging diatur ke <span class="code-term">INFO</span>, pesan ini ditampilkan.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu minta orang kasih tau berapa pohon yang akan ditanam, trus kamu catat jumlah itu di buku harian, kayak nyanyi lagu dari lirik yang dikasih orang lain biar tau berapa pohon yang masuk rencana. Di Python, kita bisa pake <span class="code-term">input()</span> untuk ambil data dari user, trus catat pake logging supaya ada jejak aktivitasnya. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span>, trus bikin logger bernama "Program Lingkungan". Aku minta user masukin jumlah pohon pake <span class="code-term">input("Masukkan jumlah pohon: ")</span>, trus ubah input itu ke integer pake <span class="code-term">int()</span> supaya jadi angka, dan simpen di variabel <span class="code-term">pohon</span>. Aku catat jumlah pohon pake <span class="code-term">logger.info(f"Jumlah pohon yang akan ditanam: {pohon}")</span>, jadi pesan yang dicatat berisi nilai yang dimasukin user. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas interaktif, kayak nulis catatan di buku harian berdasarkan info yang dikasih orang, biar tau jejaknya. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. Logging dengan List (Menantang)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+pohon_list = [10, 5, 8]
+for i, jumlah in enumerate(pohon_list, 1):
+    logger.info(f"Acara ke-{i}: Menanam {jumlah} pohon")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>INFO:Program Lingkungan:Acara ke-1: Menanam 10 pohon
+INFO:Program Lingkungan:Acara ke-2: Menanam 5 pohon
+INFO:Program Lingkungan:Acara ke-3: Menanam 8 pohon</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris karena kita punya list <span class="code-term">pohon_list</span> dengan tiga elemen: [10, 5, 8]. Loop <span class="code-term">for</span> pake <span class="code-term">enumerate(pohon_list, 1)</span> ngasih indeks <span class="code-term">i</span> (1, 2, 3) dan nilai <span class="code-term">jumlah</span> (10, 5, 8). Tiap iterasi, logger catat pesan "Acara ke-1: Menanam 10 pohon", "Acara ke-2: Menanam 5 pohon", dan "Acara ke-3: Menanam 8 pohon" dengan level <span class="code-term">INFO</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya daftar rencana tanam pohon untuk tiga acara berbeda, dan kamu mau catat masing-masing acara di buku harian, kayak nyanyi lagu sambil catat nada dari tiga bait yang beda-beda. Di Python, kita bisa pake list untuk simpen data jumlah pohon, trus loop pake <span class="code-term">for</span> untuk catat aktivitas tiap acara pake logging. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span>, trus bikin logger bernama "Program Lingkungan". Aku bikin list <span class="code-term">pohon_list = [10, 5, 8]</span> yang nyimpen jumlah pohon untuk tiga acara. Aku loop pake <span class="code-term">for i, jumlah in enumerate(pohon_list, 1)</span>, yang artinya: <span class="code-term">enumerate</span> ngasih indeks <span class="code-term">i</span> (mulai dari 1 karena aku kasih argumen 1) dan nilai <span class="code-term">jumlah</span> dari list. Tiap iterasi, aku catat pesan pake <span class="code-term">logger.info(f"Acara ke-{i}: Menanam {jumlah} pohon")</span>, jadi pesan berubah sesuai acara dan jumlah pohonnya. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas dari list, kayak nulis catatan di buku harian untuk tiap acara berdasarkan daftar rencana. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. Logging dengan Dictionary (Menantang)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+pohon_dict = {"Acara 1": 10, "Acara 2": 5, "Acara 3": 8}
+for acara, jumlah in pohon_dict.items():
+    logger.info(f"{acara}: Menanam {jumlah} pohon")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>INFO:Program Lingkungan:Acara 1: Menanam 10 pohon
+INFO:Program Lingkungan:Acara 2: Menanam 5 pohon
+INFO:Program Lingkungan:Acara 3: Menanam 8 pohon</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris karena dictionary <span class="code-term">pohon_dict</span> punya tiga pasang kunci-nilai: "Acara 1": 10, "Acara 2": 5, "Acara 3": 8. Loop <span class="code-term">for</span> pake <span class="code-term">pohon_dict.items()</span> ngasih kunci (<span class="code-term">acara</span>) dan nilai (<span class="code-term">jumlah</span>). Tiap iterasi, logger catat pesan sesuai kunci dan nilai, seperti "Acara 1: Menanam 10 pohon".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya folder berlabel yang nyimpen rencana tanam pohon untuk tiga acara, dan kamu mau catat masing-masing acara di buku harian, kayak nyanyi lagu sambil catat nada dari tiga album berlabel. Di Python, kita bisa pake dictionary untuk simpen data dengan label, trus loop pake <span class="code-term">for</span> untuk catat aktivitas tiap acara pake logging. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span>, trus bikin logger bernama "Program Lingkungan". Aku bikin dictionary <span class="code-term">pohon_dict</span> dengan tiga pasang kunci-nilai: "Acara 1": 10, "Acara 2": 5, "Acara 3": 8, yang nyimpen nama acara dan jumlah pohon. Aku loop pake <span class="code-term">for acara, jumlah in pohon_dict.items()</span>, yang artinya: <span class="code-term">items()</span> ngasih kunci (<span class="code-term">acara</span>) dan nilai (<span class="code-term">jumlah</span>) dari dictionary. Tiap iterasi, aku catat pesan pake <span class="code-term">logger.info(f"{acara}: Menanam {jumlah} pohon")</span>, jadi pesan berubah sesuai nama acara dan jumlah pohon. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas dari dictionary, kayak nulis catatan di buku harian berdasarkan folder berlabel. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>11. Logging dengan Try-Except (Agak Sulit)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+try:
+    pohon = int(input("Masukkan jumlah pohon: "))
+    if pohon < 0:
+        raise ValueError("Jumlah pohon tidak boleh negatif!")
+    logger.info(f"Jumlah pohon yang akan ditanam: {pohon}")
+except ValueError as e:
+    logger.error(f"Error: {e}")</pre>
+    <p><strong>Output (misalnya user masukkan -5):</strong></p>
+    <pre>Masukkan jumlah pohon: -5
+ERROR:Program Lingkungan:Error: Jumlah pohon tidak boleh negatif!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon:", user masukin -5. Program cek kalo jumlahnya negatif, trus lempar error pake <span class="code-term">raise ValueError("Jumlah pohon tidak boleh negatif!")</span>. Error ini ditangkap oleh <span class="code-term">except ValueError</span>, dan logger mencatat pesan error dengan level <span class="code-term">ERROR</span>: "ERROR:Program Lingkungan:Error: Jumlah pohon tidak boleh negatif!".</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu minta orang kasih tau jumlah pohon untuk ditanam, tapi kamu mau pastiin jumlahnya ga negatif, dan kalo ada error (misalnya input salah atau negatif), kamu catat di buku harian, kayak nyanyi lagu sambil cek apakah nadanya pas atau fals. Di Python, kita bisa pake <span class="code-term">try-except</span> untuk nangani error dan catat pake logging. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span>, trus bikin logger bernama "Program Lingkungan". Dalam blok <span class="code-term">try</span>, aku minta input jumlah pohon, ubah ke integer pake <span class="code-term">int()</span>, trus cek pake <span class="code-term">if pohon < 0</span>: kalo negatif, aku lempar error pake <span class="code-term">raise ValueError</span>. Kalo ga ada error, aku catat jumlah pohon pake <span class="code-term">logger.info()</span>. Kalo ada error (misalnya input bukan angka atau negatif), error ditangkap oleh <span class="code-term">except ValueError</span> dan dicatat pake <span class="code-term">logger.error()</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas dengan error handling, kayak nulis catatan di buku harian sambil cek apakah ada masalah. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>12. Logging dengan File Handling (Simulasi) (Agak Sulit)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+# Simulasi file pohon.txt berisi:
+# Pohon yang ditanam: 10
+pesan = "Pohon yang ditanam: 10"
+try:
+    jumlah = int(pesan.split(": ")[1])
+    logger.info(f"Jumlah pohon dari file: {jumlah}")
+except ValueError:
+    logger.error("Error: Gagal membaca jumlah pohon dari file!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>INFO:Program Lingkungan:Jumlah pohon dari file: 10</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "INFO:Program Lingkungan:Jumlah pohon dari file: 10" karena kita simulasi baca file dengan string <span class="code-term">pesan</span>. Kita pisah string pake <span class="code-term">split(": ")</span> untuk ambil bagian "10", ubah ke integer, trus logger mencatat jumlah pohon dengan level <span class="code-term">INFO</span>. Karena ga ada error, pesan <span class="code-term">INFO</span> ditampilkan.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya file berisi catatan jumlah pohon yang ditanam, dan kamu mau baca jumlah itu trus catat di buku harian, kayak nyanyi lagu sambil baca lirik dari buku. Di Python, kita bisa simulasi baca file (karena ga bisa I/O file di sini) dan catat aktivitasnya pake logging. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span>, trus bikin logger bernama "Program Lingkungan". Aku simulasi isi file dengan string <span class="code-term">pesan = "Pohon yang ditanam: 10"</span>. Dalam blok <span class="code-term">try</span>, aku pisah string pake <span class="code-term">split(": ")</span> untuk ambil bagian "10", ubah ke integer pake <span class="code-term">int()</span>, trus catat jumlah pohon pake <span class="code-term">logger.info()</span>. Kalo ada error (misalnya format file salah), error ditangkap oleh <span class="code-term">except ValueError</span> dan dicatat pake <span class="code-term">logger.error()</span>. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas dari file, kayak nulis catatan di buku harian berdasarkan info dari file. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>13. Logging dengan OOP (Lebih Sulit)</h4>
+    <pre>import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("Program Lingkungan")
+
+class PenanamPohon:
+    def __init__(self, jumlah):
+        self.jumlah = jumlah
+        logger.info(f"Objek PenanamPohon dibuat dengan {self.jumlah} pohon")
+    
+    def tanam(self):
+        logger.info(f"Memulai penanaman {self.jumlah} pohon...")
+        return f"Selesai menanam {self.jumlah} pohon!"
+
+penanam = PenanamPohon(10)
+pesan = penanam.tanam()
+logger.info(pesan)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>INFO:Program Lingkungan:Objek PenanamPohon dibuat dengan 10 pohon
+INFO:Program Lingkungan:Memulai penanaman 10 pohon...
+INFO:Program Lingkungan:Selesai menanam 10 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: pertama, saat objek <span class="code-term">PenanamPohon</span> dibuat, logger mencatat "Objek PenanamPohon dibuat dengan 10 pohon"; kedua, saat metode <span class="code-term">tanam()</span> dipanggil, logger mencatat "Memulai penanaman 10 pohon..."; ketiga, hasil metode <span class="code-term">tanam()</span> ("Selesai menanam 10 pohon!") dicatat oleh logger. Semua pesan dicatat dengan level <span class="code-term">INFO</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya robot penanam pohon, dan robot ini catat setiap langkah kerjanya di buku harian, kayak nyanyi lagu sambil catat nada tiap langkah biar tau apa yang udah dilakuin. Di Python, kita bisa pake OOP (Chapter 13-14) untuk bikin kelas yang mencatat aktivitasnya pake logging. Aku mulai dengan impor <span class="code-term">import logging</span>. Aku set level logging ke <span class="code-term">INFO</span>, trus bikin logger bernama "Program Lingkungan". Aku bikin kelas <span class="code-term">PenanamPohon</span> dengan atribut <span class="code-term">jumlah</span> untuk simpen jumlah pohon. Di metode <span class="code-term">__init__</span>, aku catat saat objek dibuat pake <span class="code-term">logger.info()</span>. Di metode <span class="code-term">tanam</span>, aku catat saat mulai tanam, trus return pesan selesai yang juga dicatat pake logger. Aku bikin objek <span class="code-term">penanam</span> dengan 10 pohon, panggil metode <span class="code-term">tanam</span>, dan catat hasilnya. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas pake OOP, kayak robot yang nulis catatan langkah kerjanya di buku harian. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>14. Logging dengan Waktu (Lebih Sulit)</h4>
+    <pre>import logging
+from datetime import datetime
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("Program Lingkungan")
+sekarang = datetime.now()
+logger.info(f"Program lingkungan dimulai pada {sekarang.strftime('%d-%m-%Y %H:%M:%S')}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>2025-05-16 07:43:00,123 - Program Lingkungan - INFO - Program lingkungan dimulai pada 16-05-2025 07:43:00</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya adalah "2025-05-16 07:43:00,123 - Program Lingkungan - INFO - Program lingkungan dimulai pada 16-05-2025 07:43:00" (mikrodetik bisa beda). Formatnya pake kustom dari <span class="code-term">logging.basicConfig</span>. Pesan log nyatain waktu mulai program, yang diambil dari <span class="code-term">datetime.now()</span> dan diformat pake <span class="code-term">strftime()</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu nulis di buku catatan, dan kamu mau catat kapan program lingkungan dimulai dengan waktu yang tepat, kayak nyanyi lagu sambil catat waktu mulai biar tau kapan nadanya dimainkan. Di Python, kita bisa gabungin logging dengan datetime (Chapter 17) untuk catat waktu aktivitas. Aku mulai dengan impor <span class="code-term">import logging</span> dan <span class="code-term">from datetime import datetime</span>. Aku set level logging ke <span class="code-term">INFO</span> dan format kustom yang sama seperti contoh 3, biar ada waktu, nama, level, dan pesan. Aku bikin logger, trus ambil waktu sekarang pake <span class="code-term">datetime.now()</span>, simpen di variabel <span class="code-term">sekarang</span>. Aku format waktu pake <span class="code-term">strftime('%d-%m-%Y %H:%M:%S')</span> biar rapi, trus catat pesan pake <span class="code-term">logger.info()</span> yang bilang program dimulai pada waktu itu. Aku pilih tema lingkungan karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas dengan waktu, kayak nulis catatan di buku harian dengan cap waktu biar tau kapan kejadiannya. Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre># Simulasi file lingkungan.py
+import logging
+from datetime import datetime
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+
+class PenanamPohon:
+    def __init__(self, data):
+        self.data = data
+        self.logger = logging.getLogger("Program Lingkungan")
+        self.logger.debug("Objek PenanamPohon dibuat")
+    
+    def tanam_semua(self):
+        try:
+            hasil = {}
+            i = 0
+            while i < len(self.data):
+                acara, jumlah = list(self.data.items())[i]
+                self.logger.info(f"Memulai acara {acara} pada {datetime.now().strftime('%d-%m-%Y %H:%M:%S')}")
+                if jumlah < 0:
+                    self.logger.error(f"Error di {acara}: Jumlah pohon tidak boleh negatif!")
+                else:
+                    self.logger.info(f"{acara}: Menanam {jumlah} pohon")
+                    hasil[acara] = jumlah
+                i = i + 1
+            return hasil
+        except Exception as e:
+            self.logger.error(f"Error saat menanam pohon: {e}")
+            return {}
+
+# File utama
+# from lingkungan import PenanamPohon
+data = {}
+for i in range(3):
+    try:
+        acara = input(f"Masukkan nama acara ke-{i+1}: ")
+        jumlah = int(input(f"Masukkan jumlah pohon untuk {acara}: "))
+        data[acara] = jumlah
+    except:
+        logger = logging.getLogger("Program Lingkungan")
+        logger.error("Error saat input data, coba lagi!")
+        i = i - 1
+
+penanam = PenanamPohon(data)
+hasil = penanam.tanam_semua()
+logger = logging.getLogger("Program Lingkungan")
+logger.info(f"Hasil tanam: {hasil}")
+</pre>
+    <p><strong>Output (misalnya user masukkan "Acara 1", 10, "Acara 2", -5, "Acara 3", 8):</strong></p>
+    <pre>Masukkan nama acara ke-1: Acara 1
+Masukkan jumlah pohon untuk Acara 1: 10
+Masukkan nama acara ke-2: Acara 2
+Masukkan jumlah pohon untuk Acara 2: -5
+Masukkan nama acara ke-3: Acara 3
+Masukkan jumlah pohon untuk Acara 3: 8
+DEBUG:Program Lingkungan:Objek PenanamPohon dibuat
+INFO:Program Lingkungan:Memulai acara Acara 1 pada 16-05-2025 07:43:00
+INFO:Program Lingkungan:Acara 1: Menanam 10 pohon
+INFO:Program Lingkungan:Memulai acara Acara 2 pada 16-05-2025 07:43:00
+ERROR:Program Lingkungan:Error di Acara 2: Jumlah pohon tidak boleh negatif!
+INFO:Program Lingkungan:Memulai acara Acara 3 pada 16-05-2025 07:43:00
+INFO:Program Lingkungan:Acara 3: Menanam 8 pohon
+INFO:Program Lingkungan:Hasil tanam: {'Acara 1': 10, 'Acara 3': 8}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt, user masukin tiga acara: "Acara 1" (10 pohon), "Acara 2" (-5 pohon), "Acara 3" (8 pohon). Logger mencatat: pembuatan objek (level <span class="code-term">DEBUG</span>), mulai acara (level <span class="code-term">INFO</span>), error di Acara 2 karena jumlah negatif (level <span class="code-term">ERROR</span>), sukses tanam di Acara 1 dan 3 (level <span class="code-term">INFO</span>), dan hasil akhir (level <span class="code-term">INFO</span>). Dictionary hasil cuma nyimpen acara yang sukses: {'Acara 1': 10, 'Acara 3': 8}.</p>
+    <p><strong>Penjelasan Query:</strong> Bayangin kamu punya robot penanam pohon super canggih yang minta orang kasih tau rencana tanam pohon, trus robot ini catat setiap langkah di buku harian, termasuk waktu, error kalo jumlah pohon salah, dan hasil akhir, kayak nyanyi lagu sambil catat nada dengan alat super biar ga ada yang terlewat. Di Python, kita gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">for</span> loop, <span class="code-term">while</span> loop, dictionary, <span class="code-term">if-else</span>, <span class="code-term">try-except</span>, OOP, datetime, dan logging. Aku bikin kelas <span class="code-term">PenanamPohon</span> dengan atribut <span class="code-term">data</span> (dictionary) dan logger. Metode <span class="code-term">tanam_semua</span> loop pake <span class="code-term">while</span>, catat waktu mulai tiap acara, cek jumlah pohon, simpen hasil sukses dalam dictionary, dan tangani error. Aku minta input user untuk tiga acara, trus jalankan metode dan catat hasilnya. Aku pilih tema tanam pohon karena Arry Hutomo peduli lingkungan, dan ini sesuai sama isu lingkungan. Struktur ini bikin kamu paham cara catat aktivitas kompleks, kayak robot yang nulis catatan lengkap di buku harian! Coba di VSCode, bakal bangga sama hasilnya! 🌳</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Selalu set level logging yang sesuai kebutuhan, misalnya <span class="code-term">DEBUG</span> untuk pengembangan, <span class="code-term">INFO</span> untuk produksi. ✅</li>
+        <li><strong>Don't:</strong> Jangan logging data sensitif seperti password, kalo ga bisa jadi celah keamanan. ❌</li>
+        <li><strong>Do:</strong> Gunakan format kustom biar log gampang dibaca, tambah waktu atau konteks. 🌟</li>
+        <li><strong>Don't:</strong> Jangan lupa nangani error saat logging, kalo ga log ga akan membantu debug. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap log yang kamu buat adalah jejak untuk melacak perjalanan program! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

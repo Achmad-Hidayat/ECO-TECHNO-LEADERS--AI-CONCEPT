@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: List, Bikin Daftar Keren! 📋</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 7: List, Bikin Daftar Keren! 📋</h2>
+    <div class="quote">
+        "List itu kayak buku catatan, bikin data kita rapi dan gampang dicari! 📋✨" <br>
+        Doa: "Ya Tuhan, bantu kami mengatur data dengan rapi biar coding kami bantu dunia. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar tentang list di Python, biar kita bisa nyimpen banyak data dalam satu tempat. Kita pake variabel (Chapter 2), operasi (Chapter 3), input (Chapter 4), pengkondisian (Chapter 5), perulangan (Chapter 6), dan <span class="code-term">print</span> (Chapter 1). Yuk, kita bikin daftar bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: List buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. List Sederhana (Super Gampang)</h4>
+    <pre>pohon_list = ["Mangrove", "Kelapa", "Mahoni"]
+print("Arry Hutomo tanam pohon:", pohon_list)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon: ['Mangrove', 'Kelapa', 'Mahoni']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon: ['Mangrove', 'Kelapa', 'Mahoni']" karena kita nyimpen tiga jenis pohon dalam list <span class="code-term">pohon_list</span>, trus nampilin langsung pake <span class="code-term">print()</span>. Python nampilin list apa adanya dengan tanda kurung siku.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini sederhana buat kenalin list, yang ditulis pake tanda kurung siku <span class="code-term">[]</span>. Aku pilih variabel <span class="code-term">pohon_list</span> biar namanya jelas, dan isi dengan tiga jenis pohon yang realistis. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">print()</span> langsung biar kamu paham cara nampilin list. Struktur ini bikin kamu paham cara bikin daftar sederhana, dan gampang diinget karena mirip kayak bikin daftar belanja! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Akses Elemen List (Gampang)</h4>
+    <pre>pohon_list = ["Mangrove", "Kelapa", "Mahoni"]
+print(f"Arry Hutomo tanam pohon: {pohon_list[1]}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon: Kelapa</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon: Kelapa" karena kita akses elemen ke-1 dari list <span class="code-term">pohon_list</span> pake indeks <span class="code-term">[1]</span>. Indeks di Python dimulai dari 0, jadi <span class="code-term">[1]</span> adalah elemen kedua, yaitu "Kelapa".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara akses elemen dalam list pake indeks. Aku pilih <span class="code-term">pohon_list[1]</span> biar kamu paham indeks dimulai dari 0, dan elemen ke-1 adalah "Kelapa". Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">f-string</span> biar pesan dinamis. Struktur ini bikin kamu paham cara ambil data dari list, dan gampang diinget karena mirip kayak nyari barang di daftar belanja! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Ubah Elemen List (Gampang)</h4>
+    <pre>pohon_list = ["Mangrove", "Kelapa", "Mahoni"]
+pohon_list[1] = "Pinus"
+print("Arry Hutomo tanam pohon:", pohon_list)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon: ['Mangrove', 'Pinus', 'Mahoni']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon: ['Mangrove', 'Pinus', 'Mahoni']" karena kita ubah elemen ke-1 (<span class="code-term">[1]</span>) dari "Kelapa" jadi "Pinus", trus nampilin list yang udah diubah pake <span class="code-term">print()</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara ubah elemen dalam list pake indeks. Aku pilih <span class="code-term">pohon_list[1]</span> dan ganti jadi "Pinus" biar kamu paham list itu bisa diubah (mutable). Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini sederhana biar kamu paham cara edit list, dan gampang diinget karena mirip kayak ganti barang di daftar belanja! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Tambah Elemen List (Masih Gampang)</h4>
+    <pre>pohon_list = ["Mangrove", "Kelapa"]
+pohon_list.append("Mahoni")
+print("Arry Hutomo tanam pohon:", pohon_list)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon: ['Mangrove', 'Kelapa', 'Mahoni']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon: ['Mangrove', 'Kelapa', 'Mahoni']" karena kita tambah elemen "Mahoni" ke akhir list pake <span class="code-term">append()</span>, trus nampilin list yang udah ditambah.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara tambah elemen ke list pake <span class="code-term">append()</span>, yang nambahin elemen di akhir list. Aku pilih "Mahoni" sebagai elemen baru biar realistis. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini sederhana biar kamu paham cara nambah data ke list, dan gampang diinget karena mirip kayak nambah barang di daftar belanja! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. List dengan Input (Mulai Agak Menantang)</h4>
+    <pre>pohon_list = []
+jumlah = int(input("Masukkan jumlah pohon: "))
+for i in range(jumlah):
+    pohon = input(f"Masukkan pohon ke-{i+1}: ")
+    pohon_list.append(pohon)
+print("Arry Hutomo tanam pohon:", pohon_list)</pre>
+    <p><strong>Output (misalnya user masukkan 2, lalu "Mangrove" dan "Kelapa"):</strong></p>
+    <pre>Masukkan jumlah pohon: 2
+Masukkan pohon ke-1: Mangrove
+Masukkan pohon ke-2: Kelapa
+Arry Hutomo tanam pohon: ['Mangrove', 'Kelapa']</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon: ", user masukin 2, trus prompt "Masukkan pohon ke-1: " dan "Masukkan pohon ke-2: ", user masukin "Mangrove" dan "Kelapa". List <span class="code-term">pohon_list</span> diisi pake <span class="code-term">append()</span>, jadi ['Mangrove', 'Kelapa'], trus ditampilin.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span> dari Chapter 4, <span class="code-term">for</span> loop dari Chapter 6, dan list, biar kamu paham cara bikin list interaktif. Aku pilih <span class="code-term">pohon_list</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">append()</span> buat nambahin elemen sesuai input user. Struktur ini bikin kamu paham cara bikin list dinamis, dan gampang diinget karena mirip kayak bikin daftar belanja interaktif! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. List dengan For Loop (Agak Menantang)</h4>
+    <pre>pohon_list = ["Mangrove", "Kelapa", "Mahoni"]
+for pohon in pohon_list:
+    print(f"Arry Hutomo tanam {pohon}!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam Mangrove!
+Arry Hutomo tanam Kelapa!
+Arry Hutomo tanam Mahoni!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam Mangrove!", "Arry Hutomo tanam Kelapa!", dan "Arry Hutomo tanam Mahoni!" karena kita pake <span class="code-term">for</span> loop buat ngiterasi setiap elemen dalam <span class="code-term">pohon_list</span>, trus cetak pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin list sama <span class="code-term">for</span> loop dari Chapter 6, biar kamu paham cara ngiterasi list. Aku pilih <span class="code-term">pohon_list</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">for pohon in pohon_list</span> biar langsung ambil elemen, ga perlu indeks. Struktur ini bikin kamu paham cara ngulang list, dan gampang diinget karena mirip kayak baca daftar belanja! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. List dengan While Loop (Agak Menantang)</h4>
+    <pre>pohon_list = ["Mangrove", "Kelapa", "Mahoni"]
+i = 0
+while i < len(pohon_list):
+    print(f"Arry Hutomo tanam {pohon_list[i]}!")
+    i = i + 1</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam Mangrove!
+Arry Hutomo tanam Kelapa!
+Arry Hutomo tanam Mahoni!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam Mangrove!", "Arry Hutomo tanam Kelapa!", dan "Arry Hutomo tanam Mahoni!" karena kita pake <span class="code-term">while</span> loop buat ngiterasi list. Awalnya <span class="code-term">i</span> 0, trus selama <span class="code-term">i < len(pohon_list)</span> (3), cetak elemen pake indeks <span class="code-term">[i]</span>, tambah <span class="code-term">i</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin list sama <span class="code-term">while</span> loop dari Chapter 6, biar kamu paham cara ngiterasi list pake indeks. Aku pilih <span class="code-term">pohon_list</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">len(pohon_list)</span> biar loop sesuai panjang list. Struktur ini bikin kamu paham cara ngulang list pake <span class="code-term">while</span>, dan gampang diinget karena mirip kayak baca daftar belanja! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>8. List dengan If-Else (Menantang)</h4>
+    <pre>pohon_list = ["Mangrove", "Kelapa", "Mahoni"]
+for pohon in pohon_list:
+    if pohon == "Kelapa":
+        print(f"Arry Hutomo tanam {pohon}, favorit!")
+    else:
+        print(f"Arry Hutomo tanam {pohon}!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam Mangrove!
+Arry Hutomo tanam Kelapa, favorit!
+Arry Hutomo tanam Mahoni!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam Mangrove!", "Arry Hutomo tanam Kelapa, favorit!", dan "Arry Hutomo tanam Mahoni!". Kita ngiterasi <span class="code-term">pohon_list</span>, trus cek <span class="code-term">pohon == 'Kelapa'</span>: kalo True, cetak pesan khusus; kalo False, cetak pesan biasa.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin list, <span class="code-term">for</span> loop, dan <span class="code-term">if-else</span> dari Chapter 5, biar kamu paham cara bikin keputusan saat ngiterasi list. Aku pilih <span class="code-term">pohon_list</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">pohon == 'Kelapa'</span> sebagai kondisi favorit. Struktur ini bikin kamu paham cara bikin keputusan dalam iterasi, dan gampang diinget karena mirip kayak nyari barang favorit di daftar! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. List dengan Input dan For Loop (Menantang)</h4>
+    <pre>pohon_list = []
+for i in range(3):
+    pohon = input(f"Masukkan pohon ke-{i+1}: ")
+    pohon_list.append(pohon)
+for pohon in pohon_list:
+    print(f"Arry Hutomo tanam {pohon}!")</pre>
+    <p><strong>Output (misalnya user masukkan "Mangrove", "Kelapa", "Mahoni"):</strong></p>
+    <pre>Masukkan pohon ke-1: Mangrove
+Masukkan pohon ke-2: Kelapa
+Masukkan pohon ke-3: Mahoni
+Arry Hutomo tanam Mangrove!
+Arry Hutomo tanam Kelapa!
+Arry Hutomo tanam Mahoni!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin "Mangrove", "Kelapa", "Mahoni". List <span class="code-term">pohon_list</span> diisi pake <span class="code-term">append()</span>, trus kita iterasi list buat cetak tiap elemen.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">for</span> loop, dan list, biar kamu paham cara bikin dan iterasi list interaktif. Aku pilih <span class="code-term">pohon_list</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake dua loop: satu buat ngisi list, satu buat nampilin. Struktur ini bikin kamu paham cara bikin list interaktif, dan gampang diinget karena mirip kayak bikin dan baca daftar belanja! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. List dengan While Loop dan If-Else (Menantang)</h4>
+    <pre>pohon_list = ["Mangrove", "Kelapa", "Mahoni"]
+i = 0
+while i < len(pohon_list):
+    if pohon_list[i] == "Kelapa":
+        print(f"Arry Hutomo tanam {pohon_list[i]}, favorit!")
+    else:
+        print(f"Arry Hutomo tanam {pohon_list[i]}!")
+    i = i + 1</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam Mangrove!
+Arry Hutomo tanam Kelapa, favorit!
+Arry Hutomo tanam Mahoni!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam Mangrove!", "Arry Hutomo tanam Kelapa, favorit!", dan "Arry Hutomo tanam Mahoni!". Kita pake <span class="code-term">while</span> loop buat ngiterasi, cek <span class="code-term">pohon_list[i] == 'Kelapa'</span>: kalo True, cetak pesan khusus; kalo False, cetak biasa.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin list, <span class="code-term">while</span> loop, dan <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan dalam iterasi list pake indeks. Aku pilih <span class="code-term">pohon_list</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">pohon_list[i] == 'Kelapa'</span> sebagai kondisi favorit. Struktur ini bikin kamu paham cara bikin keputusan dalam loop, dan gampang diinget karena mirip kayak nyari barang favorit! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>11. List dengan Input, Operasi, dan For Loop (Agak Sulit)</h4>
+    <pre>berat_list = []
+jumlah = int(input("Masukkan jumlah sampah: "))
+for i in range(jumlah):
+    berat = float(input(f"Masukkan berat sampah ke-{i+1} (kg): "))
+    berat_list.append(berat)
+total = 0
+for berat in berat_list:
+    total = total + berat
+print(f"Arry Hutomo daur ulang {total} kg!")</pre>
+    <p><strong>Output (misalnya user masukkan 2, lalu 5.5 dan 10.5):</strong></p>
+    <pre>Masukkan jumlah sampah: 2
+Masukkan berat sampah ke-1 (kg): 5.5
+Masukkan berat sampah ke-2 (kg): 10.5
+Arry Hutomo daur ulang 16.0 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah sampah: ", user masukin 2, trus prompt "Masukkan berat sampah ke-1 (kg): " dan "Masukkan berat sampah ke-2 (kg): ", user masukin 5.5 dan 10.5. List <span class="code-term">berat_list</span> jadi [5.5, 10.5]. Loop kedua jumlahkan: 0 + 5.5 = 5.5, 5.5 + 10.5 = 16.0, trus cetak total.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, list, <span class="code-term">for</span> loop, dan operasi <span class="code-term">+</span>, biar kamu paham cara bikin list interaktif dan hitung total. Aku pilih <span class="code-term">berat_list</span> biar jelas, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">float()</span> biar bisa desimal, dan dua loop: satu buat ngisi, satu buat hitung. Struktur ini bikin kamu paham cara bikin list dan hitung total, dan gampang diinget karena mirip kayak nyusun dan njumlahin daftar belanja! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>12. List dengan For Loop dan If-Else (Sulit)</h4>
+    <pre>berat_list = [5.5, 10.5, 3.0]
+for berat in berat_list:
+    if berat > 5:
+        print(f"Arry Hutomo daur ulang {berat} kg, banyak!")
+    else:
+        print(f"Arry Hutomo daur ulang {berat} kg, tambah lagi!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 5.5 kg, banyak!
+Arry Hutomo daur ulang 10.5 kg, banyak!
+Arry Hutomo daur ulang 3.0 kg, tambah lagi!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo daur ulang 5.5 kg, banyak!", "Arry Hutomo daur ulang 10.5 kg, banyak!", dan "Arry Hutomo daur ulang 3.0 kg, tambah lagi!". Kita iterasi <span class="code-term">berat_list</span>, cek <span class="code-term">berat > 5</span>: kalo True, cetak "banyak"; kalo False, cetak "tambah lagi".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin list, <span class="code-term">for</span> loop, dan <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan saat iterasi list. Aku pilih <span class="code-term">berat_list</span> biar jelas, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">berat > 5</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin keputusan dalam iterasi, dan gampang diinget karena mirip kayak ngecek barang di daftar! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>13. List dengan While Loop, Input, dan Operasi (Sulit)</h4>
+    <pre>lampu_list = []
+i = 0
+while i < 3:
+    lampu = int(input(f"Masukkan jumlah lampu ke-{i+1}: "))
+    lampu_list.append(lampu)
+    i = i + 1
+total = 0
+for lampu in lampu_list:
+    total = total + lampu
+print(f"Arry Hutomo hemat {total} lampu!")</pre>
+    <p><strong>Output (misalnya user masukkan 2, 3, 5):</strong></p>
+    <pre>Masukkan jumlah lampu ke-1: 2
+Masukkan jumlah lampu ke-2: 3
+Masukkan jumlah lampu ke-3: 5
+Arry Hutomo hemat 10 lampu!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin 2, 3, 5. List <span class="code-term">lampu_list</span> jadi [2, 3, 5]. Loop kedua jumlahkan: 0 + 2 = 2, 2 + 3 = 5, 5 + 5 = 10, trus cetak total.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">while</span> loop, list, <span class="code-term">for</span> loop, dan operasi <span class="code-term">+</span>, biar kamu paham cara bikin list interaktif pake indeks dan hitung total. Aku pilih <span class="code-term">lampu_list</span> biar jelas, dan tema hemat lampu karena Arry Hutomo peduli energi, sesuai isu energi. Aku pake <span class="code-term">int()</span> biar input jadi integer. Struktur ini bikin kamu paham cara bikin list dan hitung total, dan gampang diinget karena mirip kayak nyusun dan njumlahin daftar! Coba di VSCode, gampang kok! ⚡</p>
+    
+    <h4>14. List dengan For Loop, If-Else, dan Chapter 1 (Lebih Sulit)</h4>
+    <pre>donasi_list = [100000, 200000, 50000]
+for donasi in donasi_list:
+    if donasi > 150000:
+        print(f"Arry Hutomo donasi Rp {donasi}!\nBanyak ", "buat UMKM!", sep="=>", end="")
+        print("yuk!")
+    else:
+        print(f"Arry Hutomo donasi Rp {donasi}!\nTambah ", "buat UMKM!", sep="=>", end="")
+        print("yuk!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo donasi Rp 100000!
+Tambah =>buat UMKM!yuk!
+Arry Hutomo donasi Rp 200000!
+Banyak =>buat UMKM!yuk!
+Arry Hutomo donasi Rp 50000!
+Tambah =>buat UMKM!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak enam baris karena kita iterasi <span class="code-term">donasi_list</span>, tiap iterasi dua baris pake <span class="code-term">\n</span>. Cek <span class="code-term">donasi > 150000</span>: kalo True, cetak "Banyak"; kalo False, cetak "Tambah". Pake <span class="code-term">sep="=>"</span> dan <span class="code-term">end=""</span> buat format rapi.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin list, <span class="code-term">for</span> loop, <span class="code-term">if-else</span>, dan <span class="code-term">\n</span>, <span class="code-term">sep</span>, <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin keputusan dalam iterasi dengan format kece. Aku pilih <span class="code-term">donasi_list</span> biar jelas, dan tema donasi karena Arry Hutomo peduli sosial, sesuai isu sosial. Aku pake <span class="code-term">donasi > 150000</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin keputusan dalam iterasi, dan gampang diinget karena mirip kayak ngecek daftar donasi! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre>berat_list = []
+i = 0
+while i < 3:
+    berat = float(input(f"Masukkan berat sampah ke-{i+1} (kg): "))
+    berat_list.append(berat)
+    i = i + 1
+total = 0
+for berat in berat_list:
+    total = total + berat
+    if total > 10:
+        print(f"Arry Hutomo daur ulang {total} kg!\nCukup ", "bareng ECC Team!", sep="=>", end="")
+        print("yuk!")
+    else:
+        print(f"Arry Hutomo daur ulang {total} kg!\nTambah ", "bareng ECC Team!", sep="=>", end="")
+        print("yuk!")</pre>
+    <p><strong>Output (misalnya user masukkan 5.5, 3.0, 2.5):</strong></p>
+    <pre>Masukkan berat sampah ke-1 (kg): 5.5
+Masukkan berat sampah ke-2 (kg): 3.0
+Masukkan berat sampah ke-3 (kg): 2.5
+Arry Hutomo daur ulang 5.5 kg!
+Tambah =>bareng ECC Team!yuk!
+Arry Hutomo daur ulang 8.5 kg!
+Tambah =>bareng ECC Team!yuk!
+Arry Hutomo daur ulang 11.0 kg!
+Cukup =>bareng ECC Team!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin 5.5, 3.0, 2.5. List <span class="code-term">berat_list</span> jadi [5.5, 3.0, 2.5]. Loop kedua jumlahkan: 0 + 5.5 = 5.5, 5.5 + 3.0 = 8.5, 8.5 + 2.5 = 11.0. Tiap iterasi, cek <span class="code-term">total > 10</span>: kalo True, cetak "Cukup"; kalo False, cetak "Tambah". Pake <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span> buat format.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">while</span> loop, list, <span class="code-term">for</span> loop, operasi <span class="code-term">+</span>, <span class="code-term">if-else</span>, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span>, biar kamu paham cara bikin list interaktif dengan keputusan dan format canggih. Aku pilih <span class="code-term">berat_list</span> biar jelas, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">total > 10</span> sebagai batas "cukup". Struktur ini bikin kamu paham cara bikin list kompleks, dan gampang diinget karena mirip kayak bikin laporan daur ulang! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Pastiin indeks yang kamu akses ada dalam list, misalnya jangan akses <span class="code-term">list[3]</span> kalo list cuma punya 3 elemen (indeks 0-2). ✅</li>
+        <li><strong>Don't:</strong> Jangan akses indeks di luar panjang list, misalnya <span class="code-term">list[5]</span> kalo list cuma punya 3 elemen, nanti error <span class="code-term">IndexError</span>. ❌</li>
+        <li><strong>Do:</strong> Pake <span class="code-term">append()</span> buat nambah elemen satu per satu, biar list bertambah dengan rapi. 🌟</li>
+        <li><strong>Don't:</strong> Jangan lupa inisialisasi list kosong, misalnya <span class="code-term">list = []</span>, kalo ga nanti error saat <span class="code-term">append()</span>. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap elemen di list adalah langkah menuju data yang rapi! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

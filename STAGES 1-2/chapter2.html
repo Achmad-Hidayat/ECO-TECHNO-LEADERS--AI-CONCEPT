@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Variabel dan Tipe Data, Gampang Banget! 📦</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 2: Variabel dan Tipe Data, Gampang Banget! 📦</h2>
+    <div class="quote">
+        "Variabel itu kayak kotak penyimpanan ajaib, bikin data kita rapi dan gampang diatur! 📦✨" <br>
+        Doa: "Ya Tuhan, bantu kami memahami variabel dan tipe data biar coding kami bantu jaga bumi dan sesama. Aamiin. 🙏"
+    </div>
+    <p>Halo lagi, temen-temen milenial yang super duper kece! 🚀 Di chapter kedua ini, kita bakal belajar tentang variabel dan tipe data di Python, kayak integer, float, string, sama boolean. Variabel itu kayak kotak ajaib tempat kita simpen data, dan tipe data itu jenis datanya, biar Python tahu cara ngelolanya. Kita bakal bikin 15 variasi kode dari gampang sampe susah, pake konsep <span class="code-term">print</span> dari Chapter 1 juga biar nyambung. Arry Hutomo bakal bantu kita belajar coding sambil peduli sama lingkungan, energi, sosial, dan ketahanan. Yuk, kita mulai bareng Arry Hutomo, guru coding terbaik yang bikin belajar jadi fun abis! 💻🌟</p>
+    
+    <h3>Contoh Query Python: Nyimpen Data buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Nyimpen Jumlah Pohon (Super Gampang)</h4>
+    <pre>jumlah_pohon = 50
+print(f"Arry Hutomo tanam {jumlah_pohon} pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 50 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 50 pohon!" karena kita nyimpen angka 50 di variabel <span class="code-term">jumlah_pohon</span>, trus pake <span class="code-term">f-string</span> buat nyisipkan nilai itu ke pesan. Jadi, <span class="code-term">print()</span> nampilin pesan dengan angka 50 sesuai yang kita simpen di variabel. Gampang banget, kan, kayak nyimpen mainan di kotak! 🌳</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini super gampang buat kenalin variabel dan tipe data integer (angka bulat). Aku pilih variabel <span class="code-term">jumlah_pohon</span> biar namanya jelas, dan isi 50 karena itu angka realistis buat jumlah pohon. Aku pake <span class="code-term">f-string</span> dari Chapter 1 biar kamu nyaman gabungin variabel sama teks, dan tema tanam pohon dipilih karena Arry Hutomo pengen kita bantu kurangin karbon dioksida, sesuai isu lingkungan. Struktur ini sederhana banget biar kamu paham cara nyimpen data pake variabel, dan gampang diinget karena mirip kayak nyimpen barang di kotak berlabel! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Nyimpen Berat Sampah (Gampang)</h4>
+    <pre>berat_sampah = 12.5
+print(f"Arry Hutomo daur ulang {berat_sampah} kg sampah!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 12.5 kg sampah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 12.5 kg sampah!" karena kita nyimpen angka 12.5 di variabel <span class="code-term">berat_sampah</span>, trus pake <span class="code-term">f-string</span> buat nyisipkan nilai itu ke pesan. Angka 12.5 adalah tipe data float (angka desimal), jadi Python nampilin apa adanya tanpa ubah format, sesuai yang kita simpen!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin tipe data float, yaitu angka desimal, yang cocok buat nyimpen berat kayak 12.5 kg. Aku pilih variabel <span class="code-term">berat_sampah</span> biar namanya jelas, dan nilai 12.5 biar realistis buat berat sampah yang didaur ulang. Tema daur ulang dipilih karena Arry Hutomo pengen kita kurangin sampah biar bumi lebih bersih, sesuai isu lingkungan. Aku pake <span class="code-term">f-string</span> lagi biar kamu makin paham cara nyisipkan variabel ke pesan, dan struktur ini sederhana biar gampang dipaham. Ini bikin kamu ngerti bedanya integer sama float, dan gampang diinget karena mirip kayak nyimpen berat di timbangan! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>3. Nyimpen Status Hemat Energi (Gampang)</h4>
+    <pre>hemat_energi = True
+print(f"Arry Hutomo bilang: Hemat energi itu {hemat_energi}!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo bilang: Hemat energi itu True!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo bilang: Hemat energi itu True!" karena kita nyimpen nilai <span class="code-term">True</span> di variabel <span class="code-term">hemat_energi</span>. Nilai ini adalah tipe data boolean, yang cuma bisa <span class="code-term">True</span> atau <span class="code-term">False</span>. Pas kita pake <span class="code-term">f-string</span>, Python nampilin <span class="code-term">True</span> apa adanya, sesuai yang kita simpen di variabel!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin tipe data boolean, yang cuma punya dua nilai: <span class="code-term">True</span> atau <span class="code-term">False</span>. Aku pilih variabel <span class="code-term">hemat_energi</span> biar namanya jelas, dan isi <span class="code-term">True</span> biar nunjukin komitmen positif. Tema hemat energi dipilih karena Arry Hutomo pengen kita bijak pake listrik biar bumi ga makin panas, sesuai isu energi. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa nyisipkan variabel, dan struktur ini sederhana biar kamu paham boolean itu kayak lampu on-off. Ini bikin kamu ngerti tipe data baru, dan gampang diinget karena mirip kayak nyimpen status "iya" atau "tidak"! Coba di VSCode, gampang banget! ⚡</p>
+    
+    <h4>4. Nyimpen Nama Komunitas (Masih Gampang)</h4>
+    <pre>komunitas = "ECC Team"
+print(f"Arry Hutomo bareng {komunitas} bantu anak putus sekolah!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo bareng ECC Team bantu anak putus sekolah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo bareng ECC Team bantu anak putus sekolah!" karena kita nyimpen teks "ECC Team" di variabel <span class="code-term">komunitas</span>, yang tipe datanya string. Pas kita pake <span class="code-term">f-string</span>, variabel <span class="code-term">komunitas</span> diganti sama "ECC Team", jadi pesan ini jadi kalimat utuh yang rapi!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin tipe data string lebih lanjut, yang udah kita pelajari di Chapter 1. Aku pilih variabel <span class="code-term">komunitas</span> biar namanya jelas, dan isi "ECC Team" karena itu timnya Arry Hutomo yang suka bantu orang. Tema bantu anak putus sekolah dipilih karena Arry Hutomo peduli sama pendidikan, sesuai isu sosial. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa, dan struktur ini sederhana biar kamu paham string itu teks yang bisa disimpen di variabel. Ini bikin kamu ngerti cara nyimpen teks kayak nama, dan gampang diinget karena mirip kayak nyimpen nama temen di buku catatan! Coba di VSCode, pasti langsung bisa! 📚</p>
+    
+    <h4>5. Gabungin Dua Variabel (Mulai Agak Menantang)</h4>
+    <pre>produk = "Kerajinan Tangan"
+penjual = "Ibu Siti"
+print(f"Arry Hutomo dukung {penjual} jual {produk}!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo dukung Ibu Siti jual Kerajinan Tangan!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo dukung Ibu Siti jual Kerajinan Tangan!" karena kita nyimpen "Kerajinan Tangan" di variabel <span class="code-term">produk</span> dan "Ibu Siti" di variabel <span class="code-term">penjual</span>, trus pake <span class="code-term">f-string</span> buat nyisipkan kedua variabel itu ke pesan. Jadi, <span class="code-term">{penjual}</span> diganti sama "Ibu Siti", dan <span class="code-term">{produk}</span> diganti sama "Kerajinan Tangan", bikin kalimat yang utuh!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara gabungin dua variabel string pake <span class="code-term">f-string</span>. Aku pilih variabel <span class="code-term">produk</span> dan <span class="code-term">penjual</span> biar jelas, dan isi dengan "Kerajinan Tangan" sama "Ibu Siti" biar realistis. Tema dukung UMKM dipilih karena Arry Hutomo pengen kita bantu ekonomi lokal biar lebih kuat, sesuai isu ketahanan ekonomi. Kenapa pake dua variabel? Biar kamu paham cara nyimpen data terpisah trus gabungin, dan pake <span class="code-term">f-string</span> biar rapi. Struktur ini bikin kamu paham cara bikin pesan yang lebih kompleks, dan gampang diinget karena mirip kayak bikin cerita! Coba di VSCode, bakal suka sama hasilnya! 🛍️</p>
+    
+    <h4>6. Nyimpen Jumlah Donasi (Agak Menantang)</h4>
+    <pre>donasi = 500000
+print(f"Arry Hutomo donasi Rp {donasi} buat anak yatim!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo donasi Rp 500000 buat anak yatim!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo donasi Rp 500000 buat anak yatim!" karena kita nyimpen angka 500000 di variabel <span class="code-term">donasi</span>, yang tipe datanya integer. Pas kita pake <span class="code-term">f-string</span>, nilai 500000 dimasukkan ke pesan, jadi Python nampilin apa adanya tanpa ubah format!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin tipe data integer lagi, tapi dengan angka yang lebih besar biar kamu paham variabel bisa nyimpen nilai besar. Aku pilih variabel <span class="code-term">donasi</span> biar jelas, dan isi 500000 biar realistis buat donasi. Tema donasi anak yatim dipilih karena Arry Hutomo peduli sama anak-anak yang butuh bantuan, sesuai isu sosial. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa, dan struktur ini sederhana biar kamu paham variabel itu fleksibel buat nyimpen angka besar. Ini bikin kamu ngerti cara nyimpen data finansial, dan gampang diinget karena mirip kayak nyimpen uang di dompet! Coba di VSCode, gampang kok! ❤️</p>
+    
+    <h4>7. Nyimpen Persentase Emisi (Agak Menantang)</h4>
+    <pre>persentase_emisi = 25.5
+print(f"Arry Hutomo kurangi emisi {persentase_emisi}%!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo kurangi emisi 25.5%!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo kurangi emisi 25.5%!" karena kita nyimpen angka 25.5 di variabel <span class="code-term">persentase_emisi</span>, yang tipe datanya float. Pas kita pake <span class="code-term">f-string</span>, nilai 25.5 dimasukkan ke pesan, dan Python nampilin apa adanya sebagai desimal, trus kita tambahin tanda % biar jelas itu persentase!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin tipe data float lagi, tapi kali ini buat persentase biar lebih variatif. Aku pilih variabel <span class="code-term">persentase_emisi</span> biar jelas, dan isi 25.5 biar realistis buat persentase pengurangan emisi. Tema kurangi emisi dipilih karena Arry Hutomo pengen kita peduli sama perubahan iklim, sesuai isu lingkungan. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa, dan struktur ini sederhana biar kamu paham float itu cocok buat data yang butuh desimal. Ini bikin kamu ngerti cara nyimpen persentase, dan gampang diinget karena mirip kayak nyimpen persen di kalkulator! Coba di VSCode, gampang banget! 🌍</p>
+    
+    <h4>8. Nyimpen Status Daur Ulang (Menantang)</h4>
+    <pre>daur_ulang = False
+print(f"Arry Hutomo tanya: Sudah daur ulang belum? {daur_ulang}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanya: Sudah daur ulang belum? False</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanya: Sudah daur ulang belum? False" karena kita nyimpen nilai <span class="code-term">False</span> di variabel <span class="code-term">daur_ulang</span>, yang tipe datanya boolean. Pas kita pake <span class="code-term">f-string</span>, Python nampilin <span class="code-term">False</span> apa adanya, sesuai yang kita simpen di variabel!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin tipe data boolean lagi, tapi kali ini pake nilai <span class="code-term">False</span> biar kamu paham dua sisi boolean: <span class="code-term">True</span> dan <span class="code-term">False</span>. Aku pilih variabel <span class="code-term">daur_ulang</span> biar jelas, dan isi <span class="code-term">False</span> biar nunjukin status belum selesai. Tema daur ulang dipilih karena Arry Hutomo pengen kita peduli sama sampah, sesuai isu lingkungan. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa, dan struktur ini sederhana biar kamu paham boolean itu cuma punya dua nilai. Ini bikin kamu ngerti cara nyimpen status sederhana, dan gampang diinget karena mirip kayak nyimpen jawaban "belum"! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>9. Kombinasi f-String dan Chapter 1 (Menantang)</h4>
+    <pre>pesan = "Ayo hemat listrik"
+nama = "Arry Hutomo"
+print(f"{pesan} bareng {nama}!\nLakukan sekarang!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Ayo hemat listrik bareng Arry Hutomo!
+Lakukan sekarang!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya ada dua baris: "Ayo hemat listrik bareng Arry Hutomo!" di baris pertama, dan "Lakukan sekarang!" di baris kedua. Ini karena kita pake <span class="code-term">f-string</span> buat nyisipkan variabel <span class="code-term">pesan</span> dan <span class="code-term">nama</span>, trus pake <span class="code-term">\n</span> dari Chapter 1 buat pindah baris. Jadi, teks setelah <span class="code-term">\n</span> pindah ke baris baru!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin konsep variabel sama <span class="code-term">\n</span> dari Chapter 1, biar kamu paham cara bikin pesan dinamis yang rapi. Aku pilih variabel <span class="code-term">pesan</span> dan <span class="code-term">nama</span> biar jelas, dan tema hemat listrik karena Arry Hutomo pengen kita kurangin pemakaian listrik, sesuai isu energi. Kenapa pake <span class="code-term">\n</span>? Biar pesan bisa dipisah jadi dua baris, nunjukin cara ngatur format teks. Struktur ini bikin kamu paham cara bikin pesan yang lebih terstruktur, dan gampang diinget karena mirip kayak bikin dua kalimat di catatan! Coba di VSCode, bakal suka sama hasilnya! ⚡</p>
+    
+    <h4>10. Pake .format() dari Chapter 1 (Menantang)</h4>
+    <pre>komunitas = "ECC Team"
+print("Arry Hutomo bareng {} bantu UMKM!".format(komunitas))</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo bareng ECC Team bantu UMKM!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo bareng ECC Team bantu UMKM!" karena kita nyimpen "ECC Team" di variabel <span class="code-term">komunitas</span>, trus pake <span class="code-term">.format()</span> dari Chapter 1 buat nyisipkan nilai variabel ke placeholder <span class="code-term">{}</span>. Jadi, placeholder itu diganti sama "ECC Team", bikin kalimat yang utuh!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara lain gabungin variabel ke teks pake <span class="code-term">.format()</span> dari Chapter 1, biar kamu paham variasi caranya. Aku pilih variabel <span class="code-term">komunitas</span> biar jelas, dan tema bantu UMKM karena Arry Hutomo pengen kita dukung ekonomi lokal, sesuai isu ketahanan ekonomi. Kenapa pake <span class="code-term">.format()</span>? Karena ini cara klasik yang sering dipake, dan bagus buat kamu tahu alternatif selain <span class="code-term">f-string</span>. Struktur ini sederhana biar kamu paham, dan gampang diinget karena mirip kayak ngisi kolom kosong! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>11. Gabungin Dua Tipe Data (Agak Sulit)</h4>
+    <pre>jumlah = 100
+barang = "buku"
+print(f"Arry Hutomo donasi {jumlah} {barang} buat anak yatim!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo donasi 100 buku buat anak yatim!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo donasi 100 buku buat anak yatim!" karena kita nyimpen 100 di variabel <span class="code-term">jumlah</span> (tipe data integer) dan "buku" di variabel <span class="code-term">barang</span> (tipe data string). Pas kita pake <span class="code-term">f-string</span>, Python otomatis ngubah integer 100 jadi string dan gabungin sama teks lain, jadi hasilnya satu kalimat utuh!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara gabungin dua tipe data yang beda, yaitu integer dan string, pake <span class="code-term">f-string</span>. Aku pilih variabel <span class="code-term">jumlah</span> dan <span class="code-term">barang</span> biar jelas, dan tema donasi buku karena Arry Hutomo peduli sama anak yatim, sesuai isu sosial. Kenapa pake <span class="code-term">f-string</span>? Karena <span class="code-term">f-string</span> otomatis ngubah tipe data yang beda jadi string, jadi kita ga perlu khawatir error kayak kalo pake <span class="code-term">+</span>. Struktur ini bikin kamu paham cara bikin pesan dengan tipe data campuran, dan gampang diinget karena mirip kayak bikin daftar belanja! Coba di VSCode, bakal suka sama trik ini! 📖</p>
+    
+    <h4>12. Pake Separator dari Chapter 1 (Sulit)</h4>
+    <pre>pesan = "Ayo tanam pohon"
+nama = "Arry Hutomo"
+print(pesan, nama, sep=" bareng ")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Ayo tanam pohon bareng Arry Hutomo</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Ayo tanam pohon bareng Arry Hutomo" karena kita nyimpen "Ayo tanam pohon" di variabel <span class="code-term">pesan</span> dan "Arry Hutomo" di variabel <span class="code-term">nama</span>, trus pake <span class="code-term">sep=" bareng "</span> dari Chapter 1 buat pisahin kedua item itu. Jadi, pemisah default (spasi) diganti sama " bareng ", bikin output jadi satu kalimat yang rapi!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin variabel sama konsep <span class="code-term">sep</span> dari Chapter 1, biar kamu paham cara bikin pesan dengan pemisah custom. Aku pilih variabel <span class="code-term">pesan</span> dan <span class="code-term">nama</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Kenapa pake <span class="code-term">sep=" bareng "</span>? Biar outputnya lebih natural kayak kalimat biasa, dan aku kasih spasi sebelum dan sesudah "bareng" biar ga nempel. Struktur ini bikin kamu paham cara ngatur pemisah antar item, dan gampang diinget karena mirip kayak bikin kalimat sambung! Coba di VSCode, bakal rapi banget! 🌳</p>
+    
+    <h4>13. Kombinasi End dan f-String (Sulit)</h4>
+    <pre>jumlah = 20.5
+print(f"Arry Hutomo daur ulang {jumlah} kg sampah ", end="")
+print("keren!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang 20.5 kg sampah keren!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo daur ulang 20.5 kg sampah keren!" dalam satu baris karena kita nyimpen 20.5 di variabel <span class="code-term">jumlah</span>, pake <span class="code-term">f-string</span> buat nyisipkan ke pesan, dan pake <span class="code-term">end=""</span> dari Chapter 1 biar <span class="code-term">print()</span> kedua nyambung di baris yang sama. Spasi di akhir teks pertama bikin hasilnya rapi ga nempel!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">f-string</span> sama <span class="code-term">end</span>, biar kamu liat cara bikin pesan dinamis yang nyambung dalam satu baris. Aku pilih variabel <span class="code-term">jumlah</span> biar jelas, dan tema daur ulang karena Arry Hutomo pengen kita peduli sama sampah, sesuai isu lingkungan. Kenapa pake <span class="code-term">end=""</span>? Biar dua <span class="code-term">print()</span> bisa nyambung, dan aku pake <span class="code-term">f-string</span> biar gampang nyisipkan variabel float. Aku kasih spasi di akhir teks pertama biar ga nempel. Struktur ini bikin kamu paham cara ngatur output biar rapi dalam satu baris, dan gampang diinget karena mirip kayak nyatuin dua kalimat! Coba di VSCode, bakal suka sama trik ini! ♻️</p>
+    
+    <h4>14. Kombinasi Semua dari Chapter 1 (Lebih Sulit)</h4>
+    <pre>nama = "Arry Hutomo"
+print(f"Ayo hemat energi bareng {nama}!\nLakukan ", end="")
+print("sekarang!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Ayo hemat energi bareng Arry Hutomo!
+Lakukan sekarang!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya ada dua baris: "Ayo hemat energi bareng Arry Hutomo!" di baris pertama, dan "Lakukan sekarang!" di baris kedua. Ini karena kita pake <span class="code-term">f-string</span> buat nyisipkan variabel <span class="code-term">nama</span>, pake <span class="code-term">\n</span> buat pindah baris, dan <span class="code-term">end=""</span> biar <span class="code-term">print()</span> kedua nyambung di baris yang sama dengan "Lakukan ". Spasi di teks bikin hasilnya rapi!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">f-string</span>, <span class="code-term">\n</span>, dan <span class="code-term">end</span> dari Chapter 1, biar kamu liat kombinasi konsep ini. Aku pilih variabel <span class="code-term">nama</span> biar jelas, dan tema hemat energi karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Kenapa pake semua konsep ini? Biar kamu paham cara bikin pesan yang rapi dengan pindah baris dan nyambungin teks. Aku kasih spasi biar ga nempel. Struktur ini bikin kamu paham cara ngatur format output, dan gampang diinget karena mirip kayak bikin pesan motivasi! Coba di VSCode, bakal suka sama hasilnya! ⚡</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre>jumlah = 300
+barang = "pohon"
+nama = "Arry Hutomo"
+print(f"Arry Hutomo tanam {jumlah} {barang} ", f"bareng {nama}!\nAyo ikut ", sep="=>", end="")
+print("sekarang!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 300 pohon =>bareng Arry Hutomo!
+Ayo ikut sekarang!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya ada dua baris: "Arry Hutomo tanam 300 pohon =>bareng Arry Hutomo!" di baris pertama, dan "Ayo ikut sekarang!" di baris kedua. Ini karena kita pake <span class="code-term">f-string</span> buat nyisipkan variabel <span class="code-term">jumlah</span>, <span class="code-term">barang</span>, dan <span class="code-term">nama</span>, pake <span class="code-term">sep="=>"</span> buat pisahin dua item, pake <span class="code-term">\n</span> buat pindah baris, dan <span class="code-term">end=""</span> biar <span class="code-term">print()</span> kedua nyambung di baris yang sama dengan "Ayo ikut ". Spasi di teks bikin hasilnya rapi!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep dari Chapter 1: <span class="code-term">f-string</span>, <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span>. Aku pilih variabel <span class="code-term">jumlah</span>, <span class="code-term">barang</span>, dan <span class="code-term">nama</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Kenapa pake semua konsep ini? Biar kamu liat gimana cara bikin pesan kompleks tapi rapi. <span class="code-term">f-string</span> buat nyisipkan variabel, <span class="code-term">sep="=>"</span> bikin pemisah unik, <span class="code-term">\n</span> buat pindah baris, dan <span class="code-term">end=""</span> buat nyatuin dua <span class="code-term">print()</span>. Struktur ini bikin kamu paham cara bikin pesan dinamis dengan format canggih, dan gampang diinget karena mirip kayak bikin poster motivasi! Coba di VSCode, bakal bangga sama hasilnya! 🌳</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Kasih nama variabel yang jelas, misalnya <span class="code-term">jumlah_pohon</span>, biar gampang dimengerti sama kamu atau orang lain yang baca kodenya. ✅</li>
+        <li><strong>Don't:</strong> Jangan pake nama variabel yang ga jelas, kayak <span class="code-term">x</span> atau <span class="code-term">a</span>, nanti bingung sendiri pas baca lagi. ❌</li>
+        <li><strong>Do:</strong> Pake tipe data yang sesuai, kayak integer buat jumlah, float buat desimal, string buat teks, biar Python ga bingung. 🌟</li>
+        <li><strong>Don't:</strong> Jangan salah pake tipe data, misalnya nyimpen teks pake integer, kayak <span class="code-term">nama = 123</span>, nanti error. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap data yang kamu simpan di variabel adalah langkah menuju solusi besar buat bumi! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding biar bisa bikin dunia lebih baik. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

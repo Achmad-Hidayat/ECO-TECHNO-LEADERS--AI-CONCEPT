@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8: Dictionary, Simpen Data Rapi! 📖</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 8: Dictionary, Simpen Data Rapi! 📖</h2>
+    <div class="quote">
+        "Dictionary itu kayak buku pegangan, bikin data kita rapi dengan pasangan kunci dan nilai! 📖✨" <br>
+        Doa: "Ya Tuhan, bantu kami menyimpan data dengan rapi biar coding kami bantu dunia. Aamiin. 🙏"
+    </div>
+    <p>Di chapter ini, kita bakal belajar tentang dictionary di Python, biar kita bisa nyimpen data dalam pasangan kunci-nilai. Kita pake variabel (Chapter 2), operasi (Chapter 3), input (Chapter 4), pengkondisian (Chapter 5), perulangan (Chapter 6), list (Chapter 7), dan <span class="code-term">print</span> (Chapter 1). Yuk, kita bikin dictionary bareng Arry Hutomo! 🚀</p>
+    
+    <h3>Contoh Query Python: Dictionary buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Dictionary Sederhana (Super Gampang)</h4>
+    <pre>pohon_dict = {"Mangrove": 10, "Kelapa": 5, "Mahoni": 8}
+print("Arry Hutomo tanam pohon:", pohon_dict)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon: {'Mangrove': 10, 'Kelapa': 5, 'Mahoni': 8}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon: {'Mangrove': 10, 'Kelapa': 5, 'Mahoni': 8}" karena kita nyimpen tiga pasangan kunci-nilai dalam dictionary <span class="code-term">pohon_dict</span>, trus nampilin langsung pake <span class="code-term">print()</span>. Python nampilin dictionary apa adanya dengan tanda kurung kurawal.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini sederhana buat kenalin dictionary, yang ditulis pake tanda kurung kurawal <span class="code-term">{}</span> dengan pasangan kunci-nilai. Aku pilih variabel <span class="code-term">pohon_dict</span> biar jelas, dan isi dengan tiga jenis pohon serta jumlahnya yang realistis. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">print()</span> langsung biar kamu paham cara nampilin dictionary. Struktur ini bikin kamu paham cara bikin dictionary sederhana, dan gampang diinget karena mirip kayak bikin catatan pohon! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Akses Nilai Dictionary (Gampang)</h4>
+    <pre>pohon_dict = {"Mangrove": 10, "Kelapa": 5, "Mahoni": 8}
+print(f"Arry Hutomo tanam pohon Kelapa: {pohon_dict['Kelapa']}")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon Kelapa: 5</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon Kelapa: 5" karena kita akses nilai dari kunci "Kelapa" dalam dictionary <span class="code-term">pohon_dict</span> pake <span class="code-term">['Kelapa']</span>, yang hasilnya 5, trus nampilin pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara akses nilai dalam dictionary pake kunci. Aku pilih <span class="code-term">pohon_dict['Kelapa']</span> biar kamu paham cara ambil nilai berdasarkan kunci. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">f-string</span> biar pesan dinamis. Struktur ini bikin kamu paham cara ambil data dari dictionary, dan gampang diinget karena mirip kayak nyari nomor telepon di buku kontak! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>3. Ubah Nilai Dictionary (Gampang)</h4>
+    <pre>pohon_dict = {"Mangrove": 10, "Kelapa": 5, "Mahoni": 8}
+pohon_dict["Kelapa"] = 15
+print("Arry Hutomo tanam pohon:", pohon_dict)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon: {'Mangrove': 10, 'Kelapa': 15, 'Mahoni': 8}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon: {'Mangrove': 10, 'Kelapa': 15, 'Mahoni': 8}" karena kita ubah nilai kunci "Kelapa" dari 5 jadi 15, trus nampilin dictionary yang udah diubah pake <span class="code-term">print()</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara ubah nilai dalam dictionary pake kunci. Aku pilih <span class="code-term">pohon_dict['Kelapa']</span> dan ganti jadi 15 biar kamu paham dictionary itu bisa diubah (mutable). Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini sederhana biar kamu paham cara edit dictionary, dan gampang diinget karena mirip kayak ganti nomor telepon di buku kontak! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>4. Tambah Pasangan Kunci-Nilai (Masih Gampang)</h4>
+    <pre>pohon_dict = {"Mangrove": 10, "Kelapa": 5}
+pohon_dict["Mahoni"] = 8
+print("Arry Hutomo tanam pohon:", pohon_dict)</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam pohon: {'Mangrove': 10, 'Kelapa': 5, 'Mahoni': 8}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam pohon: {'Mangrove': 10, 'Kelapa': 5, 'Mahoni': 8}" karena kita tambah pasangan kunci-nilai baru "Mahoni": 8 ke dictionary pake <span class="code-term">pohon_dict['Mahoni'] = 8</span>, trus nampilin dictionary yang udah ditambah.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat nunjukin cara tambah pasangan kunci-nilai ke dictionary. Aku pilih kunci "Mahoni" dan nilai 8 biar realistis. Tema tanam pohon dipilih karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Struktur ini sederhana biar kamu paham cara nambah data ke dictionary, dan gampang diinget karena mirip kayak nambah kontak di buku telepon! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>5. Dictionary dengan Input (Mulai Agak Menantang)</h4>
+    <pre>pohon_dict = {}
+jumlah = int(input("Masukkan jumlah pohon: "))
+for i in range(jumlah):
+    pohon = input(f"Masukkan nama pohon ke-{i+1}: ")
+    jumlah_pohon = int(input(f"Masukkan jumlah {pohon}: "))
+    pohon_dict[pohon] = jumlah_pohon
+print("Arry Hutomo tanam pohon:", pohon_dict)</pre>
+    <p><strong>Output (misalnya user masukkan 2, lalu "Mangrove", 10, "Kelapa", 5):</strong></p>
+    <pre>Masukkan jumlah pohon: 2
+Masukkan nama pohon ke-1: Mangrove
+Masukkan jumlah Mangrove: 10
+Masukkan nama pohon ke-2: Kelapa
+Masukkan jumlah Kelapa: 5
+Arry Hutomo tanam pohon: {'Mangrove': 10, 'Kelapa': 5}</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah pohon: ", user masukin 2, trus prompt nama dan jumlah pohon: user masukin "Mangrove", 10, "Kelapa", 5. Dictionary <span class="code-term">pohon_dict</span> diisi pake <span class="code-term">pohon_dict[pohon] = jumlah_pohon</span>, jadi {'Mangrove': 10, 'Kelapa': 5}, trus ditampilin.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">for</span> loop dari Chapter 6, dan dictionary, biar kamu paham cara bikin dictionary interaktif. Aku pilih <span class="code-term">pohon_dict</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">int()</span> buat jumlah, dan loop buat ngisi dictionary. Struktur ini bikin kamu paham cara bikin dictionary dinamis, dan gampang diinget karena mirip kayak bikin buku kontak interaktif! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>6. Dictionary dengan For Loop (Agak Menantang)</h4>
+    <pre>pohon_dict = {"Mangrove": 10, "Kelapa": 5, "Mahoni": 8}
+for pohon, jumlah in pohon_dict.items():
+    print(f"Arry Hutomo tanam {pohon}: {jumlah}!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam Mangrove: 10!
+Arry Hutomo tanam Kelapa: 5!
+Arry Hutomo tanam Mahoni: 8!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam Mangrove: 10!", "Arry Hutomo tanam Kelapa: 5!", dan "Arry Hutomo tanam Mahoni: 8!" karena kita pake <span class="code-term">for</span> loop dengan <span class="code-term">items()</span> buat ngiterasi kunci dan nilai dalam dictionary, trus cetak pake <span class="code-term">f-string</span>.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin dictionary sama <span class="code-term">for</span> loop, biar kamu paham cara ngiterasi dictionary. Aku pilih <span class="code-term">pohon_dict</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">items()</span> biar bisa ambil kunci dan nilai sekaligus. Struktur ini bikin kamu paham cara ngulang dictionary, dan gampang diinget karena mirip kayak baca buku kontak! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>7. Dictionary dengan While Loop (Agak Menantang)</h4>
+    <pre>pohon_dict = {"Mangrove": 10, "Kelapa": 5, "Mahoni": 8}
+keys = list(pohon_dict.keys())
+i = 0
+while i < len(keys):
+    pohon = keys[i]
+    print(f"Arry Hutomo tanam {pohon}: {pohon_dict[pohon]}!")
+    i = i + 1</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam Mangrove: 10!
+Arry Hutomo tanam Kelapa: 5!
+Arry Hutomo tanam Mahoni: 8!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam Mangrove: 10!", "Arry Hutomo tanam Kelapa: 5!", dan "Arry Hutomo tanam Mahoni: 8!" karena kita pake <span class="code-term">while</span> loop buat ngiterasi kunci dictionary. Kita ubah kunci jadi list pake <span class="code-term">keys()</span>, trus akses nilai pake indeks.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin dictionary sama <span class="code-term">while</span> loop, biar kamu paham cara ngiterasi dictionary pake indeks. Aku pilih <span class="code-term">pohon_dict</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku ubah kunci jadi list pake <span class="code-term">keys()</span> biar bisa pake <span class="code-term">while</span>. Struktur ini bikin kamu paham cara ngulang dictionary pake <span class="code-term">while</span>, dan gampang diinget karena mirip kayak baca buku kontak! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>8. Dictionary dengan If-Else (Menantang)</h4>
+    <pre>pohon_dict = {"Mangrove": 10, "Kelapa": 5, "Mahoni": 8}
+for pohon, jumlah in pohon_dict.items():
+    if jumlah > 7:
+        print(f"Arry Hutomo tanam {pohon}: {jumlah}, banyak!")
+    else:
+        print(f"Arry Hutomo tanam {pohon}: {jumlah}, tambah lagi!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam Mangrove: 10, banyak!
+Arry Hutomo tanam Kelapa: 5, tambah lagi!
+Arry Hutomo tanam Mahoni: 8, banyak!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam Mangrove: 10, banyak!", "Arry Hutomo tanam Kelapa: 5, tambah lagi!", dan "Arry Hutomo tanam Mahoni: 8, banyak!". Kita iterasi dictionary, cek <span class="code-term">jumlah > 7</span>: kalo True, cetak "banyak"; kalo False, cetak "tambah lagi".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin dictionary, <span class="code-term">for</span> loop, dan <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan saat iterasi dictionary. Aku pilih <span class="code-term">pohon_dict</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">jumlah > 7</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin keputusan dalam iterasi, dan gampang diinget karena mirip kayak ngecek kontak di buku! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>9. Dictionary dengan Input dan For Loop (Menantang)</h4>
+    <pre>pohon_dict = {}
+for i in range(3):
+    pohon = input(f"Masukkan nama pohon ke-{i+1}: ")
+    jumlah = int(input(f"Masukkan jumlah {pohon}: "))
+    pohon_dict[pohon] = jumlah
+for pohon, jumlah in pohon_dict.items():
+    print(f"Arry Hutomo tanam {pohon}: {jumlah}!")</pre>
+    <p><strong>Output (misalnya user masukkan "Mangrove", 10, "Kelapa", 5, "Mahoni", 8):</strong></p>
+    <pre>Masukkan nama pohon ke-1: Mangrove
+Masukkan jumlah Mangrove: 10
+Masukkan nama pohon ke-2: Kelapa
+Masukkan jumlah Kelapa: 5
+Masukkan nama pohon ke-3: Mahoni
+Masukkan jumlah Mahoni: 8
+Arry Hutomo tanam Mangrove: 10!
+Arry Hutomo tanam Kelapa: 5!
+Arry Hutomo tanam Mahoni: 8!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin "Mangrove", 10, "Kelapa", 5, "Mahoni", 8. Dictionary <span class="code-term">pohon_dict</span> diisi, trus kita iterasi buat cetak tiap pasangan kunci-nilai.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">for</span> loop, dan dictionary, biar kamu paham cara bikin dan iterasi dictionary interaktif. Aku pilih <span class="code-term">pohon_dict</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake dua loop: satu buat ngisi dictionary, satu buat nampilin. Struktur ini bikin kamu paham cara bikin dictionary interaktif, dan gampang diinget karena mirip kayak bikin dan baca buku kontak! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>10. Dictionary dengan While Loop dan If-Else (Menantang)</h4>
+    <pre>pohon_dict = {"Mangrove": 10, "Kelapa": 5, "Mahoni": 8}
+keys = list(pohon_dict.keys())
+i = 0
+while i < len(keys):
+    pohon = keys[i]
+    jumlah = pohon_dict[pohon]
+    if jumlah > 7:
+        print(f"Arry Hutomo tanam {pohon}: {jumlah}, banyak!")
+    else:
+        print(f"Arry Hutomo tanam {pohon}: {jumlah}, tambah lagi!")
+    i = i + 1</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam Mangrove: 10, banyak!
+Arry Hutomo tanam Kelapa: 5, tambah lagi!
+Arry Hutomo tanam Mahoni: 8, banyak!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo tanam Mangrove: 10, banyak!", "Arry Hutomo tanam Kelapa: 5, tambah lagi!", dan "Arry Hutomo tanam Mahoni: 8, banyak!". Kita pake <span class="code-term">while</span> loop buat ngiterasi, cek <span class="code-term">jumlah > 7</span>: kalo True, cetak "banyak"; kalo False, cetak "tambah lagi".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin dictionary, <span class="code-term">while</span> loop, dan <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan dalam iterasi dictionary pake indeks. Aku pilih <span class="code-term">pohon_dict</span> biar jelas, dan tema tanam pohon karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">jumlah > 7</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin keputusan dalam loop, dan gampang diinget karena mirip kayak nyari kontak favorit! Coba di VSCode, gampang kok! 🌳</p>
+    
+    <h4>11. Dictionary dengan Input, Operasi, dan For Loop (Agak Sulit)</h4>
+    <pre>berat_dict = {}
+jumlah = int(input("Masukkan jumlah sampah: "))
+for i in range(jumlah):
+    jenis = input(f"Masukkan jenis sampah ke-{i+1}: ")
+    berat = float(input(f"Masukkan berat {jenis} (kg): "))
+    berat_dict[jenis] = berat
+total = 0
+for berat in berat_dict.values():
+    total = total + berat
+print(f"Arry Hutomo daur ulang {total} kg!")</pre>
+    <p><strong>Output (misalnya user masukkan 2, lalu "Plastik", 5.5, "Kertas", 3.0):</strong></p>
+    <pre>Masukkan jumlah sampah: 2
+Masukkan jenis sampah ke-1: Plastik
+Masukkan berat Plastik (kg): 5.5
+Masukkan jenis sampah ke-2: Kertas
+Masukkan berat Kertas (kg): 3.0
+Arry Hutomo daur ulang 8.5 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan prompt "Masukkan jumlah sampah: ", user masukin 2, trus prompt jenis dan berat: user masukin "Plastik", 5.5, "Kertas", 3.0. Dictionary <span class="code-term">berat_dict</span> jadi {"Plastik": 5.5, "Kertas": 3.0}. Loop kedua jumlahkan nilai: 0 + 5.5 = 5.5, 5.5 + 3.0 = 8.5, trus cetak total.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, dictionary, <span class="code-term">for</span> loop, dan operasi <span class="code-term">+</span>, biar kamu paham cara bikin dictionary interaktif dan hitung total. Aku pilih <span class="code-term">berat_dict</span> biar jelas, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">float()</span> biar bisa desimal, dan <span class="code-term">values()</span> buat ambil nilai. Struktur ini bikin kamu paham cara bikin dictionary dan hitung total, dan gampang diinget karena mirip kayak nyusun dan njumlahin catatan! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>12. Dictionary dengan For Loop dan If-Else (Sulit)</h4>
+    <pre>berat_dict = {"Plastik": 5.5, "Kertas": 10.5, "Organik": 3.0}
+for jenis, berat in berat_dict.items():
+    if berat > 5:
+        print(f"Arry Hutomo daur ulang {jenis}: {berat} kg, banyak!")
+    else:
+        print(f"Arry Hutomo daur ulang {jenis}: {berat} kg, tambah lagi!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo daur ulang Plastik: 5.5 kg, banyak!
+Arry Hutomo daur ulang Kertas: 10.5 kg, banyak!
+Arry Hutomo daur ulang Organik: 3.0 kg, tambah lagi!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak tiga baris: "Arry Hutomo daur ulang Plastik: 5.5 kg, banyak!", "Arry Hutomo daur ulang Kertas: 10.5 kg, banyak!", dan "Arry Hutomo daur ulang Organik: 3.0 kg, tambah lagi!". Kita iterasi dictionary, cek <span class="code-term">berat > 5</span>: kalo True, cetak "banyak"; kalo False, cetak "tambah lagi".</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin dictionary, <span class="code-term">for</span> loop, dan <span class="code-term">if-else</span>, biar kamu paham cara bikin keputusan saat iterasi dictionary. Aku pilih <span class="code-term">berat_dict</span> biar jelas, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">berat > 5</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin keputusan dalam iterasi, dan gampang diinget karena mirip kayak ngecek catatan daur ulang! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>13. Dictionary dengan While Loop, Input, dan Operasi (Sulit)</h4>
+    <pre>lampu_dict = {}
+i = 0
+while i < 3:
+    ruangan = input(f"Masukkan ruangan ke-{i+1}: ")
+    lampu = int(input(f"Masukkan jumlah lampu di {ruangan}: "))
+    lampu_dict[ruangan] = lampu
+    i = i + 1
+total = 0
+for lampu in lampu_dict.values():
+    total = total + lampu
+print(f"Arry Hutomo hemat {total} lampu!")</pre>
+    <p><strong>Output (misalnya user masukkan "Kamar", 2, "Ruang Tamu", 3, "Dapur", 5):</strong></p>
+    <pre>Masukkan ruangan ke-1: Kamar
+Masukkan jumlah lampu di Kamar: 2
+Masukkan ruangan ke-2: Ruang Tamu
+Masukkan jumlah lampu di Ruang Tamu: 3
+Masukkan ruangan ke-3: Dapur
+Masukkan jumlah lampu di Dapur: 5
+Arry Hutomo hemat 10 lampu!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin "Kamar", 2, "Ruang Tamu", 3, "Dapur", 5. Dictionary <span class="code-term">lampu_dict</span> jadi {"Kamar": 2, "Ruang Tamu": 3, "Dapur": 5}. Loop kedua jumlahkan nilai: 0 + 2 = 2, 2 + 3 = 5, 5 + 5 = 10, trus cetak total.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin <span class="code-term">input()</span>, <span class="code-term">while</span> loop, dictionary, <span class="code-term">for</span> loop, dan operasi <span class="code-term">+</span>, biar kamu paham cara bikin dictionary interaktif pake indeks dan hitung total. Aku pilih <span class="code-term">lampu_dict</span> biar jelas, dan tema hemat lampu karena Arry Hutomo peduli energi, sesuai isu energi. Aku pake <span class="code-term">int()</span> biar input jadi integer. Struktur ini bikin kamu paham cara bikin dictionary dan hitung total, dan gampang diinget karena mirip kayak nyusun dan njumlahin catatan! Coba di VSCode, gampang kok! ⚡</p>
+    
+    <h4>14. Dictionary dengan For Loop, If-Else, dan Chapter 1 (Lebih Sulit)</h4>
+    <pre>donasi_dict = {"Sekolah": 100000, "Panti Asuhan": 200000, "Masjid": 50000}
+for tempat, donasi in donasi_dict.items():
+    if donasi > 150000:
+        print(f"Arry Hutomo donasi ke {tempat}: Rp {donasi}!\nBanyak ", "buat komunitas!", sep="=>", end="")
+        print("yuk!")
+    else:
+        print(f"Arry Hutomo donasi ke {tempat}: Rp {donasi}!\nTambah ", "buat komunitas!", sep="=>", end="")
+        print("yuk!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo donasi ke Sekolah: Rp 100000!
+Tambah =>buat komunitas!yuk!
+Arry Hutomo donasi ke Panti Asuhan: Rp 200000!
+Banyak =>buat komunitas!yuk!
+Arry Hutomo donasi ke Masjid: Rp 50000!
+Tambah =>buat komunitas!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya mencetak enam baris karena kita iterasi <span class="code-term">donasi_dict</span>, tiap iterasi dua baris pake <span class="code-term">\n</span>. Cek <span class="code-term">donasi > 150000</span>: kalo True, cetak "Banyak"; kalo False, cetak "Tambah". Pake <span class="code-term">sep="=>"</span> dan <span class="code-term">end=""</span> buat format rapi.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin dictionary, <span class="code-term">for</span> loop, <span class="code-term">if-else</span>, dan <span class="code-term">\n</span>, <span class="code-term">sep</span>, <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin keputusan dalam iterasi dengan format kece. Aku pilih <span class="code-term">donasi_dict</span> biar jelas, dan tema donasi karena Arry Hutomo peduli sosial, sesuai isu sosial. Aku pake <span class="code-term">donasi > 150000</span> sebagai batas "banyak". Struktur ini bikin kamu paham cara bikin keputusan dalam iterasi, dan gampang diinget karena mirip kayak ngecek daftar donasi! Coba di VSCode, gampang kok! 💸</p>
+    
+    <h4>15. Semua Digabung (Paling Sulit)</h4>
+    <pre>berat_dict = {}
+i = 0
+while i < 3:
+    jenis = input(f"Masukkan jenis sampah ke-{i+1}: ")
+    berat = float(input(f"Masukkan berat {jenis} (kg): "))
+    berat_dict[jenis] = berat
+    i = i + 1
+total = 0
+for jenis, berat in berat_dict.items():
+    total = total + berat
+    if total > 10:
+        print(f"Arry Hutomo daur ulang {total} kg!\nCukup ", f"{jenis} banyak!", sep="=>", end="")
+        print("yuk!")
+    else:
+        print(f"Arry Hutomo daur ulang {total} kg!\nTambah ", f"{jenis} kurang!", sep="=>", end="")
+        print("yuk!")</pre>
+    <p><strong>Output (misalnya user masukkan "Plastik", 5.5, "Kertas", 3.0, "Organik", 2.5):</strong></p>
+    <pre>Masukkan jenis sampah ke-1: Plastik
+Masukkan berat Plastik (kg): 5.5
+Masukkan jenis sampah ke-2: Kertas
+Masukkan berat Kertas (kg): 3.0
+Masukkan jenis sampah ke-3: Organik
+Masukkan berat Organik (kg): 2.5
+Arry Hutomo daur ulang 5.5 kg!
+Tambah =>Plastik kurang!yuk!
+Arry Hutomo daur ulang 8.5 kg!
+Tambah =>Kertas kurang!yuk!
+Arry Hutomo daur ulang 11.0 kg!
+Cukup =>Organik banyak!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya dimulai dengan tiga prompt: user masukin "Plastik", 5.5, "Kertas", 3.0, "Organik", 2.5. Dictionary <span class="code-term">berat_dict</span> jadi {"Plastik": 5.5, "Kertas": 3.0, "Organik": 2.5}. Loop kedua jumlahkan: 0 + 5.5 = 5.5, 5.5 + 3.0 = 8.5, 8.5 + 2.5 = 11.0. Tiap iterasi, cek <span class="code-term">total > 10</span>: kalo True, cetak "Cukup"; kalo False, cetak "Tambah". Pake <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span> buat format.</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua konsep: <span class="code-term">input()</span>, <span class="code-term">while</span> loop, dictionary, <span class="code-term">for</span> loop, operasi <span class="code-term">+</span>, <span class="code-term">if-else</span>, plus <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span>, biar kamu paham cara bikin dictionary interaktif dengan keputusan dan format canggih. Aku pilih <span class="code-term">berat_dict</span> biar jelas, dan tema daur ulang karena Arry Hutomo peduli lingkungan, sesuai isu lingkungan. Aku pake <span class="code-term">total > 10</span> sebagai batas "cukup". Struktur ini bikin kamu paham cara bikin dictionary kompleks, dan gampang diinget karena mirip kayak bikin laporan daur ulang! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Pastiin kunci yang kamu akses ada dalam dictionary, misalnya jangan akses <span class="code-term">dict['kunci']</span> kalo kunci ga ada, pake <span class="code-term">get()</span> biar aman. ✅</li>
+        <li><strong>Don't:</strong> Jangan akses kunci yang ga ada tanpa cek, misalnya <span class="code-term">dict['kunci']</span> kalo kunci ga ada, nanti error <span class="code-term">KeyError</span>. ❌</li>
+        <li><strong>Do:</strong> Pake <span class="code-term">items()</span> saat iterasi dictionary kalo butuh kunci dan nilai sekaligus, biar lebih rapi. 🌟</li>
+        <li><strong>Don't:</strong> Jangan lupa inisialisasi dictionary kosong, misalnya <span class="code-term">dict = {}</span>, kalo ga nanti error saat nambah pasangan. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap pasangan kunci-nilai di dictionary adalah langkah menuju data yang terorganisir! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami terus belajar coding dengan semangat. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

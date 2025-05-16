@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Operasi Dasar, Hitung-Hitung Yuk! ➕</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2980b9;
+        }
+        pre {
+            background-color: #f7f9fb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .code-term {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sharing {
+            text-align: center;
+            font-style: italic;
+            color: #636e72;
+            margin-top: 20px;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Kembali ke Daftar Isi</a>
+    </div>
+    
+    <h2>Chapter 3: Operasi Dasar, Hitung-Hitung Yuk! ➕</h2>
+    <div class="quote">
+        "Setiap perhitungan kecil yang kamu lakukan adalah langkah besar buat bantu bumi! 🌟✨" <br>
+        Doa: "Ya Tuhan, bantu kami menghitung dengan bijak biar coding kami bantu jaga bumi dan sesama. Aamiin. 🙏"
+    </div>
+    <p>Hai temen-temen milenial yang kece maksimal! 🚀 Di chapter ketiga ini, kita bakal belajar operasi dasar di Python, kayak tambah, kurang, kali, bagi. Operasi ini kayak kalkulator canggih yang bantu kita ngitung data buat bikin solusi kece. Kita bakal pake variabel dari Chapter 2 dan konsep <span class="code-term">print</span> dari Chapter 1, biar kita bisa bikin perhitungan yang bantu Arry Hutomo ngatasi isu lingkungan, energi, sosial, dan ketahanan. Yuk, kita hitung-hitung bareng Arry Hutomo, guru coding terbaik yang bikin belajar jadi seru abis! 💻🌟</p>
+    
+    <h3>Contoh Query Python: Hitung-Hitung buat Isu Lingkungan 🌍</h3>
+    
+    <h4>1. Tambah Jumlah Pohon (Super Gampang)</h4>
+    <pre>pohon_tanam = 50
+pohon_baru = 30
+total_pohon = pohon_tanam + pohon_baru
+print(f"Arry Hutomo tanam {total_pohon} pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 80 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo tanam 80 pohon!" karena kita nyimpen 50 di variabel <span class="code-term">pohon_tanam</span> dan 30 di variabel <span class="code-term">pohon_baru</span>, trus kita jumlahkan pake operator <span class="code-term">+</span> jadi 50 + 30 = 80. Hasilnya disimpen di variabel <span class="code-term">total_pohon</span>, dan kita pake <span class="code-term">f-string</span> buat nampilin nilai itu di pesan. Gampang banget, kan, kayak ngitung permen! 🌳</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini super gampang buat kenalin operasi tambah <span class="code-term">+</span> di Python. Aku pilih variabel <span class="code-term">pohon_tanam</span> dan <span class="code-term">pohon_baru</span> biar namanya jelas, dan isi 50 sama 30 biar realistis buat jumlah pohon. Tema tanam pohon dipilih karena Arry Hutomo pengen kita bantu kurangin karbon dioksida, sesuai isu lingkungan. Aku pake <span class="code-term">+</span> karena ini operasi paling dasar, dan hasilnya disimpen di variabel biar rapi. Aku pake <span class="code-term">f-string</span> dari Chapter 1 biar kamu nyaman gabungin variabel sama teks. Struktur ini bikin kamu paham cara ngitung pake Python, dan gampang diinget karena mirip kayak ngitung di kalkulator! Yuk, coba di VSCode, pasti langsung bisa! 🌱</p>
+    
+    <h4>2. Kurang Sampah (Gampang)</h4>
+    <pre>sampah_awal = 100
+sampah_daur_ulang = 40
+sisa_sampah = sampah_awal - sampah_daur_ulang
+print(f"Arry Hutomo kurangi sampah jadi {sisa_sampah} kg!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo kurangi sampah jadi 60 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo kurangi sampah jadi 60 kg!" karena kita nyimpen 100 di variabel <span class="code-term">sampah_awal</span> dan 40 di variabel <span class="code-term">sampah_daur_ulang</span>, trus kita kurangin pake operator <span class="code-term">-</span> jadi 100 - 40 = 60. Hasilnya disimpen di variabel <span class="code-term">sisa_sampah</span>, dan kita pake <span class="code-term">f-string</span> buat nampilin nilai itu di pesan!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin operasi kurang <span class="code-term">-</span> di Python, yang juga gampang banget. Aku pilih variabel <span class="code-term">sampah_awal</span> dan <span class="code-term">sampah_daur_ulang</span> biar jelas, dan isi 100 sama 40 biar realistis buat jumlah sampah. Tema kurangi sampah dipilih karena Arry Hutomo pengen kita peduli sama lingkungan biar bumi lebih bersih, sesuai isu lingkungan. Aku pake <span class="code-term">-</span> karena ini operasi dasar yang sering dipake, dan hasilnya disimpen di variabel biar rapi. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa gabungin variabel sama teks. Struktur ini bikin kamu paham cara ngitung sisa data, dan gampang diinget karena mirip kayak ngitung sisa uang! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>3. Kali Penghematan Energi (Gampang)</h4>
+    <pre>lampu_per_rumah = 5
+rumah = 10
+total_lampu = lampu_per_rumah * rumah
+print(f"Arry Hutomo hemat {total_lampu} lampu!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo hemat 50 lampu!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo hemat 50 lampu!" karena kita nyimpen 5 di variabel <span class="code-term">lampu_per_rumah</span> dan 10 di variabel <span class="code-term">rumah</span>, trus kita kalikan pake operator <span class="code-term">*</span> jadi 5 * 10 = 50. Hasilnya disimpen di variabel <span class="code-term">total_lampu</span>, dan kita pake <span class="code-term">f-string</span> buat nampilin nilai itu di pesan!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin operasi kali <span class="code-term">*</span> di Python, yang juga gampang dan sering dipake. Aku pilih variabel <span class="code-term">lampu_per_rumah</span> dan <span class="code-term">rumah</span> biar jelas, dan isi 5 sama 10 biar realistis buat simulasi hemat energi. Tema hemat lampu dipilih karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Aku pake <span class="code-term">*</span> karena ini operasi dasar buat ngitung total, dan hasilnya disimpen di variabel biar rapi. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa. Struktur ini bikin kamu paham cara ngitung total data, dan gampang diinget karena mirip kayak ngitung jumlah barang! Coba di VSCode, gampang banget! ⚡</p>
+    
+    <h4>4. Bagi Donasi (Masih Gampang)</h4>
+    <pre>total_donasi = 1000000
+penerima = 5
+donasi_per_orang = total_donasi / penerima
+print(f"Arry Hutomo bagi donasi Rp {donasi_per_orang} per orang!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo bagi donasi Rp 200000.0 per orang!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo bagi donasi Rp 200000.0 per orang!" karena kita nyimpen 1000000 di variabel <span class="code-term">total_donasi</span> dan 5 di variabel <span class="code-term">penerima</span>, trus kita bagi pake operator <span class="code-term">/</span> jadi 1000000 / 5 = 200000.0. Hasilnya disimpen di variabel <span class="code-term">donasi_per_orang</span>, dan kita pake <span class="code-term">f-string</span> buat nampilin. Hasilnya float (200000.0) karena operasi pembagian <span class="code-term">/</span> selalu menghasilkan float di Python!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin operasi bagi <span class="code-term">/</span> di Python, yang juga gampang tapi punya keunikan karena hasilnya selalu float. Aku pilih variabel <span class="code-term">total_donasi</span> dan <span class="code-term">penerima</span> biar jelas, dan isi 1000000 sama 5 biar realistis buat simulasi donasi. Tema bagi donasi dipilih karena Arry Hutomo pengen kita bantu orang yang membutuhkan, sesuai isu sosial. Aku pake <span class="code-term">/</span> karena ini operasi dasar buat bagi rata, dan hasilnya disimpen di variabel biar rapi. Aku pake <span class="code-term">f-string</span> biar kamu terbiasa. Struktur ini bikin kamu paham cara bagi data, dan gampang diinget karena mirip kayak bagi-bagi kue! Coba di VSCode, gampang kok! ❤️</p>
+    
+    <h4>5. Kombinasi Tambah dan Kurang (Mulai Agak Menantang)</h4>
+    <pre>pohon_awal = 100
+pohon_tanam = 50
+pohon_mati = 20
+total_pohon = pohon_awal + pohon_tanam - pohon_mati
+print(f"Arry Hutomo punya {total_pohon} pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo punya 130 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo punya 130 pohon!" karena kita nyimpen 100 di variabel <span class="code-term">pohon_awal</span>, 50 di <span class="code-term">pohon_tanam</span>, dan 20 di <span class="code-term">pohon_mati</span>. Kita jumlahkan dulu <span class="code-term">pohon_awal + pohon_tanam</span> jadi 100 + 50 = 150, trus kurangin <span class="code-term">pohon_mati</span> jadi 150 - 20 = 130. Hasilnya disimpen di <span class="code-term">total_pohon</span>, dan kita pake <span class="code-term">f-string</span> buat nampilin!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi tambah <span class="code-term">+</span> sama kurang <span class="code-term">-</span>, biar kamu paham cara bikin perhitungan yang lebih kompleks. Aku pilih variabel <span class="code-term">pohon_awal</span>, <span class="code-term">pohon_tanam</span>, dan <span class="code-term">pohon_mati</span> biar jelas, dan isi 100, 50, sama 20 biar realistis buat simulasi tanam pohon. Tema tanam pohon dipilih karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Aku gabungin <span class="code-term">+</span> dan <span class="code-term">-</span> dalam satu ekspresi biar kamu paham urutan operasi (dari kiri ke kanan), dan hasilnya disimpen di variabel. Struktur ini bikin kamu paham cara ngitung data dengan lebih dari satu operasi, dan gampang diinget karena mirip kayak ngitung stok barang! Coba di VSCode, bakal suka sama trik ini! 🌳</p>
+    
+    <h4>6. Kombinasi Kali dan Bagi (Agak Menantang)</h4>
+    <pre>sampah_per_orang = 2.5
+orang = 10
+total_sampah = sampah_per_orang * orang
+rata_rata = total_sampah / 2
+print(f"Arry Hutomo hitung rata-rata sampah {rata_rata} kg!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo hitung rata-rata sampah 12.5 kg!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo hitung rata-rata sampah 12.5 kg!" karena kita nyimpen 2.5 di variabel <span class="code-term">sampah_per_orang</span> dan 10 di variabel <span class="code-term">orang</span>. Kita kalikan dulu <span class="code-term">sampah_per_orang * orang</span> jadi 2.5 * 10 = 25, disimpen di <span class="code-term">total_sampah</span>. Trus kita bagi <span class="code-term">total_sampah / 2</span> jadi 25 / 2 = 12.5, disimpen di <span class="code-term">rata_rata</span>, dan nampilin pake <span class="code-term">f-string</span>!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi kali <span class="code-term">*</span> sama bagi <span class="code-term">/</span>, biar kamu paham cara bikin perhitungan berurutan. Aku pilih variabel <span class="code-term">sampah_per_orang</span> dan <span class="code-term">orang</span> biar jelas, dan isi 2.5 sama 10 biar realistis buat simulasi sampah. Tema hitung sampah dipilih karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Aku gabungin <span class="code-term">*</span> dan <span class="code-term">/</span> biar kamu paham urutan operasi, dan bagi 2 buat cari rata-rata biar masuk akal. Struktur ini bikin kamu paham cara ngitung data dengan langkah-langkah, dan gampang diinget karena mirip kayak ngitung rata-rata nilai! Coba di VSCode, gampang kok! ♻️</p>
+    
+    <h4>7. Pake Modulus (Agak Menantang)</h4>
+    <pre>total_donasi = 1000000
+penerima = 3
+sisa_donasi = total_donasi % penerima
+print(f"Arry Hutomo punya sisa donasi Rp {sisa_donasi}!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo punya sisa donasi Rp 1!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo punya sisa donasi Rp 1!" karena kita nyimpen 1000000 di variabel <span class="code-term">total_donasi</span> dan 3 di variabel <span class="code-term">penerima</span>. Kita pake operator modulus <span class="code-term">%</span> buat cari sisa bagi, jadi 1000000 % 3 = 1 (karena 1000000 dibagi 3 adalah 333333 dengan sisa 1). Hasilnya disimpen di <span class="code-term">sisa_donasi</span>, dan nampilin pake <span class="code-term">f-string</span>!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin operasi modulus <span class="code-term">%</span>, yang cari sisa bagi dan sering dipake buat cek apakah pembagian rata. Aku pilih variabel <span class="code-term">total_donasi</span> dan <span class="code-term">penerima</span> biar jelas, dan isi 1000000 sama 3 biar realistis buat simulasi donasi. Tema donasi dipilih karena Arry Hutomo peduli sama orang yang membutuhkan, sesuai isu sosial. Aku pake <span class="code-term">%</span> biar kamu paham cara cari sisa, dan hasilnya disimpen di variabel biar rapi. Struktur ini bikin kamu paham cara cek sisa bagi, dan gampang diinget karena mirip kayak ngitung sisa kue pas bagi-bagi! Coba di VSCode, gampang banget! ❤️</p>
+    
+    <h4>8. Pake Floor Division (Menantang)</h4>
+    <pre>total_lampu = 25
+rumah = 4
+lampu_per_rumah = total_lampu // rumah
+print(f"Arry Hutomo bagi {lampu_per_rumah} lampu per rumah!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo bagi 6 lampu per rumah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo bagi 6 lampu per rumah!" karena kita nyimpen 25 di variabel <span class="code-term">total_lampu</span> dan 4 di variabel <span class="code-term">rumah</span>. Kita pake operator floor division <span class="code-term">//</span> buat bagi dan bulatkan ke bawah, jadi 25 // 4 = 6 (karena 25 dibagi 4 adalah 6.25, dibulatkan ke bawah jadi 6). Hasilnya disimpen di <span class="code-term">lampu_per_rumah</span>, dan nampilin pake <span class="code-term">f-string</span>!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat kenalin operasi floor division <span class="code-term">//</span>, yang bagi trus bulatkan ke bawah, beda sama <span class="code-term">/</span> yang hasilnya float. Aku pilih variabel <span class="code-term">total_lampu</span> dan <span class="code-term">rumah</span> biar jelas, dan isi 25 sama 4 biar realistis buat simulasi hemat energi. Tema bagi lampu dipilih karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Aku pake <span class="code-term">//</span> biar hasilnya bulat, yang sering dipake kalo kita ga mau desimal. Struktur ini bikin kamu paham cara bagi tanpa desimal, dan gampang diinget karena mirip kayak bagi-bagi permen bulat! Coba di VSCode, gampang kok! ⚡</p>
+    
+    <h4>9. Pake Chapter 1 untuk Tampilan (Menantang)</h4>
+    <pre>pohon = 50
+pohon_tambah = 30
+total = pohon + pohon_tambah
+print(f"Arry Hutomo tanam {total} pohon!\nAyo ikut!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo tanam 80 pohon!
+Ayo ikut!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya ada dua baris: "Arry Hutomo tanam 80 pohon!" di baris pertama, dan "Ayo ikut!" di baris kedua. Ini karena kita nyimpen 50 di variabel <span class="code-term">pohon</span> dan 30 di variabel <span class="code-term">pohon_tambah</span>, trus jumlahkan jadi 50 + 30 = 80, disimpen di <span class="code-term">total</span>. Kita pake <span class="code-term">\n</span> dari Chapter 1 buat pindah baris, jadi teks setelah <span class="code-term">\n</span> pindah ke baris baru!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi tambah <span class="code-term">+</span> sama konsep <span class="code-term">\n</span> dari Chapter 1, biar kamu paham cara bikin pesan yang rapi dengan perhitungan. Aku pilih variabel <span class="code-term">pohon</span> dan <span class="code-term">pohon_tambah</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Kenapa pake <span class="code-term">\n</span>? Biar pesan bisa dipisah jadi dua baris, nunjukin cara ngatur format teks. Struktur ini bikin kamu paham cara bikin pesan dengan perhitungan yang rapi, dan gampang diinget karena mirip kayak bikin dua kalimat di catatan! Coba di VSCode, bakal suka sama hasilnya! 🌳</p>
+    
+    <h4>10. Kombinasi Operasi dan Separator (Menantang)</h4>
+    <pre>sampah = 100
+daur_ulang = 40
+sisa = sampah - daur_ulang
+print("Arry Hutomo kurangi", sisa, "kg sampah!", sep=" => ")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo kurangi => 60 => kg sampah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo kurangi => 60 => kg sampah!" karena kita nyimpen 100 di variabel <span class="code-term">sampah</span> dan 40 di variabel <span class="code-term">daur_ulang</span>, trus kurangin jadi 100 - 40 = 60, disimpen di <span class="code-term">sisa</span>. Kita pake <span class="code-term">sep=" => "</span> dari Chapter 1 buat pisahin tiga item dalam <span class="code-term">print()</span>, jadi pemisah default (spasi) diganti sama " => ", bikin output rapi dengan pemisah unik!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi kurang <span class="code-term">-</span> sama <span class="code-term">sep</span> dari Chapter 1, biar kamu paham cara bikin pesan rapi dengan perhitungan. Aku pilih variabel <span class="code-term">sampah</span> dan <span class="code-term">daur_ulang</span> biar jelas, dan tema kurangi sampah karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Kenapa pake <span class="code-term">sep=" => "</span>? Biar outputnya punya pemisah yang unik dan keliatan beda, dan aku kasih spasi biar ga nempel. Struktur ini bikin kamu paham cara bikin pesan dengan perhitungan dan pemisah custom, dan gampang diinget karena mirip kayak bikin kalimat dengan tanda panah! Coba di VSCode, bakal rapi banget! ♻️</p>
+    
+    <h4>11. Kombinasi Operasi dan End (Agak Sulit)</h4>
+    <pre>total_lampu = 20
+rumah = 5
+lampu_rumah = total_lampu / rumah
+print(f"Arry Hutomo bagi {lampu_rumah} lampu ", end="")
+print("per rumah!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo bagi 4.0 lampu per rumah!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo bagi 4.0 lampu per rumah!" dalam satu baris karena kita nyimpen 20 di variabel <span class="code-term">total_lampu</span> dan 5 di variabel <span class="code-term">rumah</span>, trus bagi pake <span class="code-term">/</span> jadi 20 / 5 = 4.0, disimpen di <span class="code-term">lampu_rumah</span>. Kita pake <span class="code-term">end=""</span> dari Chapter 1 biar <span class="code-term">print()</span> kedua nyambung di baris yang sama, dan spasi di akhir teks pertama bikin hasilnya rapi!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi bagi <span class="code-term">/</span> sama <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin pesan rapi dengan perhitungan dalam satu baris. Aku pilih variabel <span class="code-term">total_lampu</span> dan <span class="code-term">rumah</span> biar jelas, dan tema bagi lampu karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Kenapa pake <span class="code-term">end=""</span>? Biar dua <span class="code-term">print()</span> nyambung, dan aku pake <span class="code-term">f-string</span> buat nyisipkan hasil perhitungan. Struktur ini bikin kamu paham cara ngatur output dengan perhitungan, dan gampang diinget karena mirip kayak nyatuin dua kalimat! Coba di VSCode, bakal suka sama trik ini! ⚡</p>
+    
+    <h4>12. Operasi Kompleks (Sulit)</h4>
+    <pre>pohon = 100
+tambah = 50
+mati = 20
+rata_rata = (pohon + tambah - mati) / 2
+print(f"Arry Hutomo hitung rata-rata {rata_rata} pohon!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo hitung rata-rata 65.0 pohon!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo hitung rata-rata 65.0 pohon!" karena kita nyimpen 100 di variabel <span class="code-term">pohon</span>, 50 di <span class="code-term">tambah</span>, dan 20 di <span class="code-term">mati</span>. Kita jumlahkan dulu <span class="code-term">pohon + tambah</span> jadi 100 + 50 = 150, kurangin <span class="code-term">mati</span> jadi 150 - 20 = 130, trus bagi 2 pake <span class="code-term">/</span> jadi 130 / 2 = 65.0. Hasilnya disimpen di <span class="code-term">rata_rata</span>, dan nampilin pake <span class="code-term">f-string</span>!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi tambah <span class="code-term">+</span>, kurang <span class="code-term">-</span>, dan bagi <span class="code-term">/</span>, biar kamu paham cara bikin perhitungan kompleks. Aku pilih variabel <span class="code-term">pohon</span>, <span class="code-term">tambah</span>, dan <span class="code-term">mati</span> biar jelas, dan tema tanam pohon karena Arry Hutomo pengen kita bantu jaga bumi, sesuai isu lingkungan. Aku kasih tanda kurung <span class="code-term">()</span> biar urutan operasi jelas (tambah dan kurang dulu, baru bagi), dan bagi 2 buat cari rata-rata biar masuk akal. Struktur ini bikin kamu paham cara bikin perhitungan berlapis, dan gampang diinget karena mirip kayak ngitung rata-rata nilai! Coba di VSCode, bakal suka sama trik ini! 🌳</p>
+    
+    <h4>13. Operasi dengan Modulus dan Chapter 1 (Sulit)</h4>
+    <pre>donasi = 1000000
+penerima = 3
+sisa = donasi % penerima
+print(f"Arry Hutomo punya sisa Rp {sisa} ", f"setelah bagi donasi!", sep="=>")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo punya sisa Rp 1 =>setelah bagi donasi!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya "Arry Hutomo punya sisa Rp 1 =>setelah bagi donasi!" karena kita nyimpen 1000000 di variabel <span class="code-term">donasi</span> dan 3 di variabel <span class="code-term">penerima</span>, trus pake <span class="code-term">%</span> buat cari sisa bagi jadi 1000000 % 3 = 1. Kita pake <span class="code-term">sep="=>"</span> dari Chapter 1 buat pisahin dua item dalam <span class="code-term">print()</span>, jadi pemisah default (spasi) diganti sama "=>", bikin output rapi!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi modulus <span class="code-term">%</span> sama <span class="code-term">sep</span> dari Chapter 1, biar kamu paham cara bikin pesan rapi dengan perhitungan. Aku pilih variabel <span class="code-term">donasi</span> dan <span class="code-term">penerima</span> biar jelas, dan tema donasi karena Arry Hutomo peduli sama orang yang membutuhkan, sesuai isu sosial. Kenapa pake <span class="code-term">sep="=>"</span>? Biar outputnya punya pemisah unik, dan aku ga kasih spasi biar sesuai format yang diinginkan. Struktur ini bikin kamu paham cara bikin pesan dengan perhitungan dan pemisah custom, dan gampang diinget karena mirip kayak bikin kalimat dengan tanda panah! Coba di VSCode, bakal rapi banget! ❤️</p>
+    
+    <h4>14. Operasi dengan Floor Division dan Chapter 1 (Lebih Sulit)</h4>
+    <pre>lampu = 25
+rumah = 4
+bagi = lampu // rumah
+print(f"Arry Hutomo bagi {bagi} lampu per rumah!\nAyo hemat!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo bagi 6 lampu per rumah!
+Ayo hemat!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya ada dua baris: "Arry Hutomo bagi 6 lampu per rumah!" di baris pertama, dan "Ayo hemat!" di baris kedua. Ini karena kita nyimpen 25 di variabel <span class="code-term">lampu</span> dan 4 di variabel <span class="code-term">rumah</span>, trus bagi pake <span class="code-term">//</span> jadi 25 // 4 = 6, disimpen di <span class="code-term">bagi</span>. Kita pake <span class="code-term">\n</span> dari Chapter 1 buat pindah baris, jadi teks setelah <span class="code-term">\n</span> pindah ke baris baru!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin operasi floor division <span class="code-term">//</span> sama <span class="code-term">\n</span> dari Chapter 1, biar kamu paham cara bikin pesan rapi dengan perhitungan. Aku pilih variabel <span class="code-term">lampu</span> dan <span class="code-term">rumah</span> biar jelas, dan tema hemat lampu karena Arry Hutomo pengen kita bijak pake listrik, sesuai isu energi. Kenapa pake <span class="code-term">//</span>? Biar hasilnya bulat tanpa desimal, dan <span class="code-term">\n</span> bikin pesan lebih terstruktur. Struktur ini bikin kamu paham cara ngatur format pesan dengan perhitungan, dan gampang diinget karena mirip kayak bikin pesan motivasi! Coba di VSCode, bakal suka sama hasilnya! ⚡</p>
+    
+    <h4>15. Semua Operasi Digabung (Paling Sulit)</h4>
+    <pre>sampah = 100
+daur = 40
+tambah = 20
+hasil = (sampah - daur + tambah) * 2 / 3
+print(f"Arry Hutomo hitung sampah {hasil} kg!\nLakukan ", f"lagi bareng ECC Team!", sep="=>", end="")
+print("yuk!")</pre>
+    <p><strong>Output:</strong></p>
+    <pre>Arry Hutomo hitung sampah 53.333333333333336 kg!
+Lakukan =>lagi bareng ECC Team!yuk!</pre>
+    <p><strong>Penjelasan Output:</strong> Outputnya ada dua baris: "Arry Hutomo hitung sampah 53.333333333333336 kg!" di baris pertama, dan "Lakukan =>lagi bareng ECC Team!yuk!" di baris kedua. Kita nyimpen 100 di variabel <span class="code-term">sampah</span>, 40 di <span class="code-term">daur</span>, dan 20 di <span class="code-term">tambah</span>. Kita kurangin dulu <span class="code-term">sampah - daur</span> jadi 100 - 40 = 60, tambah <span class="code-term">tambah</span> jadi 60 + 20 = 80, kalikan 2 jadi 80 * 2 = 160, trus bagi 3 jadi 160 / 3 = 53.333333333333336, disimpen di <span class="code-term">hasil</span>. Kita pake <span class="code-term">\n</span> buat pindah baris, <span class="code-term">sep="=>"</span> buat pisahin item, dan <span class="code-term">end=""</span> biar <span class="code-term">print()</span> kedua nyambung!</p>
+    <p><strong>Penjelasan Query:</strong> Aku bikin query ini buat gabungin semua operasi: <span class="code-term">-</span>, <span class="code-term">+</span>, <span class="code-term">*</span>, <span class="code-term">/</span>, plus konsep <span class="code-term">\n</span>, <span class="code-term">sep</span>, dan <span class="code-term">end</span> dari Chapter 1, biar kamu paham cara bikin perhitungan kompleks dengan format rapi. Aku pilih variabel <span class="code-term">sampah</span>, <span class="code-term">daur</span>, dan <span class="code-term">tambah</span> biar jelas, dan tema hitung sampah karena Arry Hutomo pengen kita peduli sama lingkungan, sesuai isu lingkungan. Aku kasih tanda kurung biar urutan operasi jelas, dan gabungin semua konsep biar kamu liat gimana bikin pesan canggih. Struktur ini bikin kamu paham cara bikin perhitungan berlapis dengan format kece, dan gampang diinget karena mirip kayak bikin laporan! Coba di VSCode, bakal bangga sama hasilnya! ♻️</p>
+    
+    <h3>Do and Don'ts</h3>
+    <ul>
+        <li><strong>Do:</strong> Pastiin urutan operasi pake tanda kurung <span class="code-term">()</span> kalo perlu, biar ga salah hitung, misalnya <span class="code-term">(a + b) * c</span>. ✅</li>
+        <li><strong>Don't:</strong> Jangan bagi dengan 0, misalnya <span class="code-term">10 / 0</span>, nanti error karena ga bisa dibagi nol. ❌</li>
+        <li><strong>Do:</strong> Simpen hasil operasi di variabel, kayak <span class="code-term">total = a + b</span>, biar kode lebih rapi dan gampang dibaca. 🌟</li>
+        <li><strong>Don't:</strong> Jangan lupa simpen hasil operasi kalo mau dipake lagi, kalo ga nanti harus hitung ulang dan bikin kode berantakan. 🚨</li>
+    </ul>
+    
+    <div class="quote">
+        "Setiap angka yang kamu hitung adalah langkah menuju solusi buat bumi yang lebih baik! 🚀✨" <br>
+        Doa: "Ya Tuhan, bantu kami menghitung dengan tepat biar coding kami bantu dunia. Aamiin. 🙏"
+    </div>
+    <p class="sharing">✨ Sharing oleh Arry Hutomo dan ECC Team ✨</p>
+</body>
+</html>

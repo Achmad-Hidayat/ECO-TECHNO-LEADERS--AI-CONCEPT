@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional 02: JSON Crash Courses - Eco Techno Leaders 🌟</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2e7d32; /* Hijau lingkungan */
+        }
+        h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.2em;
+        }
+        p {
+            font-size: 1em;
+            color: #424242;
+        }
+        code {
+            background-color: #e0e0e0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        a {
+            color: #0288d1; /* Biru cerah */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .quote {
+            font-style: italic;
+            color: #6a1b9a; /* Ungu inspiratif */
+            margin: 20px 0;
+            text-align: center;
+        }
+        .doa {
+            font-style: italic;
+            color: #d81b60; /* Merah muda lembut */
+            margin: 20px 0;
+            text-align: center;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">Kembali ke Daftar Isi 📚</a>
+
+    <h1>🌟 Additional 02: JSON Crash Courses 🌴</h1>
+
+    <div class="section">
+        <p class="quote">"JSON itu kayak kotak penyimpanan ajaib, bikin data kita rapi dan gampang diakses! 🗂️✨"</p>
+        <p class="doa">Doa: "Ya Tuhan, bantu kami mengolah data dengan JSON biar program kami mendukung lingkungan dan komunitas. Aamiin. 🙏"</p>
+
+        <p>Yo, bro, selamat datang di JSON Crash Courses, bagian spesial dari Tutorial Python ala Arry Hutomo! 🚀 Di sini, kita bakal ngegas belajar JSON (JavaScript Object Notation) dari nol sampe jago, pake 10 contoh query Python dari yang super gampang sampe yang bikin otak ngebul! 💥 JSON itu kayak kotak penyimpanan digital yang super rapi, cocok buat ngatur data konservasi mangrove, donasi, atau laporan kegiatan, kayak yang dibutuhin tim BioMac di Chapter 20. Kita akan pake modul <code>json</code> dari Chapter 19, plus sentuhan dari Chapter 10-18 (modul, error handling, OOP, regex, datetime, logging), dengan gaya milenial yang asik dan penjelasan yang bikin pemula ngerti. Yuk, kita jadi pengelola data kece bareng Mas Arry Hutomo dan ECC Team! 😎🌱</p>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Tujuan Pembelajaran</h2>
+        <ul>
+            <li>Ngerti apa itu JSON dan kenapa penting buat ngelola data lingkungan dan sosial. 🗂️</li>
+            <li>Bisa pake modul <code>json</code> untuk ubah data Python ke JSON dan sebaliknya. 💻</li>
+            <li>Jago bikin aplikasi sederhana sampe kompleks pake JSON, dari nyimpen data pohon sampe laporan kegiatan. 🌴</li>
+            <li>Paham cara gabungin JSON dengan konsep lain kayak OOP, regex, dan logging. 📝</li>
+            <li>Bikin kode yang rapi, terstruktur, dan siap dipake tim BioMac untuk konservasi mangrove! 😎</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🗣️ Cerita Keren: Mas Azmi Nanya, Mas Arry Jawab! 💪</h2>
+        <p><strong>Mas Azmi:</strong> "Mas Arry, tim BioMac butuh ngelola data kegiatan, donasi, sama jadwal tanam pohon pake cara yang rapi. Aku denger JSON bagus buat ini, tapi aku ga ngerti caranya. Bisa ajarin dari awal sampe bikin sistem keren kayak di Chapter 20? 🧐😍"</p>
+        <p><strong>Mas Arry:</strong> "Chill, Mas Azmi! 😎 JSON itu gampang banget kalo dijelasin step-by-step. Aku sama ECC Team bakal bikin JSON Crash Courses dengan 10 contoh, dari yang simpel kayak nyanyi lagu pop sampe yang kompleks kayak komposer symphony! 🎶 Kita bikin sistem yang bantu BioMac, plus penjelasan detail biar kamu jago sendiri. Deal? 💪"</p>
+        <p><strong>Mas Azmi:</strong> "Kece banget, Mas! 😍 Aku pengen contoh yang bener-bener praktis, dari yang gampang sampe yang bikin tim kagum. Bisa? 🚀"</p>
+        <p><strong>Mas Arry:</strong> "Beres, bro! 😎 Kita bikin 10 variasi query Python, mulai dari nyimpen data pohon sampe laporan kegiatan dengan logging dan datetime. Semua pake JSON, dan aku kasih narasi yang bikin kamu ngerti kenapa kodenya begitu. Yuk, ngegas bareng! 🚴‍♂️"</p>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ Tutorial Python: JSON Crash Courses</h2>
+        <p>Berikut 10 contoh query Python yang dirancang untuk ngajarin JSON dari level pemula sampe pro, dengan tema konservasi mangrove dan donasi untuk dukung isu lingkungan dan sosial ekonomi. Setiap query punya penjelasan detail, output, logika, dan Do and Don'ts, ditulis dengan gaya asik ala Arry Hutomo. Yuk, kita mulai petualangan JSON! 😎🚀</p>
+
+        <h3>1. Nyimpen Data Pohon ke JSON (Super Gampang) 🌱</h3>
+        <p><strong>Konsep:</strong> JSON (Chapter 19) bikin kita bisa ubah data Python (kayak dictionary) ke string JSON yang rapi, kayak nyimpen data pohon di kotak digital.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code> yang udah ada di Python. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+
+data_pohon = {"acara": "Tanam Pohon", "pohon": 10, "lokasi": "Pantai"}
+json_data = json.dumps(data_pohon)
+print(f"Data dalam JSON: {json_data}")
+</code></pre>
+        <p><strong>Output:</strong></p>
+        <pre>Data dalam JSON: {"acara": "Tanam Pohon", "pohon": 10, "lokasi": "Pantai"}</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin string JSON: <code>{"acara": "Tanam Pohon", "pohon": 10, "lokasi": "Pantai"}</code>. Ini adalah dictionary Python yang diubah jadi format JSON pake <code>json.dumps()</code>. String JSON pake kutip ganda untuk teks, bikin data rapi dan universal, kayak nyimpen lagu di playlist digital! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin kamu punya catatan sederhana tentang acara tanam pohon BioMac, dan kamu mau simpen dalam format yang gampang dibaca komputer. Kita bikin dictionary <code>data_pohon</code> dengan tiga kunci: <code>acara</code>, <code>pohon</code>, dan <code>lokasi</code>. Pake <code>json.dumps(data_pohon)</code>, kita ubah dictionary ini jadi string JSON, trus simpen di <code>json_data</code> dan cetak. Ini super simpel, cocok buat pemula, dan bikin data pohon terstruktur, kayak nyanyi lagu pop yang gampang diinget! 🌱😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak nyimpen catatan di kotak ajaib. Dictionary dipilih karena gampang nyimpen data dengan kunci-nilai (kayak "pohon": 10). <code>json.dumps()</code> ubah dictionary ke string JSON, format universal yang bisa dibaca di mana aja, misalnya buat kirim data ke tim lain. Kita cetak biar lihat hasilnya, tapi di dunia nyata, string JSON ini bisa disimpen ke file atau dikirim ke server. Struktur ini efisien buat BioMac, kayak nyanyi lagu dan simpen nadanya di kotak digital! 🎵🗂️</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake dictionary untuk data sederhana biar gampang diubah ke JSON. ✅</li>
+            <li><strong>Don't:</strong> Jangan lupa import <code>json</code>, kalo ga kode ga jalan. ❌</li>
+            <li><strong>Do:</strong> Cek format JSON pake print biar yakin datanya bener. 🌟</li>
+            <li><strong>Don't:</strong> Jangan masukin data ga valid (kaya None tanpa cek) ke JSON, nanti error. 🚨</li>
+        </ul>
+        <p class="quote">"Data JSON yang rapi itu kayak lagu pop yang enak didenger. Simpel tapi bikin happy! 🎶💚"</p>
+
+        <h3>2. Baca JSON ke Dictionary (Gampang) 📖</h3>
+        <p><strong>Konsep:</strong> Kita bisa ubah string JSON kembali ke dictionary Python pake <code>json.loads()</code>, kayak buka kotak penyimpanan dan ambil isinya.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code>. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+
+json_data = '{"acara": "Tanam Pohon", "pohon": 10, "lokasi": "Pantai"}'
+data = json.loads(json_data)
+print(f"Data dalam dictionary: {data}")
+</code></pre>
+        <p><strong>Output:</strong></p>
+        <pre>Data dalam dictionary: {'acara': 'Tanam Pohon', 'pohon': 10, 'lokasi': 'Pantai'}</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin dictionary Python: <code>{'acara': 'Tanam Pohon', 'pohon': 10, 'lokasi': 'Pantai'}</code>. String JSON diubah kembali ke dictionary pake <code>json.loads()</code>, bikin data bisa diolah lagi, kayak buka playlist dan lihat detail lagu! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin tim BioMac dapet string JSON dari server, dan mereka mau olah datanya di Python. Kita bikin string JSON <code>json_data</code> dengan data acara tanam pohon. Pake <code>json.loads(json_data)</code>, kita ubah string itu jadi dictionary, simpen di <code>data</code>, trus cetak. Ini gampang, bikin data JSON bisa diakses kayak dictionary biasa, cocok buat tim yang perlu ekstrak info pohon atau lokasi. Gampang diinget, kayak nyanyi lagu pop dan baca liriknya! 📖😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak buka kotak ajaib. String JSON adalah format data universal, tapi untuk olah di Python, kita ubah ke dictionary pake <code>json.loads()</code>. Dictionary bikin kita bisa akses data pake kunci, misalnya <code>data["pohon"]</code> ngasih 10. Kita cetak dictionary biar lihat hasilnya, tapi di dunia nyata, kita bisa olah lebih lanjut, kayak hitung total pohon. Struktur ini bikin BioMac gampang ngelola data, kayak buka playlist dan mainkan lagu favorit! 🎵📊</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake <code>json.loads()</code> untuk ubah JSON ke data Python yang bisa diolah. ✅</li>
+            <li><strong>Don't:</strong> Jangan pake JSON yang salah format, nanti <code>JSONDecodeError</code>. ❌</li>
+            <li><strong>Do:</strong> Simpen hasil <code>json.loads()</code> di variabel biar gampang diakses. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa cek apakah JSON valid sebelum <code>loads</code>. 🚨</li>
+        </ul>
+        <p class="quote">"Baca JSON itu kayak buka kotak harta. Data siap diolah, bro! 📖💚"</p>
+
+        <h3>3. JSON dengan Indentasi (Gampang) 🌴</h3>
+        <p><strong>Konsep:</strong> Pake parameter <code>indent</code> di <code>json.dumps()</code> bikin JSON rapi dan gampang dibaca manusia, kayak nyusun playlist aesthetic.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code>. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+
+data = {
+    "acara": "Tanam Pohon",
+    "donasi": 500000,
+    "lokasi": "Pantai"
+}
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")
+</code></pre>
+_threshold_0.8
+        <p><strong>Output:</strong></p>
+        <pre>Data dalam JSON:
+{
+  "acara": "Tanam Pohon",
+  "donasi": 500000,
+  "lokasi": "Pantai"
+}</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin JSON yang rapi dengan indentasi 2 spasi, tiap kunci-nilai di baris baru. Data acara, donasi, dan lokasi tersusun jelas, bikin gampang dibaca tim BioMac, kayak playlist dengan judul lagu yang rapi! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin tim BioMac mau share data tanam pohon ke donatur, tapi harus rapi biar gampang dibaca. Kita bikin dictionary <code>data</code> dengan info acara, donasi, dan lokasi. Pake <code>json.dumps(data, indent=2)</code>, kita ubah ke JSON dengan indentasi, simpen di <code>json_data</code>, trus cetak dengan tambahan <code>\n</code> biar jelas. Ini bikin JSON aesthetic, cocok buat laporan atau presentasi, kayak nyanyi lagu dengan lirik yang ditata rapi! 🌴😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak nyusun kotak penyimpanan yang cantik. Dictionary nyimpen data dengan kunci-nilai, trus <code>json.dumps()</code> ubah ke JSON. Parameter <code>indent=2</code> bikin tiap level JSON punya 2 spasi indentasi, bikin output rapi kayak buku catatan aesthetic. Kita cetak biar lihat hasilnya, tapi di dunia nyata, JSON ini bisa disimpen ke file buat laporan BioMac. Struktur ini bikin data gampang dipahami, kayak nyanyi lagu dengan lirik yang tersusun cantik! 🎵📊</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake <code>indent</code> buat JSON yang bakal dibaca manusia. ✅</li>
+            <li><strong>Don't:</strong> Jangan pake indent kalo JSON cuma buat komputer, nanti boros memori. ❌</li>
+            <li><strong>Do:</strong> Tambah <code>\n</code> di print biar output jelas di konsol. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa cek struktur dictionary sebelum ubah ke JSON. 🚨</li>
+        </ul>
+        <p class="quote">"JSON yang rapi itu kayak taman yang tertata. Bikin hati tenang, bro! 🌴💚"</p>
+
+        <h3>4. JSON dengan Data Bersarang (Masih Gampang) 🌿</h3>
+        <p><strong>Konsep:</strong> JSON bisa nyimpen data bersarang (dictionary dalam dictionary), kayak kotak penyimpanan dengan laci-laci kecil, cocok buat data kompleks BioMac.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code>. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+
+data = {
+    "acara": "Tanam Pohon",
+    "detail": {
+        "donasi": 500000,
+        "pohon": 10,
+        "lokasi": "Pantai"
+    }
+}
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")
+</code></pre>
+        <p><strong>Output:</strong></p>
+        <pre>Data dalam JSON:
+{
+  "acara": "Tanam Pohon",
+  "detail": {
+    "donasi": 500000,
+    "pohon": 10,
+    "lokasi": "Pantai"
+  }
+}</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin JSON bersarang: kunci <code>detail</code> punya dictionary sendiri dengan donasi, pohon, dan lokasi. Indentasi 2 spasi bikin struktur jelas, kayak buka album dengan folder lagu di dalamnya! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin BioMac mau simpen data acara tanam pohon dengan detail terpisah, misalnya donasi dan lokasi dalam satu grup. Kita bikin dictionary <code>data</code> dengan kunci <code>acara</code> dan <code>detail</code>, di mana <code>detail</code> adalah dictionary lain. Pake <code>json.dumps(data, indent=2)</code>, kita ubah ke JSON rapi, trus cetak. Ini bikin data kompleks tetap terorganisir, cocok buat laporan BioMac, kayak nyanyi lagu dengan lirik yang punya sub-bagian! 🌿😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak bikin kotak dengan laci-laci. Dictionary luar nyimpen info utama (<code>acara</code>), dan dictionary dalam (<code>detail</code>) nyimpen info tambahan. <code>json.dumps()</code> otomatis ngatur struktur bersarang dengan indentasi, bikin JSON gampang dibaca. Kita cetak biar lihat hasilnya, tapi JSON ini bisa disimpen atau dikirim ke tim lain. Struktur ini bikin BioMac gampang ngelola data kompleks, kayak nyanyi lagu dengan lirik yang punya bagian chorus dan verse! 🎵📊</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake dictionary bersarang untuk data kompleks biar terstruktur. ✅</li>
+            <li><strong>Don't:</strong> Jangan bikin struktur terlalu dalam, nanti susah dibaca. ❌</li>
+            <li><strong>Do:</strong> Gunakan indentasi untuk JSON bersarang biar jelas. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa cek apakah data valid sebelum ubah ke JSON. 🚨</li>
+        </ul>
+        <p class="quote">"Data bersarang itu kayak album dengan folder lagu. Teratur dan kece! 🌿💚"</p>
+
+        <h3>5. JSON dengan List dan For Loop (Mulai Agak Menantang) 📋</h3>
+        <p><strong>Konsep:</strong> JSON bisa nyimpen list dengan banyak dictionary, cocok buat nyimpen banyak data kegiatan BioMac. Kita pake loop untuk olah data sebelum simpen ke JSON.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code>. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+
+data = [
+    {"acara": "Tanam Pohon 1", "pohon": 10, "donasi": 500000},
+    {"acara": "Tanam Pohon 2", "pohon": 5, "donasi": 300000}
+]
+for item in data:
+    item["biaya_per_pohon"] = item["donasi"] / item["pohon"]
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")
+</code></pre>
+        <p><strong>Output:</strong></p>
+        <pre>Data dalam JSON:
+[
+  {
+    "acara": "Tanam Pohon 1",
+    "pohon": 10,
+    "donasi": 500000,
+    "biaya_per_pohon": 50000.0
+  },
+  {
+    "acara": "Tanam Pohon 2",
+    "pohon": 5,
+    "donasi": 300000,
+    "biaya_per_pohon": 60000.0
+  }
+]</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin JSON dengan list dua dictionary. Tiap dictionary punya kunci baru <code>biaya_per_pohon</code>, dihitung dari donasi dibagi pohon (500000/10 = 50000, 300000/5 = 60000). Indentasi bikin data rapi, kayak playlist dengan detail lagu! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin BioMac punya dua acara tanam pohon, dan mereka mau hitung biaya rata-rata per pohon sebelum simpen ke JSON. Kita bikin list <code>data</code> dengan dua dictionary. Pake loop <code>for</code>, kita tambah kunci <code>biaya_per_pohon</code> dengan menghitung donasi/pohon. Terus, ubah ke JSON pake <code>json.dumps(data, indent=2)</code> dan cetak. Ini bikin data analitik gampang disimpen, cocok buat laporan BioMac, kayak nyanyi lagu sambil hitung nada rata-rata! 📋😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak bikin playlist dengan analisis. List nyimpen banyak dictionary, tiap dictionary wakilin satu acara. Loop <code>for</code> akses tiap dictionary, hitung <code>donasi/pohon</code>, dan tambah kunci baru. <code>json.dumps()</code> ubah list ke JSON rapi. Kita cetak biar lihat hasilnya, tapi JSON ini bisa disimpen ke file buat analisis BioMac. Struktur ini efisien, kayak nyanyi lagu dengan playlist yang punya data tambahan! 🎵📊</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake list untuk simpen banyak data kegiatan di JSON. ✅</li>
+            <li><strong>Don't:</strong> Jangan lupa cek apakah data valid sebelum hitung (misalnya pohon ga boleh 0). ❌</li>
+            <li><strong>Do:</strong> Tambah kunci analitik kayak <code>biaya_per_pohon</code> biar JSON lebih informatif. 🌟</li>
+            <li><strong>Don't:</strong> Jangan ubah list langsung tanpa loop, nanti data ga konsisten. 🚨</li>
+        </ul>
+        <p class="quote">"List di JSON itu kayak playlist dengan banyak lagu. Analisis bikin makin keren! 📋💚"</p>
+
+        <h3>6. JSON dengan Input (Agak Menantang) 💸</h3>
+        <p><strong>Konsep:</strong> Kita bisa minta input user untuk bikin data JSON, cocok buat tim BioMac yang input data kegiatan di lapangan.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code>. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+
+data = []
+for i in range(2):
+    acara = input(f"Masukkan nama acara ke-{i+1}: ")
+    donasi = int(input(f"Masukkan donasi untuk {acara} (Rp): "))
+    pohon = int(input(f"Masukkan jumlah pohon untuk {acara}: "))
+    data.append({"acara": acara, "donasi": donasi, "pohon": pohon})
+json_data = json.dumps(data, indent=2)
+print(f"Data dalam JSON:\n{json_data}")
+</code></pre>
+        <p><strong>Output (contoh input: "Acara 1", 500000, 10, "Acara 2", 300000, 5):</strong></p>
+        <pre>Masukkan nama acara ke-1: Acara 1
+Masukkan donasi untuk Acara 1 (Rp): 500000
+Masukkan jumlah pohon untuk Acara 1: 10
+Masukkan nama acara ke-2: Acara 2
+Masukkan donasi untuk Acara 2 (Rp): 300000
+Masukkan jumlah pohon untuk Acara 2: 5
+Data dalam JSON:
+[
+  {
+    "acara": "Acara 1",
+    "donasi": 500000,
+    "pohon": 10
+  },
+  {
+    "acara": "Acara 2",
+    "donasi": 300000,
+    "pohon": 5
+  }
+]</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin prompt input, trus JSON dengan list dua dictionary berdasarkan input user. Acara 1 punya 500000 donasi dan 10 pohon, Acara 2 punya 300000 donasi dan 5 pohon. JSON rapi dengan indentasi, kayak playlist yang dibikin dari request penonton! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin tim BioMac di lapangan, input data acara tanam pohon langsung ke sistem. Kita bikin list kosong <code>data</code>, trus loop <code>for</code> minta input dua acara: nama, donasi, dan pohon. Tiap input disimpen ke dictionary, ditambah ke list pake <code>append()</code>. Terus, ubah ke JSON pake <code>json.dumps(data, indent=2)</code> dan cetak. Ini bikin sistem interaktif, cocok buat BioMac, kayak nyanyi lagu berdasarkan request penonton! 💸😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak bikin playlist dari input penonton. List <code>data</code> nyimpen dictionary tiap acara, bikin fleksibel untuk tambah data. Loop <code>for</code> minta input tiga hal: <code>acara</code> (string), <code>donasi</code> (integer), dan <code>pohon</code> (integer). Dictionary dibikin per input, ditambah ke list. <code>json.dumps()</code> ubah list ke JSON rapi. Kita cetak biar lihat hasilnya, tapi JSON ini bisa disimpen ke file. Struktur ini bikin BioMac gampang input data, kayak nyanyi lagu dengan lirik dari penonton! 🎵📊</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake loop untuk kumpulin input user ke list JSON. ✅</li>
+            <li><strong>Don't:</strong> Jangan lupa ubah input ke tipe yang bener (kaya <code>int</code> untuk donasi). ❌</li>
+            <li><strong>Do:</strong> Simpen input ke dictionary biar JSON terstruktur. 🌟</li>
+            <li><strong>Don't:</strong> Jangan biarin input salah tanpa error handling, nanti JSON kacau. 🚨</li>
+        </ul>
+        <p class="quote">"Input user ke JSON itu kayak request lagu dari penonton. Bikin sistem hidup, bro! 💸💚"</p>
+
+        <h3>7. JSON dengan Try-Except (Menantang) 🚨</h3>
+        <p><strong>Konsep:</strong> Pake <code>try-except</code> untuk nangani error saat parsing JSON atau validasi data, bikin sistem BioMac tangguh.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code>. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+
+json_data = '{"acara": "Tanam Pohon", "donasi": 500000, "pohon": 10}'
+try:
+    data = json.loads(json_data)
+    if data["donasi"] < 0:
+        raise ValueError("Donasi tidak boleh negatif!")
+    print(f"Data valid: {data}")
+except ValueError as e:
+    print(f"Error: {e}")
+except json.JSONDecodeError:
+    print("Error: Format JSON salah! 🚨")
+</code></pre>
+        <p><strong>Output:</strong></p>
+        <pre>Data valid: {'acara': 'Tanam Pohon', 'donasi': 500000, 'pohon': 10}</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin dictionary: <code>{'acara': 'Tanam Pohon', 'donasi': 500000, 'pohon': 10}</code>. JSON valid, donasi ga negatif, jadi <code>json.loads()</code> sukses dan cetak data. Kalo JSON salah (misalnya kurang kurung kurawal) atau donasi negatif, muncul pesan error, kayak detektif yang cek kualitas lagu! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin BioMac dapet JSON dari server, tapi mereka harus pastiin JSON-nya valid dan donasinya ga negatif. Kita bikin string JSON <code>json_data</code>. Dalam <code>try</code>, kita ubah ke dictionary pake <code>json.loads()</code>, cek donasi pake <code>if</code>, dan lempar <code>ValueError</code> kalo negatif. <code>except ValueError</code> nangani error donasi, <code>except json.JSONDecodeError</code> nangani JSON salah. Ini bikin sistem tangguh, cocok buat BioMac, kayak nyanyi lagu sambil cek nada fals! 🚨😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak detektif kualitas. <code>json.loads()</code> coba ubah JSON ke dictionary, tapi kalo JSON salah (misalnya kurang koma), <code>JSONDecodeError</code> muncul dan ditangkap. Kalo JSON valid, cek <code>donasi < 0</code> pake <code>if</code>, lempar <code>ValueError</code> kalo negatif. Dua <code>except</code> nangani error berbeda, kasih pesan jelas. Kalo semua beres, cetak dictionary. Struktur ini bikin BioMac yakin data valid, kayak nyanyi lagu dengan nada yang selalu pas! 🎵📊</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake <code>try-except</code> untuk nangani error JSON dan validasi data. ✅</li>
+            <li><strong>Don't:</strong> Jangan biarin JSON salah tanpa cek, nanti crash. ❌</li>
+            <li><strong>Do:</strong> Kasih pesan error spesifik biar user tau apa yang salah. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa <code>except json.JSONDecodeError</code> untuk JSON salah. 🚨</li>
+        </ul>
+        <p class="quote">"Error handling di JSON itu kayak jaring pengaman. Bikin sistem tank, bro! 🚨💚"</p>
+
+        <h3>8. JSON dengan OOP (Agak Sulit) 🏗️</h3>
+        <p><strong>Konsep:</strong> Gabungin JSON dengan OOP (Chapter 13-14) untuk bikin kelas yang ngelola data konservasi BioMac, kayak robot penyimpan data.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code>. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+
+class KonservasiMangrove:
+    def __init__(self, acara, donasi, pohon):
+        self.acara = acara
+        self.donasi = donasi
+        self.pohon = pohon
+    
+    def to_json(self):
+        data = {
+            "acara": self.acara,
+            "donasi": self.donasi,
+            "pohon": self.pohon,
+            "biaya_per_pohon": self.donasi / self.pohon
+        }
+        return json.dumps(data, indent=2)
+
+kegiatan = KonservasiMangrove("Tanam Pohon", 500000, 10)
+json_data = kegiatan.to_json()
+print(f"Data dalam JSON:\n{json_data}")
+</code></pre>
+        <p><strong>Output:</strong></p>
+        <pre>Data dalam JSON:
+{
+  "acara": "Tanam Pohon",
+  "donasi": 500000,
+  "pohon": 10,
+  "biaya_per_pohon": 50000.0
+}</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin JSON dari objek <code>KonservasiMangrove</code>. JSON punya kunci <code>biaya_per_pohon</code> (500000/10 = 50000), dihitung di metode <code>to_json</code>. Indentasi bikin rapi, kayak buka album lagu dengan analisis! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin BioMac punya robot yang nyimpen data acara tanam pohon dan hitung biaya per pohon otomatis. Kita bikin kelas <code>KonservasiMangrove</code> dengan atribut <code>acara</code>, <code>donasi</code>, dan <code>pohon</code>. Metode <code>to_json</code> bikin dictionary, tambah kunci <code>biaya_per_pohon</code>, trus ubah ke JSON pake <code>json.dumps()</code>. Ini bikin data terstruktur, cocok buat BioMac, kayak nyanyi lagu sambil pake robot penyanyi! 🏗️😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak bikin robot penyimpan. Kelas <code>KonservasiMangrove</code> nyimpen data di atribut pake <code>self</code>. Metode <code>to_json</code> bikin dictionary dari atribut, hitung <code>donasi/pohon</code>, trus ubah ke JSON rapi. Kita bikin objek, panggil <code>to_json</code>, dan cetak. Struktur ini bikin data gampang dikelola, kayak nyanyi lagu dengan robot yang nyanyi bareng! 🎵📊</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake OOP untuk struktur data kompleks yang butuh metode. ✅</li>
+            <li><strong>Don't:</strong> Jangan lupa <code>self</code> di metode kelas, nanti error. ❌</li>
+            <li><strong>Do:</strong> Tambah analisis kayak <code>biaya_per_pohon</code> di JSON. 🌟</li>
+            <li><strong>Don't:</strong> Jangan bikin kelas tanpa metode yang berguna. 🚨</li>
+        </ul>
+        <p class="quote">"OOP dan JSON itu kayak robot penyanyi. Data rapi, hasil maksimal! 🏗️💚"</p>
+
+        <h3>9. JSON dengan Logging dan Datetime (Sulit) 📝⏰</h3>
+        <p><strong>Konsep:</strong> Gabungin JSON dengan logging (Chapter 18) dan datetime (Chapter 17) untuk nyatet proses dan simpen data kegiatan BioMac dengan waktu.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code>, <code>logging</code>, <code>datetime</code>. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+import logging
+from datetime import datetime
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("BioMac")
+
+data = {
+    "acara": "Tanam Pohon",
+    "donasi": 500000,
+    "pohon": 10,
+    "waktu": datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+}
+logger.info(f"Menyiapkan data: {data}")
+json_data = json.dumps(data, indent=2)
+logger.info(f"Data dalam JSON:\n{json_data}")
+</code></pre>
+        <p><strong>Output:</strong></p>
+        <pre>2025-05-16 07:59:00,123 - BioMac - INFO - Menyiapkan data: {'acara': 'Tanam Pohon', 'donasi': 500000, 'pohon': 10, 'waktu': '16-05-2025 07:59:00'}
+2025-05-16 07:59:00,124 - BioMac - INFO - Data dalam JSON:
+{
+  "acara": "Tanam Pohon",
+  "donasi": 500000,
+  "pohon": 10,
+  "waktu": "16-05-2025 07:59:00"
+}</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin dua log: pertama, nyatet dictionary dengan waktu; kedua, nyatet JSON rapi. Timestamp (16 Mei 2025, 07:59:00) ditambah otomatis oleh <code>logging</code>. JSON punya kunci <code>waktu</code> dari <code>datetime</code>, bikin laporan BioMac transparan, kayak buku harian digital! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin BioMac mau laporan yang nyatet kapan data kegiatan dibikin, lengkap dengan waktu. Kita set logging dengan format kustom biar ada timestamp. Bikin dictionary <code>data</code> dengan kunci <code>waktu</code> dari <code>datetime.now()</code>. Logger nyatet dictionary dan JSON hasil <code>json.dumps()</code>. Ini bikin laporan terdokumentasi, cocok buat BioMac, kayak nyanyi lagu sambil catat waktu nadanya! 📝😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak bikin buku harian digital. <code>logging.basicConfig</code> set format log dengan timestamp. Dictionary <code>data</code> nyimpen info kegiatan, termasuk waktu dari <code>datetime.now().strftime()</code>. <code>logger.info</code> nyatet dictionary dan JSON. <code>json.dumps()</code> bikin JSON rapi. Struktur ini bikin BioMac punya jejak proses dan data terstruktur, kayak nyanyi lagu dengan catatan waktu yang rapi! 🎵📊</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Pake logging untuk nyatet proses pembuatan JSON. ✅</li>
+            <li><strong>Don't:</strong> Jangan logging data sensitif tanpa filter. ❌</li>
+            <li><strong>Do:</strong> Tambah waktu pake <code>datetime</code> biar laporan akurat. 🌟</li>
+            <li><strong>Don't:</strong> Jangan lupa format logging yang jelas, nanti susah dilacak. 🚨</li>
+        </ul>
+        <p class="quote">"Logging dan JSON itu kayak buku harian digital. Transparan dan kece! 📝💚"</p>
+
+        <h3>10. Semua Digabung: JSON dengan OOP, Logging, Datetime, dan Regex (Paling Sulit) 🔥</h3>
+        <p><strong>Konsep:</strong> Gabungin JSON, OOP, logging, datetime, dan regex (Chapter 16-19) untuk bikin sistem laporan kegiatan BioMac yang super canggih, kayak robot detektif penyimpan data.</p>
+        <p><strong>Cara Import:</strong> Butuh modul <code>json</code>, <code>logging</code>, <code>datetime</code>, <code>re</code>. Jalankan dengan <code>python nama_file.py</code>.</p>
+        <pre><code>import json
+import logging
+import re
+from datetime import datetime
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+
+class PengelolaKegiatan:
+    def __init__(self):
+        self.data = []
+        self.logger = logging.getLogger("BioMac")
+        self.logger.info("Pengelola kegiatan dibuat ✅")
+    
+    def tambah_kegiatan(self, acara, donasi, pohon, lokasi):
+        try:
+            if donasi < 0 or pohon < 0:
+                raise ValueError("Donasi atau pohon tidak boleh negatif!")
+            if not re.match(r"^[A-Za-z\s]+$", lokasi):
+                raise ValueError("Lokasi hanya boleh huruf dan spasi!")
+            kegiatan = {
+                "acara": acara,
+                "donasi": donasi,
+                "pohon": pohon,
+                "lokasi": lokasi,
+                "waktu": datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+            }
+            self.data.append(kegiatan)
+            self.logger.info(f"Kegiatan {acara} ditambahkan ✅")
+        except ValueError as e:
+            self.logger.error(f"Error: {e} 🚨")
+    
+    def to_json(self):
+        return json.dumps(self.data, indent=2)
+
+pengelola = PengelolaKegiatan()
+try:
+    pengelola.tambah_kegiatan("Tanam Pohon 1", 500000, 10, "Pantai")
+    pengelola.tambah_kegiatan("Tanam Pohon 2", -300000, 5, "Muara")
+except:
+    pengelola.logger.error("Error saat input data! 🚨")
+print(f"Laporan kegiatan:\n{pengelola.to_json()}")
+</code></pre>
+        <p><strong>Output:</strong></p>
+        <pre>2025-05-16 07:59:00,123 - BioMac - INFO - Pengelola kegiatan dibuat ✅
+2025-05-16 07:59:00,124 - BioMac - INFO - Kegiatan Tanam Pohon 1 ditambahkan ✅
+2025-05-16 07:59:00,125 - BioMac - ERROR - Error: Donasi atau pohon tidak boleh negatif! 🚨
+Laporan kegiatan:
+[
+  {
+    "acara": "Tanam Pohon 1",
+    "donasi": 500000,
+    "pohon": 10,
+    "lokasi": "Pantai",
+    "waktu": "16-05-2025 07:59:00"
+  }
+]</pre>
+        <p><strong>Penjelasan Output:</strong> Outputnya nunjukin tiga log: pembuatan <code>PengelolaKegiatan</code>, penambahan Tanam Pohon 1, dan error karena donasi negatif di Tanam Pohon 2. JSON akhir cuma punya satu kegiatan (Tanam Pohon 1), karena kegiatan kedua gagal divalidasi. JSON rapi dengan waktu dan data lengkap, kayak buku harian digital yang super canggih! 🎶</p>
+        <p><strong>Penjelasan Query:</strong> Bayangin BioMac punya robot detektif yang input data kegiatan, validasi lokasi pake regex, cek donasi, catat waktu, dan simpen ke JSON dengan log proses. Kita bikin kelas <code>PengelolaKegiatan</code> dengan list <code>data</code> dan logger. Metode <code>tambah_kegiatan</code> validasi donasi dan lokasi, tambah waktu, dan simpen ke list. Metode <code>to_json</code> ubah list ke JSON. Logging nyatet setiap langkah. Ini bikin sistem canggih, cocok buat BioMac, kayak nyanyi symphony dengan robot detektif! 🔥😎</p>
+        <p><strong>Logika Query:</strong> Logikanya kayak bikin robot detektif penyimpan. Kelas <code>PengelolaKegiatan</code> nyimpen data di list, logger nyatet proses. <code>tambah_kegiatan</code> cek donasi/pohon pake <code>if</code>, validasi lokasi pake regex <code>^[A-Za-z\s]+$</code>, tambah waktu pake <code>datetime</code>, dan simpen ke list. <code>try-except</code> nangani error, logger nyatet sukses atau gagal. <code>to_json</code> ubah list ke JSON rapi. Struktur ini bikin BioMac punya sistem tangguh, kayak nyanyi symphony dengan lirik, waktu, dan catatan rapi! 🎵📊</p>
+        <p><strong>Do and Don'ts:</strong></p>
+        <ul>
+            <li><strong>Do:</strong> Gabungin JSON, OOP, logging, dan regex untuk sistem kompleks. ✅</li>
+            <li><strong>Don't:</strong> Jangan lupa validasi input pake regex dan error handling. ❌</li>
+            <li><strong>Do:</strong> Pake logging untuk nyatet setiap langkah biar transparan. 🌟</li>
+            <li><strong>Don't:</strong> Jangan bikin sistem tanpa dokumentasi, nanti susah di-maintain. 🚨</li>
+        </ul>
+        <p class="quote">"Sistem JSON canggih itu kayak symphony yang bikin bumi tersenyum. Ngegas, bro! 🔥💚"</p>
+    </div>
+
+    <div class="section">
+        <h2>🌟 Manfaat Nyata untuk BioMac dan Komunitas</h2>
+        <ul>
+            <li><strong>Efisiensi:</strong> JSON bikin data kegiatan BioMac rapi, gampang disimpen dan dianalisis, hemat waktu tim. ⏳💨</li>
+            <li><strong>Transparansi:</strong> Logging dan JSON bikin laporan jelas, bikin donatur percaya dan tim gampang lacak proses. 📊👍</li>
+            <li><strong>Skalabilitas:</strong> Struktur OOP dan JSON bikin sistem gampang ditambah fitur, misalnya monitoring mangrove. 📈🚀</li>
+            <li><strong>Edukasi:</strong> Tutorial ini ajarin Mas Azmi dan tim ngelola JSON, bikin BioMac mandiri ngelola data. 🧠🎓</li>
+            <li><strong>Dampak Lingkungan dan Sosial:</strong> Data terstruktur bantu konservasi mangrove dan donasi, dukung ekosistem dan komunitas lokal! 🌴💸</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🙌 Penutup</h2>
+        <p>Yo, bro, JSON Crash Courses ini bukti bahwa data terstruktur bisa bikin dunia lebih hijau! 🌍 Bersama Mas Azmi, Mas Arry Hutomo, dan ECC Team, kita udah jelajahi JSON dari yang gampang sampe canggih, bikin sistem yang bantu konservasi mangrove dan komunitas. Terus semangat belajar Python, dan bikin solusi yang bikin bumi tersenyum! 😊🚀</p>
+        <p><strong>Naskah ini dibuat dari Arry Hutomo dan ECC Team untuk Bangsaku yang Kucintai, Indonesia tercinta. 🇮🇩💖</strong></p>
+    </div>
+
+</body>
+</html>
