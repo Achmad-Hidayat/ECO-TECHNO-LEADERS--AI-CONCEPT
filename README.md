@@ -10,3 +10,4 @@ Setiap modul dan tantangan ngebentuk kalian jadi Eco-Techno Leaders sejati denga
 Kalian adalah Eco-Warriors dengan keyboard dan algoritma! Keep pushing, keep innovating, dan ayo bikin masa depan lebih hijau dan pintar, bareng-bareng! Semangat terus sampai garis finish dan siap buat rock the world! 🔥🌍💻
 
 ---
+[NEXT TO STAGES 1-2](https://github.com/arry-hutomo/ECO-TECHNO-LEADERS--AI-CONCEPT/tree/main/STAGES%201-2)
