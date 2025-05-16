@@ -12,9 +12,9 @@ Assalamu’alaikum, para eco techno leader yang saya cintai! Vibe coding itu *co
 Jadi, *let’s level up* bareng! 🚀 Gak ada yang salah sama *vibe coding*, tapi tambahin *deep understanding*, biar kalian *slay* di dunia tech. Chapter-chapter ini *super worth it* buat di-*dive* lebih dalam. Ayo, *“Dream big, code bigger”*! 🌟 Gak usah takut, kita belajar bareng, rendah hati, dan *keep it real*. 🙌 Semangat, guys, kalian *born to code*! Let’s make it *gezellig* (asik) dan jadi *master Python* yang bikin dunia *shook*! 🐍🔥
 
 
-Arry Hutomo
-######## FOUNDER,
-######## NAWALA INTEGRA NUSANTARA
+Arry Hutomo.
+FOUNDER
+NAWALA INTEGRA NUSANTARA
 
 ![LINKEDIN-ARRY HUTOMO](https://www.linkedin.com/in/arry-hutomo)
 
