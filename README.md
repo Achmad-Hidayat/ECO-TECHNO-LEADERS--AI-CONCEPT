@@ -1,4 +1,4 @@
-# ETL--AICONCEPT
+## ECO TECHNO LEADERS ITU ANDA !
 
 ---
 ##### Oke, Eco Techno Leaders Digital Bootcamp Squad! Dengerin nih! 🚀 Perjalanan kita di bootcamp ini, dari awal sampai Final Project, bener-bener epic journey! Kalian bukan cuma belajar ngoding Python biasa, tapi jadi arsitek masa depan yang literally bisa nyelametin bumi pake teknologi. How cool is that?
