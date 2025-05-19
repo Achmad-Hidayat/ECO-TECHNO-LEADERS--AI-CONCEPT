@@ -7,7 +7,7 @@ Kita udah nge-decode Eco-Tech Principles, ngulik SQL buat insight data energi di
 
 Setiap modul dan tantangan ngebentuk kalian jadi Eco-Techno Leaders sejati dengan skillset rare: jago teknologi, ngerti lingkungan, dan punya mindset buat bikin perubahan. Ini baru permulaan, guys! Dengan semua ilmu ini, kalian punya kekuatan buat bikin inovasi yang nendang. Siapa tahu, solusi dari Final Project kalian jadi the next big thing di dunia green tech.
 
-Kalian adalah Eco-Warriors dengan keyboard dan algoritma! Keep pushing, keep innovating, dan ayo bikin masa depan lebih hijau dan pintar, bareng-bareng! Semangat terus sampai garis finish dan siap buat rock the world! 🔥🌍💻
+Kalian adalah Eco-Warriors dengan keyboard dan algoritma! Keep pushing, keep innovating, dan ayo bikin masa depan lebih hijau dan pintar, bareng-bareng! Semangat terus sampai garis finish dan siap buat rock the world! 🔥🌍[💻 COURSES MATERIALS](https://arry-hutomo.github.io/ECOTECHNO_MATERIAL_COURSE/)
 
 ---
 [NEXT TO STAGES 1-2](https://github.com/arry-hutomo/ECO-TECHNO-LEADERS--AI-CONCEPT/tree/main/STAGES%201-2)
